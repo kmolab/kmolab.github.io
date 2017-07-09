@@ -52,7 +52,7 @@
 </v>
 <v t="yen.20170108171733.2"><vh>@button pelican-blog</vh></v>
 <v t="leo.20170709224430.1"><vh>@button github-blog</vh></v>
-<v t="yen.20170108171733.5" a="E"><vh>Pelican 設定</vh>
+<v t="yen.20170108171733.5"><vh>Pelican 設定</vh>
 <v t="leo.20170709015940.1"><vh>近端</vh></v>
 <v t="yen.20170108171733.6"><vh>@edit local_publishconf.py</vh></v>
 <v t="leo.20170709015947.1"><vh>遠端</vh></v>
@@ -60,9 +60,19 @@
 <v t="leo.20170709020600.1"><vh>共用</vh></v>
 <v t="yen.20170108171733.7"><vh>@edit pelicanconf.py</vh></v>
 </v>
-<v t="yen.20170224232341.1" a="E"><vh>編輯 template</vh>
-<v t="yen.20170224232341.2" a="E"><vh>@path theme/pelican-bootstrap3_local/templates</vh>
+<v t="yen.20170224232341.1"><vh>編輯 template</vh>
+<v t="yen.20170224232341.2"><vh>@path theme/pelican-bootstrap3_local/templates</vh>
 <v t="yen.20170224232341.3"><vh>@edit base.html</vh></v>
+</v>
+<v t="leo.20170710015301.1" a="E"><vh>@path theme/pelican-bootstrap3/templates</vh>
+<v t="leo.20170710015311.1"><vh>@edit search.html</vh></v>
+</v>
+</v>
+<v t="leo.20170710015511.1" a="E"><vh>編輯 plugin</vh>
+<v t="leo.20170710015523.1" a="E"><vh>@path plugin</vh>
+<v t="leo.20170710015523.2" a="E"><vh>@path tipue_search</vh>
+<v t="leo.20170710015523.3"><vh>@edit tipue_search.py</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.71" a="E"><vh>@path content</vh>
@@ -341,6 +351,10 @@ web based 伺服功能
 資料在近端時可以進行各式檢視與測試
 
 資料在遠端可以利用 Github 網際介面改版, Github Pages 伺服 html + Javascript 主要儲存具完整更新歷程, 可多人協同維護的表達資料</t>
+<t tx="leo.20170710015301.1"></t>
+<t tx="leo.20170710015511.1"></t>
+<t tx="leo.20170710015523.1"></t>
+<t tx="leo.20170710015523.2"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

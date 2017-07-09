@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kmolab.github.io/blog/</loc>
-<lastmod>2017-07-10T01:45:33-00:00</lastmod>
+<lastmod>2017-07-10T01:57:39-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/archives.html</loc>
-<lastmod>2017-07-10T01:45:33-00:00</lastmod>
+<lastmod>2017-07-10T01:57:39-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/tags.html</loc>
-<lastmod>2017-07-10T01:45:33-00:00</lastmod>
+<lastmod>2017-07-10T01:57:39-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/categories.html</loc>
-<lastmod>2017-07-10T01:45:33-00:00</lastmod>
+<lastmod>2017-07-10T01:57:39-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -158,13 +158,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/wang-ji-nei-rong-guan-li.html</loc>
-<lastmod>2017-06-18T13:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://kmolab.github.io/blog/tag/ji-suan-ji-cheng-shi.html</loc>
 <lastmod>2017-06-12T11:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -181,6 +174,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kmolab.github.io/blog/tag/dian-nao-fu-zhu-she-ji-shi-xi.html</loc>
 <lastmod>2017-06-18T11:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kmolab.github.io/blog/tag/wang-ji-nei-rong-guan-li.html</loc>
+<lastmod>2017-06-18T13:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

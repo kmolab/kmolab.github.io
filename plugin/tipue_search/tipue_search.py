@@ -102,10 +102,9 @@ class Tipue_Search_JSON_Generator(object):
             self.create_json_node(page)
         root_node = {'pages': self.json_nodes}
 
-        #因為目前改為 local only, 所以蓋掉 .json 建立
-        #with open(path, 'w', encoding='utf-8') as fd:
+        with open(path, 'w', encoding='utf-8') as fd:
             # 寫出所需要的 .json 檔案
-            #json.dump(root_node, fd, separators=(',', ':'), ensure_ascii=False)
+            json.dump(root_node, fd, separators=(',', ':'), ensure_ascii=False)
 
         
         # 以下寫出 .js 檔案, 主要用於近端的 Tipue search
