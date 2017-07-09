@@ -15,7 +15,7 @@
 </v>
 <v t="yen.20170108171622.1"><vh>有關 kmolab.github.io</vh></v>
 <v t="yen.20170108171733.1" a="E"><vh>@path ../</vh>
-<v t="leo.20170706005043.1" a="E"><vh>@clean index.html</vh>
+<v t="leo.20170706005043.1"><vh>@clean index.html</vh>
 <v t="leo.20170706005043.2" a="E"><vh>html</vh>
 <v t="leo.20170706005043.3"><vh>head</vh></v>
 <v t="leo.20170706005043.4" a="E"><vh>body</vh>
@@ -46,12 +46,43 @@
 </v>
 </v>
 </v>
-<v t="leo.20170706000627.1" a="E"><vh>@path ../</vh>
-<v t="yen.20170108171733.4"><vh>@edit .gitignore</vh></v>
 <v t="yen.20170108171733.3"><vh>@edit README.md</vh></v>
-</v>
-<v t="yen.20170108171733.2"><vh>@button pelican-blog</vh></v>
+<v t="yen.20170108171733.4"><vh>@edit .gitignore</vh></v>
+<v t="yen.20170108171733.2"><vh>@button local-blog</vh></v>
 <v t="leo.20170709224430.1"><vh>@button github-blog</vh></v>
+<v t="leo.20170710021233.1"><vh>@path slides</vh>
+<v t="leo.20170710021247.1" a="E"><vh>@clean template_slide.html</vh>
+<v t="leo.20170710021247.2" a="E"><vh>html</vh>
+<v t="leo.20170710021247.3"><vh>head</vh></v>
+<v t="leo.20170710021247.4" a="E"><vh>body</vh>
+<v t="leo.20170710021247.5" a="E"><vh>reveal div</vh>
+<v t="leo.20170710021247.6" a="E"><vh>slides div</vh>
+<v t="leo.20170710021247.7" a="E"><vh>封面投影片</vh>
+<v t="leo.20170710021247.8"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20170710021247.9"><vh>快捷鍵</vh>
+<v t="leo.20170710021247.10"><vh>投影片快捷鍵</vh></v>
+</v>
+<v t="leo.20170710021247.11" a="E"><vh>溝通與表達</vh>
+<v t="leo.20170710021247.12"><vh>溝通與表達內容</vh></v>
+</v>
+<v t="leo.20170710021247.13"><vh>各式內容引用範例</vh>
+<v t="leo.20170710021247.14" a="E"><vh>導入數學符號與方程式</vh>
+<v t="leo.20170710021247.15"><vh>LaTeX 格式方程式</vh></v>
+</v>
+<v t="leo.20170710021247.16" a="E"><vh>導入縮排程式碼</vh>
+<v t="leo.20170710021247.17"><vh>引用程式碼</vh></v>
+</v>
+<v t="leo.20170710021247.18" a="E"><vh>導入影片</vh>
+<v t="leo.20170710021247.19"><vh>iframe 導入影片</vh></v>
+</v>
+</v>
+</v>
+</v>
+</v>
+</v>
+</v>
+</v>
 <v t="yen.20170108171733.5"><vh>Pelican 設定</vh>
 <v t="leo.20170709015940.1"><vh>近端</vh></v>
 <v t="yen.20170108171733.6"><vh>@edit local_publishconf.py</vh></v>
@@ -75,7 +106,7 @@
 </v>
 </v>
 </v>
-<v t="yen.20170108171733.71" a="E"><vh>@path content</vh>
+<v t="yen.20170108171733.71"><vh>@path content</vh>
 <v t="leo.20170706020010.1"><vh>@edit 20170605-1.md</vh></v>
 <v t="leo.20170706015402.1"><vh>@edit 20170605-2.md</vh></v>
 <v t="leo.20170706020035.1"><vh>@edit 20170605-3.md</vh></v>
@@ -85,21 +116,24 @@
 <v t="leo.20170706020111.1"><vh>@edit 20170618-1.md</vh></v>
 <v t="leo.20170706020122.1"><vh>@edit 20170618-2.md</vh></v>
 <v t="leo.20170706020211.1"><vh>@edit 20170618-3.md</vh></v>
-<v t="yen.20170618211552.1"><vh>@edit 20170618.md</vh></v>
 <v t="yen.20170108171733.81" a="E"><vh>@path pages</vh>
 <v t="yen.20170108171733.82"><vh>@edit pages_1.md</vh></v>
 </v>
+</v>
+<v t="leo.20170710022054.1"><vh>可以另建節點存放 content 目錄下的 md 檔案</vh></v>
+<v t="leo.20170710022041.1" a="E"><vh>@path content</vh>
+<v t="leo.20170710022207.1"><vh>@edit 20170618.md</vh></v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt</vh></v>
 </v>
 <v t="yen.20170108171930.1"><vh>@button https server</vh></v>
 <v t="yen.20170108171939.1"><vh>@button ipv6 https server</vh></v>
+<v t="leo.20170710022428.1"><vh>Git 操作</vh></v>
 <v t="leo.20170706003834.1"><vh>Pelican 與版次管理</vh></v>
 <v t="leo.20170709091423.1"><vh>Fossil SCM 檔案格式</vh></v>
 <v t="leo.20170710000725.1"><vh>近端的 Fossil 與遠端的 Github</vh></v>
 </vnodes>
 <tnodes>
-<t tx="leo.20170706000627.1"></t>
 <t tx="leo.20170706003834.1">只需要管理 Pelican 有關的設定檔案與 .md 檔案, 其餘都只保留最新檔案即可?
 
 至於 __FOSSIL__ 檔案是否納入 git 版次管理??</t>
@@ -355,6 +389,237 @@ web based 伺服功能
 <t tx="leo.20170710015511.1"></t>
 <t tx="leo.20170710015523.1"></t>
 <t tx="leo.20170710015523.2"></t>
+<t tx="leo.20170710021233.1"></t>
+<t tx="leo.20170710021247.1">@language xml
+@tabwidth -4
+@others
+
+</t>
+<t tx="leo.20170710021247.10"># 投影片快捷鍵
+
+* 利用箭頭上下前後換頁
+* 按 f 鍵進入全螢幕模式 (full screen)
+* 按 s 鍵可以顯示投影片筆記 (show)
+* 按 o 鍵可以切換單張或全域檢視 (overview)
+* 按 b 或 . 鍵可以切換螢幕黑屏 (black)
+* 按 Esc 可以退出全螢幕或全域檢視 (Escape)
+
+</t>
+<t tx="leo.20170710021247.11">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170710021247.12"># 溝通與表達
+
+* 溝通 communication
+* 表達 presentation
+* 設定溝, 如何通?
+* 如何表? 是否達?
+* 溝通才有共識
+* 表達方能了解彼此
+
+</t>
+<t tx="leo.20170710021247.13">&lt;section&gt;
+@others
+&lt;/section&gt;</t>
+<t tx="leo.20170710021247.14">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20170710021247.15"># 數學符號與方程式
+
+Inline math equations go in like so: $\omega = d\phi / dt$. Display
+math should get its own line and be put in in double-dollarsigns:
+
+$$I = \int \rho R^{2} dV$$
+</t>
+<t tx="leo.20170710021247.16">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20170710021247.17">## 利用 Markdown 寫投影片
+以下利用 Markdown 格式展示 Python 程式碼:
+```
+@language python
+# use threading and subprocess to threading the make process
+import os
+import subprocess
+import threading
+
+def domake():
+    
+    path = "../exposed/api/exposed"
+    ubuntu = "../Ubuntu"
+    
+    # create obj path
+    
+    if not os.path.exists(path+"/../obj"):
+        os.makedirs(path+"/../obj")
+    
+    subprocess.call(["make", "clean"], cwd=path)
+    subprocess.call("make", cwd=path)
+    subprocess.call(["cp", "{libslvs.so, _slvs.so, slvs.py}", ubuntu], cwd=path)
+    subprocess.call(["python3", "circle_ex.py"], cwd=path+"/"+ubuntu)
+    
+make = threading.Thread(target=domake)
+make.start()
+```
+</t>
+<t tx="leo.20170710021247.18">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170710021247.19">## 使用 iframe 導入影片
+
+### 導入影片 template
+
+&lt;iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20170710021247.2">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+@others
+&lt;/html&gt;
+</t>
+<t tx="leo.20170710021247.3">&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+&lt;title&gt;
+KMOLab 機械設計工程
+&lt;/title&gt;
+    &lt;meta name="description" content="A framework for easily creating beautiful presentations using HTML"&gt;
+    &lt;meta name="author" content="Hakim El Hattab"&gt;
+    
+    &lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
+    &lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
+    
+    &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/css/reveal.css"&gt;
+    &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/css/theme/black.css" id="theme"&gt;
+    
+    &lt;!-- Theme used for syntax highlighting of code --&gt;
+    &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/lib/css/zenburn.css"&gt;
+
+    &lt;!-- Printing and PDF exports --&gt;
+    &lt;script&gt;
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cad-lab.github.io/cadlab_data/reveal/css/print/pdf.css' : 'https://cad-lab.github.io/cadlab_data/reveal/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    &lt;/script&gt;
+
+    &lt;!--[if lt IE 9]&gt;
+    &lt;script src="https://cad-lab.github.io/cadlab_data/reveal/lib/js/html5shiv.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+&lt;/head&gt;
+
+</t>
+<t tx="leo.20170710021247.4">&lt;body&gt;
+@others
+&lt;script src="https://cad-lab.github.io/cadlab_data/reveal/lib/js/head.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cad-lab.github.io/cadlab_data/reveal/js/reveal.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [
+                { src: 'https://cad-lab.github.io/cadlab_data/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'https://cad-lab.github.io/cadlab_data/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'https://cad-lab.github.io/cadlab_data/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'https://cad-lab.github.io/cadlab_data/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'https://cad-lab.github.io/cadlab_data/reveal/plugin/zoom-js/zoom.js', async: true },
+                { src: 'https://cad-lab.github.io/cadlab_data/reveal/plugin/notes/notes.js', async: true },
+                { src: 'https://cad-lab.github.io/cadlab_data/reveal/plugin/math/math.js', async: true }
+            ]
+        });
+&lt;/script&gt;
+&lt;/body&gt;
+</t>
+<t tx="leo.20170710021247.5">&lt;div class="reveal"&gt;
+@others
+&lt;/div&gt;
+
+</t>
+<t tx="leo.20170710021247.6">&lt;!-- Any section element inside of this container is displayed as a slide --&gt;
+&lt;div class="slides"&gt;
+@others
+&lt;/div&gt;
+
+</t>
+<t tx="leo.20170710021247.7">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170710021247.8">## KMOL 課程
+
+### KMOLab 機械設計工程
+
+&lt;small&gt;
+Created by KMOLab
+&lt;/small&gt;
+
+[2017Fall 課程網誌](./../blog/index.html)
+
+
+</t>
+<t tx="leo.20170710021247.9">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170710022041.1"></t>
+<t tx="leo.20170710022054.1"></t>
+<t tx="leo.20170710022428.1">Windows 7 環境下首次使用 git command 時要求登入後, 會在
+
+控制台-&gt;使用者帳號-&gt;使用者下建立
+
+管理認證-&gt;一般認證
+
+若要更換帳號, 則必須刪除後重新登入
+
+與舊版差別, 同一台電腦只要登入一次
+
+壞處則是若經常更換推送用戶時必須刪除認證後重新登入</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

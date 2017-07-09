@@ -39,8 +39,10 @@ for stud_num in alist:
 
 &lt;!-- 在 blog 中引用圖檔, 只要往外跳一層即可跳出 blog 目錄 --&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;img src="./../data/logo/kmol_1172x340_blue_3yrs.png" width="300"&gt;&lt;/img&gt;&lt;/p&gt;</content><category term="Final"></category></entry><entry><title>網際內容管理</title><link href="https://kmolab.github.io/blog/wcm-course-1.html" rel="alternate"></link><published>2017-06-18T13:00:00+08:00</published><updated>2017-06-18T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/wcm-course-1.html</id><summary type="html">&lt;p&gt;網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src="./../data/logo/kmol_1172x340_blue_3yrs.png" width="300"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;a href="./../slides/template_slide.html"&gt;template slide&lt;/a&gt;&lt;/p&gt;</content><category term="Final"></category></entry><entry><title>網際內容管理</title><link href="https://kmolab.github.io/blog/wcm-course-1.html" rel="alternate"></link><published>2017-06-18T13:00:00+08:00</published><updated>2017-06-18T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/wcm-course-1.html</id><summary type="html">&lt;p&gt;網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.&lt;/p&gt;
 
 
