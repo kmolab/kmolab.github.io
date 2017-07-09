@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>KMOLab 機械設計工程 - Simulation</title><link href="./" rel="alternate"></link><link href="./feeds/simulation.atom.xml" rel="self"></link><id>./</id><updated>2017-06-05T02:29:00+08:00</updated><entry><title>電腦模擬</title><link href="./first-simulation-blog.html" rel="alternate"></link><published>2017-06-05T02:29:00+08:00</published><updated>2017-06-05T02:29:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-05:./first-simulation-blog.html</id><summary type="html">&lt;p&gt;紀錄與電腦模擬相關內容與紀錄， 使用工具 Python3, &lt;a href="http://www.robodk.com/download"&gt;RoboDK&lt;/a&gt;&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;紀錄與電腦模擬相關內容與紀錄， 使用工具 Python3, &lt;a href="http://www.robodk.com/download"&gt;RoboDK&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;為什麼要模擬?假如要您負責送人登月,  不需模擬嗎?&lt;/p&gt;
+&lt;p&gt;幾天後就要接受面試, 需要先前排練嗎?&lt;/p&gt;
+&lt;p&gt;幾位好友要到墾丁旅遊, 需要事先安排好吃住與玩樂內容嗎?需要想想如何安排交通工具與路線嗎?&lt;/p&gt;
+&lt;p&gt;pyqt5 程式 &lt;a href="http://projects.skylogic.ca/blog/how-to-install-pyqt5-and-build-your-first-gui-in-python-3-4/"&gt;http://projects.skylogic.ca/blog/how-to-install-pyqt5-and-build-your-first-gui-in-python-3-4/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;run.py, 自行編寫用從 core/main.py 中導入 MainWindow 類別建立案例後執行&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+if __name__ == "__main__":
+    import sys
+    from PyQt5.QtWidgets import QApplication
+
+    from core.main import MainWindow
+
+    app = QApplication(sys.argv)
+
+    main = MainWindow()
+    main.show()
+
+    sys.exit(app.exec_())
+&lt;/pre&gt;
+
+&lt;p&gt;core/main.py, 以 main.ui 滑鼠右鍵 generate Dialog Code 產生&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+# -*- coding: utf-8 -*-
+
+"""
+Module implementing MainWindow.
+"""
+
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QMainWindow
+
+from PyQt5.QtCore import QLineF
+from PyQt5.QtWidgets import QFrame
+from PyQt5.QtWidgets import QGraphicsScene,  QGraphicsView,  QGraphicsEllipseItem
+
+from .Ui_main import Ui_MainWindow
+
+
+class MainWindow(QMainWindow, Ui_MainWindow):
+    """
+    Class documentation goes here.
+    """
+    def __init__(self, parent=None):
+        """
+        Constructor
+
+        @param parent reference to the parent widget
+        @type QWidget
+        """
+        super(MainWindow, self).__init__(parent)
+        self.setupUi(self)
+
+    @pyqtSlot()
+    def on_actionAbout_triggered(self):
+        """
+        Slot documentation goes here.
+        """
+        # TODO: not implemented yet
+        #raise NotImplementedError
+        #建立景物
+        scene = QGraphicsScene(-200, -200, 400, 400)
+        # Create Ellipse Item
+        item = QGraphicsEllipseItem(-150, -100, 300, 300)
+        # Add item
+        scene.addItem(item)
+        # 納入繪圖物件
+        scene.addText("終於可以!")
+        scene.addLine(QLineF(0, 0, 200, 200))
+        # set no frame to graphicsView
+        self.graphicsView.setFrameShape(QFrame.NoFrame)
+        # 在既有的 graphicsView 中設定景物
+        # graphicsView in a layout and set layout to the grid to fit the size of window
+        self.graphicsView.setScene(scene)
+
+        # 顯示
+        self.graphicsView.show()
+
+    @pyqtSlot()
+    def on_actionQuit_triggered(self):
+        """
+        Slot documentation goes here.
+        """
+        # TODO: not implemented yet
+        #raise NotImplementedError
+        self.close()
+&lt;/pre&gt;
+
+&lt;p&gt;core/Ui_main.py, 利用 main.ui 以 compile form 產生&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'Y:\tmp\pyqt5_vault\ex3\core\main.ui'
+#
+# Created by: PyQt5 UI code generator 5.8.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(800, 600)
+        self.centralWidget = QtWidgets.QWidget(MainWindow)
+        self.centralWidget.setObjectName("centralWidget")
+        self.graphicsView = QtWidgets.QGraphicsView(self.centralWidget)
+        self.graphicsView.setGeometry(QtCore.QRect(-15, -29, 871, 581))
+        self.graphicsView.setObjectName("graphicsView")
+        MainWindow.setCentralWidget(self.centralWidget)
+        self.menuBar = QtWidgets.QMenuBar(MainWindow)
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 800, 22))
+        self.menuBar.setObjectName("menuBar")
+        self.menuFile = QtWidgets.QMenu(self.menuBar)
+        self.menuFile.setObjectName("menuFile")
+        MainWindow.setMenuBar(self.menuBar)
+        self.actionAbout = QtWidgets.QAction(MainWindow)
+        self.actionAbout.setObjectName("actionAbout")
+        self.actionQuit = QtWidgets.QAction(MainWindow)
+        self.actionQuit.setObjectName("actionQuit")
+        self.menuFile.addAction(self.actionAbout)
+        self.menuFile.addAction(self.actionQuit)
+        self.menuBar.addAction(self.menuFile.menuAction())
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.menuFile.setTitle(_translate("MainWindow", "File"))
+        self.actionAbout.setText(_translate("MainWindow", "About"))
+        self.actionQuit.setText(_translate("MainWindow", "Quit"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+&lt;/pre&gt;
+
+&lt;p&gt;main.ui&lt;/p&gt;
+&lt;pre class="brush: xml"&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;ui version="4.0"&gt;
+ &lt;class&gt;MainWindow&lt;/class&gt;
+ &lt;widget class="QMainWindow" name="MainWindow"&gt;
+  &lt;property name="geometry"&gt;
+   &lt;rect&gt;
+    &lt;x&gt;0&lt;/x&gt;
+    &lt;y&gt;0&lt;/y&gt;
+    &lt;width&gt;800&lt;/width&gt;
+    &lt;height&gt;600&lt;/height&gt;
+   &lt;/rect&gt;
+  &lt;/property&gt;
+  &lt;property name="windowTitle"&gt;
+   &lt;string&gt;MainWindow&lt;/string&gt;
+  &lt;/property&gt;
+  &lt;widget class="QWidget" name="centralWidget"&gt;
+   &lt;widget class="QGraphicsView" name="graphicsView"&gt;
+    &lt;property name="geometry"&gt;
+     &lt;rect&gt;
+      &lt;x&gt;-15&lt;/x&gt;
+      &lt;y&gt;-29&lt;/y&gt;
+      &lt;width&gt;871&lt;/width&gt;
+      &lt;height&gt;581&lt;/height&gt;
+     &lt;/rect&gt;
+    &lt;/property&gt;
+   &lt;/widget&gt;
+  &lt;/widget&gt;
+  &lt;widget class="QMenuBar" name="menuBar"&gt;
+   &lt;property name="geometry"&gt;
+    &lt;rect&gt;
+     &lt;x&gt;0&lt;/x&gt;
+     &lt;y&gt;0&lt;/y&gt;
+     &lt;width&gt;800&lt;/width&gt;
+     &lt;height&gt;22&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;widget class="QMenu" name="menuFile"&gt;
+    &lt;property name="title"&gt;
+     &lt;string&gt;File&lt;/string&gt;
+    &lt;/property&gt;
+    &lt;addaction name="actionAbout"/&gt;
+    &lt;addaction name="actionQuit"/&gt;
+   &lt;/widget&gt;
+   &lt;addaction name="menuFile"/&gt;
+  &lt;/widget&gt;
+  &lt;action name="actionAbout"&gt;
+   &lt;property name="text"&gt;
+    &lt;string&gt;About&lt;/string&gt;
+   &lt;/property&gt;
+  &lt;/action&gt;
+  &lt;action name="actionQuit"&gt;
+   &lt;property name="text"&gt;
+    &lt;string&gt;Quit&lt;/string&gt;
+   &lt;/property&gt;
+  &lt;/action&gt;
+ &lt;/widget&gt;
+ &lt;resources/&gt;
+ &lt;connections/&gt;
+&lt;/ui&gt;
+&lt;/pre&gt;</content><category term="機械設計"></category><category term="課程"></category></entry></feed>

@@ -99,3 +99,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# fossil file
+_FOSSIL_

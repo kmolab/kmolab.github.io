@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>網際內容管理 - KMOLab 機械設計工程</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="./wcm-course-1.html">
+
+        <meta name="author" content="kmol" />
+        <meta name="keywords" content="網際內容管理,課程" />
+        <meta name="description" content="網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務." />
+
+        <meta property="og:site_name" content="KMOLab 機械設計工程" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="網際內容管理"/>
+        <meta property="og:url" content="./wcm-course-1.html"/>
+        <meta property="og:description" content="網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務."/>
+        <meta property="article:published_time" content="2017-06-18" />
+            <meta property="article:section" content="Course" />
+            <meta property="article:tag" content="網際內容管理" />
+            <meta property="article:tag" content="課程" />
+            <meta property="article:author" content="kmol" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="./theme/css/bootstrap.united.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="./theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="./theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+
+        <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="KMOLab 機械設計工程 ATOM Feed"/>
+
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushBash.js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shCore.css";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "https://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="./" class="navbar-brand">
+KMOLab 機械設計工程            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="/blog/pages/about/">About</a></li>
+                        <li class="active">
+                            <a href="./category/course.html">Course</a>
+                        </li>
+                        <li >
+                            <a href="./category/discussion.html">Discussion</a>
+                        </li>
+                        <li >
+                            <a href="./category/misc.html">Misc</a>
+                        </li>
+                        <li >
+                            <a href="./category/realization.html">Realization</a>
+                        </li>
+                        <li >
+                            <a href="./category/setup.html">Setup</a>
+                        </li>
+                        <li >
+                            <a href="./category/simulation.html">Simulation</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><span>
+                <form class="navbar-search" action="./search.html">
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+              <li><a href="./archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="./wcm-course-1.html"
+                       rel="bookmark"
+                       title="Permalink to 網際內容管理">
+                        網際內容管理
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-06-18T13:00:00+08:00"> Sun 18 June 2017</time>
+    </span>
+            <span class="label label-default">By</span>
+            <a href="./author/kmol.html"><i class="fa fa-user"></i> kmol</a>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/wang-ji-nei-rong-guan-li.html">網際內容管理</a>
+        /
+	<a href="./tag/ke-cheng.html">課程</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.</p>
+
+
+<p>所謂網際指的是 Web-Based, 也就是 World-Wide-Web Based 的簡稱, 中文也可以翻為"植基於全球資訊網" 或 "以全球資訊網為基礎", 其內涵是希望讓使用者在網際網路 (Internet) 的基礎上, 利用 Web Browser (瀏覽器) 操作各種與機械設計內容管理有關的任務.</p>
+<h3>Ubuntu 操作系統</h3>
+<p>根據 https://www.ubuntu.com/info/release-end-of-life 的生命週期年限, 選擇 LTS Server 版本安裝, 安裝過程需要安裝 OpenSSL 模組, 以及 ubuntu-desktop, Windows 客戶端則透過 <a href="https://sourceforge.net/projects/xming/">xming</a> 與 <a href="http://www.putty.org/">http://www.putty.org/</a> 進行安全的遠端登入.</p>
+<h3>IPv4 與 IPv6 網路設定</h3>
+<p>一般來說, 只有必須擔負特定 WWW Server、DNS Server 與 Proxy Server 的主機需要同時支援 IPv4 與 IPv6 網路協定外, 其餘客戶端都可以只透過 IPv6 網路協定上網.</p>
+<p>WWW Server 使用 Nginx, DNS Serve 使用 Bind, 而 Proxy Server 則使用 Squid.</p>
+<h3>Nginx</h3>
+<p>Nginx WWW 伺服器通常用來伺服靜態文件或者作為其他近端伺服資料傳送的代理主機 (例如, uwsgi 網際服務).</p>
+<h3>Ethercalc</h3>
+<p>Ethercalc 允許多人利用瀏覽器同時維護一份線上試算表, 可以用於協同資料永久存檔前的轉介站.</p>
+<h3>Fossil SCM</h3>
+<p>Fossil SCM 是一套小而美的分散式資料管理系統</p>
+<h3>Squid Proxy Server</h3>
+<p>在 IPv4 轉換到 IPv6 的過程中, 雙網路協定支援的代理主機扮演非常重要的角色, 例如, 從純 IPv4 瀏覽器連線到純 IPv6 WWW 伺服器, 就需要透過雙網路協定的代理主機轉介資料, 其次 putty ssh 遠端登入或 sftp 安全資料傳送, 也都需要雙網路支援的代理主機居中轉換不同協定資料.</p>
+<h3>X-windows</h3>
+<h3>Putty</h3>
+<h3>Leo Editor</h3>
+<h3>Filezilla 與 SFTP</h3>
+<h3>Uwsgi 與 CMSimfly</h3>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="./2017fall-cp-cadp.html">
+                            計算機程式與電腦輔助設計實習
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./wcm-course-1.html">
+                            網際內容管理
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./cd-course-1.html">
+                            協同產品設計實習
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./cadp-course-1.html">
+                            電腦輔助設計實習
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./cp-course-1.html">
+                            計算機程式
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item"><a href="./categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+                <ul class="list-group" id="categories">
+                    <li class="list-group-item">
+                        <a href="./category/course.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Course
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./category/discussion.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Discussion
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./category/misc.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Misc
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./category/realization.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Realization
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./category/setup.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Setup
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./category/simulation.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Simulation
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item"><a href="./tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group list-inline tagcloud" id="tags">
+                </ul>
+            </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="https://www.nature.com/" target="_blank">
+                Nature
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.sciencemag.org/" target="_blank">
+                Science
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://www.samharris.org/" target="_blank">
+                Sam Harris
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.ieu.uzh.ch/wagner/" target="_blank">
+                Andreas Wagner
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://www.americanscientist.org/" target="_blank">
+                American Scientist
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://www.scientificamerican.com/" target="_blank">
+                Scientific American
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2017 KMOL
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="./theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./theme/js/bootstrap.min.js"></script>
+
+<!-- for https://github.com/jsor/lity lightbox video popup -->
+
+<link href="./theme/css/lity.css" rel="stylesheet">
+
+<script src="./theme/js/lity.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="./theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

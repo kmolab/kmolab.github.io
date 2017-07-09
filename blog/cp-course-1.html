@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>計算機程式 - KMOLab 機械設計工程</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="./cp-course-1.html">
+
+        <meta name="author" content="kmol" />
+        <meta name="keywords" content="計算機程式,課程" />
+        <meta name="description" content="計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務." />
+
+        <meta property="og:site_name" content="KMOLab 機械設計工程" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="計算機程式"/>
+        <meta property="og:url" content="./cp-course-1.html"/>
+        <meta property="og:description" content="計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務."/>
+        <meta property="article:published_time" content="2017-06-12" />
+            <meta property="article:section" content="Course" />
+            <meta property="article:tag" content="計算機程式" />
+            <meta property="article:tag" content="課程" />
+            <meta property="article:author" content="kmol" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="./theme/css/bootstrap.united.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="./theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="./theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+
+        <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="KMOLab 機械設計工程 ATOM Feed"/>
+
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushBash.js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shCore.css";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "https://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="./" class="navbar-brand">
+KMOLab 機械設計工程            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="/blog/pages/about/">About</a></li>
+                        <li class="active">
+                            <a href="./category/course.html">Course</a>
+                        </li>
+                        <li >
+                            <a href="./category/discussion.html">Discussion</a>
+                        </li>
+                        <li >
+                            <a href="./category/misc.html">Misc</a>
+                        </li>
+                        <li >
+                            <a href="./category/realization.html">Realization</a>
+                        </li>
+                        <li >
+                            <a href="./category/setup.html">Setup</a>
+                        </li>
+                        <li >
+                            <a href="./category/simulation.html">Simulation</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><span>
+                <form class="navbar-search" action="./search.html">
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+              <li><a href="./archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="./cp-course-1.html"
+                       rel="bookmark"
+                       title="Permalink to 計算機程式">
+                        計算機程式
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-06-12T11:00:00+08:00"> Mon 12 June 2017</time>
+    </span>
+            <span class="label label-default">By</span>
+            <a href="./author/kmol.html"><i class="fa fa-user"></i> kmol</a>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/ji-suan-ji-cheng-shi.html">計算機程式</a>
+        /
+	<a href="./tag/ke-cheng.html">課程</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.</p>
+
+
+<p>首先, 看看機械設計流程會牽涉哪些任務, 所謂機械設計, 就是歷經詳細思慮考量, 完成互動元件間之精巧配置, 使其展現特定功能之具體規劃表達.</p>
+<p>換言之, 機械設計是一種具體規劃的表達 (presentation), 其內容是經過一系列詳細的思慮與考量所得到的結果, 而此項結果通常有具體的功能, 並且包含許多互動 (interaction) 元件之間的彈性與精巧配置 (flexible and sophisticated configuration).</p>
+<p>我們將上述與機械設計有關的關鍵字引列如下:</p>
+<ol>
+<li>
+<p>機械設計是一種表達, 此種表達可以利用文字、口語、2D 靜態圖像、3D 或影音動態圖像、理論分析或實體呈現.</p>
+</li>
+<li>
+<p>機械設計的過程所需要的各種思慮與考量牽涉許多定性與定量的分析, 包含許多工程原理原則與實務經驗, 這些分析除了必須利用數學建立模型, 透過演算預先模擬外, 還需要使用有效率可協同的方式紀錄過程中所產生的各種資料.</p>
+</li>
+<li>
+<p>機械設計產品中所包含的各種互動元件, 包括硬體元件、流體元件、軟體元件與管理元件等.</p>
+</li>
+<li>
+<p>機械設計過程中, 為了在實體化之前能預先針對各種互動元件間的組成與配置進行最佳化, 因此需要使用各種逼真的模擬方法加以呈現.</p>
+</li>
+</ol>
+<h3>如何進行文字、2D&amp;3D表達</h3>
+<p>有沒有一種方法可以讓多名使用者協同管理一份文件, 其中包含各種互動式圖文與影音資料, 各使用者在編修內容過程可以有效對資料進行保全, 可以有效分散備份, 可以紀錄各編修者所增刪的內容, 可以透過有效率的方法散佈此份文件的內容?</p>
+<h3>使用工具的評量方法</h3>
+<p>機械設計工程師為了有效完成具體規劃內容的表達, 過程中必須使用各種類型的工具, 其中包括:</p>
+<ol>
+<li>文字資料構建、管理與呈現的工具 (text)</li>
+</ol>
+<p>2  口語資料構建、管理與呈現的工具 (oral)</p>
+<ol>
+<li>
+<p>2D 靜態圖像資料構建、管理與呈現的工具 (2d)</p>
+</li>
+<li>
+<p>3D 或影音動態圖像資料構建、管理與呈現的工具 (3d)</p>
+</li>
+<li>
+<p>理論分析資料構建、管理與呈現的工具 (analytical)</p>
+</li>
+<li>
+<p>實體構建、管理與呈現的工具 (physical)</p>
+</li>
+</ol>
+<p>工具取得、維護使用成本與其他工具整合效能成本等</p>
+<ol>
+<li>
+<p>工具取得成本 (now and how)</p>
+</li>
+<li>
+<p>維護更新與永續使用成本 (update and sustainable)</p>
+</li>
+<li>
+<p>工具掌握度與整合效能成本 (integration)</p>
+</li>
+</ol>
+<h3>Free 不只免費而是自由</h3>
+<p>免費的最貴</p>
+<p>自由的好處</p>
+<p>自由的壞處</p>
+<h3>假如修習課程是一場選秀球賽</h3>
+<p>選秀過程分為上下兩個半場, 半場結束各球員身上會有兩種標價, 一種是球員自身的評價, 另一種則是選秀主持團對各球員的評價</p>
+<p>為了有效評定各球員在選秀結束後的身價, 一開始所有球員尚未上場展示球技之前, 全部都屬於勝部組, 隨著上半場結束前, 部份球員可能因為犯規或違例而落入敗部, 敗部球員若要轉回勝部則必須額外展示球技, 例如, 若球賽為籃球, 若敗部球員可以在底線連續投入3個三分球, 就可以即刻從敗部重新回到勝部.</p>
+<h3>選秀規則</h3>
+<p>犯規: 沒能帶筆記本或在筆記本中紀錄當天的上課內容與心得者</p>
+<p>犯規: 每週分組賽結束後, 各組員未能有效陳述該場球賽過程者</p>
+<p>犯規: 在電腦教室中用餐或喝開水之外的飲料者</p>
+<p>三次犯規 = 一次違例</p>
+<p>違例: 分組球賽開始, 裁判已經追哨後, 仍然找不到球員</p>
+<p>違例: 分組球賽進行中, 暫停休息時間結束後, 仍然找不到球員</p>
+<p>兩次違例 = 落入敗部</p>
+<p>在底線連續投入3個三分球, 可以從敗部回到勝部</p>
+<p>上下半場持續在敗部的球員 = 身價低於 60 吉格幣</p>
+<h3>一定要學 C</h3>
+<p>C 是為建立 Unix 操作系統而生的程式語言, 也是近代許多高階程式語言建構的基礎, 例如, 最早的 C 程式編譯器雖然採用組合語言編寫, 但是隨後的 C 程式編譯器則可以採用舊版的 C 來編譯, 而 Python 解譯器在 1980 年代晚期出現時, 就是以 C 程式編寫, 之後雖然有採用 Java 編寫的 Jython (2001), 以 C# 編寫的 IronPython (2006), 以 RPython 編寫的 PyPy (2007), 以 Javascript 編寫的 Brython (2012), 但是 CPython 仍然是最通用的版本.</p>
+<p>儘管 C 程式語言對於工程師而言非常重要, 但是 C 或更進階的 C++ 程式語言的學習並不容易, 並不只是因為 C/C++ 擁有指標, 能夠控制電腦的底層記憶體, 而是因為 C/C++ 程式語言所涵蓋的應用非常廣.</p>
+<p>但是無論如何, 工程師一定要學會基本的  C 程式語言, 倒是毋庸置疑.</p>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="./2017fall-cp-cadp.html">
+                            計算機程式與電腦輔助設計實習
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./wcm-course-1.html">
+                            網際內容管理
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./cd-course-1.html">
+                            協同產品設計實習
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./cadp-course-1.html">
+                            電腦輔助設計實習
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./cp-course-1.html">
+                            計算機程式
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item"><a href="./categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+                <ul class="list-group" id="categories">
+                    <li class="list-group-item">
+                        <a href="./category/course.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Course
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./category/discussion.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Discussion
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./category/misc.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Misc
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./category/realization.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Realization
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./category/setup.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Setup
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./category/simulation.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Simulation
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item"><a href="./tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group list-inline tagcloud" id="tags">
+                </ul>
+            </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="https://www.nature.com/" target="_blank">
+                Nature
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.sciencemag.org/" target="_blank">
+                Science
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://www.samharris.org/" target="_blank">
+                Sam Harris
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.ieu.uzh.ch/wagner/" target="_blank">
+                Andreas Wagner
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://www.americanscientist.org/" target="_blank">
+                American Scientist
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://www.scientificamerican.com/" target="_blank">
+                Scientific American
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2017 KMOL
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="./theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./theme/js/bootstrap.min.js"></script>
+
+<!-- for https://github.com/jsor/lity lightbox video popup -->
+
+<link href="./theme/css/lity.css" rel="stylesheet">
+
+<script src="./theme/js/lity.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="./theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

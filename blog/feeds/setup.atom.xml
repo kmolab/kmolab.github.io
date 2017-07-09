@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>KMOLab 機械設計工程 - Setup</title><link href="./" rel="alternate"></link><link href="./feeds/setup.atom.xml" rel="self"></link><id>./</id><updated>2017-06-05T01:29:00+08:00</updated><entry><title>軟硬體設置</title><link href="./first-setup-blog.html" rel="alternate"></link><published>2017-06-05T01:29:00+08:00</published><updated>2017-06-05T01:29:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-05:./first-setup-blog.html</id><summary type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
+
+
+&lt;p&gt;github 倉儲與 bitbucket 倉儲利用 git remote add 同步&lt;/p&gt;
+&lt;p&gt;近端則利用 Fossil SCM 進行備份&lt;/p&gt;
+&lt;p&gt;給一台電腦, 設置到能夠提供特定的機械設計服務&lt;/p&gt;
+&lt;p&gt;主題式教學的反思&lt;/p&gt;
+&lt;p&gt;數學與軟硬體設置有關嗎?&lt;/p&gt;
+&lt;p&gt;英文與軟硬體設置有關嗎?&lt;/p&gt;
+&lt;p&gt;Pelican Blog 共用設定檔案:&lt;/p&gt;
+&lt;p&gt;pelicanconf.py&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- #
+from __future__ import unicode_literals
+
+AUTHOR = 'KMOL'
+SITENAME = 'KMOLab 機械設計工程'
+# 不要用文章所在目錄作為類別
+USE_FOLDER_AS_CATEGORY = False
+
+#PATH = 'content'
+
+#OUTPUT_PATH = 'output'
+
+TIMEZONE = 'Asia/Taipei'
+
+DEFAULT_LANG = 'en'
+
+# Feed generation is usually not desired when developing
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
+
+# Blogroll
+LINKS = (('Pelican', 'http://getpelican.com/'),
+         ('pelican-bootstrap3', 'https://github.com/DandyDev/pelican-bootstrap3/'),
+         ('pelican-plugins', 'https://github.com/getpelican/pelican-plugins'),
+         ('Tipue search', 'https://github.com/Tipue/Tipue-Search'),)
+
+# Social widget
+#SOCIAL = (('You can add links in your config file', '#'),('Another social link', '#'),)
+
+DEFAULT_PAGINATION = 10
+
+# Uncomment following line if you want document-relative URLs when developing
+#RELATIVE_URLS = True
+
+# 必須絕對目錄或相對於設定檔案所在目錄
+PLUGIN_PATHS = ['plugin']
+PLUGINS = ['summary', 'tipue_search', 'sitemap']
+
+# for sitemap plugin
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
+
+# search is for Tipue search
+DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'authors', 'archives', 'search'))
+
+# for pelican-bootstrap3 theme settings
+#TAG_CLOUD_MAX_ITEMS = 50
+DISPLAY_CATEGORIES_ON_SIDEBAR = True
+DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
+DISPLAY_TAGS_ON_SIDEBAR = True
+DISPLAY_TAGS_INLINE = True
+TAGS_URL = "tags.html"
+CATEGORIES_URL = "categories.html"
+MENUITEMS = [('About', '/blog/pages/about/')]
+#SHOW_ARTICLE_AUTHOR = True
+
+#MENUITEMS = [('Home', '/'), ('Archives', '/archives.html'), ('Search', '/search.html')]
+&lt;/pre&gt;
+
+&lt;p&gt;遠端 publishconf.py&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- #
+from __future__ import unicode_literals
+
+# This file is only used if you use `make publish` or
+# explicitly specify it as your config file.
+
+import os
+import sys
+sys.path.append(os.curdir)
+from pelicanconf import *
+
+# 因為 publishconf.py 在 pelicanconf.py 之後, 因此若兩處有相同變數的設定, 將以較後讀入的 publishconf.py 中的設定為主.
+
+# 將所有靜態 html 檔案移到 blog 子目錄
+SITEURL = 'https://kmolab.github.io/blog'
+# 此設定用於將資料送到 gh-pages, 因此使用絕對 URL 設定
+RELATIVE_URLS = False
+# 為了要讓 local 與 gh-pages 上都能夠使用 Tipue search, 可能要採用不同的 theme
+THEME = 'theme/pelican-bootstrap3'
+#BOOTSTRAP_THEME = 'readable'
+#BOOTSTRAP_THEME = 'readable-old'
+BOOTSTRAP_THEME = 'united'
+#PYGMENTS_STYLE = 'paraiso-drak'
+#PYGMENTS_STYLE = 'fruity'
+# 為了同時兼容 render_math, 必須放棄 fruity
+PYGMENTS_STYLE = 'monokai'
+
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+
+DELETE_OUTPUT_DIRECTORY = True
+
+# Following items are often useful when publishing
+
+DISQUS_SITENAME = "kmolabmde"
+#GOOGLE_ANALYTICS = ""
+
+# 設定網誌以 md 檔案建立的 file system date 為準, 無需自行設定
+DEFAULT_DATE = 'fs'
+
+# 遠端的 code hightlight
+#MD_EXTENSIONS = ['fenced_code', 'extra', 'codehilite(linenums=True)']
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
+
+# 若要依照日期存檔呼叫
+#ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+#ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+PAGE_URL = 'pages/{slug}/'
+PAGE_SAVE_AS = 'pages/{slug}/index.html'
+SHOW_ARTICLE_AUTHOR = True
+&lt;/pre&gt;
+
+&lt;p&gt;local_publishconf.py&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- #
+from __future__ import unicode_literals
+
+# This file is only used if you use `make publish` or
+# explicitly specify it as your config file.
+
+import os
+import sys
+sys.path.append(os.curdir)
+from pelicanconf import *
+
+# 因為 publishconf.py 在 pelicanconf.py 之後, 因此若兩處有相同變數的設定, 將以較後讀入的 publishconf.py 中的設定為主.
+
+# 請注意, 為了在近端讓 Tipue search 傳回的搜尋結果連結正確, 必須使用 ./
+SITEURL = './'
+# 此設定用於近端靜態網頁查驗, 因此使用相對 URL
+RELATIVE_URLS = True
+# 為了要讓 local 與 gh-pages 上都能夠使用 Tipue search, 可能要採用不同的 theme
+THEME = 'theme/pelican-bootstrap3_local'
+#BOOTSTRAP_THEME = 'readable'
+#BOOTSTRAP_THEME = 'readable-old'
+BOOTSTRAP_THEME = 'united'
+#PYGMENTS_STYLE = 'paraiso-drak'
+#PYGMENTS_STYLE = 'fruity'
+# 為了同時兼容 render_math, 必須放棄 fruity
+PYGMENTS_STYLE = 'monokai'
+
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+
+DELETE_OUTPUT_DIRECTORY = True
+
+# Following items are often useful when publishing
+
+#DISQUS_SITENAME = "kmolab"
+#GOOGLE_ANALYTICS = ""
+
+# 設定網誌以 md 檔案建立的 file system date 為準, 無需自行設定
+DEFAULT_DATE = 'fs'
+
+# 近端的 code hightlight
+#MD_EXTENSIONS = ['fenced_code', 'extra', 'codehilite(linenums=True)']
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
+
+# 若要依照日期存檔呼叫
+#ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+#ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+PAGE_URL = 'pages/{slug}/'
+PAGE_SAVE_AS = 'pages/{slug}/index.html'
+SHOW_ARTICLE_AUTHOR = True
+&lt;/pre&gt;</content><category term="機械設計"></category><category term="課程"></category></entry></feed>
