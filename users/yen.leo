@@ -210,7 +210,7 @@ make.start()
 <t tx="leo.20170706005043.3">&lt;head&gt;
     &lt;meta charset="utf-8"&gt;
 &lt;title&gt;
-2017 Spring 機械設計工程系網際內容管理
+KMOLab 機械設計工程
 &lt;/title&gt;
     &lt;meta name="description" content="A framework for easily creating beautiful presentations using HTML"&gt;
     &lt;meta name="author" content="Hakim El Hattab"&gt;
@@ -291,10 +291,10 @@ make.start()
 </t>
 <t tx="leo.20170706005043.8">## 2017Fall KMOL 課程
 
-### 虎科大機械設計工程系
+### KMOLab 機械設計工程
 
 &lt;small&gt;
-Created by [KMOLab](http://chiamingyen.github.io/kmolab/blog/)
+Created by KMOLab
 &lt;/small&gt;
 
 [2017Fall 課程網誌](blog/index.html)
@@ -318,7 +318,7 @@ Created by [KMOLab](http://chiamingyen.github.io/kmolab/blog/)
 import os
 #os.system("pelican content -o output -s local_publishconf.py -t theme/pelican-bootstrap3")
 os.system("pelican content -o blog -s publishconf.py")
-g.es("admin pelican 近端執行完畢")
+g.es("admin pelican Github 執行完畢")
 
 
 </t>
