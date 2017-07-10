@@ -104,6 +104,9 @@ KMOLab 機械設計工程            </a>
                             <a href="https://kmolab.github.io/blog/category/course.html">Course</a>
                         </li>
                         <li >
+                            <a href="https://kmolab.github.io/blog/category/courses.html">Courses</a>
+                        </li>
+                        <li >
                             <a href="https://kmolab.github.io/blog/category/discussion.html">Discussion</a>
                         </li>
                         <li >
@@ -138,10 +141,27 @@ KMOLab 機械設計工程            </a>
         <div class="col-sm-9">
 
             <article>
+                <h2><a href="https://kmolab.github.io/blog/2015-cadp-w16.html">2015 Fall CADP W16</a></h2>
+                <div class="summary"><p>根據 <a href="./../data/nutcracker/ProEMechanism.pdf">Nutcracker 機構</a>的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.</p>
+<p><img src="./../data/nutcracker/nutcracker_left_limit.png" width="600" /></p>
+<p><img src="./../data/nutcracker/nutcracker_right_limit.png" width="600" /></p>
+<p>計算 Piston 不發生干涉的有效行程, 可採如下方法:</p>
+<ol>
+<li>實際利用 Onshape 中的組立, 移動 piston 零件, 靠目測概略決定 piston 的有效行程. (目測法, 只能得到大概的行程範圍)</li>
+<li>利用 Solvespace 繪製 2D 約束圖, 然後利用約束點在線或圓上的方式, 以圖解法解出有效行程, 如下圖一, 圖二與圖三所示. (圖解法, 利用 Solvespace 既有的約束條件設定完成計算)</li>
+<li>利用 Jupyter 與 Python3 的 sympy 模組, 先進行符號式推導, 然後再利用數值分析解出 piston 的有效行程, 機構各點標示如下圖四所示, <a href="./../data/nutcracker/cadp_nutcracker.ipynb">計算出</a>的 theta 轉角為 105.7, 如下圖五所示. (以自行編寫的 sympy 程式解題, 透過 Jupyterhub 可以有效進行協同設計運算)</li>
+<li>除了上述的目測, 圖解與符號式結合數值分析法之外, 也可以採用<a href="./../data/nutcracker/ga_nutcracker1.py">基因演算法解題</a>, 計算出的 theta 轉角為 105.7, 如下圖六所示. (利用演化法解題, 可以在單機運算, 也可以在 <a href="./../data/nutcracker//cadp_nutcracker.ipynb">Jupyterhub 平台</a>上進行運算)</li>
+</ol>
+
+<p><small><a href="https://kmolab.github.io/blog/2015-cadp-w16.html#disqus_thread" data-disqus-identifier="2015-cadp-w16">View comments</a>.</small></p>                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/2015-cadp-w16.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://kmolab.github.io/blog/2017fall-cp-cadp.html">計算機程式與電腦輔助設計實習</a></h2>
                 <div class="summary"><p>以下為 Brython 網際程式環境.</p>
 
-                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/2017fall-cp-cadp.html">more ...</a>
+<p><small><a href="https://kmolab.github.io/blog/2017fall-cp-cadp.html#disqus_thread" data-disqus-identifier="2017fall-cp-cadp">View comments</a>.</small></p>                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/2017fall-cp-cadp.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -149,7 +169,7 @@ KMOLab 機械設計工程            </a>
                 <h2><a href="https://kmolab.github.io/blog/wcm-course-1.html">網際內容管理</a></h2>
                 <div class="summary"><p>網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.</p>
 
-                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/wcm-course-1.html">more ...</a>
+<p><small><a href="https://kmolab.github.io/blog/wcm-course-1.html#disqus_thread" data-disqus-identifier="wcm-course-1">View comments</a>.</small></p>                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/wcm-course-1.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -157,7 +177,7 @@ KMOLab 機械設計工程            </a>
                 <h2><a href="https://kmolab.github.io/blog/cd-course-1.html">協同產品設計實習</a></h2>
                 <div class="summary"><p>協同產品設計課程在教導學生, 以同步或非同步協同方式, 利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.</p>
 
-                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/cd-course-1.html">more ...</a>
+<p><small><a href="https://kmolab.github.io/blog/cd-course-1.html#disqus_thread" data-disqus-identifier="cd-course-1">View comments</a>.</small></p>                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/cd-course-1.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -165,7 +185,7 @@ KMOLab 機械設計工程            </a>
                 <h2><a href="https://kmolab.github.io/blog/cadp-course-1.html">電腦輔助設計實習</a></h2>
                 <div class="summary"><p>電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.</p>
 
-                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/cadp-course-1.html">more ...</a>
+<p><small><a href="https://kmolab.github.io/blog/cadp-course-1.html#disqus_thread" data-disqus-identifier="cadp-course-1">View comments</a>.</small></p>                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/cadp-course-1.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -173,7 +193,7 @@ KMOLab 機械設計工程            </a>
                 <h2><a href="https://kmolab.github.io/blog/cp-course-1.html">計算機程式</a></h2>
                 <div class="summary"><p>計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.</p>
 
-                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/cp-course-1.html">more ...</a>
+<p><small><a href="https://kmolab.github.io/blog/cp-course-1.html#disqus_thread" data-disqus-identifier="cp-course-1">View comments</a>.</small></p>                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/cp-course-1.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -181,7 +201,7 @@ KMOLab 機械設計工程            </a>
                 <h2><a href="https://kmolab.github.io/blog/first-discussion-blog.html">大學生為何不來上課?</a></h2>
                 <div class="summary"><p>所謂論述 (Discussion) 就是針對特定議題的敘述與分析, 例如: 討論有關大學生為何不來上課? 就應該是一篇論述.</p>
 
-                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/first-discussion-blog.html">more ...</a>
+<p><small><a href="https://kmolab.github.io/blog/first-discussion-blog.html#disqus_thread" data-disqus-identifier="first-discussion-blog">View comments</a>.</small></p>                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/first-discussion-blog.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -189,7 +209,7 @@ KMOLab 機械設計工程            </a>
                 <h2><a href="https://kmolab.github.io/blog/first-misc-blog.html">其他</a></h2>
                 <div class="summary"><p>不在設置, 模擬, 實作與論述類別的內容, 則放入雜項其他類別</p>
 
-                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/first-misc-blog.html">more ...</a>
+<p><small><a href="https://kmolab.github.io/blog/first-misc-blog.html#disqus_thread" data-disqus-identifier="first-misc-blog">View comments</a>.</small></p>                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/first-misc-blog.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -197,7 +217,7 @@ KMOLab 機械設計工程            </a>
                 <h2><a href="https://kmolab.github.io/blog/first-realization-blog.html">實作</a></h2>
                 <div class="summary"><p>紀錄與實作有關的內容, 實體製作</p>
 
-                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/first-realization-blog.html">more ...</a>
+<p><small><a href="https://kmolab.github.io/blog/first-realization-blog.html#disqus_thread" data-disqus-identifier="first-realization-blog">View comments</a>.</small></p>                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/first-realization-blog.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -205,19 +225,20 @@ KMOLab 機械設計工程            </a>
                 <h2><a href="https://kmolab.github.io/blog/first-simulation-blog.html">電腦模擬</a></h2>
                 <div class="summary"><p>紀錄與電腦模擬相關內容與紀錄， 使用工具 Python3, <a href="http://www.robodk.com/download">RoboDK</a></p>
 
-                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/first-simulation-blog.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://kmolab.github.io/blog/first-setup-blog.html">軟硬體設置</a></h2>
-                <div class="summary"><p>紀錄電腦與網路的軟硬體相關設置</p>
-
-                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/first-setup-blog.html">more ...</a>
+<p><small><a href="https://kmolab.github.io/blog/first-simulation-blog.html#disqus_thread" data-disqus-identifier="first-simulation-blog">View comments</a>.</small></p>                    <a class="btn btn-default btn-xs" href="https://kmolab.github.io/blog/first-simulation-blog.html">more ...</a>
                 </div>
             </article>
             <hr/>
 
+        <ul class="pagination">
+                <li class="prev disabled"><a href="#">&laquo;</a></li>
+                    <li class="active"><a
+                            href="https://kmolab.github.io/blog/index.html">1</a></li>
+                    <li class=""><a
+                            href="https://kmolab.github.io/blog/index2.html">2</a></li>
+                <li class="next"><a
+                        href="https://kmolab.github.io/blog/index2.html">&raquo;</a></li>
+        </ul>
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
@@ -227,6 +248,11 @@ KMOLab 機械設計工程            </a>
 
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/2015-cadp-w16.html">
+                            2015 Fall CADP W16
+                        </a>
+                    </li>
                     <li class="list-group-item">
                         <a href="https://kmolab.github.io/blog/2017fall-cp-cadp.html">
                             計算機程式與電腦輔助設計實習
@@ -247,11 +273,6 @@ KMOLab 機械設計工程            </a>
                             電腦輔助設計實習
                         </a>
                     </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/cp-course-1.html">
-                            計算機程式
-                        </a>
-                    </li>
                 </ul>
             </li>
 
@@ -260,6 +281,11 @@ KMOLab 機械設計工程            </a>
                     <li class="list-group-item">
                         <a href="https://kmolab.github.io/blog/category/course.html">
                             <i class="fa fa-folder-open fa-lg"></i> Course
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/category/courses.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Courses
                         </a>
                     </li>
                     <li class="list-group-item">

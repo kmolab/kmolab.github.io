@@ -8,6 +8,8 @@ KMOLab 投影片: <a href="https://kmolab.github.io">https://kmolab.github.io</a
 
 KMOLab 網誌: <a href="https://kmolab.github.io/blog">https://kmolab.github.io/blog</a>
 
+Contact: kmolab At mde dot tw
+
 ##KMOLab 信念
 
 二十一世紀的科技大學, 在培育具世界觀與在地文化素養, 能適應環境並成功面對挑戰之專業人才. 所謂專業, 即具有專長, 能夠就業之謂. 所謂文化者, 因思考及概念而有之教化. 所謂素養, 即平日的涵養.
@@ -44,6 +46,8 @@ KMOLab 網誌: <a href="https://kmolab.github.io/blog">https://kmolab.github.io/
 <img src="./../../../data/logo/kmol_rotary_570x570.png" width="300"></img>
 
 <img src="./../../../data/logo/3yrs_camel.jpg" width="300"></img>
+
+
 
 
 

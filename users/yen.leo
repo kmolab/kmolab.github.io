@@ -15,7 +15,7 @@
 </v>
 <v t="yen.20170108171622.1"><vh>有關 kmolab.github.io</vh></v>
 <v t="yen.20170108171733.1" a="E"><vh>@path ../</vh>
-<v t="leo.20170706005043.1"><vh>@clean index.html</vh>
+<v t="leo.20170706005043.1" a="E"><vh>@clean index.html</vh>
 <v t="leo.20170706005043.2" a="E"><vh>html</vh>
 <v t="leo.20170706005043.3"><vh>head</vh></v>
 <v t="leo.20170706005043.4" a="E"><vh>body</vh>
@@ -83,7 +83,7 @@
 </v>
 </v>
 </v>
-<v t="yen.20170108171733.5"><vh>Pelican 設定</vh>
+<v t="yen.20170108171733.5" a="E"><vh>Pelican 設定</vh>
 <v t="leo.20170709015940.1"><vh>近端</vh></v>
 <v t="yen.20170108171733.6"><vh>@edit local_publishconf.py</vh></v>
 <v t="leo.20170709015947.1"><vh>遠端</vh></v>
@@ -91,12 +91,14 @@
 <v t="leo.20170709020600.1"><vh>共用</vh></v>
 <v t="yen.20170108171733.7"><vh>@edit pelicanconf.py</vh></v>
 </v>
-<v t="yen.20170224232341.1"><vh>編輯 template</vh>
-<v t="yen.20170224232341.2"><vh>@path theme/pelican-bootstrap3_local/templates</vh>
+<v t="yen.20170224232341.1" a="E"><vh>編輯 template</vh>
+<v t="yen.20170224232341.2" a="E"><vh>@path theme/pelican-bootstrap3_local/templates</vh>
 <v t="yen.20170224232341.3"><vh>@edit base.html</vh></v>
 </v>
 <v t="leo.20170710015301.1" a="E"><vh>@path theme/pelican-bootstrap3/templates</vh>
 <v t="leo.20170710015311.1"><vh>@edit search.html</vh></v>
+<v t="leo.20170710095845.1"><vh>@edit base.html</vh></v>
+<v t="leo.20170710101854.1"><vh>@edit article.html</vh></v>
 </v>
 </v>
 <v t="leo.20170710015511.1" a="E"><vh>編輯 plugin</vh>
@@ -106,29 +108,53 @@
 </v>
 </v>
 </v>
-<v t="yen.20170108171733.71"><vh>@path content</vh>
+<v t="yen.20170108171733.71" a="E"><vh>@path content</vh>
+<v t="leo.20170710162557.1" a="E"><vh>軟硬體設置</vh>
 <v t="leo.20170706020010.1"><vh>@edit 20170605-1.md</vh></v>
+</v>
+<v t="leo.20170710162546.1" a="E"><vh>電腦模擬</vh>
 <v t="leo.20170706015402.1"><vh>@edit 20170605-2.md</vh></v>
+</v>
+<v t="leo.20170710162534.1" a="E"><vh>實作</vh>
 <v t="leo.20170706020035.1"><vh>@edit 20170605-3.md</vh></v>
+</v>
+<v t="leo.20170710162521.1" a="E"><vh>其他</vh>
 <v t="leo.20170706020044.1"><vh>@edit 20170605-4.md</vh></v>
+</v>
+<v t="leo.20170710162500.1" a="E"><vh>大學生為何不來上課?</vh>
 <v t="leo.20170706020055.1"><vh>@edit 20170605-5.md</vh></v>
+</v>
+<v t="leo.20170710162358.1" a="E"><vh>計算機程式</vh>
 <v t="leo.20170706020102.1"><vh>@edit 20170612-1.md</vh></v>
+</v>
+<v t="leo.20170710162347.1" a="E"><vh>電腦輔助設計實習</vh>
 <v t="leo.20170706020111.1"><vh>@edit 20170618-1.md</vh></v>
+</v>
+<v t="leo.20170710162330.1" a="E"><vh>協同產品設計實習</vh>
 <v t="leo.20170706020122.1"><vh>@edit 20170618-2.md</vh></v>
+<v t="leo.20170710162608.1"><vh>網際內容管理</vh></v>
 <v t="leo.20170706020211.1"><vh>@edit 20170618-3.md</vh></v>
+</v>
 <v t="yen.20170108171733.81" a="E"><vh>@path pages</vh>
 <v t="yen.20170108171733.82"><vh>@edit pages_1.md</vh></v>
 </v>
 </v>
 <v t="leo.20170710022054.1"><vh>可以另建節點存放 content 目錄下的 md 檔案</vh></v>
 <v t="leo.20170710022041.1" a="E"><vh>@path content</vh>
+<v t="leo.20170710162623.1"><vh>計算機程式與電腦輔助設計實習</vh>
 <v t="leo.20170710022207.1"><vh>@edit 20170618.md</vh></v>
+</v>
+<v t="leo.20170710225031.1" a="E"><vh>2015 Fall CADP W16</vh>
+<v t="leo.20170710225034.1"><vh>@edit 20170710.md</vh></v>
+</v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt</vh></v>
 </v>
 <v t="yen.20170108171930.1"><vh>@button https server</vh></v>
 <v t="yen.20170108171939.1"><vh>@button ipv6 https server</vh></v>
-<v t="leo.20170710022428.1"><vh>Git 操作</vh></v>
+<v t="leo.20170710022428.1" a="E"><vh>Git 操作</vh>
+<v t="leo.20170710022851.1"><vh>github pages</vh></v>
+</v>
 <v t="leo.20170706003834.1"><vh>Pelican 與版次管理</vh></v>
 <v t="leo.20170709091423.1"><vh>Fossil SCM 檔案格式</vh></v>
 <v t="leo.20170710000725.1"><vh>近端的 Fossil 與遠端的 Github</vh></v>
@@ -620,6 +646,20 @@ Created by KMOLab
 與舊版差別, 同一台電腦只要登入一次
 
 壞處則是若經常更換推送用戶時必須刪除認證後重新登入</t>
+<t tx="leo.20170710022851.1">因為 kmolab.github.io 為帳號對應倉儲, 因此可以使用 master branch 伺服網頁
+
+其他倉儲則只允許 gh-pages branch 伺服網頁</t>
+<t tx="leo.20170710162330.1"></t>
+<t tx="leo.20170710162347.1"></t>
+<t tx="leo.20170710162358.1"></t>
+<t tx="leo.20170710162500.1"></t>
+<t tx="leo.20170710162521.1"></t>
+<t tx="leo.20170710162534.1"></t>
+<t tx="leo.20170710162546.1"></t>
+<t tx="leo.20170710162557.1"></t>
+<t tx="leo.20170710162608.1"></t>
+<t tx="leo.20170710162623.1"></t>
+<t tx="leo.20170710225031.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

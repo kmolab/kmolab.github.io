@@ -3,12 +3,22 @@
 </summary><content type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
 
 
+&lt;h3&gt;Github, Bitbucket 與 Fossil SCM&lt;/h3&gt;
+&lt;p&gt;Github 目前提供免費無太多限制的多人協同開放倉儲使用, 唯一的限制就是單一檔案建議不能大於 50 MB, 但是若不公開倉儲就必須付費.&lt;/p&gt;
+&lt;p&gt;Bitbucket 則允許免費使用非公開的倉儲, 但是至多只允許五個帳號協同.&lt;/p&gt;
+&lt;p&gt;Fossil SCM 則適合在近端或區域網路中使用, 目前 KMOLab 希望在區網中導入作為與 Github Pages 配合的工具, 使用者可以將 Fossil SCM 的 working directory 限縮在 Github 近端倉儲的特定目錄下, 且在 .gitignore 中排除 &lt;em&gt;FOSSIL&lt;/em&gt; (under Windows) 的版次管理, 但是相關的 fossil update 與 fossil server 功能仍然必須依照特定的流程進行操作, 以避免兩套版次管理系統內容的不同步導致資料覆蓋流失.&lt;/p&gt;
 &lt;p&gt;github 倉儲與 bitbucket 倉儲利用 git remote add 同步&lt;/p&gt;
 &lt;p&gt;近端則利用 Fossil SCM 進行備份&lt;/p&gt;
 &lt;p&gt;給一台電腦, 設置到能夠提供特定的機械設計服務&lt;/p&gt;
 &lt;p&gt;主題式教學的反思&lt;/p&gt;
 &lt;p&gt;數學與軟硬體設置有關嗎?&lt;/p&gt;
 &lt;p&gt;英文與軟硬體設置有關嗎?&lt;/p&gt;
+&lt;h3&gt;Leo Editor, Pelican 與 Reveal.js&lt;/h3&gt;
+&lt;p&gt;Leo Editor 是一套能夠以程式方法有效管理多元資料的文字資料編輯器, 以下就是用來管理 KMOLab Pelican 靜態網誌有關內容的畫面, 其中的 @button local-blog 是用來產生靜態網誌的指令按鈕, @button github-blog 則是用來產生嵌入 Disqus 留言系統的 Github Pages 網誌對應指令, 兩個指令的差別在於使用不同的設定檔案, 使用者可以先利用近端的按鈕, 建立網誌後在近端以另一個 https-server 按鈕建立 https 伺服, 用瀏覽器檢查所產生的網誌內容, 一旦要送到 Github 倉儲, 必須再利用遠端按鈕產生另外一組網誌與搜尋用 .json 檔案後, 再提交推送到倉儲.&lt;/p&gt;
+&lt;p&gt;在這個過程中, 使用者依照 Pelican 的特定 Markdown 檔案編寫網誌內容外, Leo Editor 專案檔中也可以放入其他有關的註記與設定檔案編輯用的節點. 若需要在 Pelican 的環境中修改設定, 都可以全部在一個 Leo Editor 專案檔中完成.&lt;/p&gt;
+&lt;p&gt;&lt;img src="./../data/images/leo_editor_kmolab.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;Leo Editor 另外一項有用的特定就是能夠利用從屬節點關係與內文指令來表示複雜的 html 檔案, 如下圖所示, 各段落的超文件標註可以利用節點加以切割, 使用者在編寫 reveal.js 投影片時, 可以只集中在特定簡報內容的編寫, 並且透過節點的複製與搬移, 甚至使用 Leo Editor 的節點 clone 功能, 同步相同內容但是同時出現在不同位置的節點.&lt;/p&gt;
+&lt;p&gt;&lt;img src="./../data/images/reveal_slide_on_leo_editor.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;Pelican Blog 共用設定檔案:&lt;/p&gt;
 &lt;p&gt;pelicanconf.py&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
@@ -185,7 +195,7 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = "kmolab"
+#DISQUS_SITENAME = "kmolabmde"
 #GOOGLE_ANALYTICS = ""
 
 # 設定網誌以 md 檔案建立的 file system date 為準, 無需自行設定
@@ -208,4 +218,4 @@ MARKDOWN = {
 PAGE_URL = 'pages/{slug}/'
 PAGE_SAVE_AS = 'pages/{slug}/index.html'
 SHOW_ARTICLE_AUTHOR = True
-&lt;/pre&gt;</content><category term="機械設計"></category><category term="課程"></category></entry></feed>
+&lt;/pre&gt;</content><category term="Github"></category><category term="Bitbucket"></category><category term="Fossil SCM"></category><category term="Leo Editor"></category><category term="Pelican"></category><category term="Reveal.js"></category></entry></feed>

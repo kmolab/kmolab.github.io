@@ -68,7 +68,13 @@ for stud_num in alist:
 </summary><content type="html">&lt;p&gt;協同產品設計課程在教導學生, 以同步或非同步協同方式, 利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
 </content><category term="協同產品設計實習"></category><category term="課程"></category></entry><entry><title>電腦輔助設計實習</title><link href="https://kmolab.github.io/blog/cadp-course-1.html" rel="alternate"></link><published>2017-06-18T11:00:00+08:00</published><updated>2017-06-18T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/cadp-course-1.html</id><summary type="html">&lt;p&gt;電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
-</content><category term="電腦輔助設計實習"></category><category term="課程"></category></entry><entry><title>計算機程式</title><link href="https://kmolab.github.io/blog/cp-course-1.html" rel="alternate"></link><published>2017-06-12T11:00:00+08:00</published><updated>2017-06-12T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-12:/blog/cp-course-1.html</id><summary type="html">&lt;p&gt;計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.&lt;/p&gt;
+
+
+&lt;p&gt;CAD Book: &lt;a href="http://mde.tw/2016fallcadp/data/CAD_book.pdf"&gt;http://mde.tw/2016fallcadp/data/CAD_book.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://link.springer.com/content/pdf/10.1007%2F978-3-319-03862-9.pdf"&gt;Space Modeling with SolidWorks and NX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://beyondplm.com/2015/03/18/autodesk-and-onshape-disagree-about-cloud-technology-and-focus/"&gt;http://beyondplm.com/2015/03/18/autodesk-and-onshape-disagree-about-cloud-technology-and-focus/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.solidsmack.com/cad/onshape-comes-out-swinging-changes-mcad-pricing-forever/"&gt;https://www.solidsmack.com/cad/onshape-comes-out-swinging-changes-mcad-pricing-forever/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://newscrewdriver.com/category/3d-printing/3d-printing-software/fusion-360-vs-onshape/"&gt;https://newscrewdriver.com/category/3d-printing/3d-printing-software/fusion-360-vs-onshape/&lt;/a&gt;&lt;/p&gt;</content><category term="電腦輔助設計實習"></category><category term="課程"></category></entry><entry><title>計算機程式</title><link href="https://kmolab.github.io/blog/cp-course-1.html" rel="alternate"></link><published>2017-06-12T11:00:00+08:00</published><updated>2017-06-12T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-12:/blog/cp-course-1.html</id><summary type="html">&lt;p&gt;計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.&lt;/p&gt;
 
 
@@ -127,20 +133,9 @@ for stud_num in alist:
 &lt;p&gt;免費的最貴&lt;/p&gt;
 &lt;p&gt;自由的好處&lt;/p&gt;
 &lt;p&gt;自由的壞處&lt;/p&gt;
-&lt;h3&gt;假如修習課程是一場選秀球賽&lt;/h3&gt;
-&lt;p&gt;選秀過程分為上下兩個半場, 半場結束各球員身上會有兩種標價, 一種是球員自身的評價, 另一種則是選秀主持團對各球員的評價&lt;/p&gt;
-&lt;p&gt;為了有效評定各球員在選秀結束後的身價, 一開始所有球員尚未上場展示球技之前, 全部都屬於勝部組, 隨著上半場結束前, 部份球員可能因為犯規或違例而落入敗部, 敗部球員若要轉回勝部則必須額外展示球技, 例如, 若球賽為籃球, 若敗部球員可以在底線連續投入3個三分球, 就可以即刻從敗部重新回到勝部.&lt;/p&gt;
-&lt;h3&gt;選秀規則&lt;/h3&gt;
-&lt;p&gt;犯規: 沒能帶筆記本或在筆記本中紀錄當天的上課內容與心得者&lt;/p&gt;
-&lt;p&gt;犯規: 每週分組賽結束後, 各組員未能有效陳述該場球賽過程者&lt;/p&gt;
-&lt;p&gt;犯規: 在電腦教室中用餐或喝開水之外的飲料者&lt;/p&gt;
-&lt;p&gt;三次犯規 = 一次違例&lt;/p&gt;
-&lt;p&gt;違例: 分組球賽開始, 裁判已經追哨後, 仍然找不到球員&lt;/p&gt;
-&lt;p&gt;違例: 分組球賽進行中, 暫停休息時間結束後, 仍然找不到球員&lt;/p&gt;
-&lt;p&gt;兩次違例 = 落入敗部&lt;/p&gt;
-&lt;p&gt;在底線連續投入3個三分球, 可以從敗部回到勝部&lt;/p&gt;
-&lt;p&gt;上下半場持續在敗部的球員 = 身價低於 60 吉格幣&lt;/p&gt;
 &lt;h3&gt;一定要學 C&lt;/h3&gt;
 &lt;p&gt;C 是為建立 Unix 操作系統而生的程式語言, 也是近代許多高階程式語言建構的基礎, 例如, 最早的 C 程式編譯器雖然採用組合語言編寫, 但是隨後的 C 程式編譯器則可以採用舊版的 C 來編譯, 而 Python 解譯器在 1980 年代晚期出現時, 就是以 C 程式編寫, 之後雖然有採用 Java 編寫的 Jython (2001), 以 C# 編寫的 IronPython (2006), 以 RPython 編寫的 PyPy (2007), 以 Javascript 編寫的 Brython (2012), 但是 CPython 仍然是最通用的版本.&lt;/p&gt;
 &lt;p&gt;儘管 C 程式語言對於工程師而言非常重要, 但是 C 或更進階的 C++ 程式語言的學習並不容易, 並不只是因為 C/C++ 擁有指標, 能夠控制電腦的底層記憶體, 而是因為 C/C++ 程式語言所涵蓋的應用非常廣.&lt;/p&gt;
-&lt;p&gt;但是無論如何, 工程師一定要學會基本的  C 程式語言, 倒是毋庸置疑.&lt;/p&gt;</content><category term="計算機程式"></category><category term="課程"></category></entry></feed>
+&lt;p&gt;但是無論如何, 工程師一定要學會基本的  C 程式語言, 倒是毋庸置疑.&lt;/p&gt;
+&lt;h3&gt;CP to CADP&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/cptocadp"&gt;https://github.com/2015fallhw/cptocadp&lt;/a&gt;&lt;/p&gt;</content><category term="計算機程式"></category><category term="課程"></category></entry></feed>
