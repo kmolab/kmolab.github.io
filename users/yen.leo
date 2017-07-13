@@ -141,11 +141,14 @@
 </v>
 <v t="leo.20170710022054.1"><vh>可以另建節點存放 content 目錄下的 md 檔案</vh></v>
 <v t="leo.20170710022041.1" a="E"><vh>@path content</vh>
-<v t="leo.20170710162623.1"><vh>計算機程式與電腦輔助設計實習</vh>
+<v t="leo.20170710162623.1" a="E"><vh>計算機程式與電腦輔助設計實習</vh>
 <v t="leo.20170710022207.1"><vh>@edit 20170618.md</vh></v>
 </v>
 <v t="leo.20170710225031.1" a="E"><vh>2015 Fall CADP W16</vh>
 <v t="leo.20170710225034.1"><vh>@edit 20170710.md</vh></v>
+</v>
+<v t="leo.20170714000548.1" a="E"><vh>Create a multi-repository Fossil Server</vh>
+<v t="leo.20170714000620.1"><vh>@edit 20170714.md</vh></v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt</vh></v>
@@ -660,6 +663,7 @@ Created by KMOLab
 <t tx="leo.20170710162608.1"></t>
 <t tx="leo.20170710162623.1"></t>
 <t tx="leo.20170710225031.1"></t>
+<t tx="leo.20170714000548.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
