@@ -147,11 +147,14 @@
 <v t="leo.20170710225031.1" a="E"><vh>2015 Fall CADP W16</vh>
 <v t="leo.20170710225034.1"><vh>@edit 20170710.md</vh></v>
 </v>
-<v t="leo.20170714000548.1" a="E"><vh>Create a multi-repository Fossil Server</vh>
+<v t="leo.20170714000548.1"><vh>Create a multi-repository Fossil Server</vh>
 <v t="leo.20170714000620.1"><vh>@edit 20170714.md</vh></v>
 </v>
+<v t="yen.20170731134418.1" a="E"><vh>PyQt5 calculator</vh>
+<v t="yen.20170731134425.1"><vh>@edit 20170731.md</vh></v>
 </v>
-<v t="yen.20170108171733.83"><vh>產生 .key 與 .crt</vh></v>
+</v>
+<v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
 </v>
 <v t="yen.20170108171930.1"><vh>@button https server</vh></v>
 <v t="yen.20170108171939.1"><vh>@button ipv6 https server</vh></v>
@@ -815,5 +818,6 @@ make = threading.Thread(target=domake)
 make.start()</t>
 <t tx="yen.20170224232341.1"></t>
 <t tx="yen.20170224232341.2"></t>
+<t tx="yen.20170731134418.1"></t>
 </tnodes>
 </leo_file>

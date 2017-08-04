@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Calculator in PyQt5 and Eric6 - KMOLab 機械設計工程</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+-->
+
+<!-- for LaTeX equations -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+
+<link rel="canonical" href="https://kmolab.github.io/blog/calculator-pyqt5-eric6.html">
+
+        <meta name="author" content="yen" />
+        <meta name="keywords" content="計算機程式,PyQt5" />
+        <meta name="description" content="根據 http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html 利用 Eric6 與 PyQt5 開發簡單的計算機視窗程式." />
+
+        <meta property="og:site_name" content="KMOLab 機械設計工程" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Calculator in PyQt5 and Eric6"/>
+        <meta property="og:url" content="https://kmolab.github.io/blog/calculator-pyqt5-eric6.html"/>
+        <meta property="og:description" content="根據 http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html 利用 Eric6 與 PyQt5 開發簡單的計算機視窗程式."/>
+        <meta property="article:published_time" content="2017-07-31" />
+            <meta property="article:section" content="Course" />
+            <meta property="article:tag" content="計算機程式" />
+            <meta property="article:tag" content="PyQt5" />
+            <meta property="article:author" content="yen" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://kmolab.github.io/blog/theme/css/bootstrap.united.min.css" type="text/css"/>
+    <link href="https://kmolab.github.io/blog/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://kmolab.github.io/blog/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="https://kmolab.github.io/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://kmolab.github.io/blog/theme/css/style.css" type="text/css"/>
+
+        <link href="https://kmolab.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="KMOLab 機械設計工程 ATOM Feed"/>
+
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushMakefile.min.js"></script>
+<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushMakefile.js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shCore.css";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "https://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://kmolab.github.io/blog/" class="navbar-brand">
+KMOLab 機械設計工程            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="/blog/pages/about/">About</a></li>
+                         <li><a href="https://kmolab.github.io/blog/pages/about/">
+                             About
+                          </a></li>
+                        <li class="active">
+                            <a href="https://kmolab.github.io/blog/category/course.html">Course</a>
+                        </li>
+                        <li >
+                            <a href="https://kmolab.github.io/blog/category/discussion.html">Discussion</a>
+                        </li>
+                        <li >
+                            <a href="https://kmolab.github.io/blog/category/misc.html">Misc</a>
+                        </li>
+                        <li >
+                            <a href="https://kmolab.github.io/blog/category/realization.html">Realization</a>
+                        </li>
+                        <li >
+                            <a href="https://kmolab.github.io/blog/category/setup.html">Setup</a>
+                        </li>
+                        <li >
+                            <a href="https://kmolab.github.io/blog/category/simulation.html">Simulation</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><span>
+                <form class="navbar-search" action="https://kmolab.github.io/blog/search.html">
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+              <li><a href="https://kmolab.github.io/blog/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="https://kmolab.github.io/blog/calculator-pyqt5-eric6.html"
+                       rel="bookmark"
+                       title="Permalink to Calculator in PyQt5 and Eric6">
+                        Calculator in PyQt5 and Eric6
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-07-31T12:00:00+08:00"> Mon 31 July 2017</time>
+    </span>
+            <span class="label label-default">By</span>
+            <a href="https://kmolab.github.io/blog/author/yen.html"><i class="fa fa-user"></i> yen</a>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="https://kmolab.github.io/blog/tag/ji-suan-ji-cheng-shi.html">計算機程式</a>
+        /
+	<a href="https://kmolab.github.io/blog/tag/pyqt5.html">PyQt5</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>根據 <a href="http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html">http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html</a> 利用 Eric6 與 PyQt5 開發簡單的計算機視窗程式.</p>
+
+
+<p>The example consists of two classes:</p>
+<p>Calculator is the calculator widget, with all the calculator functionality.</p>
+<p>Button is the widget used for each of the calculator button. It derives from QToolButton.</p>
+<p>The Calculator class provides a simple calculator widget. It inherits from QDialog and has several private slots associated with the calculator's buttons. QObject::eventFilter() is reimplemented to handle mouse events on the calculator's display.</p>
+<p>Buttons are grouped in categories according to their behavior. For example, all the digit buttons (labeled 0 to 9) append a digit to the current operand. For these, we connect multiple buttons to the same slot (e.g., digitClicked()). The categories are digits, unary operators (Sqrt, x², 1/x), additive operators (+, -), and multiplicative operators (×, ÷). The other buttons have their own slots.</p>
+<p>The private createButton() function is used as part of the widget construction. abortOperation() is called whenever a division by zero occurs or when a square root operation is applied to a negative number. calculate() applies a binary operator (+, -, ×, or ÷).</p>
+<p>These variables, together with the contents of the calculator display (a QLineEdit), encode the state of the calculator:</p>
+<p>sumInMemory contains the value stored in the calculator's memory (using MS, M+, or MC).</p>
+<p>sumSoFar stores the value accumulated so far. When the user clicks =, sumSoFar is recomputed and shown on the display. Clear All resets sumSoFar to zero.</p>
+<p>factorSoFar stores a temporary value when doing multiplications and divisions.</p>
+<p>pendingAdditiveOperator stores the last additive operator clicked by the user.</p>
+<p>pendingMultiplicativeOperator stores the last multiplicative operator clicked by the user.</p>
+<p>waitingForOperand is true when the calculator is expecting the user to start typing an operand.</p>
+<p>Additive and multiplicative operators are treated differently because they have different precedences. For example, 1 + 2 ÷ 3 is interpreted as 1 + (2 ÷ 3) because ÷ has higher precedence than +.</p>
+<p>The table below shows the evolution of the calculator state as the user enters a mathematical expression.</p>
+<p>User Input  Display Sum so Far  Add. Op.    Factor so Far   Mult. Op.   Waiting for Operand?
+0   0               true
+1   1   0               false
+1 + 1   1   +           true
+1 + 2   2   1   +           false
+1 + 2 ÷ 2   1   +   2   ÷   true
+1 + 2 ÷ 3   3   1   +   2   ÷   false
+1 + 2 ÷ 3 - 1.66667 1.66667 -           true
+1 + 2 ÷ 3 - 4   4   1.66667 -           false
+1 + 2 ÷ 3 - 4 = -2.33333    0               true</p>
+<p>Unary operators, such as Sqrt, require no special handling; they can be applied immediately since the operand is already known when the operator button is clicked.</p>
+<p>Finally, we declare the variables associated with the display and the buttons used to display numerals.</p>
+<p>In the constructor, we initialize the calculator's state. The pendingAdditiveOperator and pendingMultiplicativeOperator variables don't need to be initialized explicitly, because the QString constructor initializes them to empty strings.</p>
+<p>We create the QLineEdit representing the calculator's display and set up some of its properties. In particular, we set it to be read-only.</p>
+<p>We also enlarge display's font by 8 points.</p>
+<p>For each button, we call the private createButton() function with the proper text label and a slot to connect to the button.</p>
+<p>The layout is handled by a single QGridLayout. The QLayout::setSizeConstraint() call ensures that the Calculator widget is always shown as its optimal size (its size hint), preventing the user from resizing the calculator. The size hint is determined by the size and size policy of the child widgets.</p>
+<p>Most child widgets occupy only one cell in the grid layout. For these, we only need to pass a row and a column to QGridLayout::addWidget(). The display, backspaceButton, clearButton, and clearAllButton widgets occupy more than one column; for these we must also pass a row span and a column span.</p>
+<p>Pressing one of the calculator's digit buttons will emit the button's clicked() signal, which will trigger the digitClicked() slot.</p>
+<p>First, we find out which button sent the signal using QObject::sender(). This function returns the sender as a QObject pointer. Since we know that the sender is a Button object, we can safely cast the QObject. We could have used a C-style cast or a C++ static_cast&lt;&gt;(), but as a defensive programming technique we use a qobject_cast(). The advantage is that if the object has the wrong type, a null pointer is returned. Crashes due to null pointers are much easier to diagnose than crashes due to unsafe casts. Once we have the button, we extract the operator using QToolButton::text().</p>
+<p>The slot needs to consider two situations in particular. If display contains "0" and the user clicks the 0 button, it would be silly to show "00". And if the calculator is in a state where it is waiting for a new operand, the new digit is the first digit of that new operand; in that case, any result of a previous calculation must be cleared first.</p>
+<p>At the end, we append the new digit to the value in the display.</p>
+<p>The unaryOperatorClicked() slot is called whenever one of the unary operator buttons is clicked. Again a pointer to the clicked button is retrieved using QObject::sender(). The operator is extracted from the button's text and stored in clickedOperator. The operand is obtained from display.</p>
+<p>Then we perform the operation. If Sqrt is applied to a negative number or 1/x to zero, we call abortOperation(). If everything goes well, we display the result of the operation in the line edit and we set waitingForOperand to true. This ensures that if the user types a new digit, the digit will be considered as a new operand, instead of being appended to the current value.</p>
+<p>The additiveOperatorClicked() slot is called when the user clicks the + or - button.</p>
+<p>Before we can actually do something about the clicked operator, we must handle any pending operations. We start with the multiplicative operators, since these have higher precedence than additive operators:</p>
+<p>If × or ÷ has been clicked earlier, without clicking = afterward, the current value in the display is the right operand of the × or ÷ operator and we can finally perform the operation and update the display.</p>
+<p>If + or - has been clicked earlier, sumSoFar is the left operand and the current value in the display is the right operand of the operator. If there is no pending additive operator, sumSoFar is simply set to be the text in the display.</p>
+<p>Finally, we can take care of the operator that was just clicked. Since we don't have the right-hand operand yet, we store the clicked operator in the pendingAdditiveOperator variable. We will apply the operation later, when we have a right operand, with sumSoFar as the left operand.</p>
+<p>The multiplicativeOperatorClicked() slot is similar to additiveOperatorClicked(). We don't need to worry about pending additive operators here, because multiplicative operators have precedence over additive operators.</p>
+<p>Like in additiveOperatorClicked(), we start by handling any pending multiplicative and additive operators. Then we display sumSoFar and reset the variable to zero. Resetting the variable to zero is necessary to avoid counting the value twice.</p>
+<p>The pointClicked() slot adds a decimal point to the content in display.</p>
+<p>The changeSignClicked() slot changes the sign of the value in display. If the current value is positive, we prepend a minus sign; if the current value is negative, we remove the first character from the value (the minus sign).</p>
+<p>The backspaceClicked() removes the rightmost character in the display. If we get an empty string, we show "0" and set waitingForOperand to true.</p>
+<p>The clear() slot resets the current operand to zero. It is equivalent to clicking Backspace enough times to erase the entire operand.</p>
+<p>The clearAll() slot resets the calculator to its initial state.</p>
+<p>The clearMemory() slot erases the sum kept in memory, readMemory() displays the sum as an operand, setMemory() replace the sum in memory with the current sum, and addToMemory() adds the current value to the value in memory. For setMemory() and addToMemory(), we start by calling equalClicked() to update sumSoFar and the value in the display.</p>
+<p>The private createButton() function is called from the constructor to create calculator buttons.</p>
+<p>The private abortOperation() function is called whenever a calculation fails. It resets the calculator state and displays "####".</p>
+<p>The private calculate() function performs a binary operation. The right operand is given by rightOperand. For additive operators, the left operand is sumSoFar; for multiplicative operators, the left operand is factorSoFar. The function return false if a division by zero occurs.</p>
+<p>$$H\frac{d^{2}\theta (t)}{dt^{2}} = gSin\theta(t)+a_2(t)H-a_1(t)Cos\theta(t)$$</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'kmolabmde'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'calculator-pyqt5-eric6';
+                var disqus_url = 'https://kmolab.github.io/blog/calculator-pyqt5-eric6.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/calculator-pyqt5-eric6.html">
+                            Calculator in PyQt5 and Eric6
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/create-a-multi-repository-fossil-scm-server.html">
+                            Create a Multi-repository Fossil SCM Server
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/2015-cadp-w16.html">
+                            2015 Fall CADP W16
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/2017fall-cp-cadp.html">
+                            計算機程式與電腦輔助設計實習
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/wcm-course-1.html">
+                            網際內容管理
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item"><a href="https://kmolab.github.io/blog/categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+                <ul class="list-group" id="categories">
+                    <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/category/course.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Course
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/category/discussion.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Discussion
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/category/misc.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Misc
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/category/realization.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Realization
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/category/setup.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Setup
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/category/simulation.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Simulation
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item"><a href="https://kmolab.github.io/blog/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group list-inline tagcloud" id="tags">
+                </ul>
+            </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="https://www.nature.com/" target="_blank">
+                Nature
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.sciencemag.org/" target="_blank">
+                Science
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://www.samharris.org/" target="_blank">
+                Sam Harris
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.ieu.uzh.ch/wagner/" target="_blank">
+                Andreas Wagner
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://www.americanscientist.org/" target="_blank">
+                American Scientist
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://www.scientificamerican.com/" target="_blank">
+                Scientific American
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2017 KMOL
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="https://kmolab.github.io/blog/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://kmolab.github.io/blog/theme/js/bootstrap.min.js"></script>
+
+<!-- for https://github.com/jsor/lity lightbox video popup -->
+
+<link href="https://kmolab.github.io/blog/theme/css/lity.css" rel="stylesheet">
+
+<script src="https://kmolab.github.io/blog/theme/js/lity.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="https://kmolab.github.io/blog/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'kmolabmde'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>
