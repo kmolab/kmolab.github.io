@@ -30,6 +30,9 @@
 <v t="leo.20170706005043.11" a="E"><vh>溝通與表達</vh>
 <v t="leo.20170706005043.12"><vh>溝通與表達內容</vh></v>
 </v>
+<v t="leo.20170820171135.1" a="E"><vh>USB隨身碟</vh>
+<v t="leo.20170820171135.2"><vh>USB隨身碟內容</vh></v>
+</v>
 <v t="leo.20170706005043.13"><vh>各式內容引用範例</vh>
 <v t="leo.20170706005043.14" a="E"><vh>導入數學符號與方程式</vh>
 <v t="leo.20170706005043.15"><vh>LaTeX 格式方程式</vh></v>
@@ -161,7 +164,9 @@
 <v t="leo.20170710022428.1" a="E"><vh>Git 操作</vh>
 <v t="leo.20170710022851.1"><vh>github pages</vh></v>
 </v>
-<v t="leo.20170706003834.1"><vh>Pelican 與版次管理</vh></v>
+<v t="leo.20170706003834.1" a="E"><vh>Pelican 與版次管理</vh>
+<v t="leo.20170820195907.1"><vh>加入  table style</vh></v>
+</v>
 <v t="leo.20170709091423.1"><vh>Fossil SCM 檔案格式</vh></v>
 <v t="leo.20170710000725.1"><vh>近端的 Fossil 與遠端的 Github</vh></v>
 </vnodes>
@@ -197,10 +202,10 @@
 
 * 溝通 communication
 * 表達 presentation
-* 設定溝, 如何通?
-* 如何表? 是否達?
-* 溝通才有共識
-* 表達方能了解彼此
+* 如何溝通?
+* 如何表達?
+* 溝通才能彼此建立共識
+* 表達才能讓人體察內容
 
 </t>
 <t tx="leo.20170706005043.13">&lt;section&gt;
@@ -667,6 +672,41 @@ Created by KMOLab
 <t tx="leo.20170710162623.1"></t>
 <t tx="leo.20170710225031.1"></t>
 <t tx="leo.20170714000548.1"></t>
+<t tx="leo.20170820171135.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170820171135.2"># 隨身碟速度 (理論頻寬)
+
+* USB 2.0 - 480 megabits/s
+* USB 3.0 - 5000 megabits/s
+* Sata HD - 6000 megabits/s
+* USB 3.1 - 10000 megabits/s
+* SSD PCI-E - 10000 megabits/s
+
+</t>
+<t tx="leo.20170820195907.1">在 template 中的兩個 base.html 加入
+
+&lt;style&gt;
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+&lt;/style&gt;</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

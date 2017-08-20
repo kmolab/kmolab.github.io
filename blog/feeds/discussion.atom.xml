@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>KMOLab 機械設計工程</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/discussion.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2017-06-05T05:29:00+08:00</updated><entry><title>大學生為何不來上課?</title><link href="https://kmolab.github.io/blog/first-discussion-blog.html" rel="alternate"></link><published>2017-06-05T05:29:00+08:00</published><updated>2017-06-05T05:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:blog/first-discussion-blog.html</id><summary type="html">&lt;p&gt;所謂論述 (Discussion) 就是針對特定議題的敘述與分析, 例如: 討論有關大學生為何不來上課? 就應該是一篇論述.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>KMOLab 機械設計工程 - Discussion</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/discussion.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2017-06-05T05:29:00+08:00</updated><entry><title>大學生為何不來上課?</title><link href="https://kmolab.github.io/blog/first-discussion-blog.html" rel="alternate"></link><published>2017-06-05T05:29:00+08:00</published><updated>2017-06-05T05:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:/blog/first-discussion-blog.html</id><summary type="html">&lt;p&gt;所謂論述 (Discussion) 就是針對特定議題的敘述與分析, 例如: 討論有關大學生為何不來上課? 就應該是一篇論述.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;所謂論述 (Discussion) 就是針對特定議題的敘述與分析, 例如: 討論有關大學生為何不來上課? 就應該是一篇論述.&lt;/p&gt;
 
 
 &lt;h3&gt;大學生為何不來上課?&lt;/h3&gt;
@@ -21,4 +22,4 @@
 &lt;p&gt;&lt;a href="https://www.cheers.com.tw/blog/blogTopic.action?id=425&amp;amp;nid=5513"&gt;https://www.cheers.com.tw/blog/blogTopic.action?id=425&amp;amp;nid=5513&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.thenewslens.com/article/664"&gt;https://www.thenewslens.com/article/664&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://shinphotos.com/2014-03-08-297/"&gt;https://shinphotos.com/2014-03-08-297/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.businessweekly.com.tw/article.aspx?id=1124&amp;amp;type=Blog"&gt;http://www.businessweekly.com.tw/article.aspx?id=1124&amp;amp;type=Blog&lt;/a&gt;&lt;/p&gt;</summary><category term="機械設計"></category><category term="課程"></category></entry></feed>
+&lt;p&gt;&lt;a href="http://www.businessweekly.com.tw/article.aspx?id=1124&amp;amp;type=Blog"&gt;http://www.businessweekly.com.tw/article.aspx?id=1124&amp;amp;type=Blog&lt;/a&gt;&lt;/p&gt;</content><category term="機械設計"></category><category term="課程"></category></entry></feed>

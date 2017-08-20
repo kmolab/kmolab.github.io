@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>KMOLab 機械設計工程</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2017-07-31T12:00:00+08:00</updated><entry><title>Calculator in PyQt5 and Eric6</title><link href="https://kmolab.github.io/blog/calculator-pyqt5-eric6.html" rel="alternate"></link><published>2017-07-31T12:00:00+08:00</published><updated>2017-07-31T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-31:blog/calculator-pyqt5-eric6.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html"&gt;http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html&lt;/a&gt; 利用 Eric6 與 PyQt5 開發簡單的計算機視窗程式.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>KMOLab 機械設計工程</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2017-07-31T12:00:00+08:00</updated><entry><title>Calculator in PyQt5 and Eric6</title><link href="https://kmolab.github.io/blog/calculator-pyqt5-eric6.html" rel="alternate"></link><published>2017-07-31T12:00:00+08:00</published><updated>2017-07-31T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-31:/blog/calculator-pyqt5-eric6.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html"&gt;http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html&lt;/a&gt; 利用 Eric6 與 PyQt5 開發簡單的計算機視窗程式.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;根據 &lt;a href="http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html"&gt;http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html&lt;/a&gt; 利用 Eric6 與 PyQt5 開發簡單的計算機視窗程式.&lt;/p&gt;
 
 
 &lt;p&gt;The example consists of two classes:&lt;/p&gt;
@@ -17,17 +18,54 @@
 &lt;p&gt;waitingForOperand is true when the calculator is expecting the user to start typing an operand.&lt;/p&gt;
 &lt;p&gt;Additive and multiplicative operators are treated differently because they have different precedences. For example, 1 + 2 ÷ 3 is interpreted as 1 + (2 ÷ 3) because ÷ has higher precedence than +.&lt;/p&gt;
 &lt;p&gt;The table below shows the evolution of the calculator state as the user enters a mathematical expression.&lt;/p&gt;
-&lt;p&gt;User Input  Display Sum so Far  Add. Op.    Factor so Far   Mult. Op.   Waiting for Operand?
-0   0               true
-1   1   0               false
-1 + 1   1   +           true
-1 + 2   2   1   +           false
-1 + 2 ÷ 2   1   +   2   ÷   true
-1 + 2 ÷ 3   3   1   +   2   ÷   false
-1 + 2 ÷ 3 - 1.66667 1.66667 -           true
-1 + 2 ÷ 3 - 4   4   1.66667 -           false
-1 + 2 ÷ 3 - 4 = -2.33333    0               true&lt;/p&gt;
-&lt;p&gt;Unary operators, such as Sqrt, require no special handling; they can be applied immediately since the operand is already known when the operator button is clicked.&lt;/p&gt;
+&lt;p&gt;Waiting for Operand? 等待運算處理對象?&lt;/p&gt;
+&lt;p&gt;Add. Op. - 加或減運算元,若隨後無乘與除等優先運算元, 且按下等於或接著按加或減運算元, 則前段隨即完成運算後列在 Sum so Far 欄位.&lt;/p&gt;
+&lt;p&gt;Mul. Op. - 乘或除運算元, 屬於優先運算元, 因此若輸入已經滿足運算數接優先運算元, 再接其他運算元則 將局部優先運算所需的前方運算數, 放入 Factor so Far, 而前面未處理的加或減運算數, 則放入 Sum so Far.&lt;/p&gt;
+&lt;!-- 這裡在測試 template 中 base.html head 標註中所加入的 style 標註用法 --&gt;
+
+&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;User Input&lt;/th&gt; &lt;th&gt;Display&lt;/th&gt;    &lt;th&gt;Sum so Far&lt;/th&gt; &lt;th&gt;Add. Op.&lt;/ht&gt;   &lt;th&gt;Factor so Far&lt;/th&gt;  &lt;th&gt;Mult. Op.&lt;/th&gt;  &lt;th&gt;Waiting for Operand?&lt;/th&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt; &lt;td&gt;0&lt;/td&gt;    &lt;td&gt;0&lt;/td&gt;  &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;           &lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;  &lt;td&gt;1&lt;/td&gt;  &lt;td&gt;0&lt;/td&gt;  &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;           &lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1 +&lt;/td&gt;    &lt;td&gt;1&lt;/td&gt;  &lt;td&gt;1&lt;/td&gt;  &lt;td&gt;+&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;          &lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1 + 2&lt;/td&gt;  &lt;td&gt;2&lt;/td&gt;  &lt;td&gt;1&lt;/td&gt;  &lt;td&gt;+&lt;/td&gt;  &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;     &lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1 + 2 ÷&lt;/td&gt;    &lt;td&gt;2&lt;/td&gt;  &lt;td&gt;1&lt;/td&gt;  &lt;td&gt;+&lt;/td&gt;  &lt;td&gt;2&lt;/td&gt;  &lt;td&gt;÷&lt;/td&gt; &lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1 + 2 ÷ 3&lt;/td&gt;  &lt;td&gt;3&lt;/td&gt;  &lt;td&gt;1&lt;/td&gt;  &lt;td&gt;+&lt;/td&gt;  &lt;td&gt;2&lt;/td&gt;  &lt;td&gt;÷&lt;/td&gt;  &lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1 + 2 ÷ 3 -&lt;/td&gt;    &lt;td&gt;1.66667&lt;/td&gt;    &lt;td&gt;1.66667&lt;/td&gt;    &lt;td&gt;-&lt;/td&gt;  &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;     &lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1 + 2 ÷ 3 - 4&lt;/td&gt;  &lt;td&gt;4&lt;/td&gt;  &lt;td&gt;1.66667&lt;/td&gt;    &lt;td&gt;-&lt;/td&gt;      &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1 + 2 ÷ 3 - 4 =&lt;/td&gt;    &lt;td&gt;-2.33333&lt;/td&gt;   &lt;td&gt;0&lt;/td&gt;      &lt;td&gt;&lt;/td&gt;   &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Unary operators, such as Sqrt, require no special handling; they can be applied immediately since the operand is already known when the operator button is clicked.&lt;/p&gt;
 &lt;p&gt;Finally, we declare the variables associated with the display and the buttons used to display numerals.&lt;/p&gt;
 &lt;p&gt;In the constructor, we initialize the calculator's state. The pendingAdditiveOperator and pendingMultiplicativeOperator variables don't need to be initialized explicitly, because the QString constructor initializes them to empty strings.&lt;/p&gt;
 &lt;p&gt;We create the QLineEdit representing the calculator's display and set up some of its properties. In particular, we set it to be read-only.&lt;/p&gt;
@@ -56,8 +94,8 @@
 &lt;p&gt;The clearMemory() slot erases the sum kept in memory, readMemory() displays the sum as an operand, setMemory() replace the sum in memory with the current sum, and addToMemory() adds the current value to the value in memory. For setMemory() and addToMemory(), we start by calling equalClicked() to update sumSoFar and the value in the display.&lt;/p&gt;
 &lt;p&gt;The private createButton() function is called from the constructor to create calculator buttons.&lt;/p&gt;
 &lt;p&gt;The private abortOperation() function is called whenever a calculation fails. It resets the calculator state and displays "####".&lt;/p&gt;
-&lt;p&gt;The private calculate() function performs a binary operation. The right operand is given by rightOperand. For additive operators, the left operand is sumSoFar; for multiplicative operators, the left operand is factorSoFar. The function return false if a division by zero occurs.&lt;/p&gt;
-&lt;p&gt;$$H\frac{d^{2}\theta (t)}{dt^{2}} = gSin\theta(t)+a_2(t)H-a_1(t)Cos\theta(t)$$&lt;/p&gt;</summary><category term="計算機程式"></category><category term="PyQt5"></category></entry><entry><title>Create a Multi-repository Fossil SCM Server</title><link href="https://kmolab.github.io/blog/create-a-multi-repository-fossil-scm-server.html" rel="alternate"></link><published>2017-07-14T12:00:00+08:00</published><updated>2017-07-14T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-14:blog/create-a-multi-repository-fossil-scm-server.html</id><summary type="html">&lt;p&gt;In order to create a multi-repository Fossil SCM server on Ubuntu 16.04 environment, three steps are needed.&lt;/p&gt;
+&lt;p&gt;The private calculate() function performs a binary operation. The right operand is given by rightOperand. For additive operators, the left operand is sumSoFar; for multiplicative operators, the left operand is factorSoFar. The function return false if a division by zero occurs.&lt;/p&gt;</content><category term="計算機程式"></category><category term="PyQt5"></category></entry><entry><title>Create a Multi-repository Fossil SCM Server</title><link href="https://kmolab.github.io/blog/create-a-multi-repository-fossil-scm-server.html" rel="alternate"></link><published>2017-07-14T12:00:00+08:00</published><updated>2017-07-14T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-14:/blog/create-a-multi-repository-fossil-scm-server.html</id><summary type="html">&lt;p&gt;In order to create a multi-repository Fossil SCM server on Ubuntu 16.04 environment, three steps are needed.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;In order to create a multi-repository Fossil SCM server on Ubuntu 16.04 environment, three steps are needed.&lt;/p&gt;
 
 
 &lt;h3&gt;Step 1: install Stunnel and Fossil SCM&lt;/h3&gt;
@@ -87,7 +125,8 @@ execargs = /usr/bin/fossil http /home/user/repository/ --https --nojail --notfou
 &lt;h3&gt;Step 3: create Fossil SCM repositories&lt;/h3&gt;
 &lt;p&gt;Change directory to /home/user/repository and use "fossil init default.fossil" command to create the default repository. If more repository is needed, also use "fossil init other.fossil" to create other.fossil repository under /home/user/repository.&lt;/p&gt;
 &lt;p&gt;After the setup use "/etc/init.d/stunnel4 restart" command to restart the Stunnel service.&lt;/p&gt;
-&lt;p&gt;Use https://site-url:443/ to connect to default.fossil and use https://site-url:443/other to connect to other.fossil.&lt;/p&gt;</summary><category term="Fossil SCM"></category><category term="Ubuntu"></category></entry><entry><title>2015 Fall CADP W16</title><link href="https://kmolab.github.io/blog/2015-cadp-w16.html" rel="alternate"></link><published>2017-07-10T12:00:00+08:00</published><updated>2017-07-10T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-10:blog/2015-cadp-w16.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="./../data/nutcracker/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
+&lt;p&gt;Use https://site-url:443/ to connect to default.fossil and use https://site-url:443/other to connect to other.fossil.&lt;/p&gt;</content><category term="Fossil SCM"></category><category term="Ubuntu"></category></entry><entry><title>2015 Fall CADP W16</title><link href="https://kmolab.github.io/blog/2015-cadp-w16.html" rel="alternate"></link><published>2017-07-10T12:00:00+08:00</published><updated>2017-07-10T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-10:/blog/2015-cadp-w16.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="./../data/nutcracker/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;根據 &lt;a href="./../data/nutcracker/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;img src="./../data/nutcracker/nutcracker_left_limit.png" width="600" /&gt;&lt;/p&gt;
@@ -499,7 +538,8 @@ if __name__ == "__main__":
     #env = Environment(Volume, size=500, maxgenerations=100)
     env = Environment(Intersect, size=500, maxgenerations=100)
     env.run()
-&lt;/pre&gt;</summary><category term="電腦輔助設計實習"></category><category term="2015 Fall cadp"></category></entry><entry><title>計算機程式與電腦輔助設計實習</title><link href="https://kmolab.github.io/blog/2017fall-cp-cadp.html" rel="alternate"></link><published>2017-07-06T12:00:00+08:00</published><updated>2017-07-06T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-06:blog/2017fall-cp-cadp.html</id><summary type="html">&lt;p&gt;以下為 Brython 網際程式環境.&lt;/p&gt;
+&lt;/pre&gt;</content><category term="電腦輔助設計實習"></category><category term="2015 Fall cadp"></category></entry><entry><title>計算機程式與電腦輔助設計實習</title><link href="https://kmolab.github.io/blog/2017fall-cp-cadp.html" rel="alternate"></link><published>2017-07-06T12:00:00+08:00</published><updated>2017-07-06T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-06:/blog/2017fall-cp-cadp.html</id><summary type="html">&lt;p&gt;以下為 Brython 網際程式環境.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;以下為 Brython 網際程式環境.&lt;/p&gt;
 
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
@@ -541,7 +581,21 @@ for stud_num in alist:
 &lt;p&gt;&lt;br /&gt;
 &lt;img src="./../data/logo/kmol_1172x340_blue_3yrs.png" width="300"&gt;&lt;/img&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;
-&lt;a href="./../slides/template_slide.html"&gt;template slide&lt;/a&gt;&lt;/p&gt;</summary><category term="Final"></category></entry><entry><title>網際內容管理</title><link href="https://kmolab.github.io/blog/wcm-course-1.html" rel="alternate"></link><published>2017-06-18T13:00:00+08:00</published><updated>2017-06-18T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:blog/wcm-course-1.html</id><summary type="html">&lt;p&gt;網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.&lt;/p&gt;
+&lt;a href="./../slides/template_slide.html"&gt;template slide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;測試 LaTex 方程式寫法與轉換:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+$$H\frac{d^{2}\theta (t)}{dt^{2}} = gSin\theta(t)+a_2(t)H-a_1(t)Cos\theta(t)$$
+&lt;/pre&gt;
+
+&lt;p&gt;經過轉換成為:&lt;/p&gt;
+&lt;p&gt;$$H\frac{d^{2}\theta (t)}{dt^{2}} = gSin\theta(t)+a_2(t)H-a_1(t)Cos\theta(t)$$&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+$$\frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\left\{-\frac{\left(x-\mu\right)^2}{2\sigma^2}\right\}$$
+&lt;/pre&gt;
+
+&lt;p&gt;經過轉換成為:&lt;/p&gt;
+&lt;p&gt;$$\frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\left{-\frac{\left(x-\mu\right)^2}{2\sigma^2}\right}$$&lt;/p&gt;</content><category term="Final"></category></entry><entry><title>網際內容管理</title><link href="https://kmolab.github.io/blog/wcm-course-1.html" rel="alternate"></link><published>2017-06-18T13:00:00+08:00</published><updated>2017-06-18T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/wcm-course-1.html</id><summary type="html">&lt;p&gt;網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.&lt;/p&gt;
 
 
 &lt;p&gt;所謂網際指的是 Web-Based, 也就是 World-Wide-Web Based 的簡稱, 中文也可以翻為"植基於全球資訊網" 或 "以全球資訊網為基礎", 其內涵是希望讓使用者在網際網路 (Internet) 的基礎上, 利用 Web Browser (瀏覽器) 操作各種與機械設計內容管理有關的任務.&lt;/p&gt;
@@ -562,8 +616,10 @@ for stud_num in alist:
 &lt;h3&gt;Putty&lt;/h3&gt;
 &lt;h3&gt;Leo Editor&lt;/h3&gt;
 &lt;h3&gt;Filezilla 與 SFTP&lt;/h3&gt;
-&lt;h3&gt;Uwsgi 與 CMSimfly&lt;/h3&gt;</summary><category term="網際內容管理"></category><category term="課程"></category></entry><entry><title>協同產品設計實習</title><link href="https://kmolab.github.io/blog/cd-course-1.html" rel="alternate"></link><published>2017-06-18T12:00:00+08:00</published><updated>2017-06-18T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:blog/cd-course-1.html</id><summary type="html">&lt;p&gt;協同產品設計課程在教導學生, 以同步或非同步協同方式, 利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
-</summary><category term="協同產品設計實習"></category><category term="課程"></category></entry><entry><title>電腦輔助設計實習</title><link href="https://kmolab.github.io/blog/cadp-course-1.html" rel="alternate"></link><published>2017-06-18T11:00:00+08:00</published><updated>2017-06-18T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:blog/cadp-course-1.html</id><summary type="html">&lt;p&gt;電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
+&lt;h3&gt;Uwsgi 與 CMSimfly&lt;/h3&gt;</content><category term="網際內容管理"></category><category term="課程"></category></entry><entry><title>協同產品設計實習</title><link href="https://kmolab.github.io/blog/cd-course-1.html" rel="alternate"></link><published>2017-06-18T12:00:00+08:00</published><updated>2017-06-18T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/cd-course-1.html</id><summary type="html">&lt;p&gt;協同產品設計課程在教導學生, 以同步或非同步協同方式, 利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;協同產品設計課程在教導學生, 以同步或非同步協同方式, 利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
+</content><category term="協同產品設計實習"></category><category term="課程"></category></entry><entry><title>電腦輔助設計實習</title><link href="https://kmolab.github.io/blog/cadp-course-1.html" rel="alternate"></link><published>2017-06-18T11:00:00+08:00</published><updated>2017-06-18T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/cadp-course-1.html</id><summary type="html">&lt;p&gt;電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
 
 
 &lt;p&gt;CAD Book: &lt;a href="http://mde.tw/2016fallcadp/data/CAD_book.pdf"&gt;http://mde.tw/2016fallcadp/data/CAD_book.pdf&lt;/a&gt;&lt;/p&gt;
@@ -576,7 +632,8 @@ for stud_num in alist:
 &lt;p&gt;CADO: &lt;a href="https://github.com/BGCECSE2015/CADO"&gt;https://github.com/BGCECSE2015/CADO&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Electronics made easy: &lt;a href="http://fritzing.org/home/"&gt;http://fritzing.org/home/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;SFEPy: &lt;a href="https://github.com/sfepy/sfepy"&gt;https://github.com/sfepy/sfepy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://nbviewer.jupyter.org/github/sukhbinder/sfepy-simple_tutorial/blob/master/Getting_Started_With_SFEPY_using_a_simpleplate_example.ipynb"&gt;http://nbviewer.jupyter.org/github/sukhbinder/sfepy-simple_tutorial/blob/master/Getting_Started_With_SFEPY_using_a_simpleplate_example.ipynb&lt;/a&gt;&lt;/p&gt;</summary><category term="電腦輔助設計實習"></category><category term="課程"></category></entry><entry><title>計算機程式</title><link href="https://kmolab.github.io/blog/cp-course-1.html" rel="alternate"></link><published>2017-06-12T11:00:00+08:00</published><updated>2017-06-12T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-12:blog/cp-course-1.html</id><summary type="html">&lt;p&gt;計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://nbviewer.jupyter.org/github/sukhbinder/sfepy-simple_tutorial/blob/master/Getting_Started_With_SFEPY_using_a_simpleplate_example.ipynb"&gt;http://nbviewer.jupyter.org/github/sukhbinder/sfepy-simple_tutorial/blob/master/Getting_Started_With_SFEPY_using_a_simpleplate_example.ipynb&lt;/a&gt;&lt;/p&gt;</content><category term="電腦輔助設計實習"></category><category term="課程"></category></entry><entry><title>計算機程式</title><link href="https://kmolab.github.io/blog/cp-course-1.html" rel="alternate"></link><published>2017-06-12T11:00:00+08:00</published><updated>2017-06-12T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-12:/blog/cp-course-1.html</id><summary type="html">&lt;p&gt;計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.&lt;/p&gt;
 
 
 &lt;h3&gt;為什麼非學不可?&lt;/h3&gt;
@@ -685,7 +742,8 @@ for stud_num in alist:
 &lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=8hHOxfXcWsg"&gt;https://www.youtube.com/watch?v=8hHOxfXcWsg&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=a8LsdodGoWQ"&gt;https://www.youtube.com/watch?v=a8LsdodGoWQ&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;PyQT&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://kuanyui.github.io/2014/09/13/learn-python-via-pyqt/"&gt;https://kuanyui.github.io/2014/09/13/learn-python-via-pyqt/&lt;/a&gt;&lt;/p&gt;</summary><category term="計算機程式"></category><category term="課程"></category></entry><entry><title>大學生為何不來上課?</title><link href="https://kmolab.github.io/blog/first-discussion-blog.html" rel="alternate"></link><published>2017-06-05T05:29:00+08:00</published><updated>2017-06-05T05:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:blog/first-discussion-blog.html</id><summary type="html">&lt;p&gt;所謂論述 (Discussion) 就是針對特定議題的敘述與分析, 例如: 討論有關大學生為何不來上課? 就應該是一篇論述.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://kuanyui.github.io/2014/09/13/learn-python-via-pyqt/"&gt;https://kuanyui.github.io/2014/09/13/learn-python-via-pyqt/&lt;/a&gt;&lt;/p&gt;</content><category term="計算機程式"></category><category term="課程"></category></entry><entry><title>大學生為何不來上課?</title><link href="https://kmolab.github.io/blog/first-discussion-blog.html" rel="alternate"></link><published>2017-06-05T05:29:00+08:00</published><updated>2017-06-05T05:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:/blog/first-discussion-blog.html</id><summary type="html">&lt;p&gt;所謂論述 (Discussion) 就是針對特定議題的敘述與分析, 例如: 討論有關大學生為何不來上課? 就應該是一篇論述.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;所謂論述 (Discussion) 就是針對特定議題的敘述與分析, 例如: 討論有關大學生為何不來上課? 就應該是一篇論述.&lt;/p&gt;
 
 
 &lt;h3&gt;大學生為何不來上課?&lt;/h3&gt;
@@ -707,8 +765,10 @@ for stud_num in alist:
 &lt;p&gt;&lt;a href="https://www.cheers.com.tw/blog/blogTopic.action?id=425&amp;amp;nid=5513"&gt;https://www.cheers.com.tw/blog/blogTopic.action?id=425&amp;amp;nid=5513&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.thenewslens.com/article/664"&gt;https://www.thenewslens.com/article/664&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://shinphotos.com/2014-03-08-297/"&gt;https://shinphotos.com/2014-03-08-297/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.businessweekly.com.tw/article.aspx?id=1124&amp;amp;type=Blog"&gt;http://www.businessweekly.com.tw/article.aspx?id=1124&amp;amp;type=Blog&lt;/a&gt;&lt;/p&gt;</summary><category term="機械設計"></category><category term="課程"></category></entry><entry><title>其他</title><link href="https://kmolab.github.io/blog/first-misc-blog.html" rel="alternate"></link><published>2017-06-05T04:29:00+08:00</published><updated>2017-06-05T04:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:blog/first-misc-blog.html</id><summary type="html">&lt;p&gt;不在設置, 模擬, 實作與論述類別的內容, 則放入雜項其他類別&lt;/p&gt;
-</summary><category term="機械設計"></category><category term="課程"></category></entry><entry><title>實作</title><link href="https://kmolab.github.io/blog/first-realization-blog.html" rel="alternate"></link><published>2017-06-05T03:29:00+08:00</published><updated>2017-06-05T03:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:blog/first-realization-blog.html</id><summary type="html">&lt;p&gt;紀錄與實作有關的內容, 實體製作&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.businessweekly.com.tw/article.aspx?id=1124&amp;amp;type=Blog"&gt;http://www.businessweekly.com.tw/article.aspx?id=1124&amp;amp;type=Blog&lt;/a&gt;&lt;/p&gt;</content><category term="機械設計"></category><category term="課程"></category></entry><entry><title>其他</title><link href="https://kmolab.github.io/blog/first-misc-blog.html" rel="alternate"></link><published>2017-06-05T04:29:00+08:00</published><updated>2017-06-05T04:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:/blog/first-misc-blog.html</id><summary type="html">&lt;p&gt;不在設置, 模擬, 實作與論述類別的內容, 則放入雜項其他類別&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;不在設置, 模擬, 實作與論述類別的內容, 則放入雜項其他類別&lt;/p&gt;
+</content><category term="機械設計"></category><category term="課程"></category></entry><entry><title>實作</title><link href="https://kmolab.github.io/blog/first-realization-blog.html" rel="alternate"></link><published>2017-06-05T03:29:00+08:00</published><updated>2017-06-05T03:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:/blog/first-realization-blog.html</id><summary type="html">&lt;p&gt;紀錄與實作有關的內容, 實體製作&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;紀錄與實作有關的內容, 實體製作&lt;/p&gt;
 
 
 &lt;p&gt;拍攝實際操作的照片與影片&lt;/p&gt;
@@ -718,7 +778,8 @@ for stud_num in alist:
 &lt;p&gt;Docker for Discourse: &lt;a href="https://github.com/discourse/discourse_docker"&gt;https://github.com/discourse/discourse_docker&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;安裝: &lt;a href="https://blog.fntsr.tw/articles/2014/11/07/how-to-build-discourse-with-docker-1/"&gt;https://blog.fntsr.tw/articles/2014/11/07/how-to-build-discourse-with-docker-1/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Discourse 中文: &lt;a href="https://meta.discoursecn.org/"&gt;https://meta.discoursecn.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;網際程式框架: &lt;a href="https://github.com/emberjs/ember.js"&gt;https://github.com/emberjs/ember.js&lt;/a&gt;&lt;/p&gt;</summary><category term="機械設計"></category><category term="課程"></category></entry><entry><title>電腦模擬</title><link href="https://kmolab.github.io/blog/first-simulation-blog.html" rel="alternate"></link><published>2017-06-05T02:29:00+08:00</published><updated>2017-06-05T02:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:blog/first-simulation-blog.html</id><summary type="html">&lt;p&gt;紀錄與電腦模擬相關內容與紀錄， 使用工具 Python3, &lt;a href="http://www.robodk.com/download"&gt;RoboDK&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;網際程式框架: &lt;a href="https://github.com/emberjs/ember.js"&gt;https://github.com/emberjs/ember.js&lt;/a&gt;&lt;/p&gt;</content><category term="機械設計"></category><category term="課程"></category></entry><entry><title>電腦模擬</title><link href="https://kmolab.github.io/blog/first-simulation-blog.html" rel="alternate"></link><published>2017-06-05T02:29:00+08:00</published><updated>2017-06-05T02:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:/blog/first-simulation-blog.html</id><summary type="html">&lt;p&gt;紀錄與電腦模擬相關內容與紀錄， 使用工具 Python3, &lt;a href="http://www.robodk.com/download"&gt;RoboDK&lt;/a&gt;&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;紀錄與電腦模擬相關內容與紀錄， 使用工具 Python3, &lt;a href="http://www.robodk.com/download"&gt;RoboDK&lt;/a&gt;&lt;/p&gt;
 
 
 &lt;h3&gt;電腦模擬&lt;/h3&gt;
@@ -1267,7 +1328,8 @@ if __name__ == "__main__":
 &lt;p&gt;&lt;a href="https://groups.google.com/forum/m/#!msg/deap-users/P4IkiE-Bvbg/xSoMDphbMR4J"&gt;https://groups.google.com/forum/m/#!msg/deap-users/P4IkiE-Bvbg/xSoMDphbMR4J&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;平行運算&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://research.cs.wisc.edu/htcondor/"&gt;http://research.cs.wisc.edu/htcondor/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/J-Robinson/GridGA"&gt;https://github.com/J-Robinson/GridGA&lt;/a&gt;&lt;/p&gt;</summary><category term="機械設計"></category><category term="課程"></category></entry><entry><title>軟硬體設置</title><link href="https://kmolab.github.io/blog/first-setup-blog.html" rel="alternate"></link><published>2017-06-05T01:29:00+08:00</published><updated>2017-06-05T01:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:blog/first-setup-blog.html</id><summary type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/J-Robinson/GridGA"&gt;https://github.com/J-Robinson/GridGA&lt;/a&gt;&lt;/p&gt;</content><category term="機械設計"></category><category term="課程"></category></entry><entry><title>軟硬體設置</title><link href="https://kmolab.github.io/blog/first-setup-blog.html" rel="alternate"></link><published>2017-06-05T01:29:00+08:00</published><updated>2017-06-05T01:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:/blog/first-setup-blog.html</id><summary type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
 
 
 &lt;h3&gt;Github, Bitbucket 與 Fossil SCM&lt;/h3&gt;
@@ -1485,4 +1547,4 @@ MARKDOWN = {
 PAGE_URL = 'pages/{slug}/'
 PAGE_SAVE_AS = 'pages/{slug}/index.html'
 SHOW_ARTICLE_AUTHOR = True
-&lt;/pre&gt;</summary><category term="Github"></category><category term="Bitbucket"></category><category term="Fossil SCM"></category><category term="Leo Editor"></category><category term="Pelican"></category><category term="Reveal.js"></category></entry></feed>
+&lt;/pre&gt;</content><category term="Github"></category><category term="Bitbucket"></category><category term="Fossil SCM"></category><category term="Leo Editor"></category><category term="Pelican"></category><category term="Reveal.js"></category></entry></feed>
