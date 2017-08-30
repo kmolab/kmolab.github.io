@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>KMOLab 機械設計工程 - Setup</title><link href="./" rel="alternate"></link><link href="./feeds/setup.atom.xml" rel="self"></link><id>./</id><updated>2017-06-05T01:29:00+08:00</updated><entry><title>軟硬體設置</title><link href="./first-setup-blog.html" rel="alternate"></link><published>2017-06-05T01:29:00+08:00</published><updated>2017-06-05T01:29:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-05:./first-setup-blog.html</id><summary type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>KMOLab 機械設計工程 - Setup</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/setup.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2017-06-05T01:29:00+08:00</updated><entry><title>軟硬體設置</title><link href="https://kmolab.github.io/blog/first-setup-blog.html" rel="alternate"></link><published>2017-06-05T01:29:00+08:00</published><updated>2017-06-05T01:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:/blog/first-setup-blog.html</id><summary type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
 
 
