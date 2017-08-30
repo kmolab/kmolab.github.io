@@ -4,295 +4,309 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://kmolab.github.io/blog/</loc>
-<lastmod>2017-08-20T22:21:38-00:00</lastmod>
+<loc>./</loc>
+<lastmod>2017-08-30T22:31:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/archives.html</loc>
-<lastmod>2017-08-20T22:21:38-00:00</lastmod>
+<loc>./archives.html</loc>
+<lastmod>2017-08-30T22:31:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tags.html</loc>
-<lastmod>2017-08-20T22:21:38-00:00</lastmod>
+<loc>./tags.html</loc>
+<lastmod>2017-08-30T22:31:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/categories.html</loc>
-<lastmod>2017-08-20T22:21:38-00:00</lastmod>
+<loc>./categories.html</loc>
+<lastmod>2017-08-30T22:31:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/pages/about/</loc>
+<loc>./pages/about/</loc>
 <lastmod>2017-08-19T21:55:46+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/calculator-pyqt5-eric6.html</loc>
+<loc>./sunset-of-openshift-online2.html</loc>
+<lastmod>2017-08-26T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./calculator-pyqt5-eric6.html</loc>
 <lastmod>2017-07-31T12:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/create-a-multi-repository-fossil-scm-server.html</loc>
+<loc>./create-a-multi-repository-fossil-scm-server.html</loc>
 <lastmod>2017-07-14T12:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/2015-cadp-w16.html</loc>
+<loc>./2015-cadp-w16.html</loc>
 <lastmod>2017-07-10T12:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/2017fall-cp-cadp.html</loc>
+<loc>./2017fall-cp-cadp.html</loc>
 <lastmod>2017-07-06T12:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/wcm-course-1.html</loc>
+<loc>./wcm-course-1.html</loc>
 <lastmod>2017-06-18T13:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/cd-course-1.html</loc>
+<loc>./cd-course-1.html</loc>
 <lastmod>2017-06-18T12:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/cadp-course-1.html</loc>
+<loc>./cadp-course-1.html</loc>
 <lastmod>2017-06-18T11:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/cp-course-1.html</loc>
+<loc>./cp-course-1.html</loc>
 <lastmod>2017-06-12T11:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/first-discussion-blog.html</loc>
+<loc>./first-discussion-blog.html</loc>
 <lastmod>2017-06-05T05:29:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/first-misc-blog.html</loc>
+<loc>./first-misc-blog.html</loc>
 <lastmod>2017-06-05T04:29:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/first-realization-blog.html</loc>
+<loc>./first-realization-blog.html</loc>
 <lastmod>2017-06-05T03:29:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/first-simulation-blog.html</loc>
+<loc>./first-simulation-blog.html</loc>
 <lastmod>2017-06-05T02:29:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/first-setup-blog.html</loc>
+<loc>./first-setup-blog.html</loc>
 <lastmod>2017-06-05T01:29:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/category/course.html</loc>
-<lastmod>2017-07-31T12:00:00+08:06</lastmod>
+<loc>./category/course.html</loc>
+<lastmod>2017-08-26T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/category/discussion.html</loc>
+<loc>./category/discussion.html</loc>
 <lastmod>2017-06-05T05:29:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/category/misc.html</loc>
+<loc>./category/misc.html</loc>
 <lastmod>2017-06-05T04:29:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/category/realization.html</loc>
+<loc>./category/realization.html</loc>
 <lastmod>2017-06-05T03:29:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/category/setup.html</loc>
+<loc>./category/setup.html</loc>
 <lastmod>2017-06-05T01:29:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/category/simulation.html</loc>
+<loc>./category/simulation.html</loc>
 <lastmod>2017-06-05T02:29:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/ji-suan-ji-cheng-shi.html</loc>
+<loc>./tag/openshift.html</loc>
+<lastmod>2017-08-26T12:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./tag/ji-suan-ji-cheng-shi.html</loc>
 <lastmod>2017-07-31T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/pyqt5.html</loc>
+<loc>./tag/pyqt5.html</loc>
 <lastmod>2017-07-31T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/fossil-scm.html</loc>
+<loc>./tag/fossil-scm.html</loc>
 <lastmod>2017-07-14T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/ubuntu.html</loc>
+<loc>./tag/ubuntu.html</loc>
 <lastmod>2017-07-14T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/dian-nao-fu-zhu-she-ji-shi-xi.html</loc>
+<loc>./tag/dian-nao-fu-zhu-she-ji-shi-xi.html</loc>
 <lastmod>2017-07-10T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/2015-fall-cadp.html</loc>
+<loc>./tag/2015-fall-cadp.html</loc>
 <lastmod>2017-07-10T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/final.html</loc>
+<loc>./tag/final.html</loc>
 <lastmod>2017-07-06T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/wang-ji-nei-rong-guan-li.html</loc>
+<loc>./tag/wang-ji-nei-rong-guan-li.html</loc>
 <lastmod>2017-06-18T13:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/ke-cheng.html</loc>
+<loc>./tag/ke-cheng.html</loc>
 <lastmod>2017-06-18T13:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/xie-tong-chan-pin-she-ji-shi-xi.html</loc>
+<loc>./tag/xie-tong-chan-pin-she-ji-shi-xi.html</loc>
 <lastmod>2017-06-18T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/ji-jie-she-ji.html</loc>
+<loc>./tag/ji-jie-she-ji.html</loc>
 <lastmod>2017-06-05T05:29:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/github.html</loc>
+<loc>./tag/github.html</loc>
 <lastmod>2017-06-05T01:29:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/bitbucket.html</loc>
+<loc>./tag/bitbucket.html</loc>
 <lastmod>2017-06-05T01:29:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/leo-editor.html</loc>
+<loc>./tag/leo-editor.html</loc>
 <lastmod>2017-06-05T01:29:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/pelican.html</loc>
+<loc>./tag/pelican.html</loc>
 <lastmod>2017-06-05T01:29:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/tag/revealjs.html</loc>
+<loc>./tag/revealjs.html</loc>
 <lastmod>2017-06-05T01:29:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/author/kmol.html</loc>
+<loc>./author/kmol.html</loc>
 <lastmod>2017-06-18T13:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/author/yen.html</loc>
-<lastmod>2017-07-31T12:00:00+08:06</lastmod>
+<loc>./author/yen.html</loc>
+<lastmod>2017-08-26T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
