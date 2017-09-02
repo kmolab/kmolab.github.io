@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>KMOLab 機械設計工程</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2017-08-26T12:00:00+08:00</updated><entry><title>Sunset of OpenShift Online 2 Platform</title><link href="https://kmolab.github.io/blog/sunset-of-openshift-online2.html" rel="alternate"></link><published>2017-08-26T12:00:00+08:00</published><updated>2017-08-26T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-08-26:/blog/sunset-of-openshift-online2.html</id><summary type="html">&lt;p&gt;OpenShift 在 2017.08.25 於 &lt;a href="https://blog.openshift.com/migrate-to-v3-v2-eol/"&gt;https://blog.openshift.com/migrate-to-v3-v2-eol/&lt;/a&gt; 宣布, 先前所推出的 Online 2 Platform, 將要在 2017.09.30 走入歷史.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>KMOLab 機械設計工程</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2017-09-01T12:00:00+08:00</updated><entry><title>2017 Fall 即將開學</title><link href="./2017fall-semester-starts.html" rel="alternate"></link><published>2017-09-01T12:00:00+08:00</published><updated>2017-09-01T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-09-01:./2017fall-semester-starts.html</id><summary type="html">&lt;p&gt;再過幾天, 2017 Fall 學期即將開始, 去年 copy.com 免費雲端磁碟停止提供服務, 這個月底 OpenShift 的 online 2 免費帳號也將走入歷史, 可以預期, 之後 Github 與 Bitbucket 的免費方案也將會越來越限縮, 或許就連 Onshape 與 V-rep 目前所提供的免費教育授權, 也會步上相同後塵.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;再過幾天, 2017 Fall 學期即將開始, 去年 copy.com 免費雲端磁碟停止提供服務, 這個月底 OpenShift 的 online 2 免費帳號也將走入歷史, 可以預期, 之後 Github 與 Bitbucket 的免費方案也將會越來越限縮, 或許就連 Onshape 與 V-rep 目前所提供的免費教育授權, 也會步上相同後塵.&lt;/p&gt;
+
+
+&lt;h2&gt;課程工具檢討&lt;/h2&gt;
+&lt;p&gt;以機械設計工程師的培訓角度而言, 除了第三方的雲端系統外, 還有自建的廣域網路上的伺服器, 區域網路上的伺服器, 以及單機隨身系統上的伺服器. 其中自建的三種伺服器都能從 &lt;a href="http://service.mde.tw/public/python2017fall_36.7z"&gt;http://service.mde.tw/public/python2017fall_36.7z&lt;/a&gt; 隨身系統中所提供的工具進行配置與模擬.&lt;/p&gt;
+&lt;p&gt;可攜隨身系統中最重要的工具為 Python3 程式環境, 搭配 SCiTE, TinyC, Leo Editor, Pelican, Reveal.js, Eric6 IDE, 以及 Flask 與 Brython, 使用者可以編寫 PyQt5 套件, 可以練習以 ANSI C 建立簡單的動態連結程式庫, 配合 Python3 主程式使用. 也能建立整合網際前後端的 Python3 程式, 同時納入網誌與網際投影片系統.&lt;/p&gt;
+&lt;p&gt;這些工具在從事各種機械設計產品開發時, 所產生的資料版本, 自 2017 Spring 起, 已經同時採用 Github 與 Fossil SCM 進行管理, 2017 Fall 將會更側重 Fossil SCM 的運用, 除了讓同一倉儲, 在兩套遠端不同分散式資料版次管理系統保持同步外, 近端也會擁有一套備份, 可以簡單地利用 fossil ui 進行檢視, 或者結合 Stunnel, 讓近端的倉儲管理與遠端模式相同.&lt;/p&gt;
+&lt;p&gt;至於用來執行 Fossil SCM 伺服器的主機, 目前使用的是接近淘汰的機種, 這學期將要測試一台電腦能夠承受幾名學員同步提交推送資料,  最終, 學員必須要學會如何將 Pelican Blog, Reveal.js 投影片版本資料, 同時放到 Github 與區域網路上的 Fossil SCM 伺服器.&lt;/p&gt;
+&lt;p&gt;CAD 的工具目前採用單機上輕量的 Solvespace 與雲端上的 OnShape, Solvespace 是一套採 C++11 編寫的 GPL 授權參數式電腦輔助設計套件, 永續使用較無問題, OnShape 在協同產品上的設計功能, 有其獨特性, 因此將繼續採用.&lt;/p&gt;
+&lt;p&gt;V-rep 也提供 GPL 使用授權, 2017 Fall 起將要自行編譯使用.&lt;/p&gt;
+&lt;h2&gt;2017 Fall 區網主機&lt;/h2&gt;
+&lt;p&gt;主要伺服器可以從 &lt;a href="http://mde.tw"&gt;http://mde.tw&lt;/a&gt; 進入.&lt;/p&gt;
+&lt;p&gt;2017 Fall 區網課程網頁: &lt;a href="https://mde1a1.kmol.info/2017fall"&gt;https://mde1a1.kmol.info/2017fall&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github 與 Fossil SCM 同步倉儲: &lt;a href="https://mde1a1.kmol.info/pymcadp"&gt;https://mde1a1.kmol.info/pymcadp&lt;/a&gt;&lt;/p&gt;</content><category term="2017fall"></category></entry><entry><title>Sunset of OpenShift Online 2 Platform</title><link href="./sunset-of-openshift-online2.html" rel="alternate"></link><published>2017-08-26T12:00:00+08:00</published><updated>2017-08-26T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-08-26:./sunset-of-openshift-online2.html</id><summary type="html">&lt;p&gt;OpenShift 在 2017.08.25 於 &lt;a href="https://blog.openshift.com/migrate-to-v3-v2-eol/"&gt;https://blog.openshift.com/migrate-to-v3-v2-eol/&lt;/a&gt; 宣布, 先前所推出的 Online 2 Platform, 將要在 2017.09.30 走入歷史.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;OpenShift 在 2017.08.25 於 &lt;a href="https://blog.openshift.com/migrate-to-v3-v2-eol/"&gt;https://blog.openshift.com/migrate-to-v3-v2-eol/&lt;/a&gt; 宣布, 先前所推出的 Online 2 Platform, 將要在 2017.09.30 走入歷史.&lt;/p&gt;
 
 
@@ -19,7 +33,7 @@
 &lt;p&gt;備份: https://wordpress-2015course.rhcloud.com/?p=4579&lt;/p&gt;
 &lt;p&gt;Product Design Modeling using CAD/CAE &lt;/p&gt;
 &lt;p&gt;How to be a star engineer&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://ieeexplore.ieee.org/document/795608/"&gt;http://ieeexplore.ieee.org/document/795608/&lt;/a&gt;&lt;/p&gt;</content><category term="OpenShift"></category></entry><entry><title>Calculator in PyQt5 and Eric6</title><link href="https://kmolab.github.io/blog/calculator-pyqt5-eric6.html" rel="alternate"></link><published>2017-07-31T12:00:00+08:00</published><updated>2017-07-31T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-31:/blog/calculator-pyqt5-eric6.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html"&gt;http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html&lt;/a&gt; 的說明, 利用 Eric6 與 PyQt5 開發簡單的計算器視窗程式.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ieeexplore.ieee.org/document/795608/"&gt;http://ieeexplore.ieee.org/document/795608/&lt;/a&gt;&lt;/p&gt;</content><category term="OpenShift"></category></entry><entry><title>Calculator in PyQt5 and Eric6</title><link href="./calculator-pyqt5-eric6.html" rel="alternate"></link><published>2017-07-31T12:00:00+08:00</published><updated>2017-07-31T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-07-31:./calculator-pyqt5-eric6.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html"&gt;http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html&lt;/a&gt; 的說明, 利用 Eric6 與 PyQt5 開發簡單的計算器視窗程式.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;根據 &lt;a href="http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html"&gt;http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html&lt;/a&gt; 的說明, 利用 Eric6 與 PyQt5 開發簡單的計算器視窗程式.&lt;/p&gt;
 
 
@@ -129,7 +143,7 @@ Unary operators, such as Sqrt, require no special handling; they can be applied 
 &lt;p&gt;The clearMemory() slot erases the sum kept in memory, readMemory() displays the sum as an operand, setMemory() replace the sum in memory with the current sum, and addToMemory() adds the current value to the value in memory. For setMemory() and addToMemory(), we start by calling equalClicked() to update sumSoFar and the value in the display.&lt;/p&gt;
 &lt;p&gt;The private createButton() function is called from the constructor to create calculator buttons.&lt;/p&gt;
 &lt;p&gt;The private abortOperation() function is called whenever a calculation fails. It resets the calculator state and displays "####".&lt;/p&gt;
-&lt;p&gt;The private calculate() function performs a binary operation. The right operand is given by rightOperand. For additive operators, the left operand is sumSoFar; for multiplicative operators, the left operand is factorSoFar. The function return false if a division by zero occurs.&lt;/p&gt;</content><category term="計算機程式"></category><category term="PyQt5"></category></entry><entry><title>Create a Multi-repository Fossil SCM Server</title><link href="https://kmolab.github.io/blog/create-a-multi-repository-fossil-scm-server.html" rel="alternate"></link><published>2017-07-14T12:00:00+08:00</published><updated>2017-07-14T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-14:/blog/create-a-multi-repository-fossil-scm-server.html</id><summary type="html">&lt;p&gt;In order to create a multi-repository Fossil SCM server on Ubuntu 16.04 environment, three steps are needed.&lt;/p&gt;
+&lt;p&gt;The private calculate() function performs a binary operation. The right operand is given by rightOperand. For additive operators, the left operand is sumSoFar; for multiplicative operators, the left operand is factorSoFar. The function return false if a division by zero occurs.&lt;/p&gt;</content><category term="計算機程式"></category><category term="PyQt5"></category></entry><entry><title>Create a Multi-repository Fossil SCM Server</title><link href="./create-a-multi-repository-fossil-scm-server.html" rel="alternate"></link><published>2017-07-14T12:00:00+08:00</published><updated>2017-07-14T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-07-14:./create-a-multi-repository-fossil-scm-server.html</id><summary type="html">&lt;p&gt;In order to create a multi-repository Fossil SCM server on Ubuntu 16.04 environment, three steps are needed.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;In order to create a multi-repository Fossil SCM server on Ubuntu 16.04 environment, three steps are needed.&lt;/p&gt;
 
 
@@ -160,7 +174,7 @@ execargs = /usr/bin/fossil http /home/user/repository/ --https --nojail --notfou
 &lt;h3&gt;Step 3: create Fossil SCM repositories&lt;/h3&gt;
 &lt;p&gt;Change directory to /home/user/repository and use "fossil init default.fossil" command to create the default repository. If more repository is needed, also use "fossil init other.fossil" to create other.fossil repository under /home/user/repository.&lt;/p&gt;
 &lt;p&gt;After the setup use "/etc/init.d/stunnel4 restart" command to restart the Stunnel service.&lt;/p&gt;
-&lt;p&gt;Use https://site-url:443/ to connect to default.fossil and use https://site-url:443/other to connect to other.fossil.&lt;/p&gt;</content><category term="Fossil SCM"></category><category term="Ubuntu"></category></entry><entry><title>2015 Fall CADP W16</title><link href="https://kmolab.github.io/blog/2015-cadp-w16.html" rel="alternate"></link><published>2017-07-10T12:00:00+08:00</published><updated>2017-07-10T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-10:/blog/2015-cadp-w16.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="./../data/nutcracker/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
+&lt;p&gt;Use https://site-url:443/ to connect to default.fossil and use https://site-url:443/other to connect to other.fossil.&lt;/p&gt;</content><category term="Fossil SCM"></category><category term="Ubuntu"></category></entry><entry><title>2015 Fall CADP W16</title><link href="./2015-cadp-w16.html" rel="alternate"></link><published>2017-07-10T12:00:00+08:00</published><updated>2017-07-10T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-07-10:./2015-cadp-w16.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="./../data/nutcracker/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;根據 &lt;a href="./../data/nutcracker/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
 
 
@@ -573,7 +587,7 @@ if __name__ == "__main__":
     #env = Environment(Volume, size=500, maxgenerations=100)
     env = Environment(Intersect, size=500, maxgenerations=100)
     env.run()
-&lt;/pre&gt;</content><category term="電腦輔助設計實習"></category><category term="2015 Fall cadp"></category></entry><entry><title>計算機程式與電腦輔助設計實習</title><link href="https://kmolab.github.io/blog/2017fall-cp-cadp.html" rel="alternate"></link><published>2017-07-06T12:00:00+08:00</published><updated>2017-07-06T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-06:/blog/2017fall-cp-cadp.html</id><summary type="html">&lt;p&gt;以下為 Brython 網際程式環境.&lt;/p&gt;
+&lt;/pre&gt;</content><category term="電腦輔助設計實習"></category><category term="2015 Fall cadp"></category></entry><entry><title>計算機程式與電腦輔助設計實習</title><link href="./2017fall-cp-cadp.html" rel="alternate"></link><published>2017-07-06T12:00:00+08:00</published><updated>2017-07-06T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-07-06:./2017fall-cp-cadp.html</id><summary type="html">&lt;p&gt;以下為 Brython 網際程式環境.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;以下為 Brython 網際程式環境.&lt;/p&gt;
 
 
@@ -629,7 +643,7 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;/pre&gt;
 
 &lt;p&gt;經過轉換成為:&lt;/p&gt;
-&lt;p&gt;$$[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigma^2}(X_i-\mu)^2\right]]$$&lt;/p&gt;</content><category term="Final"></category></entry><entry><title>網際內容管理</title><link href="https://kmolab.github.io/blog/wcm-course-1.html" rel="alternate"></link><published>2017-06-18T13:00:00+08:00</published><updated>2017-06-18T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/wcm-course-1.html</id><summary type="html">&lt;p&gt;網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.&lt;/p&gt;
+&lt;p&gt;$$[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigma^2}(X_i-\mu)^2\right]]$$&lt;/p&gt;</content><category term="Final"></category></entry><entry><title>網際內容管理</title><link href="./wcm-course-1.html" rel="alternate"></link><published>2017-06-18T13:00:00+08:00</published><updated>2017-06-18T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-18:./wcm-course-1.html</id><summary type="html">&lt;p&gt;網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.&lt;/p&gt;
 
 
@@ -651,9 +665,9 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;h3&gt;Putty&lt;/h3&gt;
 &lt;h3&gt;Leo Editor&lt;/h3&gt;
 &lt;h3&gt;Filezilla 與 SFTP&lt;/h3&gt;
-&lt;h3&gt;Uwsgi 與 CMSimfly&lt;/h3&gt;</content><category term="網際內容管理"></category><category term="課程"></category></entry><entry><title>協同產品設計實習</title><link href="https://kmolab.github.io/blog/cd-course-1.html" rel="alternate"></link><published>2017-06-18T12:00:00+08:00</published><updated>2017-06-18T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/cd-course-1.html</id><summary type="html">&lt;p&gt;協同產品設計課程在教導學生, 以同步或非同步協同方式, 利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
+&lt;h3&gt;Uwsgi 與 CMSimfly&lt;/h3&gt;</content><category term="網際內容管理"></category><category term="課程"></category></entry><entry><title>協同產品設計實習</title><link href="./cd-course-1.html" rel="alternate"></link><published>2017-06-18T12:00:00+08:00</published><updated>2017-06-18T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-18:./cd-course-1.html</id><summary type="html">&lt;p&gt;協同產品設計課程在教導學生, 以同步或非同步協同方式, 利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;協同產品設計課程在教導學生, 以同步或非同步協同方式, 利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
-</content><category term="協同產品設計實習"></category><category term="課程"></category></entry><entry><title>電腦輔助設計實習</title><link href="https://kmolab.github.io/blog/cadp-course-1.html" rel="alternate"></link><published>2017-06-18T11:00:00+08:00</published><updated>2017-06-18T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/cadp-course-1.html</id><summary type="html">&lt;p&gt;電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
+</content><category term="協同產品設計實習"></category><category term="課程"></category></entry><entry><title>電腦輔助設計實習</title><link href="./cadp-course-1.html" rel="alternate"></link><published>2017-06-18T11:00:00+08:00</published><updated>2017-06-18T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-18:./cadp-course-1.html</id><summary type="html">&lt;p&gt;電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
 
 
@@ -667,7 +681,7 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;p&gt;CADO: &lt;a href="https://github.com/BGCECSE2015/CADO"&gt;https://github.com/BGCECSE2015/CADO&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Electronics made easy: &lt;a href="http://fritzing.org/home/"&gt;http://fritzing.org/home/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;SFEPy: &lt;a href="https://github.com/sfepy/sfepy"&gt;https://github.com/sfepy/sfepy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://nbviewer.jupyter.org/github/sukhbinder/sfepy-simple_tutorial/blob/master/Getting_Started_With_SFEPY_using_a_simpleplate_example.ipynb"&gt;http://nbviewer.jupyter.org/github/sukhbinder/sfepy-simple_tutorial/blob/master/Getting_Started_With_SFEPY_using_a_simpleplate_example.ipynb&lt;/a&gt;&lt;/p&gt;</content><category term="電腦輔助設計實習"></category><category term="課程"></category></entry><entry><title>計算機程式</title><link href="https://kmolab.github.io/blog/cp-course-1.html" rel="alternate"></link><published>2017-06-12T11:00:00+08:00</published><updated>2017-06-12T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-12:/blog/cp-course-1.html</id><summary type="html">&lt;p&gt;計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://nbviewer.jupyter.org/github/sukhbinder/sfepy-simple_tutorial/blob/master/Getting_Started_With_SFEPY_using_a_simpleplate_example.ipynb"&gt;http://nbviewer.jupyter.org/github/sukhbinder/sfepy-simple_tutorial/blob/master/Getting_Started_With_SFEPY_using_a_simpleplate_example.ipynb&lt;/a&gt;&lt;/p&gt;</content><category term="電腦輔助設計實習"></category><category term="課程"></category></entry><entry><title>計算機程式</title><link href="./cp-course-1.html" rel="alternate"></link><published>2017-06-12T11:00:00+08:00</published><updated>2017-06-12T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-12:./cp-course-1.html</id><summary type="html">&lt;p&gt;計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.&lt;/p&gt;
 
 
@@ -737,9 +751,6 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;p&gt;1) 從一本英文書的文字檔中, 算出總字數, 並按照英文字母排列, 列出書中所使用的單字, 並查出各單字的中文解釋.&lt;/p&gt;
 &lt;p&gt;2) 從網站中擷取當天台幣與美金及英鎊的匯率, 並根據某一列有台幣、美金與英鎊的檔案進行各幣值的總結算.&lt;/p&gt;
 &lt;p&gt;3) 每組有六人, 某一任務需要完成六項工作, 每人負責一項, 但各工作間必須互相配合, 任務進行中需要完整呈現各組員每一階段所完成的內容細節, 請問該如何完成.&lt;/p&gt;
-&lt;p&gt;例如: &lt;/p&gt;
-&lt;p&gt;3 1 + 2 / 各數字與符號隔開, 表示 3 + 1 / 2&lt;/p&gt;
-&lt;p&gt;2 3 4 + 4 * 7 / 答案為?&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/dustinrohde/python-rpn"&gt;https://github.com/dustinrohde/python-rpn&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;4) 如何將材料特性 2D 圖表轉為電腦可以套用的文字檔或資料庫檔案?&lt;/p&gt;
 &lt;p&gt;漸開線正齒輪齒面寬運算 - 選擇正齒輪對所要傳遞的功率大小, 選擇所要使用的正齒輪齒數、模數與壓力角, 選擇齒輪的材質, 選擇小齒輪的齒數, 選擇安全係數, 從上述資料中算出齒輪齒面寬, 以便能在安全的範圍中, 不致產生過大噪音條件下完成所需功率的傳遞.&lt;/p&gt;
@@ -782,7 +793,7 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;h3&gt;PyQT&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://kuanyui.github.io/2014/09/13/learn-python-via-pyqt/"&gt;https://kuanyui.github.io/2014/09/13/learn-python-via-pyqt/&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;網際程式繪圖&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://2015fallhw.github.io/2015fallcpa/g99_w15.html"http://2015fallhw.github.io/2015fallcpa/g99_w15.html&lt;/a&gt;&lt;/p&gt;</content><category term="計算機程式"></category><category term="課程"></category></entry><entry><title>大學生為何不來上課?</title><link href="https://kmolab.github.io/blog/first-discussion-blog.html" rel="alternate"></link><published>2017-06-05T05:29:00+08:00</published><updated>2017-06-05T05:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:/blog/first-discussion-blog.html</id><summary type="html">&lt;p&gt;所謂論述 (Discussion) 就是針對特定議題的敘述與分析, 例如: 討論有關大學生為何不來上課? 就應該是一篇論述.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://2015fallhw.github.io/2015fallcpa/g99_w15.html"http://2015fallhw.github.io/2015fallcpa/g99_w15.html&lt;/a&gt;&lt;/p&gt;</content><category term="計算機程式"></category><category term="課程"></category></entry><entry><title>大學生為何不來上課?</title><link href="./first-discussion-blog.html" rel="alternate"></link><published>2017-06-05T05:29:00+08:00</published><updated>2017-06-05T05:29:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-05:./first-discussion-blog.html</id><summary type="html">&lt;p&gt;所謂論述 (Discussion) 就是針對特定議題的敘述與分析, 例如: 討論有關大學生為何不來上課? 就應該是一篇論述.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;所謂論述 (Discussion) 就是針對特定議題的敘述與分析, 例如: 討論有關大學生為何不來上課? 就應該是一篇論述.&lt;/p&gt;
 
 
@@ -812,27 +823,22 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 不要失去熱忱 (強化動力) – 許多人在生活周遭都會碰到非常多不盡如人意的各種挑戰, 持續保持個人與團隊的處事熱忱, 是堅持克服困難的必備動力.
 不要以為不可能 (終究達陣) – 只要個人不斷提升待人處事能力, 持續接觸人文養分, 並且在團隊機制的架構下, 以轉知為智的精神來解決各式問題, 假以時日, 便可實現團隊理想, 化不可能為可能!&lt;/p&gt;
 &lt;p&gt;培養新世紀大學生的關鍵能力: &lt;/p&gt;
-&lt;p&gt;http://www.tpea.org.tw/uploads/TPEA_2013112021132.pdf&lt;/p&gt;</content><category term="機械設計"></category><category term="課程"></category></entry><entry><title>其他</title><link href="https://kmolab.github.io/blog/first-misc-blog.html" rel="alternate"></link><published>2017-06-05T04:29:00+08:00</published><updated>2017-06-05T04:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:/blog/first-misc-blog.html</id><summary type="html">&lt;p&gt;不在設置, 模擬, 實作與論述類別的內容, 則放入雜項其他類別&lt;/p&gt;
+&lt;p&gt;http://www.tpea.org.tw/uploads/TPEA_2013112021132.pdf&lt;/p&gt;</content><category term="機械設計"></category><category term="課程"></category></entry><entry><title>其他</title><link href="./first-misc-blog.html" rel="alternate"></link><published>2017-06-05T04:29:00+08:00</published><updated>2017-06-05T04:29:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-05:./first-misc-blog.html</id><summary type="html">&lt;p&gt;不在設置, 模擬, 實作與論述類別的內容, 則放入雜項其他類別&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;不在設置, 模擬, 實作與論述類別的內容, 則放入雜項其他類別&lt;/p&gt;
-</content><category term="機械設計"></category><category term="課程"></category></entry><entry><title>實作</title><link href="https://kmolab.github.io/blog/first-realization-blog.html" rel="alternate"></link><published>2017-06-05T03:29:00+08:00</published><updated>2017-06-05T03:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:/blog/first-realization-blog.html</id><summary type="html">&lt;p&gt;紀錄與實作有關的內容, 實體製作&lt;/p&gt;
+</content><category term="機械設計"></category><category term="課程"></category></entry><entry><title>實作</title><link href="./first-realization-blog.html" rel="alternate"></link><published>2017-06-05T03:29:00+08:00</published><updated>2017-06-05T03:29:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-05:./first-realization-blog.html</id><summary type="html">&lt;p&gt;紀錄與實作有關的內容, 實體製作&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;紀錄與實作有關的內容, 實體製作&lt;/p&gt;
 
 
 &lt;p&gt;拍攝實際操作的照片與影片&lt;/p&gt;
-&lt;p&gt;將上課的實際情況反應出來&lt;/p&gt;
 &lt;p&gt;課該怎麼上: &lt;a href="https://lectures.quantecon.org/"&gt;https://lectures.quantecon.org/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;互動討論程式: &lt;a href="https://github.com/discourse/discourse"&gt;https://github.com/discourse/discourse&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Docker for Discourse: &lt;a href="https://github.com/discourse/discourse_docker"&gt;https://github.com/discourse/discourse_docker&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;安裝: &lt;a href="https://blog.fntsr.tw/articles/2014/11/07/how-to-build-discourse-with-docker-1/"&gt;https://blog.fntsr.tw/articles/2014/11/07/how-to-build-discourse-with-docker-1/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Discourse 中文: &lt;a href="https://meta.discoursecn.org/"&gt;https://meta.discoursecn.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;網際程式框架: &lt;a href="https://github.com/emberjs/ember.js"&gt;https://github.com/emberjs/ember.js&lt;/a&gt;&lt;/p&gt;</content><category term="機械設計"></category><category term="課程"></category></entry><entry><title>電腦模擬</title><link href="https://kmolab.github.io/blog/first-simulation-blog.html" rel="alternate"></link><published>2017-06-05T02:29:00+08:00</published><updated>2017-06-05T02:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:/blog/first-simulation-blog.html</id><summary type="html">&lt;p&gt;紀錄與電腦模擬相關內容與紀錄， 使用工具 Python3, &lt;a href="http://www.robodk.com/download"&gt;RoboDK&lt;/a&gt;&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;紀錄與電腦模擬相關內容與紀錄， 使用工具 Python3, &lt;a href="http://www.robodk.com/download"&gt;RoboDK&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;網際程式框架: &lt;a href="https://github.com/emberjs/ember.js"&gt;https://github.com/emberjs/ember.js&lt;/a&gt;&lt;/p&gt;</content><category term="機械設計"></category><category term="課程"></category></entry><entry><title>電腦模擬</title><link href="./first-simulation-blog.html" rel="alternate"></link><published>2017-06-05T02:29:00+08:00</published><updated>2017-06-05T02:29:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-05:./first-simulation-blog.html</id><summary type="html">&lt;p&gt;紀錄與電腦模擬相關內容與紀錄， 使用工具 Python3, &lt;a href="http://www.robodk.com/download"&gt;RoboDK&lt;/a&gt; (&lt;a href="https://robodk.com/doc/en/RoboDK-API.html"&gt;RoboDK API&lt;/a&gt;)&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;紀錄與電腦模擬相關內容與紀錄， 使用工具 Python3, &lt;a href="http://www.robodk.com/download"&gt;RoboDK&lt;/a&gt; (&lt;a href="https://robodk.com/doc/en/RoboDK-API.html"&gt;RoboDK API&lt;/a&gt;)&lt;/p&gt;
 
 
-&lt;h3&gt;電腦模擬&lt;/h3&gt;
-&lt;p&gt;為什麼要模擬?假如要您負責送人登月,  不需模擬嗎?&lt;/p&gt;
-&lt;p&gt;幾天後就要接受面試, 需要先前排練嗎?&lt;/p&gt;
-&lt;p&gt;幾位好友要到墾丁旅遊, 需要事先安排好吃住與玩樂內容嗎?需要想想如何安排交通工具與路線嗎?&lt;/p&gt;
 &lt;h3&gt;PyQt5&lt;/h3&gt;
 &lt;p&gt;pyqt5 程式 &lt;a href="http://projects.skylogic.ca/blog/how-to-install-pyqt5-and-build-your-first-gui-in-python-3-4/"&gt;http://projects.skylogic.ca/blog/how-to-install-pyqt5-and-build-your-first-gui-in-python-3-4/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;run.py, 自行編寫用從 core/main.py 中導入 MainWindow 類別建立案例後執行&lt;/p&gt;
@@ -1375,20 +1381,18 @@ if __name__ == "__main__":
 &lt;p&gt;&lt;a href="https://groups.google.com/forum/m/#!msg/deap-users/P4IkiE-Bvbg/xSoMDphbMR4J"&gt;https://groups.google.com/forum/m/#!msg/deap-users/P4IkiE-Bvbg/xSoMDphbMR4J&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;平行運算&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://research.cs.wisc.edu/htcondor/"&gt;http://research.cs.wisc.edu/htcondor/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/J-Robinson/GridGA"&gt;https://github.com/J-Robinson/GridGA&lt;/a&gt;&lt;/p&gt;</content><category term="機械設計"></category><category term="課程"></category></entry><entry><title>軟硬體設置</title><link href="https://kmolab.github.io/blog/first-setup-blog.html" rel="alternate"></link><published>2017-06-05T01:29:00+08:00</published><updated>2017-06-05T01:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:/blog/first-setup-blog.html</id><summary type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/J-Robinson/GridGA"&gt;https://github.com/J-Robinson/GridGA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;利用 Blender 製作 &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=WUvTyaaNkzM"&gt;Essence of calculus&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=kjBOesZCoqc"&gt;Essence of linear algebra&lt;/a&gt;&lt;/p&gt;</content><category term="機械設計"></category><category term="課程"></category></entry><entry><title>軟硬體設置</title><link href="./first-setup-blog.html" rel="alternate"></link><published>2017-06-05T01:29:00+08:00</published><updated>2017-06-05T01:29:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-05:./first-setup-blog.html</id><summary type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
 
 
 &lt;h3&gt;Github, Bitbucket 與 Fossil SCM&lt;/h3&gt;
-&lt;p&gt;Github 目前提供免費無太多限制的多人協同開放倉儲使用, 唯一的限制就是單一檔案建議不能大於 50 MB, 但是若不公開倉儲就必須付費.&lt;/p&gt;
+&lt;p&gt;Github 目前提供的免費帳號, 允許多人協同提交推送版本, 唯一的限制就是單一檔案不能大於 50 MB.&lt;/p&gt;
 &lt;p&gt;Bitbucket 則允許免費使用非公開的倉儲, 但是至多只允許五個帳號協同.&lt;/p&gt;
 &lt;p&gt;Fossil SCM 則適合在近端或區域網路中使用, 目前 KMOLab 希望在區網中導入作為與 Github Pages 配合的工具, 使用者可以將 Fossil SCM 的 working directory 限縮在 Github 近端倉儲的特定目錄下, 且在 .gitignore 中排除 &lt;em&gt;FOSSIL&lt;/em&gt; (under Windows) 的版次管理, 但是相關的 fossil update 與 fossil server 功能仍然必須依照特定的流程進行操作, 以避免兩套版次管理系統內容的不同步導致資料覆蓋流失.&lt;/p&gt;
-&lt;p&gt;github 倉儲與 bitbucket 倉儲利用 git remote add 同步&lt;/p&gt;
-&lt;p&gt;近端則利用 Fossil SCM 進行備份&lt;/p&gt;
-&lt;p&gt;給一台電腦, 設置到能夠提供特定的機械設計服務&lt;/p&gt;
-&lt;p&gt;主題式教學的反思&lt;/p&gt;
-&lt;p&gt;數學與軟硬體設置有關嗎?&lt;/p&gt;
-&lt;p&gt;英文與軟硬體設置有關嗎?&lt;/p&gt;
+&lt;p&gt;github 倉儲與 bitbucket 倉儲, 則可以利用 git remote add 同步.&lt;/p&gt;
 &lt;h3&gt;Leo Editor, Pelican 與 Reveal.js&lt;/h3&gt;
 &lt;p&gt;Leo Editor 是一套能夠以程式方法有效管理多元資料的文字資料編輯器, 以下就是用來管理 KMOLab Pelican 靜態網誌有關內容的畫面, 其中的 @button local-blog 是用來產生靜態網誌的指令按鈕, @button github-blog 則是用來產生嵌入 Disqus 留言系統的 Github Pages 網誌對應指令, 兩個指令的差別在於使用不同的設定檔案, 使用者可以先利用近端的按鈕, 建立網誌後在近端以另一個 https-server 按鈕建立 https 伺服, 用瀏覽器檢查所產生的網誌內容, 一旦要送到 Github 倉儲, 必須再利用遠端按鈕產生另外一組網誌與搜尋用 .json 檔案後, 再提交推送到倉儲.&lt;/p&gt;
 &lt;p&gt;在這個過程中, 使用者依照 Pelican 的特定 Markdown 檔案編寫網誌內容外, Leo Editor 專案檔中也可以放入其他有關的註記與設定檔案編輯用的節點. 若需要在 Pelican 的環境中修改設定, 都可以全部在一個 Leo Editor 專案檔中完成.&lt;/p&gt;

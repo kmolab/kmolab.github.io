@@ -174,8 +174,11 @@
 <v t="yen.20170731134418.1" a="E"><vh>PyQt5 calculator</vh>
 <v t="yen.20170731134425.1"><vh>@edit 20170731.md</vh></v>
 </v>
-<v t="leo.20170826070114.1" a="E"><vh>免費試吃終將結束</vh>
+<v t="leo.20170826070114.1"><vh>免費試吃終將結束</vh>
 <v t="leo.20170826070147.1"><vh>@edit 20170826.md</vh></v>
+</v>
+<v t="leo.20170901235244.1" a="E"><vh>2017 Fall 即將開學</vh>
+<v t="leo.20170901235304.1"><vh>@edit 20170901.md</vh></v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -1882,6 +1885,7 @@ if __name__ == '__main__':
         id: player_right
         x: root.width-self.width
         center_y: root.center_y</t>
+<t tx="leo.20170901235244.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
