@@ -69,8 +69,12 @@
 </v>
 <v t="yen.20170108171733.3"><vh>@edit README.md</vh></v>
 <v t="yen.20170108171733.4"><vh>@edit .gitignore</vh></v>
+<v t="leo.20170908162839.1" a="E"><vh>沒有 disqus 論壇</vh>
 <v t="yen.20170108171733.2"><vh>@button local-blog</vh></v>
+</v>
+<v t="leo.20170908162904.1" a="E"><vh>有 disqus 論壇</vh>
 <v t="leo.20170709224430.1"><vh>@button github-blog</vh></v>
+</v>
 <v t="leo.20170710021233.1"><vh>@path slides</vh>
 <v t="leo.20170710021247.1" a="E"><vh>@clean template_slide.html</vh>
 <v t="leo.20170710021247.2" a="E"><vh>html</vh>
@@ -1886,6 +1890,8 @@ if __name__ == '__main__':
         x: root.width-self.width
         center_y: root.center_y</t>
 <t tx="leo.20170901235244.1"></t>
+<t tx="leo.20170908162839.1"></t>
+<t tx="leo.20170908162904.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

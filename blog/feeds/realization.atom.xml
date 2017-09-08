@@ -3,9 +3,12 @@
 </summary><content type="html">&lt;p&gt;紀錄與實作有關的內容, 實體製作&lt;/p&gt;
 
 
-&lt;p&gt;拍攝實際操作的照片與影片&lt;/p&gt;
-&lt;p&gt;課該怎麼上: &lt;a href="https://lectures.quantecon.org/"&gt;https://lectures.quantecon.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;互動討論程式: &lt;a href="https://github.com/discourse/discourse"&gt;https://github.com/discourse/discourse&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;操作流程拍攝&lt;/h3&gt;
+&lt;p&gt;有關實作, 包含拍攝實際操作的照片與影片. 在 Windows 環境建議使用 &lt;a href="https://getsharex.com/"&gt;ShareX&lt;/a&gt; 拍攝, Ubuntu 則建議使用 &lt;a href="https:// .net/kazam"&gt;Kazam&lt;/a&gt;. 另外一個值得研究的 PyQt5 + FFMpeg 工具位於: &lt;a href="https://github.com/codeshard/videomorph"&gt;https://github.com/codeshard/videomorph&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;理想的課程網頁&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://lectures.quantecon.org/"&gt;https://lectures.quantecon.org/&lt;/a&gt; 是一門教授數學與計量經濟學的課程, 分別使用 Python 與 Julia 程式語言, 採用 Python3 的課程教材 pdf 位於: &lt;a href="https://lectures.quantecon.org/_static/pdfs/QuantEconlectures-python3.pdf"&gt;https://lectures.quantecon.org/_static/pdfs/QuantEconlectures-python3.pdf&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;這門課程的網頁不僅有 &lt;a href="https://quantecon.org/news"&gt;News&lt;/a&gt;, 有&lt;a href="http://discourse.quantecon.org/"&gt;論壇&lt;/a&gt;, 並使用 Jupyter 建立網際 &lt;a href="https://quantecon.org/notebooks.html"&gt;Notebook&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;其中, 互動討論程式: &lt;a href="https://github.com/discourse/discourse"&gt;https://github.com/discourse/discourse&lt;/a&gt;, 為 discourse, 採用 Ruby 建立.&lt;/p&gt;
 &lt;p&gt;Docker for Discourse: &lt;a href="https://github.com/discourse/discourse_docker"&gt;https://github.com/discourse/discourse_docker&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;安裝: &lt;a href="https://blog.fntsr.tw/articles/2014/11/07/how-to-build-discourse-with-docker-1/"&gt;https://blog.fntsr.tw/articles/2014/11/07/how-to-build-discourse-with-docker-1/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Discourse 中文: &lt;a href="https://meta.discoursecn.org/"&gt;https://meta.discoursecn.org/&lt;/a&gt;&lt;/p&gt;
