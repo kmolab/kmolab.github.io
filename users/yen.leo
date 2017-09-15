@@ -15,50 +15,50 @@
 </v>
 <v t="yen.20170108171622.1"><vh>有關 kmolab.github.io</vh></v>
 <v t="yen.20170108171733.1" a="E"><vh>@path ../</vh>
-<v t="leo.20170706005043.1" a="E"><vh>@clean index.html</vh>
-<v t="leo.20170706005043.2" a="E"><vh>html</vh>
+<v t="leo.20170706005043.1"><vh>@clean index.html</vh>
+<v t="leo.20170706005043.2"><vh>html</vh>
 <v t="leo.20170706005043.3"><vh>head</vh></v>
-<v t="leo.20170706005043.4" a="E"><vh>body</vh>
-<v t="leo.20170706005043.5" a="E"><vh>reveal div</vh>
-<v t="leo.20170706005043.6" a="E"><vh>slides div</vh>
-<v t="leo.20170706005043.7" a="E"><vh>封面投影片</vh>
+<v t="leo.20170706005043.4"><vh>body</vh>
+<v t="leo.20170706005043.5"><vh>reveal div</vh>
+<v t="leo.20170706005043.6"><vh>slides div</vh>
+<v t="leo.20170706005043.7"><vh>封面投影片</vh>
 <v t="leo.20170706005043.8"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20170706005043.9"><vh>快捷鍵</vh>
 <v t="leo.20170706005043.10"><vh>投影片快捷鍵</vh></v>
 </v>
-<v t="leo.20170706005043.11" a="E"><vh>溝通與表達</vh>
+<v t="leo.20170706005043.11"><vh>溝通與表達</vh>
 <v t="leo.20170706005043.12"><vh>溝通與表達內容</vh></v>
 </v>
 <v t="leo.20170820171135.1"><vh>USB隨身碟</vh>
 <v t="leo.20170820171135.2"><vh>USB隨身碟內容</vh></v>
 </v>
-<v t="leo.20170821094649.1" a="E"><vh>筆記本隨身碟與耳機</vh>
+<v t="leo.20170821094649.1"><vh>筆記本隨身碟與耳機</vh>
 <v t="leo.20170821094649.2"><vh>筆記本隨身碟與耳機內容</vh></v>
 </v>
-<v t="leo.20170821095027.1" a="E"><vh>倉儲、網誌與版次管理</vh>
+<v t="leo.20170821095027.1"><vh>倉儲、網誌與版次管理</vh>
 <v t="leo.20170821095027.2"><vh>倉儲、網誌與版次管理內容</vh></v>
 </v>
-<v t="leo.20170825230412.1" a="E"><vh>課程相關系統</vh>
+<v t="leo.20170825230412.1"><vh>課程相關系統</vh>
 <v t="leo.20170825230412.2"><vh>課程相關系統內容</vh></v>
 </v>
-<v t="leo.20170821095406.1" a="E"><vh>Leo Editor 與 Pelican</vh>
+<v t="leo.20170821095406.1"><vh>Leo Editor 與 Pelican</vh>
 <v t="leo.20170821095406.2"><vh>Leo Editor 與 Pelican 內容</vh></v>
 </v>
-<v t="leo.20170821095622.1" a="E"><vh>Git 與 Github</vh>
+<v t="leo.20170821095622.1"><vh>Git 與 Github</vh>
 <v t="leo.20170821095622.2"><vh>Git 與 Github 內容</vh></v>
 </v>
-<v t="leo.20170821100226.1" a="E"><vh>Why Version Control</vh>
+<v t="leo.20170821100226.1"><vh>Why Version Control</vh>
 <v t="leo.20170821100226.2"><vh>Why Version Control 內容</vh></v>
 </v>
 <v t="leo.20170706005043.13"><vh>各式內容引用範例</vh>
-<v t="leo.20170706005043.14" a="E"><vh>導入數學符號與方程式</vh>
+<v t="leo.20170706005043.14"><vh>導入數學符號與方程式</vh>
 <v t="leo.20170706005043.15"><vh>LaTeX 格式方程式</vh></v>
 </v>
-<v t="leo.20170706005043.16" a="E"><vh>導入縮排程式碼</vh>
+<v t="leo.20170706005043.16"><vh>導入縮排程式碼</vh>
 <v t="leo.20170706005043.17"><vh>引用程式碼</vh></v>
 </v>
-<v t="leo.20170706005043.18" a="E"><vh>導入影片</vh>
+<v t="leo.20170706005043.18"><vh>導入影片</vh>
 <v t="leo.20170706005043.19"><vh>iframe 導入影片</vh></v>
 </v>
 </v>
@@ -69,36 +69,36 @@
 </v>
 <v t="yen.20170108171733.3"><vh>@edit README.md</vh></v>
 <v t="yen.20170108171733.4"><vh>@edit .gitignore</vh></v>
-<v t="leo.20170908162839.1" a="E"><vh>沒有 disqus 論壇</vh>
+<v t="leo.20170908162839.1"><vh>沒有 disqus 論壇</vh>
 <v t="yen.20170108171733.2"><vh>@button local-blog</vh></v>
 </v>
-<v t="leo.20170908162904.1" a="E"><vh>有 disqus 論壇</vh>
+<v t="leo.20170908162904.1"><vh>有 disqus 論壇</vh>
 <v t="leo.20170709224430.1"><vh>@button github-blog</vh></v>
 </v>
 <v t="leo.20170710021233.1"><vh>@path slides</vh>
-<v t="leo.20170710021247.1" a="E"><vh>@clean template_slide.html</vh>
-<v t="leo.20170710021247.2" a="E"><vh>html</vh>
+<v t="leo.20170710021247.1"><vh>@clean template_slide.html</vh>
+<v t="leo.20170710021247.2"><vh>html</vh>
 <v t="leo.20170710021247.3"><vh>head</vh></v>
-<v t="leo.20170710021247.4" a="E"><vh>body</vh>
-<v t="leo.20170710021247.5" a="E"><vh>reveal div</vh>
-<v t="leo.20170710021247.6" a="E"><vh>slides div</vh>
-<v t="leo.20170710021247.7" a="E"><vh>封面投影片</vh>
+<v t="leo.20170710021247.4"><vh>body</vh>
+<v t="leo.20170710021247.5"><vh>reveal div</vh>
+<v t="leo.20170710021247.6"><vh>slides div</vh>
+<v t="leo.20170710021247.7"><vh>封面投影片</vh>
 <v t="leo.20170710021247.8"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20170710021247.9"><vh>快捷鍵</vh>
 <v t="leo.20170710021247.10"><vh>投影片快捷鍵</vh></v>
 </v>
-<v t="leo.20170710021247.11" a="E"><vh>溝通與表達</vh>
+<v t="leo.20170710021247.11"><vh>溝通與表達</vh>
 <v t="leo.20170710021247.12"><vh>溝通與表達內容</vh></v>
 </v>
 <v t="leo.20170710021247.13"><vh>各式內容引用範例</vh>
-<v t="leo.20170710021247.14" a="E"><vh>導入數學符號與方程式</vh>
+<v t="leo.20170710021247.14"><vh>導入數學符號與方程式</vh>
 <v t="leo.20170710021247.15"><vh>LaTeX 格式方程式</vh></v>
 </v>
-<v t="leo.20170710021247.16" a="E"><vh>導入縮排程式碼</vh>
+<v t="leo.20170710021247.16"><vh>導入縮排程式碼</vh>
 <v t="leo.20170710021247.17"><vh>引用程式碼</vh></v>
 </v>
-<v t="leo.20170710021247.18" a="E"><vh>導入影片</vh>
+<v t="leo.20170710021247.18"><vh>導入影片</vh>
 <v t="leo.20170710021247.19"><vh>iframe 導入影片</vh></v>
 </v>
 </v>
@@ -108,7 +108,7 @@
 </v>
 </v>
 </v>
-<v t="yen.20170108171733.5" a="E"><vh>Pelican 設定</vh>
+<v t="yen.20170108171733.5"><vh>Pelican 設定</vh>
 <v t="leo.20170709015940.1"><vh>近端</vh></v>
 <v t="yen.20170108171733.6"><vh>@edit local_publishconf.py</vh></v>
 <v t="leo.20170709015947.1"><vh>遠端</vh></v>
@@ -116,19 +116,19 @@
 <v t="leo.20170709020600.1"><vh>共用</vh></v>
 <v t="yen.20170108171733.7"><vh>@edit pelicanconf.py</vh></v>
 </v>
-<v t="yen.20170224232341.1" a="E"><vh>編輯 template</vh>
-<v t="yen.20170224232341.2" a="E"><vh>@path theme/pelican-bootstrap3_local/templates</vh>
+<v t="yen.20170224232341.1"><vh>編輯 template</vh>
+<v t="yen.20170224232341.2"><vh>@path theme/pelican-bootstrap3_local/templates</vh>
 <v t="yen.20170224232341.3"><vh>@edit base.html</vh></v>
 </v>
-<v t="leo.20170710015301.1" a="E"><vh>@path theme/pelican-bootstrap3/templates</vh>
+<v t="leo.20170710015301.1"><vh>@path theme/pelican-bootstrap3/templates</vh>
 <v t="leo.20170710015311.1"><vh>@edit search.html</vh></v>
 <v t="leo.20170710095845.1"><vh>@edit base.html</vh></v>
 <v t="leo.20170710101854.1"><vh>@edit article.html</vh></v>
 </v>
 </v>
-<v t="leo.20170710015511.1" a="E"><vh>編輯 plugin</vh>
-<v t="leo.20170710015523.1" a="E"><vh>@path plugin</vh>
-<v t="leo.20170710015523.2" a="E"><vh>@path tipue_search</vh>
+<v t="leo.20170710015511.1"><vh>編輯 plugin</vh>
+<v t="leo.20170710015523.1"><vh>@path plugin</vh>
+<v t="leo.20170710015523.2"><vh>@path tipue_search</vh>
 <v t="leo.20170710015523.3"><vh>@edit tipue_search.py</vh></v>
 </v>
 </v>
@@ -137,51 +137,51 @@
 <v t="leo.20170710162557.1" a="E"><vh>軟硬體設置</vh>
 <v t="leo.20170706020010.1"><vh>@edit 20170605-1.md</vh></v>
 </v>
-<v t="leo.20170710162546.1" a="E"><vh>電腦模擬</vh>
+<v t="leo.20170710162546.1"><vh>電腦模擬</vh>
 <v t="leo.20170706015402.1"><vh>@edit 20170605-2.md</vh></v>
 </v>
-<v t="leo.20170710162534.1" a="E"><vh>實作</vh>
+<v t="leo.20170710162534.1"><vh>實作</vh>
 <v t="leo.20170706020035.1"><vh>@edit 20170605-3.md</vh></v>
 </v>
-<v t="leo.20170710162521.1" a="E"><vh>其他</vh>
+<v t="leo.20170710162521.1"><vh>其他</vh>
 <v t="leo.20170706020044.1"><vh>@edit 20170605-4.md</vh></v>
 </v>
-<v t="leo.20170710162500.1" a="E"><vh>大學生為何不來上課?</vh>
+<v t="leo.20170710162500.1"><vh>大學生為何不來上課?</vh>
 <v t="leo.20170706020055.1"><vh>@edit 20170605-5.md</vh></v>
 </v>
-<v t="leo.20170710162358.1" a="E"><vh>計算機程式</vh>
+<v t="leo.20170710162358.1"><vh>計算機程式</vh>
 <v t="leo.20170706020102.1"><vh>@edit 20170612-1.md</vh></v>
 </v>
-<v t="leo.20170710162347.1" a="E"><vh>電腦輔助設計實習</vh>
+<v t="leo.20170710162347.1"><vh>電腦輔助設計實習</vh>
 <v t="leo.20170706020111.1"><vh>@edit 20170618-1.md</vh></v>
 </v>
-<v t="leo.20170710162330.1" a="E"><vh>協同產品設計實習</vh>
+<v t="leo.20170710162330.1"><vh>協同產品設計實習</vh>
 <v t="leo.20170706020122.1"><vh>@edit 20170618-2.md</vh></v>
 <v t="leo.20170710162608.1"><vh>網際內容管理</vh></v>
 <v t="leo.20170706020211.1"><vh>@edit 20170618-3.md</vh></v>
 </v>
-<v t="yen.20170108171733.81" a="E"><vh>@path pages</vh>
+<v t="yen.20170108171733.81"><vh>@path pages</vh>
 <v t="yen.20170108171733.82"><vh>@edit pages_1.md</vh></v>
 </v>
 </v>
 <v t="leo.20170710022054.1"><vh>可以另建節點存放 content 目錄下的 md 檔案</vh></v>
-<v t="leo.20170710022041.1" a="E"><vh>@path content</vh>
-<v t="leo.20170710162623.1" a="E"><vh>計算機程式與電腦輔助設計實習</vh>
+<v t="leo.20170710022041.1"><vh>@path content</vh>
+<v t="leo.20170710162623.1"><vh>計算機程式與電腦輔助設計實習</vh>
 <v t="leo.20170710022207.1"><vh>@edit 20170618.md</vh></v>
 </v>
-<v t="leo.20170710225031.1" a="E"><vh>2015 Fall CADP W16</vh>
+<v t="leo.20170710225031.1"><vh>2015 Fall CADP W16</vh>
 <v t="leo.20170710225034.1"><vh>@edit 20170710.md</vh></v>
 </v>
 <v t="leo.20170714000548.1"><vh>Create a multi-repository Fossil Server</vh>
 <v t="leo.20170714000620.1"><vh>@edit 20170714.md</vh></v>
 </v>
-<v t="yen.20170731134418.1" a="E"><vh>PyQt5 calculator</vh>
+<v t="yen.20170731134418.1"><vh>PyQt5 calculator</vh>
 <v t="yen.20170731134425.1"><vh>@edit 20170731.md</vh></v>
 </v>
 <v t="leo.20170826070114.1"><vh>免費試吃終將結束</vh>
 <v t="leo.20170826070147.1"><vh>@edit 20170826.md</vh></v>
 </v>
-<v t="leo.20170901235244.1" a="E"><vh>2017 Fall 即將開學</vh>
+<v t="leo.20170901235244.1"><vh>2017 Fall 即將開學</vh>
 <v t="leo.20170901235304.1"><vh>@edit 20170901.md</vh></v>
 </v>
 </v>
@@ -189,7 +189,7 @@
 </v>
 <v t="yen.20170108171930.1"><vh>@button https server</vh></v>
 <v t="yen.20170108171939.1"><vh>@button ipv6 https server</vh></v>
-<v t="leo.20170710022428.1" a="E"><vh>Git 操作</vh>
+<v t="leo.20170710022428.1"><vh>Git 操作</vh>
 <v t="leo.20170710022851.1"><vh>github pages</vh></v>
 </v>
 <v t="leo.20170706003834.1" a="E"><vh>Pelican 與版次管理</vh>
@@ -198,9 +198,9 @@
 </v>
 <v t="leo.20170709091423.1"><vh>Fossil SCM 檔案格式</vh></v>
 <v t="leo.20170710000725.1"><vh>近端的 Fossil 與遠端的 Github</vh></v>
-<v t="leo.20170821120412.1" a="E"><vh>修正錯誤</vh>
-<v t="leo.20170827171251.1" a="E"><vh>kivy 抱怨無 sdl2</vh>
-<v t="leo.20170827174034.1" a="E"><vh>kivy pong example</vh>
+<v t="leo.20170821120412.1"><vh>修正錯誤</vh>
+<v t="leo.20170827171251.1"><vh>kivy 抱怨無 sdl2</vh>
+<v t="leo.20170827174034.1"><vh>kivy pong example</vh>
 <v t="leo.20170827174103.1"><vh>pong.kv</vh></v>
 </v>
 </v>
@@ -214,7 +214,7 @@
 <v t="leo.20170826090433.1"><vh>disable_proxy.reg</vh></v>
 <v t="leo.20170826090505.1"><vh>stop.bat</vh></v>
 </v>
-<v t="leo.20170826223628.1" a="E"><vh>如何成為一位傑出工程師</vh>
+<v t="leo.20170826223628.1"><vh>如何成為一位傑出工程師</vh>
 <v t="leo.20170826223748.1"><vh>英文版</vh></v>
 <v t="leo.20170826223640.1"><vh>中文版</vh></v>
 <v t="leo.20170826225423.1"><vh>Street Smart</vh></v>

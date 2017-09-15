@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kmolab.github.io/blog/</loc>
-<lastmod>2017-09-12T15:28:26-00:00</lastmod>
+<lastmod>2017-09-15T22:37:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/archives.html</loc>
-<lastmod>2017-09-12T15:28:26-00:00</lastmod>
+<lastmod>2017-09-15T22:37:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/tags.html</loc>
-<lastmod>2017-09-12T15:28:26-00:00</lastmod>
+<lastmod>2017-09-15T22:37:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/categories.html</loc>
-<lastmod>2017-09-12T15:28:26-00:00</lastmod>
+<lastmod>2017-09-15T22:37:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -151,35 +151,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/category/discussion.html</loc>
+<loc>https://kmolab.github.io/blog/category/misc.html</loc>
 <lastmod>2017-06-05T05:29:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://kmolab.github.io/blog/category/misc.html</loc>
-<lastmod>2017-06-05T04:29:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://kmolab.github.io/blog/category/realization.html</loc>
-<lastmod>2017-06-05T03:29:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://kmolab.github.io/blog/category/setup.html</loc>
-<lastmod>2017-06-05T01:29:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://kmolab.github.io/blog/category/simulation.html</loc>
+<loc>https://kmolab.github.io/blog/category/research.html</loc>
 <lastmod>2017-06-05T02:29:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
