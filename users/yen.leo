@@ -69,7 +69,7 @@
 </v>
 <v t="yen.20170108171733.3"><vh>@edit README.md</vh></v>
 <v t="yen.20170108171733.4"><vh>@edit .gitignore</vh></v>
-<v t="leo.20170908162839.1"><vh>沒有 disqus 論壇</vh>
+<v t="leo.20170908162839.1" a="E"><vh>沒有 disqus 論壇</vh>
 <v t="yen.20170108171733.2"><vh>@button local-blog</vh></v>
 </v>
 <v t="leo.20170908162904.1"><vh>有 disqus 論壇</vh>
@@ -165,7 +165,7 @@
 </v>
 </v>
 <v t="leo.20170710022054.1"><vh>可以另建節點存放 content 目錄下的 md 檔案</vh></v>
-<v t="leo.20170710022041.1"><vh>@path content</vh>
+<v t="leo.20170710022041.1" a="E"><vh>@path content</vh>
 <v t="leo.20170710162623.1"><vh>計算機程式與電腦輔助設計實習</vh>
 <v t="leo.20170710022207.1"><vh>@edit 20170618.md</vh></v>
 </v>
@@ -181,8 +181,11 @@
 <v t="leo.20170826070114.1"><vh>免費試吃終將結束</vh>
 <v t="leo.20170826070147.1"><vh>@edit 20170826.md</vh></v>
 </v>
-<v t="leo.20170901235244.1"><vh>2017 Fall 即將開學</vh>
+<v t="leo.20170901235244.1" a="E"><vh>2017 Fall 即將開學</vh>
 <v t="leo.20170901235304.1"><vh>@edit 20170901.md</vh></v>
+</v>
+<v t="leo.20170916092621.1" a="E"><vh>2017 主機設定</vh>
+<v t="leo.20170916092636.1"><vh>@edit 20170916.md</vh></v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -1892,6 +1895,7 @@ if __name__ == '__main__':
 <t tx="leo.20170901235244.1"></t>
 <t tx="leo.20170908162839.1"></t>
 <t tx="leo.20170908162904.1"></t>
+<t tx="leo.20170916092621.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
