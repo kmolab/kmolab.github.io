@@ -5,35 +5,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kmolab.github.io/blog/</loc>
-<lastmod>2017-09-16T13:19:52-00:00</lastmod>
+<lastmod>2017-10-01T10:41:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/archives.html</loc>
-<lastmod>2017-09-16T13:19:52-00:00</lastmod>
+<lastmod>2017-10-01T10:41:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/tags.html</loc>
-<lastmod>2017-09-16T13:19:52-00:00</lastmod>
+<lastmod>2017-10-01T10:41:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/categories.html</loc>
-<lastmod>2017-09-16T13:19:52-00:00</lastmod>
+<lastmod>2017-10-01T10:41:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/pages/about/</loc>
-<lastmod>2017-08-31T16:11:48+08:00</lastmod>
+<lastmod>2017-09-30T14:35:23+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kmolab.github.io/blog/cmsimfly-and-fossil-on-same-machine.html</loc>
+<lastmod>2017-10-01T11:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -166,14 +173,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kmolab.github.io/blog/category/research.html</loc>
-<lastmod>2017-09-16T12:00:00+08:06</lastmod>
+<lastmod>2017-10-01T11:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/tag/2017fall.html</loc>
-<lastmod>2017-09-16T12:00:00+08:06</lastmod>
+<lastmod>2017-10-01T11:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -306,7 +313,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kmolab.github.io/blog/author/yen.html</loc>
-<lastmod>2017-09-16T12:00:00+08:06</lastmod>
+<lastmod>2017-10-01T11:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

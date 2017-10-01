@@ -210,7 +210,7 @@ KMOLab 機械設計工程            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-09-16T12:00:00+08:00"> 週六 16 九月 2017</time>
+        <i class="fa fa-calendar"></i><time datetime="2017-09-16T12:00:00+08:00"> Sat 16 September 2017</time>
     </span>
             <span class="label label-default">By</span>
             <a href="https://kmolab.github.io/blog/author/yen.html"><i class="fa fa-user"></i> yen</a>
@@ -230,11 +230,11 @@ KMOLab 機械設計工程            </a>
 <p>這個學期工作站室的伺服器, 將全面使用 <a href="https://www.fossil-scm.org">Fossil SCM</a> 管理所有的課程與研究專案, 每一位上課的學員都將在近端與區網擁有一個 Fossil 倉儲, 用來存放與課程相關的所有內容.</p>
 <p>Github 與 Bitbuckert 等雲端免費方案仍然扮演重要角色, 只是在無廣域網路連線與區域網路連線的情況下, 各學員的各項課程內容演練與操作資料提交, 將能在隨身的可攜系統上完成, 之後再配合區網與雲端網路的連線, 設法在分組協同的模式下, 將近端資料同步到區網與雲端主機. 因此 2017 Fall 起, 如何在近端、區網與雲端不同硬體環境下, 保持倉儲資料版本的同步, 就是另外一個重點.</p>
 <h3>主機設定</h3>
-<p>接下來, 我們透過 <a href="https://cadpb.kmol.info/cadpbg1/40523201">https://cadpb.kmol.info/cadpbg1/40523201</a> 學員倉儲, 來說明提供 Fossil SCM 服務的主機如何設定.</p>
+<p>接下來, 我們透過 <a href="https://cadpb.kmol.info/40523201">https://cadpb.kmol.info/40523201</a> 學員倉儲, 來說明提供 Fossil SCM 服務的主機如何設定.</p>
 <p>首先當然是要先掌握 kmol.info 網域的主導權, 透過網域 DNS 的控管, 讓區域網路中的主機可以在 A 與 AAA 設定下的 IPv4 與 IPv6 網址呼應, 例如: cadpb.kmol.info 指的就是 cadp 電腦輔助設計實習課程中的 b 班所使用的伺服器名稱.</p>
 <p>如前所述, 這些伺服器都是安裝 Ubuntu 16.04 Server 操作系統 + OpenSSH, 目的是希望在 Self-signed Certificate 的模式下運作.</p>
 <p>接著必須根據 <a href="create-a-multi-repository-fossil-scm-server.html">多 Fossil SCM 倉儲主機</a> 的架構, 分別安裝 Fossil SCM 與 Stunnel.</p>
-<p>其中, 特別將 Fossil SCM 伺服的目錄指向 /home/, 表示各操作系統帳號所有人, 可以自行利用 fossil 指令, 建立多個倉儲, 此一模式就是同一台主機可以透過網域來界定上課班級, 操作系統帳號可以界定大分組名稱, 而採用學號的倉儲名稱則可以用來界定參與協同的所有者.</p>
+<p>其中, 特別將 Fossil SCM 伺服的目錄指向 /home/cadpa2017, 表示各操作系統帳號所有人, 可以自行利用 fossil 指令, 建立多個倉儲, 此一模式就是同一台主機可以透過網域來界定上課班級, 操作系統帳號可以界定大分組名稱, 而採用學號的倉儲名稱則可以用來界定參與協同的所有者.</p>
 <p>因此, 一旦各倉儲所有者掌握管理該 .fossil 檔案的總管理權之後, 可以將其他學員納入自己所掌控的 .fossil users 中, 視實際需求賦於各帳號不同權限. 且可透過制式的 URL, 在得知各班各分組的成員學號情況下, 連結至各學員的倉儲中進行資料檢視.</p>
 <h3>機械設計專案的資料格式</h3>
 <p>由於設計是一種利用口語、文字、2D、3D、數學與實體等形式, 所完成的明確與具體表達, 過程中必須仔細思考、多方考量, 而且在不同時段與多人協同合作的結果, 將會產生許多不同的資料版本.</p>
@@ -339,6 +339,11 @@ server {
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
+                        <a href="https://kmolab.github.io/blog/cmsimfly-and-fossil-on-same-machine.html">
+                            CMSimfly 與 Fossil SCM
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="https://kmolab.github.io/blog/2017fall-srver-setup.html">
                             2017 Fall 主機設定
                         </a>
@@ -356,11 +361,6 @@ server {
                     <li class="list-group-item">
                         <a href="https://kmolab.github.io/blog/calculator-pyqt5-eric6.html">
                             Calculator in PyQt5 and Eric6
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/create-a-multi-repository-fossil-scm-server.html">
-                            Create a Multi-repository Fossil SCM Server
                         </a>
                     </li>
                 </ul>
