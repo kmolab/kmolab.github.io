@@ -187,8 +187,11 @@
 <v t="leo.20170916092621.1" a="E"><vh>2017 主機設定</vh>
 <v t="leo.20170916092636.1"><vh>@edit 20170916.md</vh></v>
 </v>
-<v t="leo.20171001091537.1" a="E"><vh>CMSimfly 與 Fossil SCM 同在</vh>
+<v t="leo.20171001091537.1"><vh>CMSimfly 與 Fossil SCM 同在</vh>
 <v t="leo.20171001091610.1"><vh>@edit 20171001.md</vh></v>
+</v>
+<v t="leo.20171025093610.1" a="E"><vh>Brython 3.3.4 程式環境</vh>
+<v t="leo.20171025093640.1"><vh>@edit 20171017.md</vh></v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -1900,6 +1903,7 @@ if __name__ == '__main__':
 <t tx="leo.20170908162904.1"></t>
 <t tx="leo.20170916092621.1"></t>
 <t tx="leo.20171001091537.1"></t>
+<t tx="leo.20171025093610.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
