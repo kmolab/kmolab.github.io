@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kmolab.github.io/blog/</loc>
-<lastmod>2017-10-25T10:27:08-00:00</lastmod>
+<lastmod>2017-10-25T23:58:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/archives.html</loc>
-<lastmod>2017-10-25T10:27:08-00:00</lastmod>
+<lastmod>2017-10-25T23:58:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/tags.html</loc>
-<lastmod>2017-10-25T10:27:08-00:00</lastmod>
+<lastmod>2017-10-25T23:58:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/categories.html</loc>
-<lastmod>2017-10-25T10:27:08-00:00</lastmod>
+<lastmod>2017-10-25T23:58:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -34,6 +34,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kmolab.github.io/blog/pages/about/</loc>
 <lastmod>2017-10-13T23:09:56+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kmolab.github.io/blog/cango-brython-svg-canvas.html</loc>
+<lastmod>2017-10-25T12:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -166,7 +173,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kmolab.github.io/blog/category/course.html</loc>
-<lastmod>2017-10-25T11:00:00+08:06</lastmod>
+<lastmod>2017-10-25T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -186,8 +193,29 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://kmolab.github.io/blog/tag/cango.html</loc>
+<lastmod>2017-10-25T12:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://kmolab.github.io/blog/tag/brython.html</loc>
-<lastmod>2017-10-25T11:00:00+08:06</lastmod>
+<lastmod>2017-10-25T12:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kmolab.github.io/blog/tag/svg.html</loc>
+<lastmod>2017-10-25T12:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kmolab.github.io/blog/tag/canvas.html</loc>
+<lastmod>2017-10-25T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -327,7 +355,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kmolab.github.io/blog/author/yen.html</loc>
-<lastmod>2017-10-25T11:00:00+08:06</lastmod>
+<lastmod>2017-10-25T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

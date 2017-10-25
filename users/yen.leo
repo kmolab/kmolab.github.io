@@ -72,7 +72,7 @@
 <v t="leo.20170908162839.1" a="E"><vh>沒有 disqus 論壇</vh>
 <v t="yen.20170108171733.2"><vh>@button local-blog</vh></v>
 </v>
-<v t="leo.20170908162904.1"><vh>有 disqus 論壇</vh>
+<v t="leo.20170908162904.1" a="E"><vh>有 disqus 論壇</vh>
 <v t="leo.20170709224430.1"><vh>@button github-blog</vh></v>
 </v>
 <v t="leo.20170710021233.1"><vh>@path slides</vh>
@@ -116,11 +116,11 @@
 <v t="leo.20170709020600.1"><vh>共用</vh></v>
 <v t="yen.20170108171733.7"><vh>@edit pelicanconf.py</vh></v>
 </v>
-<v t="yen.20170224232341.1"><vh>編輯 template</vh>
-<v t="yen.20170224232341.2"><vh>@path theme/pelican-bootstrap3_local/templates</vh>
+<v t="yen.20170224232341.1" a="E"><vh>編輯 template</vh>
+<v t="yen.20170224232341.2" a="E"><vh>@path theme/pelican-bootstrap3_local/templates</vh>
 <v t="yen.20170224232341.3"><vh>@edit base.html</vh></v>
 </v>
-<v t="leo.20170710015301.1"><vh>@path theme/pelican-bootstrap3/templates</vh>
+<v t="leo.20170710015301.1" a="E"><vh>@path theme/pelican-bootstrap3/templates</vh>
 <v t="leo.20170710015311.1"><vh>@edit search.html</vh></v>
 <v t="leo.20170710095845.1"><vh>@edit base.html</vh></v>
 <v t="leo.20170710101854.1"><vh>@edit article.html</vh></v>
@@ -192,6 +192,9 @@
 </v>
 <v t="leo.20171025093610.1" a="E"><vh>Brython 3.3.4 程式環境</vh>
 <v t="leo.20171025093640.1"><vh>@edit 20171017.md</vh></v>
+</v>
+<v t="leo.20171025164948.1" a="E"><vh>Cango 繪圖</vh>
+<v t="leo.20171025164953.1"><vh>@edit 20171025.md</vh></v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -1904,6 +1907,7 @@ if __name__ == '__main__':
 <t tx="leo.20170916092621.1"></t>
 <t tx="leo.20171001091537.1"></t>
 <t tx="leo.20171025093610.1"></t>
+<t tx="leo.20171025164948.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
