@@ -3,6 +3,12 @@
 </summary><content type="html">&lt;p&gt;利用 Cango 與 Brython 進行網際繪圖&lt;/p&gt;
 
 
+&lt;!-- 導入 FileSaver 與 filereader --&gt;
+
+&lt;script type="text/javascript" src="./../ace/FileSaver.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="./../ace/filereader.js"&gt;&lt;/script&gt;
+
 &lt;!-- 導入最新版的 Brython 標準程式庫 3.3.4 --&gt;
 
 &lt;script type="text/javascript" src="./../data/Brython-3.3.4/brython_dist.js"&gt;&lt;/script&gt;
@@ -11,13 +17,35 @@
 
 &lt;script type="text/javascript" src="./../data/cango/CangoAxes-4v00-min.js"&gt;&lt;/script&gt;
 
+&lt;!-- 啟動 Brython 時, 設定 pythonpath 為 data/py, 並將 script1.py 放入, 以便取代 3.2.9 之前版本的 script id 導入 --&gt;
+
 &lt;script&gt;
 window.onload=function(){
-brython(1);
+brython({debug:1, pythonpath:['./../data/py']});
 }
 &lt;/script&gt;
 
-&lt;canvas id="plotarea" width="750" height="550"&gt;&lt;/canvas&gt;
+&lt;!-- 以下執行 Brython 程式 --&gt;
+
+&lt;script src="./../ace/ace.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;script src="./../ace/ext-language_tools.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;script src="./../ace/mode-python3.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;script src="./../ace/snippets/python.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--&gt;
+
+&lt;script type="text/javascript"&gt;
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value
+    saveAs(blob, filename+".py");
+}
+&lt;/script&gt;
+
+&lt;canvas id="plotarea" width="800" height="400"&gt;&lt;/canvas&gt;
 
 &lt;script type="text/python"&gt;
 from browser import alert
@@ -31,10 +59,11 @@ shape = window.Shape.new
 # Javascript 變數
 shapedefs = window.shapeDefs
 cgo = cango("plotarea")
+cgo.gridboxPadding(10, 10, 5, 7)
 
 # 設定座標系統
 # cgo.setWorldCoordsRHC(xmin, ymin, xmax-xmin);  
-cgo.setWorldCoordsRHC(-40, -250, 800) 
+cgo.setWorldCoordsRHC(-40, -50, 800, 300) 
 
 # 畫軸線
 cgo.drawAxes(-40, 750, -80, 710, {
@@ -210,7 +239,252 @@ x9, y9 = mychain.basic_rot(x8, y8, -100)
 x10, y10 = mychain.basic_rot(x9, y9, -150)
 # 水平接回原點
 mychain.basic(x10, y10, 0+65*3, 0, color="red")
-&lt;/script&gt;</content><category term="Cango"></category><category term="Brython"></category><category term="SVG"></category><category term="Canvas"></category></entry><entry><title>Brython 3.3.4 程式環境</title><link href="https://kmolab.github.io/blog/brython-programming-environment.html" rel="alternate"></link><published>2017-10-25T11:00:00+08:00</published><updated>2017-10-25T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-10-25:/blog/brython-programming-environment.html</id><summary type="html">&lt;p&gt;利用 &lt;a href="http://brython.info/"&gt;Brython&lt;/a&gt; 與 &lt;a href="https://ace.c9.io/"&gt;Ace&lt;/a&gt; 編輯器, 建立瀏覽器上的簡單 Python3 程式練習環境.&lt;/p&gt;
+&lt;/script&gt;
+
+&lt;!-- Cango 繪圖程式 --&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+import ace
+
+# Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
+Ace = ace.Editor(editor_id="can1_editor", console_id="can1_console", container_id="can1_container", storage_id="can1_py_src" )
+
+Ace.editor.setValue('''#Cango 繪圖
+from browser import window
+import math
+cos30 = math.cos(30*math.pi/180)
+sin30 = math.sin(30*math.pi/180)
+
+# Javascript 物件
+cango = window.Cango.new
+path = window.Path.new
+shape = window.Shape.new
+# Javascript 變數
+shapedefs = window.shapeDefs
+g1 = cango("can1_container")
+g1.clearCanvas()
+g1.gridboxPadding(10, 10, 5, 7)
+g1.fillGridbox("lightgreen")
+g1.setWorldCoordsRHC(0, 0, 80)
+
+g1.drawText("gc.setWorldCoordsRHC() 設為 Y 向上為正", {'x':3, 'y':52, 'fontSize': 30, 'fillColor':"black"})
+g1.drawText("X", {'x':60, 'y':2, 'fontSize': 30, 'fontWeight': 800, 'lorg': 9, 'fillColor': "black"});
+g1.drawText("Y", {'x':2, 'y':30, 'fontSize': 30, 'fontWeight': 800, 'lorg': 1, 'fillColor': "black"});
+
+g1.drawArrow(60, 0, {'shaftWidth':2.5, 'fillColor':'black'});
+g1.drawArrow(0, 30, {'shaftWidth':2.5, 'fillColor':'black'});
+g1.drawPath(["M", 0,0, "L", 35*cos30, 35*sin30, 0, 0]);
+g1.drawArrowArc(25, 0, 30, {'clockwise':False, 'shaftWidth':2.5, 'fillColor':'black'});
+''')
+Ace.editor.scrollToRow(0)
+Ace.editor.gotoLine(0)
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['can1_run'].bind('click', Ace.run)
+doc['can1_show_console'].bind('click', Ace.show_console)
+doc['can1_clear_console'].bind('click', Ace.clear_console)
+&lt;/script&gt;
+
+&lt;!-- 用來顯示程式碼的 editor 區域 --&gt;
+
+&lt;div id="can1_editor" style="width:600px;height:300px;"&gt;&lt;/div&gt;
+
+&lt;!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --&gt;
+
+&lt;form&gt;
+    &lt;label&gt;Filename: &lt;input type="text" id="can1_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
+    &lt;input type="submit" value="Save" onclick="doSave('can1_py_src', 'can1_filename');"/&gt;
+&lt;/form&gt;
+
+&lt;p&gt;&lt;button id="can1_run"&gt;Run&lt;/button&gt;
+&lt;button id="can1_show_console"&gt;Output&lt;/button&gt;
+&lt;button id="can1_clear_console"&gt;清除&lt;/button&gt;
+&lt;div style="width:100%;height:100%;"&gt;
+&lt;textarea id="can1_console" autocomplete="off"&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;canvas id="can1_container" width="750" height="550"&gt;&lt;/canvas&gt;&lt;/p&gt;
+&lt;!-- Cango 繪圖程式2 --&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+import ace
+
+# Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
+Ace = ace.Editor(editor_id="can2_editor", console_id="can2_console", container_id="can2_container", storage_id="can2_py_src" )
+
+Ace.editor.setValue('''#Cango 繪圖
+from browser import window
+import math
+cos30 = math.cos(30*math.pi/180)
+sin30 = math.sin(30*math.pi/180)
+
+# Javascript 物件
+cango = window.Cango.new
+path = window.Path.new
+shape = window.Shape.new
+# Javascript 變數
+shapedefs = window.shapeDefs
+g1 = cango("can2_container")
+g1.clearCanvas()
+g1.gridboxPadding(10, 10, 5, 7)
+g1.fillGridbox("lightpink")
+g1.setWorldCoordsSVG(0, 0, 100)
+
+g1.drawText("gc.setWorldCoordsSVG() 設為 Y 向下為正", {'x':2, 'y':-6, 'fontSize': 30, 'fillColor':"black"})
+g1.drawText("X", {'x':60, 'y':2, 'fontSize': 30, 'fontWeight': 800, 'lorg': 3, 'fillColor': "black"});
+g1.drawText("Y", {'x':2, 'y':30, 'fontSize': 30, 'fontWeight': 800, 'lorg': 7, 'fillColor': "black"});
+
+g1.drawArrow(60, 0, {'shaftWidth':2.5, 'fillColor':'black'});
+g1.drawArrow(0, 30, {'shaftWidth':2.5, 'fillColor':'black'});
+g1.drawPath(["M", 0,0, "L", 35*cos30, 35*sin30, 0, 0]);
+g1.drawArrowArc(25, 0, 30, {'clockwise':False, 'shaftWidth':2.5, 'fillColor':'black'});
+''')
+Ace.editor.scrollToRow(0)
+Ace.editor.gotoLine(0)
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['can2_run'].bind('click', Ace.run)
+doc['can2_show_console'].bind('click', Ace.show_console)
+doc['can2_clear_console'].bind('click', Ace.clear_console)
+&lt;/script&gt;
+
+&lt;!-- 用來顯示程式碼的 editor 區域 --&gt;
+
+&lt;div id="can2_editor" style="width:600px;height:300px;"&gt;&lt;/div&gt;
+
+&lt;!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --&gt;
+
+&lt;form&gt;
+    &lt;label&gt;Filename: &lt;input type="text" id="can2_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
+    &lt;input type="submit" value="Save" onclick="doSave('can2_py_src', 'can2_filename');"/&gt;
+&lt;/form&gt;
+
+&lt;p&gt;&lt;button id="can2_run"&gt;Run&lt;/button&gt;
+&lt;button id="can2_show_console"&gt;Output&lt;/button&gt;
+&lt;button id="can2_clear_console"&gt;清除&lt;/button&gt;
+&lt;div style="width:100%;height:100%;"&gt;
+&lt;textarea id="can2_console" autocomplete="off"&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;canvas id="can2_container" width="750" height="550"&gt;&lt;/canvas&gt;&lt;/p&gt;
+&lt;!-- Cango 繪圖程式3 --&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+import ace
+
+# Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
+Ace = ace.Editor(editor_id="can3_editor", console_id="can3_console", container_id="can3_container", storage_id="can3_py_src" )
+
+Ace.editor.setValue('''#Cango Bezier 繪圖
+from browser import window
+
+# Javascript 物件
+cango = window.Cango.new
+path = window.Path.new
+shape = window.Shape.new
+group = window.Group.new
+# Javascript 變數
+shapedefs = window.shapeDefs
+g1 = cango("can3_container")
+g1.clearCanvas()
+g1.gridboxPadding(10, 10, 5, 7)
+g1.fillGridbox("lightgreen")
+g1.setWorldCoordsRHC(-100, -100, 400)
+
+x1 = 40
+y1 = 20
+cx1 = 90
+cy1 = 120
+x2 = 120
+y2 = 100
+cx2 = 130
+cy2 = 20
+cx3 = 150
+cy3 = 120
+x3 = 180
+y3 = 60
+
+def dragC1(mousePos):
+    global cx1, cy1
+    cx1 = mousePos.x
+    cy1 = mousePos.y
+    drawCurve()
+
+def dragC2(mousePos):
+    global cx2, cy2
+    cx2 = mousePos.x
+    cy2 = mousePos.y
+    drawCurve()
+
+def dragC3(mousePos):
+    global cx3, cy3
+    cx3 = mousePos.x
+    cy3 = mousePos.y
+    drawCurve()
+
+def drawCurve():
+    qbez = path(['M', x1, y1, 'Q', cx1, cy1, x2, y2], {
+      'strokeColor':'blue'})
+    cbez = path(['M', x2, y2, 'C', cx2, cy2, cx3, cy3, x3, y3], {
+      'strokeColor':'green'})
+    L1 = path(['M', x1, y1, 'L', cx1, cy1, x2, y2], {
+      'strokeColor':"rgba(0, 0, 0, 0.2)",
+      'dashed':[4]})
+    L2 = path(['M', x2, y2, 'L', cx2, cy2], {
+      'strokeColor':"rgba(0, 0, 0, 0.2)",
+      'dashed':[4]})
+    L3 = path(['M', x3, y3, 'L', cx3, cy3], {
+      'strokeColor':"rgba(0, 0, 0, 0.2)",
+      'dashed':[4]})
+    c1.transform.translate(cx1, cy1)
+    c2.transform.translate(cx2, cy2)
+    c3.transform.translate(cx3, cy3)
+    grp = group(qbez, cbez, L1, L2, L3, c1, c2, c3)
+    g1.render(grp, True)
+
+g1.clearCanvas("lightyellow")
+g1.deleteAllLayers()
+g1.setWorldCoordsRHC(0, 0, 200)
+
+c1 = shape(shapedefs.circle(6), {'fillColor':'red'})
+c1.enableDrag(None, dragC1, None)
+
+c2 = shape(shapedefs.circle(6), {'fillColor':'red'})
+c2.enableDrag(None, dragC2, None)
+
+c3 = shape(shapedefs.circle(6), {'fillColor':'red'})
+c3.enableDrag(None, dragC3, None);
+
+drawCurve()
+''')
+Ace.editor.scrollToRow(0)
+Ace.editor.gotoLine(0)
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['can3_run'].bind('click', Ace.run)
+doc['can3_show_console'].bind('click', Ace.show_console)
+doc['can3_clear_console'].bind('click', Ace.clear_console)
+&lt;/script&gt;
+
+&lt;!-- 用來顯示程式碼的 editor 區域 --&gt;
+
+&lt;div id="can3_editor" style="width:600px;height:300px;"&gt;&lt;/div&gt;
+
+&lt;!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --&gt;
+
+&lt;form&gt;
+    &lt;label&gt;Filename: &lt;input type="text" id="can3_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
+    &lt;input type="submit" value="Save" onclick="doSave('can3_py_src', 'can3_filename');"/&gt;
+&lt;/form&gt;
+
+&lt;p&gt;&lt;button id="can3_run"&gt;Run&lt;/button&gt;
+&lt;button id="can3_show_console"&gt;Output&lt;/button&gt;
+&lt;button id="can3_clear_console"&gt;清除&lt;/button&gt;
+&lt;div style="width:100%;height:100%;"&gt;
+&lt;textarea id="can3_console" autocomplete="off"&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;canvas id="can3_container" width="750" height="550"&gt;&lt;/canvas&gt;&lt;/p&gt;</content><category term="Cango"></category><category term="Brython"></category><category term="SVG"></category><category term="Canvas"></category></entry><entry><title>Brython 3.3.4 程式環境</title><link href="https://kmolab.github.io/blog/brython-programming-environment.html" rel="alternate"></link><published>2017-10-25T11:00:00+08:00</published><updated>2017-10-25T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-10-25:/blog/brython-programming-environment.html</id><summary type="html">&lt;p&gt;利用 &lt;a href="http://brython.info/"&gt;Brython&lt;/a&gt; 與 &lt;a href="https://ace.c9.io/"&gt;Ace&lt;/a&gt; 編輯器, 建立瀏覽器上的簡單 Python3 程式練習環境.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;利用 &lt;a href="http://brython.info/"&gt;Brython&lt;/a&gt; 與 &lt;a href="https://ace.c9.io/"&gt;Ace&lt;/a&gt; 編輯器, 建立瀏覽器上的簡單 Python3 程式練習環境.&lt;/p&gt;
 
 
