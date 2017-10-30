@@ -1349,6 +1349,76 @@ doc['jansen_clear_console'].bind('click', Ace.clear_console)
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;以下為與上述 Jansen's 八連桿機構對應的座標驗證圖, 機構端點座標 kx= -30.81 ky= -84.02:&lt;/p&gt;
 &lt;p&gt;&lt;img src="./../data/images/jansen_sympy.png" width="800" height="600"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;h3&gt;平面機構數目合成&lt;/h3&gt;
+&lt;p&gt;itertools module implements a number of iterator building blocks.&lt;/p&gt;
+&lt;p&gt;itertools.product(*iterables, repeat=1) - Cartesian product of input iterables.&lt;/p&gt;
+&lt;p&gt;根據 &lt;a href="http://www.iftomm2015.tw/IFToMM2015CD/PDF/OS2-048.pdf"&gt;http://www.iftomm2015.tw/IFToMM2015CD/PDF/OS2-048.pdf&lt;/a&gt; (or &lt;a href="./../data/pdf/An_Algorithm_for_the_Automatic_Sketching_of_Generalized_Kinematic_Chains.pdf"&gt;local download&lt;/a&gt;)&lt;/p&gt;
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+# 表示要導入 data/py/ace.py
+import ace
+
+Ace = ace.Editor(editor_id="numsyn_editor", console_id="numsyn_console", container_id="numsyn_container", storage_id="numsyn_py_src" )
+
+Ace.editor.setValue('''#數目合成
+from itertools import product
+
+# NL links and NJ joints as inputs
+class NumberSynthesis:
+    def __init__(self, NL, NJ):
+        self.NL = NL
+        self.NJ = NJ
+
+    @property
+    def Mmax(self):
+        if self.NL &lt;= self.NJ and self.NJ &lt;= (2*self.NL-3):
+            return self.NJ - self.NL + 2
+        elif (2*self.NL-3) &lt;= self.NJ and self.NJ &lt;= (self.NL*(self.NL-1)/2):
+            return self.NL - 1
+        else:
+            raise ValueError("incorrect number.")
+
+    @property
+    def NLm(self):
+        result = []
+        correction = lambda l: sum((i+2)*l[i] for i in range(len(l))) == 2*self.NJ
+        for symbols in product(range(self.NL+1), repeat=self.Mmax-2):
+            NLMmax = self.NL - sum(symbols)
+            answer = symbols+(NLMmax,)
+            if correction(answer) and NLMmax&gt;=0:
+                result.append(answer)
+        return tuple(result)
+
+a = NumberSynthesis(9, 11)
+print("the maximum number of joints incident to a link: ", a.Mmax)
+print("link assortments of the generalized kinematic chains: ", a.NLm)
+''')
+Ace.editor.scrollToRow(0)
+Ace.editor.gotoLine(0)
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['numsyn_run'].bind('click', Ace.run)
+doc['numsyn_show_console'].bind('click', Ace.show_console)
+doc['numsyn_clear_console'].bind('click', Ace.clear_console)
+&lt;/script&gt;
+
+&lt;!-- 用來顯示程式碼的 editor 區域 --&gt;
+
+&lt;div id="numsyn_editor" style="width:600px;height:300px;"&gt;&lt;/div&gt;
+
+&lt;!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --&gt;
+
+&lt;form&gt;
+    &lt;label&gt;Filename: &lt;input type="text" id="numsyn_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
+    &lt;input type="submit" value="Save" onclick="doSave('numsyn_py_src', 'numsyn_filename');"/&gt;
+&lt;/form&gt;
+
+&lt;p&gt;&lt;button id="numsyn_run"&gt;Run&lt;/button&gt;
+&lt;button id="numsyn_show_console"&gt;Output&lt;/button&gt;
+&lt;button id="numsyn_clear_console"&gt;清除&lt;/button&gt;
+&lt;div style="width:100%;height:100%;"&gt;
+&lt;textarea id="numsyn_console" autocomplete="off"&gt;&lt;/textarea&gt;
+&lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;目前所在頁面, 分別利用 &lt;a href="http://brython.info/"&gt;Brython&lt;/a&gt; 與 &lt;a href="https://ace.c9.io/"&gt;Ace&lt;/a&gt; 編輯器, 可直接在網誌中執行 Python3 程式, 基本架構為將 &lt;a href="http://brython.info/"&gt;Brython&lt;/a&gt; 的標準輸出轉到特定 div 標註, 而 &lt;a href="https://ace.c9.io/"&gt;Ace&lt;/a&gt; 編輯器則設為與其內的程式碼相同長度, 但至多只會在頁面中顯示 20 行, 且編輯器內的程式碼使用 12 號字元.&lt;/p&gt;
 &lt;p&gt;ace.py 原始碼, 位於 data/py 目錄中, 將原先只能單一呼叫的函式改為物件, 可以在同一頁面中產生案例時, 透過各標註的 id 字串區分各段程式碼, 是本課程 Python3 物件導向程式的實際應用範例, 謹提供參考.&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
