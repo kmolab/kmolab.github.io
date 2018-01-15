@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'KMOL'
-SITENAME = 'KMOLab 機械設計工程'
+SITENAME = '機械設計工程系 KMOLab'
 # 不要用文章所在目錄作為類別
 USE_FOLDER_AS_CATEGORY = False
 
@@ -40,7 +40,7 @@ DEFAULT_PAGINATION = 10
 
 # 必須絕對目錄或相對於設定檔案所在目錄
 PLUGIN_PATHS = ['plugin']
-PLUGINS = ['summary', 'tipue_search', 'sitemap']
+PLUGINS = ['summary', 'tipue_search', 'sitemap', 'neighbors']
 
 # for sitemap plugin
 SITEMAP = {
@@ -68,7 +68,7 @@ DISPLAY_TAGS_ON_SIDEBAR = True
 DISPLAY_TAGS_INLINE = True
 TAGS_URL = "tags.html"
 CATEGORIES_URL = "categories.html"
-MENUITEMS = [('About', '/blog/pages/about/')]
+#MENUITEMS = [('About', '/blog/pages/about/')]
 #SHOW_ARTICLE_AUTHOR = True
 
 #MENUITEMS = [('Home', '/'), ('Archives', '/archives.html'), ('Search', '/search.html')]

@@ -1,84 +1,90 @@
 <!DOCTYPE html>
-<html lang="en"
->
+<html lang="en">
+
 <head>
-    <title>2017 Fall 主機設定 - KMOLab 機械設計工程</title>
-    <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!--
--->
-
-<!-- for LaTeX equations -->
-<script src="./../data/math/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
-<script type="text/javascript">
-init_mathjax = function() {
-    if (window.MathJax) {
-        // MathJax loaded
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-            },
-            displayAlign: 'left', // Change this to 'center' to center equations.
-            "HTML-CSS": {
-                styles: {'.MathJax_Display': {"margin": 0}}
-            }
-        });
-        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-    }
-}
-init_mathjax();
-</script>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-<link rel="canonical" href="https://kmolab.github.io/blog/2017fall-srver-setup.html">
-
-        <meta name="author" content="yen" />
-        <meta name="keywords" content="2017fall" />
-        <meta name="description" content="在 2017 年 Spring, 電腦輔助設計室購入兩台 HP 伺服器, 分別是 HPE ProLiant ML10 Gen9 Server 與 HPE ProLiant ML350 Gen9 Server, 操作系統為 Ubuntu 16.04, 根據 Ubuntu LTS 通告, 使用週期可至 2021 年, 預計在 2019 年 Spring 由新伺服器接手提供服務." />
-
-        <meta property="og:site_name" content="KMOLab 機械設計工程" />
-        <meta property="og:type" content="article"/>
-        <meta property="og:title" content="2017 Fall 主機設定"/>
-        <meta property="og:url" content="https://kmolab.github.io/blog/2017fall-srver-setup.html"/>
-        <meta property="og:description" content="在 2017 年 Spring, 電腦輔助設計室購入兩台 HP 伺服器, 分別是 HPE ProLiant ML10 Gen9 Server 與 HPE ProLiant ML350 Gen9 Server, 操作系統為 Ubuntu 16.04, 根據 Ubuntu LTS 通告, 使用週期可至 2021 年, 預計在 2019 年 Spring 由新伺服器接手提供服務."/>
-        <meta property="article:published_time" content="2017-09-16" />
-            <meta property="article:section" content="Research" />
-            <meta property="article:tag" content="2017fall" />
-            <meta property="article:author" content="yen" />
+  <title>2017 Fall 主機設定</title>
 
 
-    <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://kmolab.github.io/blog/theme/css/bootstrap.united.min.css" type="text/css"/>
-    <link href="https://kmolab.github.io/blog/theme/css/font-awesome.min.css" rel="stylesheet">
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://kmolab.github.io/blog/" rel="canonical" />
 
-    <link href="https://kmolab.github.io/blog/theme/css/pygments/monokai.css" rel="stylesheet">
+  <!-- Feed -->
+        <link href="https://kmolab.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="機械設計工程系 KMOLab Full Atom Feed" />
+          <link href="https://kmolab.github.io/blog/feeds/research.atom.xml" type="application/atom+xml" rel="alternate" title="機械設計工程系 KMOLab Categories Atom Feed" />
+
+  <link href="https://kmolab.github.io/blog/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://kmolab.github.io/blog/theme/css/code_blocks/tomorrow_night.css" rel="stylesheet">
+
+  
     <link href="https://kmolab.github.io/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://kmolab.github.io/blog/theme/css/style.css" type="text/css"/>
 
-        <link href="https://kmolab.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="KMOLab 機械設計工程 ATOM Feed"/>
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
 
-<!--
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shCore.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushJScript.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushJava.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushPython.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushSql.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushXml.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushPhp.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCpp.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCss.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCSharp.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushBash.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushLua.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushMakefile.min.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushMakefile.js"></script>
--->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
+
+    <link href="https://kmolab.github.io/blog/2017fall-srver-setup.html" rel="canonical" />
+
+        <meta name="description" content="在 2017 年 Spring, 電腦輔助設計室購入兩台 HP 伺服器, 分別是 HPE ProLiant ML10 Gen9 Server 與 HPE ProLiant ML350 Gen9 Server, 操作系統為 Ubuntu 16.04, 根據 Ubuntu...">
+
+        <meta name="author" content="yen">
+
+        <meta name="tags" content="2017fall">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="機械設計工程系 KMOLab"/>
+<meta property="og:title" content="2017 Fall 主機設定"/>
+<meta property="og:description" content="在 2017 年 Spring, 電腦輔助設計室購入兩台 HP 伺服器, 分別是 HPE ProLiant ML10 Gen9 Server 與 HPE ProLiant ML350 Gen9 Server, 操作系統為 Ubuntu 16.04, 根據 Ubuntu..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://kmolab.github.io/blog/2017fall-srver-setup.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-09-16 12:00:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://kmolab.github.io/blog/author/yen.html">
+<meta property="article:section" content="Research"/>
+<meta property="article:tag" content="2017fall"/>
+<meta property="og:image" content="https://kmolab.github.io/blog/theme/images/post-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "2017 Fall 主機設定",
+  "headline": "2017 Fall 主機設定",
+  "datePublished": "2017-09-16 12:00:00+08:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "yen",
+    "url": "https://kmolab.github.io/blog/author/yen.html"
+  },
+  "image": "https://kmolab.github.io/blog/theme/images/post-bg.jpg",
+  "url": "https://kmolab.github.io/blog/2017fall-srver-setup.html",
+  "description": "在 2017 年 Spring, 電腦輔助設計室購入兩台 HP 伺服器, 分別是 HPE ProLiant ML10 Gen9 Server 與 HPE ProLiant ML350 Gen9 Server, 操作系統為 Ubuntu 16.04, 根據 Ubuntu..."
+}
+</script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shCore.js"></script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shBrushJScript.js"></script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shBrushJava.js"></script>
@@ -91,13 +97,11 @@ init_mathjax();
 <script type="text/javascript" src="./../data/syntaxhighlighter/shBrushCSharp.js"></script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shBrushBash.js"></script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shBrushLua.js"></script>
-<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushMakefile.min.js"></script>
-<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushMakefile.js"></script>
 <script type='text/javascript'>
 	(function(){
 		var corecss = document.createElement('link');
 		var themecss = document.createElement('link');
-		var corecssurl = "https://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shCore.css";
+		var corecssurl = "./../data/syntaxhighlighter/shCore.css";
 		if ( corecss.setAttribute ) {
 				corecss.setAttribute( "rel", "stylesheet" );
 				corecss.setAttribute( "type", "text/css" );
@@ -107,7 +111,7 @@ init_mathjax();
 				corecss.href = corecssurl;
 		}
 		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
-		var themecssurl = "https://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shThemeDefault.css?ver=3.0.9b";
+		var themecssurl = "./../data/syntaxhighlighter/shThemeDefault.css?ver=3.0.9b";
 		if ( themecss.setAttribute ) {
 				themecss.setAttribute( "rel", "stylesheet" );
 				themecss.setAttribute( "type", "text/css" );
@@ -129,126 +133,119 @@ init_mathjax();
 	SyntaxHighlighter.all();
 </script>
 
-<!-- for table style start -->
-<style>
-table, td, th {    
-    border: 1px solid #ddd;
-    text-align: left;
+<!-- for LaTeX equations -->
+<script src="./../data/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
 }
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th, td {
-    padding: 15px;
-}
-</style>
-<!-- for table style end -->
+init_mathjax();
+</script>
 
 </head>
-<body>
+<!-- TODO : Body class -->
+<body class="home-template">
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="https://kmolab.github.io/blog/" class="navbar-brand">
-KMOLab 機械設計工程            </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                    <li><a href="/blog/pages/about/">About</a></li>
-                        <li >
-                            <a href="https://kmolab.github.io/blog/category/course.html">Course</a>
-                        </li>
-                        <li >
-                            <a href="https://kmolab.github.io/blog/category/misc.html">Misc</a>
-                        </li>
-                        <li class="active">
-                            <a href="https://kmolab.github.io/blog/category/research.html">Research</a>
-                        </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><span>
-                <form class="navbar-search" action="https://kmolab.github.io/blog/search.html">
-                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
-                </form></span>
-              </li>
-              <li><a href="https://kmolab.github.io/blog/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="https://kmolab.github.io/blog/pages/about/">About</a></li>
+
+            <li><a href="https://kmolab.github.io/blog/archives.html">Archives</span></a></li>
+            
+            <li><a href="https://kmolab.github.io/blog/categories.html">Categories</span></a></li>
+            
+            <li><a href="https://kmolab.github.io/blog/tags.html">Tags</span></a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
     </div>
-</div> <!-- /.navbar -->
-<!-- Banner -->
-<!-- End Banner -->
-<div class="container">
-    <div class="row">
-        <div class="col-sm-9">
 
-    <section id="content">
-        <article>
-            <header class="page-header">
-                <h1>
-                    <a href="https://kmolab.github.io/blog/2017fall-srver-setup.html"
-                       rel="bookmark"
-                       title="Permalink to 2017 Fall 主機設定">
-                        2017 Fall 主機設定
-                    </a>
-                </h1>
-            </header>
-            <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-09-16T12:00:00+08:00"> Sat 16 September 2017</time>
-    </span>
-            <span class="label label-default">By</span>
-            <a href="https://kmolab.github.io/blog/author/yen.html"><i class="fa fa-user"></i> yen</a>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://kmolab.github.io/blog/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">2017 Fall 主機設定</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://kmolab.github.io/blog/author/yen.html">Yen</a>
+            | <time datetime="Sat 16 September 2017">Sat 16 September 2017</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('https://kmolab.github.io/blog/theme/images/post-bg.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+<section class="search">
+      <form class="navbar-search" action="https://kmolab.github.io/blog/search.html">
+      <input type="text"  placeholder="Search" name="q" id="tipue_search_input" required>
+    </form>
+</section>
 
 
-
-<span class="label label-default">Tags</span>
-	<a href="https://kmolab.github.io/blog/tag/2017fall.html">2017fall</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                </div>
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
                 <p>在 2017 年 Spring, 電腦輔助設計室購入兩台 HP 伺服器, 分別是 <a href="https://www.hpe.com/h20195/v2/GetPDF.aspx/c04922941.pdf">HPE ProLiant ML10 Gen9 Server</a> 與 <a href="https://www.hpe.com/h20195/v2/getpdf.aspx/c04375628.pdf">HPE ProLiant ML350 Gen9 Server</a>, 操作系統為 Ubuntu 16.04, 根據 <a href="https://www.ubuntu.com/info/release-end-of-life">Ubuntu LTS 通告</a>, 使用週期可至 2021 年, 預計在 2019 年 Spring 由新伺服器接手提供服務.</p>
 
 
-<h3>近端、區網與雲端其實是同一端</h3>
+<h2>近端、區網與雲端其實是同一端</h2>
 <p>自 2017 年 10 月起, 已經沒有免費的 OpenShift 雲端服務可以使用, 遠端較穩定的 html + javascript hosting 只剩下 Github Pages, 但是就課程與研究所需的近端、區網與雲端上的各項服務而言, 雲端的免費套餐終將越來越縮水的情況下, 強化近端與區網上的軟硬體服務, 將會更加重要.</p>
 <p>這個學期工作站室的伺服器, 將全面使用 <a href="https://www.fossil-scm.org">Fossil SCM</a> 管理所有的課程與研究專案, 每一位上課的學員都將在近端與區網擁有一個 Fossil 倉儲, 用來存放與課程相關的所有內容.</p>
 <p>Github 與 Bitbuckert 等雲端免費方案仍然扮演重要角色, 只是在無廣域網路連線與區域網路連線的情況下, 各學員的各項課程內容演練與操作資料提交, 將能在隨身的可攜系統上完成, 之後再配合區網與雲端網路的連線, 設法在分組協同的模式下, 將近端資料同步到區網與雲端主機. 因此 2017 Fall 起, 如何在近端、區網與雲端不同硬體環境下, 保持倉儲資料版本的同步, 就是另外一個重點.</p>
-<h3>主機設定</h3>
+<h2>主機設定</h2>
 <p>接下來, 我們透過 <a href="https://cadpb.kmol.info/40523201">https://cadpb.kmol.info/40523201</a> 學員倉儲, 來說明提供 Fossil SCM 服務的主機如何設定.</p>
 <p>首先當然是要先掌握 kmol.info 網域的主導權, 透過網域 DNS 的控管, 讓區域網路中的主機可以在 A 與 AAA 設定下的 IPv4 與 IPv6 網址呼應, 例如: cadpb.kmol.info 指的就是 cadp 電腦輔助設計實習課程中的 b 班所使用的伺服器名稱.</p>
 <p>如前所述, 這些伺服器都是安裝 Ubuntu 16.04 Server 操作系統 + OpenSSH, 目的是希望在 Self-signed Certificate 的模式下運作.</p>
 <p>接著必須根據 <a href="create-a-multi-repository-fossil-scm-server.html">多 Fossil SCM 倉儲主機</a> 的架構, 分別安裝 Fossil SCM 與 Stunnel.</p>
 <p>其中, 特別將 Fossil SCM 伺服的目錄指向 /home/cadpa2017, 表示各操作系統帳號所有人, 可以自行利用 fossil 指令, 建立多個倉儲, 此一模式就是同一台主機可以透過網域來界定上課班級, 操作系統帳號可以界定大分組名稱, 而採用學號的倉儲名稱則可以用來界定參與協同的所有者.</p>
 <p>因此, 一旦各倉儲所有者掌握管理該 .fossil 檔案的總管理權之後, 可以將其他學員納入自己所掌控的 .fossil users 中, 視實際需求賦於各帳號不同權限. 且可透過制式的 URL, 在得知各班各分組的成員學號情況下, 連結至各學員的倉儲中進行資料檢視.</p>
-<h3>機械設計專案的資料格式</h3>
+<h2>機械設計專案的資料格式</h2>
 <p>由於設計是一種利用口語、文字、2D、3D、數學與實體等形式, 所完成的明確與具體表達, 過程中必須仔細思考、多方考量, 而且在不同時段與多人協同合作的結果, 將會產生許多不同的資料版本.</p>
 <p>加上二十一世紀的機械可說是各種固體、流體與軟體元件精巧組合而成, 能達成特定功能之器物. 因此機械設計專案過程所產生的各種資料及版本, 更需要特別關注並竭力保存, 以便讓新舊學員在自學、執行與想像的創造力發揮階段, 擁有可持續改進的工具之外, 也能有保有多元開放的完整學習資料.</p>
 <p>在這樣對於機械設計表達、內容物與創造流程的認知下, 我們會希望學員在口語表達階段除了錄音之外, 能夠利用 Reveal.js 投影片寫下文字資料, 能儘量採用開放的設計格式, 在 Fossil SCM 倉儲中保留可以持續追蹤的文字資料格式, 2D/3D 的末端二位元檔案, 並非版次管理系統所關注並保留的重點, 學員該紀錄的是, 各種末端檔案是在何種情況下, 根據哪些約束條件, 用甚麼方法產生, 隨後的使用者在檢視歷史資料的同時, 應該可以根據這些較能持續改進的文字資料, 配合不同的情況, 使用不同的工具, 建立其所需的二位元末端檔案.</p>
 <p>換言之, 一個多元開放的機械設計專案, 在導入各種軟硬體組態管理的時間點, 必須全面檢視所用的工具, 所處的環境, 盡量採用能持續改進的專案資料格式, 而非只儲存不知前因與狀況下所產生的封閉格式檔案.</p>
-<h3>文字、大綱與程式</h3>
+<h2>文字、大綱與程式</h2>
 <p>當上述 Fossil SCM 主機的設定, 可以讓各學員個別管理 .fossil 倉儲檔案之後, 
 利用瀏覽器介面可以控管 users, 可以利用  wiki 建立快寫網頁, 可以將各種影片檔案以 attach 方式附加在 wiki 頁面中, 也可以在專案進行過程利用 tickets 追蹤設計問題, 並在專案階段性任務完成時, 以 technote 紀錄成果.</p>
 <p>除了利用瀏覽器介面維護的協同內容之外, 機械設計過程中採 Pelican Blog 紀錄的網誌, 採 Reveal.js 格式的簡報網頁, 以及各種計算機程式檔案, 則必須在文字、大綱與程式架構下來進行管理.</p>
 <p>在此我們所採用的管理工具為 Leo Editor, SciTE 與 Eric6.</p>
 <p>Leo Editor 是一套採用 Python3 + PyQt5 所編寫的大綱管理套件, 其任務是負責利用大綱架構管理鬆散的 Pelican Blog, 並且利用 button 執行操作系統指令, 還肩負透過 Python3 程式碼所組成的 button, 在近端啟動 IPv4 與 IPv6 WWW 伺服模擬環境, 能讓學員在近端檢視所有之後要推送到區網與雲端中的網誌與投影片內容.</p>
 <p>SciTE 則提供文字編輯以及 Python3 與 ANSI C 程式執行環境, 而 Eric6 則用於 PyQt5 程式的開發.</p>
-<h3>純 IPv6 主機設定</h3>
+<h2>純 IPv6 主機設定</h2>
 <p>目前在系主幹上的電腦已經可以選擇透過 IPv6 DHCP 或自行設定 IPv6 位址連線上網. </p>
 <p>在安裝  Ubuntu 16.04 Server 時, 選擇安裝 OpenSSH 模組, 之後則必須透過 IPv4/IPv6 雙支援的 Squid Proxy Server 才可以利用 apt 維護系統所安裝的套件.</p>
 <p>apt Proxy 的設定必須在 /etc/apt/atp.conf 中納入:</p>
@@ -269,7 +266,7 @@ dns-nameservers 2001:b000:168::1
 <p>最後則安裝設定中文輸入法:</p>
 <p>sudo apt install fcitx fcitx-chewing</p>
 <p>然後修改系統的 language support 將輸入法改為 fcitx 設定後, 必須登出再登入, 讓設定生效, input method 則選擇 chewing.</p>
-<h3>各階段設定檔案</h3>
+<h2>各階段設定檔案</h2>
 <p>Stunnel 的設定, 目的在與 Fossil SCM 結合, 提供 https 的連線代理.</p>
 <p>/etc/stunnel/stunnel.conf</p>
 <pre class="brush: python">
@@ -294,183 +291,91 @@ server {
     return 301 https://hp.kmol.info;
 }
 </pre>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=2017 Fall 主機設定&amp;url=https://kmolab.github.io/blog/2017fall-srver-setup.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://kmolab.github.io/blog/2017fall-srver-setup.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://kmolab.github.io/blog/2017fall-srver-setup.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://kmolab.github.io/blog/tag/2017fall.html">2017fall</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+                <script type="text/javascript">
+                    var disqus = 'kmolab-github';
+                    var disqus_shortname = 'kmolab-github';
+                    var disqus_identifier = '/2017fall-srver-setup.html';
+                    var disqus_url = 'https://kmolab.github.io/blog/2017fall-srver-setup.html';
+                </script>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+                <section class="post-comments">
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/2017fall-srver-setup.html" >Show Comments</a>
+                    <div id="disqus_thread"></div>
+                </section>
+
+                <aside class="post-nav">
+                    <a class="post-nav-next" href="https://kmolab.github.io/blog/cmsimfly-and-fossil-on-same-machine.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-left"></i>
+                                <h2 class="post-nav-title">CMSimfly 與 Fossil SCM</h2>
+                            <p class="post-nav-excerpt">CMSimfly 是一套採用 Flask 應用程式框架編寫的網際內容管理系統 (Content Management System), Fossil SCM 則是以...</p>
+                        </section>
+                    </a>
+                    <a class="post-nav-prev" href="https://kmolab.github.io/blog/2017fall-semester-starts.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">2017 Fall 即將開學</h2>
+                            <p class="post-nav-excerpt">再過幾天, 2017 Fall 學期即將開始, 去年 copy.com 免費雲端磁碟停止提供服務, 這個月底 OpenShift 的 online 2...</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
             </div>
-            <!-- /.entry-content -->
-    <hr/>
-    <section class="comments" id="comments">
-        <h2>Comments</h2>
-
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'kmolab-github'; // required: replace example with your forum shortname
-
-                    var disqus_identifier = '2017fall-srver-setup';
-                var disqus_url = 'https://kmolab.github.io/blog/2017fall-srver-setup.html';
-
-            var disqus_config = function () {
-                this.language = "en";
-            };
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function () {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-    </section>
         </article>
-    </section>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
 
-        </div>
-        <div class="col-sm-3" id="sidebar">
-            <aside>
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
 
-<section class="well well-sm">
-    <ul class="list-group list-group-flush">
 
-            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
-                <ul class="list-group" id="recentposts">
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/cango-brython-svg-canvas.html">
-                            Cango Javascript 程式庫繪圖
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/brython-programming-environment.html">
-                            Brython 3.3.4 程式環境
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/cmsimfly-and-fossil-on-same-machine.html">
-                            CMSimfly 與 Fossil SCM
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/2017fall-srver-setup.html">
-                            2017 Fall 主機設定
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/2017fall-semester-starts.html">
-                            2017 Fall 即將開學
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="list-group-item"><a href="https://kmolab.github.io/blog/categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
-                <ul class="list-group" id="categories">
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/category/course.html">
-                            <i class="fa fa-folder-open fa-lg"></i> Course
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/category/misc.html">
-                            <i class="fa fa-folder-open fa-lg"></i> Misc
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/category/research.html">
-                            <i class="fa fa-folder-open fa-lg"></i> Research
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="list-group-item"><a href="https://kmolab.github.io/blog/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-                <ul class="list-group list-inline tagcloud" id="tags">
-                </ul>
-            </li>
-    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
-      <ul class="list-group" id="links">
-        <li class="list-group-item">
-            <a href="https://www.nature.com/" target="_blank">
-                Nature
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://www.sciencemag.org/" target="_blank">
-                Science
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="https://www.samharris.org/" target="_blank">
-                Sam Harris
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://www.ieu.uzh.ch/wagner/" target="_blank">
-                Andreas Wagner
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="https://www.americanscientist.org/" target="_blank">
-                American Scientist
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="https://www.scientificamerican.com/" target="_blank">
-                Scientific American
-            </a>
-        </li>
-      </ul>
-    </li>
-    </ul>
-</section>
-            </aside>
-        </div>
-    </div>
-</div>
-<footer>
-   <div class="container">
-      <hr>
-      <div class="row">
-         <div class="col-xs-10">&copy; 2017 KMOL
-            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
-            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
-            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
-         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
       </div>
-   </div>
-</footer>
-<script src="https://kmolab.github.io/blog/theme/js/jquery.min.js"></script>
+    </footer>
+  </section>
+  
+  <script type="text/javascript" src="https://kmolab.github.io/blog/theme/js/script.js"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://kmolab.github.io/blog/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var disqus_shortname = 'kmolab-github';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+ 
 
-<!-- for https://github.com/jsor/lity lightbox video popup -->
-
-<link href="https://kmolab.github.io/blog/theme/css/lity.css" rel="stylesheet">
-
-<script src="https://kmolab.github.io/blog/theme/js/lity.js"></script>
-
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="https://kmolab.github.io/blog/theme/js/respond.min.js"></script>
-
-    <!-- Disqus -->
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'kmolab-github'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script');
-            s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
-    <!-- End Disqus Code -->
 
 </body>
 </html>

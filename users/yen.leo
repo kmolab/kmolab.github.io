@@ -14,13 +14,15 @@
 <v t="yen.20170108171605.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
 <v t="yen.20170108171622.1"><vh>有關 kmolab.github.io</vh></v>
+<v t="leo.20180115141411.1"><vh>20180115 重整內容</vh></v>
 <v t="yen.20170108171733.1" a="E"><vh>@path ../</vh>
-<v t="leo.20170706005043.1"><vh>@clean index.html</vh>
-<v t="leo.20170706005043.2"><vh>html</vh>
+<v t="leo.20180115150519.1"><vh>@edit index.html</vh></v>
+<v t="leo.20170706005043.1"><vh>@clean index_reveal.html</vh>
+<v t="leo.20170706005043.2" a="E"><vh>html</vh>
 <v t="leo.20170706005043.3"><vh>head</vh></v>
-<v t="leo.20170706005043.4"><vh>body</vh>
-<v t="leo.20170706005043.5"><vh>reveal div</vh>
-<v t="leo.20170706005043.6"><vh>slides div</vh>
+<v t="leo.20170706005043.4" a="E"><vh>body</vh>
+<v t="leo.20170706005043.5" a="E"><vh>reveal div</vh>
+<v t="leo.20170706005043.6" a="E"><vh>slides div</vh>
 <v t="leo.20170706005043.7"><vh>封面投影片</vh>
 <v t="leo.20170706005043.8"><vh>封面投影片內容</vh></v>
 </v>
@@ -75,9 +77,9 @@
 <v t="leo.20170908162904.1" a="E"><vh>有 disqus 論壇</vh>
 <v t="leo.20170709224430.1"><vh>@button github-blog</vh></v>
 </v>
-<v t="leo.20170710021233.1"><vh>@path slides</vh>
-<v t="leo.20170710021247.1"><vh>@clean template_slide.html</vh>
-<v t="leo.20170710021247.2"><vh>html</vh>
+<v t="leo.20170710021233.1" a="E"><vh>@path slides</vh>
+<v t="leo.20170710021247.1" a="E"><vh>@clean template_slide.html</vh>
+<v t="leo.20170710021247.2" a="E"><vh>html</vh>
 <v t="leo.20170710021247.3"><vh>head</vh></v>
 <v t="leo.20170710021247.4"><vh>body</vh>
 <v t="leo.20170710021247.5"><vh>reveal div</vh>
@@ -109,14 +111,23 @@
 </v>
 </v>
 <v t="yen.20170108171733.5" a="E"><vh>Pelican 設定</vh>
-<v t="leo.20170709015940.1"><vh>近端</vh></v>
-<v t="yen.20170108171733.6"><vh>@edit local_publishconf.py</vh></v>
-<v t="leo.20170709015947.1"><vh>遠端</vh></v>
-<v t="leo.20170709015955.1"><vh>@edit publishconf.py</vh></v>
 <v t="leo.20170709020600.1"><vh>共用</vh></v>
 <v t="yen.20170108171733.7"><vh>@edit pelicanconf.py</vh></v>
+<v t="leo.20170709015947.1"><vh>遠端</vh></v>
+<v t="leo.20170709015955.1"><vh>@edit publishconf.py</vh></v>
+<v t="leo.20170709015940.1"><vh>近端</vh></v>
+<v t="yen.20170108171733.6"><vh>@edit local_publishconf.py</vh></v>
 </v>
 <v t="yen.20170224232341.1" a="E"><vh>編輯 template</vh>
+<v t="leo.20180115093448.1" a="E"><vh>@path theme/attila/templates</vh>
+<v t="leo.20180115093536.1"><vh>@edit base.html</vh></v>
+<v t="leo.20180115093657.1"><vh>@edit search.html</vh></v>
+<v t="leo.20180115093715.1"><vh>@edit archives.html</vh></v>
+<v t="leo.20180115093726.1" a="E"><vh>@path partials</vh>
+<v t="leo.20180115093749.1"><vh>@edit navigation.html</vh></v>
+</v>
+<v t="leo.20180115142025.1"><vh>保留之前舊的設定檔案</vh></v>
+</v>
 <v t="yen.20170224232341.2" a="E"><vh>@path theme/pelican-bootstrap3_local/templates</vh>
 <v t="yen.20170224232341.3"><vh>@edit base.html</vh></v>
 </v>
@@ -126,9 +137,9 @@
 <v t="leo.20170710101854.1"><vh>@edit article.html</vh></v>
 </v>
 </v>
-<v t="leo.20170710015511.1"><vh>編輯 plugin</vh>
-<v t="leo.20170710015523.1"><vh>@path plugin</vh>
-<v t="leo.20170710015523.2"><vh>@path tipue_search</vh>
+<v t="leo.20170710015511.1" a="E"><vh>編輯 plugin</vh>
+<v t="leo.20170710015523.1" a="E"><vh>@path plugin</vh>
+<v t="leo.20170710015523.2" a="E"><vh>@path tipue_search</vh>
 <v t="leo.20170710015523.3"><vh>@edit tipue_search.py</vh></v>
 </v>
 </v>
@@ -137,45 +148,45 @@
 <v t="leo.20170710162557.1" a="E"><vh>軟硬體設置</vh>
 <v t="leo.20170706020010.1"><vh>@edit 20170605-1.md</vh></v>
 </v>
-<v t="leo.20170710162546.1"><vh>電腦模擬</vh>
+<v t="leo.20170710162546.1" a="E"><vh>電腦模擬</vh>
 <v t="leo.20170706015402.1"><vh>@edit 20170605-2.md</vh></v>
 </v>
-<v t="leo.20170710162534.1"><vh>實作</vh>
+<v t="leo.20170710162534.1" a="E"><vh>實作</vh>
 <v t="leo.20170706020035.1"><vh>@edit 20170605-3.md</vh></v>
 </v>
-<v t="leo.20170710162521.1"><vh>其他</vh>
+<v t="leo.20170710162521.1" a="E"><vh>其他</vh>
 <v t="leo.20170706020044.1"><vh>@edit 20170605-4.md</vh></v>
 </v>
-<v t="leo.20170710162500.1"><vh>大學生為何不來上課?</vh>
+<v t="leo.20170710162500.1" a="E"><vh>大學生為何不來上課?</vh>
 <v t="leo.20170706020055.1"><vh>@edit 20170605-5.md</vh></v>
 </v>
-<v t="leo.20170710162358.1"><vh>計算機程式</vh>
+<v t="leo.20170710162358.1" a="E"><vh>計算機程式</vh>
 <v t="leo.20170706020102.1"><vh>@edit 20170612-1.md</vh></v>
 </v>
-<v t="leo.20170710162347.1"><vh>電腦輔助設計實習</vh>
+<v t="leo.20170710162347.1" a="E"><vh>電腦輔助設計實習</vh>
 <v t="leo.20170706020111.1"><vh>@edit 20170618-1.md</vh></v>
 </v>
-<v t="leo.20170710162330.1"><vh>協同產品設計實習</vh>
+<v t="leo.20170710162330.1" a="E"><vh>協同產品設計實習</vh>
 <v t="leo.20170706020122.1"><vh>@edit 20170618-2.md</vh></v>
 <v t="leo.20170710162608.1"><vh>網際內容管理</vh></v>
 <v t="leo.20170706020211.1"><vh>@edit 20170618-3.md</vh></v>
 </v>
-<v t="yen.20170108171733.81"><vh>@path pages</vh>
+<v t="yen.20170108171733.81" a="E"><vh>@path pages</vh>
 <v t="yen.20170108171733.82"><vh>@edit pages_1.md</vh></v>
 </v>
 </v>
 <v t="leo.20170710022054.1"><vh>可以另建節點存放 content 目錄下的 md 檔案</vh></v>
 <v t="leo.20170710022041.1" a="E"><vh>@path content</vh>
-<v t="leo.20170710162623.1"><vh>計算機程式與電腦輔助設計實習</vh>
+<v t="leo.20170710162623.1" a="E"><vh>計算機程式與電腦輔助設計實習</vh>
 <v t="leo.20170710022207.1"><vh>@edit 20170618.md</vh></v>
 </v>
-<v t="leo.20170710225031.1"><vh>2015 Fall CADP W16</vh>
+<v t="leo.20170710225031.1" a="E"><vh>2015 Fall CADP W16</vh>
 <v t="leo.20170710225034.1"><vh>@edit 20170710.md</vh></v>
 </v>
-<v t="leo.20170714000548.1"><vh>Create a multi-repository Fossil Server</vh>
+<v t="leo.20170714000548.1" a="E"><vh>Create a multi-repository Fossil Server</vh>
 <v t="leo.20170714000620.1"><vh>@edit 20170714.md</vh></v>
 </v>
-<v t="yen.20170731134418.1"><vh>PyQt5 calculator</vh>
+<v t="yen.20170731134418.1" a="E"><vh>PyQt5 calculator</vh>
 <v t="yen.20170731134425.1"><vh>@edit 20170731.md</vh></v>
 </v>
 <v t="leo.20170826070114.1" a="E"><vh>免費試吃終將結束</vh>
@@ -187,7 +198,7 @@
 <v t="leo.20170916092621.1" a="E"><vh>2017 主機設定</vh>
 <v t="leo.20170916092636.1"><vh>@edit 20170916.md</vh></v>
 </v>
-<v t="leo.20171001091537.1"><vh>CMSimfly 與 Fossil SCM 同在</vh>
+<v t="leo.20171001091537.1" a="E"><vh>CMSimfly 與 Fossil SCM 同在</vh>
 <v t="leo.20171001091610.1"><vh>@edit 20171001.md</vh></v>
 </v>
 <v t="leo.20171025093610.1" a="E"><vh>Brython 3.3.4 程式環境</vh>
@@ -195,6 +206,9 @@
 </v>
 <v t="leo.20171025164948.1" a="E"><vh>Cango 繪圖</vh>
 <v t="leo.20171025164953.1"><vh>@edit 20171025.md</vh></v>
+</v>
+<v t="leo.20180115115910.1" a="E"><vh>2018</vh>
+<v t="leo.20180115115914.1"><vh>@edit 20180115.md</vh></v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -226,7 +240,7 @@
 <v t="leo.20170826090433.1"><vh>disable_proxy.reg</vh></v>
 <v t="leo.20170826090505.1"><vh>stop.bat</vh></v>
 </v>
-<v t="leo.20170826223628.1"><vh>如何成為一位傑出工程師</vh>
+<v t="leo.20170826223628.1" a="E"><vh>如何成為一位傑出工程師</vh>
 <v t="leo.20170826223748.1"><vh>英文版</vh></v>
 <v t="leo.20170826223640.1"><vh>中文版</vh></v>
 <v t="leo.20170826225423.1"><vh>Street Smart</vh></v>
@@ -460,7 +474,7 @@ Created by KMOLab
 </t>
 <t tx="leo.20170709224430.1">@language python
 import os
-#os.system("pelican content -o output -s local_publishconf.py -t theme/pelican-bootstrap3")
+
 os.system("pelican content -o blog -s publishconf.py")
 g.es("admin pelican Github 執行完畢")
 
@@ -617,31 +631,31 @@ KMOLab 機械設計工程
     
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
     
-    &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/css/reveal.css"&gt;
-    &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/css/theme/black.css" id="theme"&gt;
+    &lt;link rel="stylesheet" href="./../data/reveal.js/css/reveal.css"&gt;
+    &lt;link rel="stylesheet" href="./../data/reveal.js/css/theme/black.css" id="theme"&gt;
     
     &lt;!-- Theme used for syntax highlighting of code --&gt;
-    &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/lib/css/zenburn.css"&gt;
+    &lt;link rel="stylesheet" href="./../data/reveal.js/lib/css/zenburn.css"&gt;
 
     &lt;!-- Printing and PDF exports --&gt;
     &lt;script&gt;
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cad-lab.github.io/cadlab_data/reveal/css/print/pdf.css' : 'https://cad-lab.github.io/cadlab_data/reveal/css/print/paper.css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './../data/reveal.js/css/print/pdf.css' : './../data/reveal.js/css/print/paper.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     &lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
-    &lt;script src="https://cad-lab.github.io/cadlab_data/reveal/lib/js/html5shiv.js"&gt;&lt;/script&gt;
+    &lt;script src="./../data/reveal.js/lib/js/html5shiv.js"&gt;&lt;/script&gt;
     &lt;![endif]--&gt;
 &lt;/head&gt;
 
 </t>
 <t tx="leo.20170710021247.4">&lt;body&gt;
 @others
-&lt;script src="https://cad-lab.github.io/cadlab_data/reveal/lib/js/head.min.js"&gt;&lt;/script&gt;
-&lt;script src="https://cad-lab.github.io/cadlab_data/reveal/js/reveal.js"&gt;&lt;/script&gt;
+&lt;script src="./../data/reveal.js/lib/js/head.min.js"&gt;&lt;/script&gt;
+&lt;script src="./../data/reveal.js/js/reveal.js"&gt;&lt;/script&gt;
 &lt;script&gt;
         // More info https://github.com/hakimel/reveal.js#configuration
         Reveal.initialize({
@@ -654,13 +668,13 @@ KMOLab 機械設計工程
 
             // More info https://github.com/hakimel/reveal.js#dependencies
             dependencies: [
-                { src: 'https://cad-lab.github.io/cadlab_data/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: 'https://cad-lab.github.io/cadlab_data/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'https://cad-lab.github.io/cadlab_data/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'https://cad-lab.github.io/cadlab_data/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: 'https://cad-lab.github.io/cadlab_data/reveal/plugin/zoom-js/zoom.js', async: true },
-                { src: 'https://cad-lab.github.io/cadlab_data/reveal/plugin/notes/notes.js', async: true },
-                { src: 'https://cad-lab.github.io/cadlab_data/reveal/plugin/math/math.js', async: true }
+                { src: './../data/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: './../data/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: './../data/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: './../data/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: './../data/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: './../data/reveal.js/plugin/notes/notes.js', async: true },
+                { src: './../data/reveal.js/plugin/math/math.js', async: true }
             ]
         });
 &lt;/script&gt;
@@ -1908,6 +1922,19 @@ if __name__ == '__main__':
 <t tx="leo.20171001091537.1"></t>
 <t tx="leo.20171025093610.1"></t>
 <t tx="leo.20171025164948.1"></t>
+<t tx="leo.20180115093448.1"></t>
+<t tx="leo.20180115093726.1"></t>
+<t tx="leo.20180115115910.1"></t>
+<t tx="leo.20180115141411.1">採用　attila theme
+
+syntaxhighlighter 採用 3.0.83 舊版
+
+mathjax 採用最新版本 2.7.2
+
+重新改寫 .md 檔案, 採用 []: url 引用網址資料, 以單 $ 引用數學符號, 以 $$ 引用方程式
+
+以 &lt;pre class="brush: python"&lt;/&gt; &lt;/pre&gt; 引用程式碼</t>
+<t tx="leo.20180115142025.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
@@ -1994,7 +2021,7 @@ vertical: body pane on the botton</t>
 <t tx="yen.20170108171733.1"></t>
 <t tx="yen.20170108171733.2">@language python
 import os
-#os.system("pelican content -o output -s local_publishconf.py -t theme/pelican-bootstrap3")
+
 os.system("pelican content -o blog -s local_publishconf.py")
 g.es("admin pelican 近端執行完畢")
 
@@ -2042,7 +2069,7 @@ class HTTPServerV6(http.server.HTTPServer):
 def domake():
     # build directory
     os.chdir("./../")
-    ipv6_address = '2001:288:6004:17:3004::808'
+    ipv6_address = '::1'
     server_address = (ipv6_address, 6443)
     #httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
     httpd = HTTPServerV6(server_address, http.server.SimpleHTTPRequestHandler)

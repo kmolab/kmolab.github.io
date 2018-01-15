@@ -1,6 +1,6 @@
 Title: About
 
-##機械設計工程 KMOLab 倉儲
+##機械設計工程系 KMOLab 倉儲
 
 KMOLab 倉儲: <a href="https://github.com/kmolab/kmolab.github.io">https://github.com/kmolab/kmolab.github.io</a>
 

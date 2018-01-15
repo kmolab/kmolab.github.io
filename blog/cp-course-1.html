@@ -1,85 +1,92 @@
 <!DOCTYPE html>
-<html lang="en"
->
+<html lang="en">
+
 <head>
-    <title>計算機程式 - KMOLab 機械設計工程</title>
-    <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!--
--->
-
-<!-- for LaTeX equations -->
-<script src="./../data/math/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
-<script type="text/javascript">
-init_mathjax = function() {
-    if (window.MathJax) {
-        // MathJax loaded
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-            },
-            displayAlign: 'left', // Change this to 'center' to center equations.
-            "HTML-CSS": {
-                styles: {'.MathJax_Display': {"margin": 0}}
-            }
-        });
-        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-    }
-}
-init_mathjax();
-</script>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-<link rel="canonical" href="https://kmolab.github.io/blog/cp-course-1.html">
-
-        <meta name="author" content="kmol" />
-        <meta name="keywords" content="計算機程式,課程" />
-        <meta name="description" content="計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務." />
-
-        <meta property="og:site_name" content="KMOLab 機械設計工程" />
-        <meta property="og:type" content="article"/>
-        <meta property="og:title" content="計算機程式"/>
-        <meta property="og:url" content="https://kmolab.github.io/blog/cp-course-1.html"/>
-        <meta property="og:description" content="計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務."/>
-        <meta property="article:published_time" content="2017-06-12" />
-            <meta property="article:section" content="Course" />
-            <meta property="article:tag" content="計算機程式" />
-            <meta property="article:tag" content="課程" />
-            <meta property="article:author" content="kmol" />
+  <title>計算機程式</title>
 
 
-    <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://kmolab.github.io/blog/theme/css/bootstrap.united.min.css" type="text/css"/>
-    <link href="https://kmolab.github.io/blog/theme/css/font-awesome.min.css" rel="stylesheet">
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://kmolab.github.io/blog/" rel="canonical" />
 
-    <link href="https://kmolab.github.io/blog/theme/css/pygments/monokai.css" rel="stylesheet">
+  <!-- Feed -->
+        <link href="https://kmolab.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="機械設計工程系 KMOLab Full Atom Feed" />
+          <link href="https://kmolab.github.io/blog/feeds/course.atom.xml" type="application/atom+xml" rel="alternate" title="機械設計工程系 KMOLab Categories Atom Feed" />
+
+  <link href="https://kmolab.github.io/blog/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://kmolab.github.io/blog/theme/css/code_blocks/tomorrow_night.css" rel="stylesheet">
+
+  
     <link href="https://kmolab.github.io/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://kmolab.github.io/blog/theme/css/style.css" type="text/css"/>
 
-        <link href="https://kmolab.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="KMOLab 機械設計工程 ATOM Feed"/>
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
 
-<!--
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shCore.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushJScript.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushJava.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushPython.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushSql.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushXml.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushPhp.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCpp.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCss.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushCSharp.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushBash.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushLua.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushMakefile.min.js"></script>
-<script type="text/javascript" src="https://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushMakefile.js"></script>
--->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
+
+    <link href="https://kmolab.github.io/blog/cp-course-1.html" rel="canonical" />
+
+        <meta name="description" content="計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.">
+
+        <meta name="author" content="kmol">
+
+        <meta name="tags" content="計算機程式">
+        <meta name="tags" content="課程">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="機械設計工程系 KMOLab"/>
+<meta property="og:title" content="計算機程式"/>
+<meta property="og:description" content="計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://kmolab.github.io/blog/cp-course-1.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-06-12 11:00:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://kmolab.github.io/blog/author/kmol.html">
+<meta property="article:section" content="Course"/>
+<meta property="article:tag" content="計算機程式"/>
+<meta property="article:tag" content="課程"/>
+<meta property="og:image" content="https://kmolab.github.io/blog/theme/images/post-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "計算機程式",
+  "headline": "計算機程式",
+  "datePublished": "2017-06-12 11:00:00+08:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "kmol",
+    "url": "https://kmolab.github.io/blog/author/kmol.html"
+  },
+  "image": "https://kmolab.github.io/blog/theme/images/post-bg.jpg",
+  "url": "https://kmolab.github.io/blog/cp-course-1.html",
+  "description": "計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務."
+}
+</script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shCore.js"></script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shBrushJScript.js"></script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shBrushJava.js"></script>
@@ -92,13 +99,11 @@ init_mathjax();
 <script type="text/javascript" src="./../data/syntaxhighlighter/shBrushCSharp.js"></script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shBrushBash.js"></script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shBrushLua.js"></script>
-<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushMakefile.min.js"></script>
-<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushMakefile.js"></script>
 <script type='text/javascript'>
 	(function(){
 		var corecss = document.createElement('link');
 		var themecss = document.createElement('link');
-		var corecssurl = "https://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shCore.css";
+		var corecssurl = "./../data/syntaxhighlighter/shCore.css";
 		if ( corecss.setAttribute ) {
 				corecss.setAttribute( "rel", "stylesheet" );
 				corecss.setAttribute( "type", "text/css" );
@@ -108,7 +113,7 @@ init_mathjax();
 				corecss.href = corecssurl;
 		}
 		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
-		var themecssurl = "https://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shThemeDefault.css?ver=3.0.9b";
+		var themecssurl = "./../data/syntaxhighlighter/shThemeDefault.css?ver=3.0.9b";
 		if ( themecss.setAttribute ) {
 				themecss.setAttribute( "rel", "stylesheet" );
 				themecss.setAttribute( "type", "text/css" );
@@ -130,105 +135,96 @@ init_mathjax();
 	SyntaxHighlighter.all();
 </script>
 
-<!-- for table style start -->
-<style>
-table, td, th {    
-    border: 1px solid #ddd;
-    text-align: left;
+<!-- for LaTeX equations -->
+<script src="./../data/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
 }
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th, td {
-    padding: 15px;
-}
-</style>
-<!-- for table style end -->
+init_mathjax();
+</script>
 
 </head>
-<body>
+<!-- TODO : Body class -->
+<body class="home-template">
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="https://kmolab.github.io/blog/" class="navbar-brand">
-KMOLab 機械設計工程            </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                    <li><a href="/blog/pages/about/">About</a></li>
-                        <li class="active">
-                            <a href="https://kmolab.github.io/blog/category/course.html">Course</a>
-                        </li>
-                        <li >
-                            <a href="https://kmolab.github.io/blog/category/misc.html">Misc</a>
-                        </li>
-                        <li >
-                            <a href="https://kmolab.github.io/blog/category/research.html">Research</a>
-                        </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><span>
-                <form class="navbar-search" action="https://kmolab.github.io/blog/search.html">
-                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
-                </form></span>
-              </li>
-              <li><a href="https://kmolab.github.io/blog/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="https://kmolab.github.io/blog/pages/about/">About</a></li>
+
+            <li><a href="https://kmolab.github.io/blog/archives.html">Archives</span></a></li>
+            
+            <li><a href="https://kmolab.github.io/blog/categories.html">Categories</span></a></li>
+            
+            <li><a href="https://kmolab.github.io/blog/tags.html">Tags</span></a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
     </div>
-</div> <!-- /.navbar -->
-<!-- Banner -->
-<!-- End Banner -->
-<div class="container">
-    <div class="row">
-        <div class="col-sm-9">
 
-    <section id="content">
-        <article>
-            <header class="page-header">
-                <h1>
-                    <a href="https://kmolab.github.io/blog/cp-course-1.html"
-                       rel="bookmark"
-                       title="Permalink to 計算機程式">
-                        計算機程式
-                    </a>
-                </h1>
-            </header>
-            <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-06-12T11:00:00+08:00"> Mon 12 June 2017</time>
-    </span>
-            <span class="label label-default">By</span>
-            <a href="https://kmolab.github.io/blog/author/kmol.html"><i class="fa fa-user"></i> kmol</a>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://kmolab.github.io/blog/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">計算機程式</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://kmolab.github.io/blog/author/kmol.html">Kmol</a>
+            | <time datetime="Mon 12 June 2017">Mon 12 June 2017</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('https://kmolab.github.io/blog/theme/images/post-bg.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+<section class="search">
+      <form class="navbar-search" action="https://kmolab.github.io/blog/search.html">
+      <input type="text"  placeholder="Search" name="q" id="tipue_search_input" required>
+    </form>
+</section>
 
 
-
-<span class="label label-default">Tags</span>
-	<a href="https://kmolab.github.io/blog/tag/ji-suan-ji-cheng-shi.html">計算機程式</a>
-        /
-	<a href="https://kmolab.github.io/blog/tag/ke-cheng.html">課程</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                </div>
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
                 <p>計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.</p>
 
 
-<h3>為什麼非學不可?</h3>
+<h2>為什麼非學不可?</h2>
 <p><a href="https://cacm.acm.org/blogs/blog-cacm/166115-why-scientists-and-engineers-must-learn-programming/fulltext">https://cacm.acm.org/blogs/blog-cacm/166115-why-scientists-and-engineers-must-learn-programming/fulltext</a></p>
 <p>首先, 看看機械設計流程會牽涉哪些任務, 所謂機械設計, 就是歷經詳細思慮考量, 完成互動元件間之精巧配置, 使其展現特定功能之具體規劃表達.</p>
 <p>換言之, 機械設計是一種具體規劃的表達 (presentation), 其內容是經過一系列詳細的思慮與考量所得到的結果, 而此項結果通常有具體的功能, 並且包含許多互動 (interaction) 元件之間的彈性與精巧配置 (flexible and sophisticated configuration).</p>
@@ -247,9 +243,9 @@ KMOLab 機械設計工程            </a>
 <p>機械設計過程中, 為了在實體化之前能預先針對各種互動元件間的組成與配置進行最佳化, 因此需要使用各種逼真的模擬方法加以呈現.</p>
 </li>
 </ol>
-<h3>如何進行文字、2D&amp;3D表達</h3>
+<h2>如何進行文字、2D&amp;3D表達</h2>
 <p>有沒有一種方法可以讓多名使用者協同管理一份文件, 其中包含各種互動式圖文與影音資料, 各使用者在編修內容過程可以有效對資料進行保全, 可以有效分散備份, 可以紀錄各編修者所增刪的內容, 可以透過有效率的方法散佈此份文件的內容?</p>
-<h3>使用工具的評量方法</h3>
+<h2>使用工具的評量方法</h2>
 <p>機械設計工程師為了有效完成具體規劃內容的表達, 過程中必須使用各種類型的工具, 其中包括:</p>
 <ol>
 <li>文字資料構建、管理與呈現的工具 (text)</li>
@@ -281,16 +277,16 @@ KMOLab 機械設計工程            </a>
 <p>工具掌握度與整合效能成本 (integration)</p>
 </li>
 </ol>
-<h3>一定要學 C</h3>
+<h2>一定要學 C</h2>
 <p>C 是為建立 Unix 操作系統而生的程式語言, 也是近代許多高階程式語言建構的基礎, 例如, 最早的 C 程式編譯器雖然採用組合語言編寫, 但是隨後的 C 程式編譯器則可以採用舊版的 C 來編譯, 而 Python 解譯器在 1980 年代晚期出現時, 就是以 C 程式編寫, 之後雖然有採用 Java 編寫的 Jython (2001), 以 C# 編寫的 IronPython (2006), 以 RPython 編寫的 PyPy (2007), 以 Javascript 編寫的 Brython (2012), 但是 CPython 仍然是最通用的版本.</p>
 <p>儘管 C 程式語言對於工程師而言非常重要, 但是 C 或更進階的 C++ 程式語言的學習並不容易, 並不只是因為 C/C++ 擁有指標, 能夠控制電腦的底層記憶體, 而是因為 C/C++ 程式語言所涵蓋的應用非常廣.</p>
 <p>但是無論如何, 工程師一定要學會基本的  C 程式語言, 倒是毋庸置疑.</p>
 <p><a href="https://www.asme.org/career-education/articles/teachers-academics/c-as-part-of-a-mechanical-engineering-curriculum">https://www.asme.org/career-education/articles/teachers-academics/c-as-part-of-a-mechanical-engineering-curriculum</a></p>
-<h3>C 的指標與陣列導引</h3>
+<h2>C 的指標與陣列導引</h2>
 <p><a href="http://cad-lab.github.io/manual/post/c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin-zhong-wen-fan-yi.html">http://cad-lab.github.io/manual/post/c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin-zhong-wen-fan-yi.html</a></p>
-<h3>CP to CADP</h3>
+<h2>CP to CADP</h2>
 <p><a href="https://github.com/2015fallhw/cptocadp">https://github.com/2015fallhw/cptocadp</a></p>
-<h3>如何完成下列工作?</h3>
+<h2>如何完成下列工作?</h2>
 <p>1) 從一本英文書的文字檔中, 算出總字數, 並按照英文字母排列, 列出書中所使用的單字, 並查出各單字的中文解釋.</p>
 <p>2) 從網站中擷取當天台幣與美金及英鎊的匯率, 並根據某一列有台幣、美金與英鎊的檔案進行各幣值的總結算.</p>
 <p>3) 每組有六人, 某一任務需要完成六項工作, 每人負責一項, 但各工作間必須互相配合, 任務進行中需要完整呈現各組員每一階段所完成的內容細節, 請問該如何完成.</p>
@@ -322,7 +318,7 @@ KMOLab 機械設計工程            </a>
 <p>IGES Version 6: <a href="https://filemonger.com/specs/igs/devdept.com/version6.pdf">https://filemonger.com/specs/igs/devdept.com/version6.pdf</a></p>
 <p><a href="https://en.wikipedia.org/wiki/IGES">https://en.wikipedia.org/wiki/IGES</a></p>
 <p>DXF, IGES and STEP: <a href="http://homepages.cae.wisc.edu/~me232/info/dxf_iges_step.pdf">http://homepages.cae.wisc.edu/~me232/info/dxf_iges_step.pdf</a></p>
-<h3>Python3 學習</h3>
+<h2>Python3 學習</h2>
 <p>Official Tutorial: <a href="https://docs.python.org/3/tutorial/">https://docs.python.org/3/tutorial/</a></p>
 <p><a href="https://www.stavros.io/tutorials/python/"> 10 min Python Tutorial</a></p>
 <p>help(), dir(), print(), <a href="https://docs.python.org/3/tutorial/controlflow.html#the-range-function">range()</a>, <a href="https://docs.python.org/3/library/stdtypes.html">built-in types</a>,</p>
@@ -330,190 +326,98 @@ KMOLab 機械設計工程            </a>
 <p><a href="http://www.spronck.net/pythonbook">http://www.spronck.net/pythonbook</a></p>
 <p><a href="https://github.com/coodict/python3-in-one-pic/blob/master/notebooks/py3-in-one-pic.ipynb">https://github.com/coodict/python3-in-one-pic/blob/master/notebooks/py3-in-one-pic.ipynb</a></p>
 <p>資料分析: <a href="https://lectures.quantecon.org/py/">https://lectures.quantecon.org/py/</a></p>
-<h3>Python 很慢?</h3>
+<h2>Python 很慢?</h2>
 <p><a href="https://www.youtube.com/watch?v=8hHOxfXcWsg">https://www.youtube.com/watch?v=8hHOxfXcWsg</a></p>
 <p><a href="https://www.youtube.com/watch?v=a8LsdodGoWQ">https://www.youtube.com/watch?v=a8LsdodGoWQ</a></p>
-<h3>PyQT</h3>
+<h2>PyQT</h2>
 <p><a href="https://kuanyui.github.io/2014/09/13/learn-python-via-pyqt/">https://kuanyui.github.io/2014/09/13/learn-python-via-pyqt/</a></p>
-<h3>網際程式繪圖</h3>
+<h2>網際程式繪圖</h2>
 <p><a href="http://2015fallhw.github.io/2015fallcpa/g99_w15.html"http://2015fallhw.github.io/2015fallcpa/g99_w15.html</a></p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=計算機程式&amp;url=https://kmolab.github.io/blog/cp-course-1.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://kmolab.github.io/blog/cp-course-1.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://kmolab.github.io/blog/cp-course-1.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://kmolab.github.io/blog/tag/ji-suan-ji-cheng-shi.html">計算機程式</a><a href="https://kmolab.github.io/blog/tag/ke-cheng.html">課程</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+                <script type="text/javascript">
+                    var disqus = 'kmolab-github';
+                    var disqus_shortname = 'kmolab-github';
+                    var disqus_identifier = '/cp-course-1.html';
+                    var disqus_url = 'https://kmolab.github.io/blog/cp-course-1.html';
+                </script>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+                <section class="post-comments">
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/cp-course-1.html" >Show Comments</a>
+                    <div id="disqus_thread"></div>
+                </section>
+
+                <aside class="post-nav">
+                    <a class="post-nav-next" href="https://kmolab.github.io/blog/cadp-course-1.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-left"></i>
+                                <h2 class="post-nav-title">電腦輔助設計實習</h2>
+                            <p class="post-nav-excerpt">電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.</p>
+                        </section>
+                    </a>
+                    <a class="post-nav-prev" href="https://kmolab.github.io/blog/first-discussion-blog.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">大學生為何不來上課?</h2>
+                            <p class="post-nav-excerpt">大學生不願進教室上課的原因很多, 學費太低? 學不到東西? 完全跟不上進度? 老師太混? 上與不上都差不多? 實在爬不起來? 沒有人叫我起床?</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
             </div>
-            <!-- /.entry-content -->
-    <hr/>
-    <section class="comments" id="comments">
-        <h2>Comments</h2>
-
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'kmolab-github'; // required: replace example with your forum shortname
-
-                    var disqus_identifier = 'cp-course-1';
-                var disqus_url = 'https://kmolab.github.io/blog/cp-course-1.html';
-
-            var disqus_config = function () {
-                this.language = "en";
-            };
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function () {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-    </section>
         </article>
-    </section>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
 
-        </div>
-        <div class="col-sm-3" id="sidebar">
-            <aside>
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
 
-<section class="well well-sm">
-    <ul class="list-group list-group-flush">
 
-            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
-                <ul class="list-group" id="recentposts">
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/cango-brython-svg-canvas.html">
-                            Cango Javascript 程式庫繪圖
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/brython-programming-environment.html">
-                            Brython 3.3.4 程式環境
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/cmsimfly-and-fossil-on-same-machine.html">
-                            CMSimfly 與 Fossil SCM
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/2017fall-srver-setup.html">
-                            2017 Fall 主機設定
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/2017fall-semester-starts.html">
-                            2017 Fall 即將開學
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="list-group-item"><a href="https://kmolab.github.io/blog/categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
-                <ul class="list-group" id="categories">
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/category/course.html">
-                            <i class="fa fa-folder-open fa-lg"></i> Course
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/category/misc.html">
-                            <i class="fa fa-folder-open fa-lg"></i> Misc
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://kmolab.github.io/blog/category/research.html">
-                            <i class="fa fa-folder-open fa-lg"></i> Research
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="list-group-item"><a href="https://kmolab.github.io/blog/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-                <ul class="list-group list-inline tagcloud" id="tags">
-                </ul>
-            </li>
-    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
-      <ul class="list-group" id="links">
-        <li class="list-group-item">
-            <a href="https://www.nature.com/" target="_blank">
-                Nature
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://www.sciencemag.org/" target="_blank">
-                Science
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="https://www.samharris.org/" target="_blank">
-                Sam Harris
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://www.ieu.uzh.ch/wagner/" target="_blank">
-                Andreas Wagner
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="https://www.americanscientist.org/" target="_blank">
-                American Scientist
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="https://www.scientificamerican.com/" target="_blank">
-                Scientific American
-            </a>
-        </li>
-      </ul>
-    </li>
-    </ul>
-</section>
-            </aside>
-        </div>
-    </div>
-</div>
-<footer>
-   <div class="container">
-      <hr>
-      <div class="row">
-         <div class="col-xs-10">&copy; 2017 KMOL
-            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
-            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
-            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
-         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
       </div>
-   </div>
-</footer>
-<script src="https://kmolab.github.io/blog/theme/js/jquery.min.js"></script>
+    </footer>
+  </section>
+  
+  <script type="text/javascript" src="https://kmolab.github.io/blog/theme/js/script.js"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://kmolab.github.io/blog/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var disqus_shortname = 'kmolab-github';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+ 
 
-<!-- for https://github.com/jsor/lity lightbox video popup -->
-
-<link href="https://kmolab.github.io/blog/theme/css/lity.css" rel="stylesheet">
-
-<script src="https://kmolab.github.io/blog/theme/js/lity.js"></script>
-
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="https://kmolab.github.io/blog/theme/js/respond.min.js"></script>
-
-    <!-- Disqus -->
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'kmolab-github'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script');
-            s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
-    <!-- End Disqus Code -->
 
 </body>
 </html>

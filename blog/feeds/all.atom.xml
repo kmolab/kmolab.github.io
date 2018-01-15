@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>KMOLab 機械設計工程</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2017-10-25T12:00:00+08:00</updated><entry><title>Cango Javascript 程式庫繪圖</title><link href="https://kmolab.github.io/blog/cango-brython-svg-canvas.html" rel="alternate"></link><published>2017-10-25T12:00:00+08:00</published><updated>2017-10-25T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-10-25:/blog/cango-brython-svg-canvas.html</id><summary type="html">&lt;p&gt;利用 Cango 與 Brython 進行網際繪圖&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>機械設計工程系 KMOLab</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2018-01-15T11:00:00+08:00</updated><entry><title>網頁上的數學方程式</title><link href="https://kmolab.github.io/blog/Math-Equation-On-Web-Page.html" rel="alternate"></link><published>2018-01-15T11:00:00+08:00</published><updated>2018-01-15T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-01-15:/blog/Math-Equation-On-Web-Page.html</id><summary type="html">&lt;p&gt;利用 &lt;a href="https://www.mathjax.org"&gt;Mathjax&lt;/a&gt; 可以利用 LaTeX 語法，在網頁上編寫數學方程式.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;利用 &lt;a href="https://www.mathjax.org"&gt;Mathjax&lt;/a&gt; 可以利用 LaTeX 語法，在網頁上編寫數學方程式.&lt;/p&gt;
+
+
+&lt;h2&gt;數學方程式&lt;/h2&gt;
+&lt;p&gt;當 $a \ne 0$, 一元二次方程式 (ax^2 + bx + c = 0) 有兩組解, 可以寫成:
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$&lt;/p&gt;
+&lt;p&gt;以上的原始 Markdown 檔案為:&lt;/p&gt;
+&lt;pre class="brush:xml"&gt;
+當 $a \ne 0$, 一元二次方程式 \(ax^2 + bx + c = 0\) 有兩組解, 可以寫成:
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+
+[Mathjax]:https://www.mathjax.org
+&lt;/pre&gt;
+
+&lt;h2&gt;機械設計方法與表達&lt;/h2&gt;
+&lt;p&gt;假如您真正將在機械設計工程系所學, 用在解決實務問題, 就會發現整個過程都在與概念及知識混戰, 而概念與知識的交互作用, 正是所謂知識經濟的重要特徵, 概念可以通過驗證而成為知識, 用來解決問題, 而概念可能衍生出更多概念, 當知識在實務執行過程中, 因為各種原因而無法用來解決問題時, 就會轉化成為團隊間的概念, 而特定知識的運用與推演, 更會產生更多有用的知識.&lt;/p&gt;
+&lt;p&gt;上面與概念及知識相關的說明, 就是來自 &lt;a href="http://cktheory.com"&gt;C-K 設計理論&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;以上述利用 LaTeX 語法, 在網頁中產生數學方程式的概念, 來自於工程師設計表達過程中的需求, 而這些需求最早的"知識", 是將方程式事先做成圖形檔案, 然後再以 img 標註引入網頁, 但是這樣的知識很快受到挑戰, 因為整體流程非常沒有彈性, 並非直接從網頁中的文字"自動"轉為可視的數學公式, 因此早先的知識在 Javascript 的置入後, 由使用者編寫 LaTeX 語法, 然後再由程式方法在網頁中即時訂製出所要的數學方程式.&lt;/p&gt;
+&lt;p&gt;與數學方程式在網頁中的表達需求相同的, 是在網頁中正確引用各種程式碼, 在此我們採用的是舊版的 &lt;a href="http://alexgorbatchev.com/SyntaxHighlighter/"&gt;Syntaxhighlighter&lt;/a&gt;, 也是透過 Javascript 解讀所要引用的程式語法, 然後再利用設定顯示出對應的行號. 上述用來顯示四行 LaTeX 方程式與 Markdown 引用網址的原始內容, 就是應用之一.&lt;/p&gt;
+&lt;h2&gt;組成內容與狀態的版次決定一切&lt;/h2&gt;
+&lt;p&gt;當上述引用 &lt;a href="http://alexgorbatchev.com/SyntaxHighlighter/"&gt;Syntaxhighlighter&lt;/a&gt; 與 &lt;a href="https://www.mathjax.org"&gt;Mathjax&lt;/a&gt; 的過程中, 非常重要的一點就是這兩套 Javascript 程式碼, 在不斷更新的情況下, 不同版次的組成內容各不相同, 使用的方法也不一樣, 因此我們說事物組成內容與狀態的版次決定一切, 當許多問題的解決與討論, 在各自不知彼此立足點的組成內容與狀態版次的情況下, 許多無謂紛爭就會發生, 解決方法也比相對難以找到.&lt;/p&gt;
+&lt;p&gt;以我們目前在使用的 &lt;a href="http://leoeditor.com/"&gt;Leo Editor&lt;/a&gt; 來說, 可以在 &lt;a href="https://pythonclock.org/"&gt;Python2&lt;/a&gt; 或 Python3 的環境中使用, 並且需要安裝 &lt;a href="https://riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt; 第四版或第五版模組才能啟動. 但是隨著 &lt;a href="https://pythonclock.org/"&gt;Python2&lt;/a&gt; 的生命週期即將抵達終點, 而且 &lt;a href="http://leoeditor.com/"&gt;Leo Editor&lt;/a&gt; 及 &lt;a href="https://riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt; 幾乎隨時都在更動改版中, 因此假如使用者的操作系統、&lt;a href="http://leoeditor.com/"&gt;Leo Editor&lt;/a&gt;、&lt;a href="https://riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt; 與其他使用者用來建置網頁或程式的所有套件都能"自動"感知組成內容, 自動調適狀態, 自動搭配改版, 使用者就能高枕無憂, 永續使用這一系列工具, 問題是整個過程中牽涉到如何收費, 這些工具套件如何正確判斷使用者的需求, 倘若因此造成損失, 該由誰負責"賠償"或者恢復原狀, 重點在於哪一個才是原狀?&lt;/p&gt;
+&lt;p&gt;以過去三十幾年的電腦與網路使用歷程來看, 第一階段的電腦輔助, 從旁協助的角色, 早已提升到自動附加的半自主角色, 例如: Windows 10 的自主更新, 已經無需使用者同意, 眼前能夠想像的是在十年內, 電腦與網路全面自主為人類創造價值的世代, 希望屆時使用者不僅只是整體社會運作的組成元件
+, 更是主導運作狀態的發號者.&lt;/p&gt;</content><category term="Mathjax"></category></entry><entry><title>Cango Javascript 程式庫繪圖</title><link href="https://kmolab.github.io/blog/cango-brython-svg-canvas.html" rel="alternate"></link><published>2017-10-25T12:00:00+08:00</published><updated>2017-10-25T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-10-25:/blog/cango-brython-svg-canvas.html</id><summary type="html">&lt;p&gt;利用 Cango 與 Brython 進行網際繪圖&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;利用 Cango 與 Brython 進行網際繪圖&lt;/p&gt;
 
 
@@ -544,7 +568,7 @@ function doSave(storage_id, filename){
 &lt;/script&gt;
 
 &lt;p&gt;編寫 Python3 程式邏輯之前必須先了解基本的程式語法, 其中包括:&lt;/p&gt;
-&lt;h3&gt;Python3 變數命名規則與關鍵字&lt;/h3&gt;
+&lt;h2&gt;Python3 變數命名規則與關鍵字&lt;/h2&gt;
 &lt;p&gt;Python 英文變數命名規格&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;變數必須以英文字母大寫或小寫或底線開頭
 變數其餘字元可以是英文大小寫字母, 數字或底線
@@ -609,9 +633,9 @@ doc['kw_clear_console'].bind('click', Ace.clear_console)
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;print() 函式用法&lt;/h3&gt;
+&lt;h2&gt;print() 函式用法&lt;/h2&gt;
 &lt;p&gt;print() 為 Python 程式語言中用來列印數值或字串的函式, 其中有 sep 變數定義分隔符號, ｓep 內定為 ",", end 變數則用來定義列印結尾的符號, end 內定為跳行符號.&lt;/p&gt;
-&lt;h3&gt;for 迴圈用法與 Python 的縮排規定&lt;/h3&gt;
+&lt;h2&gt;for 迴圈用法與 Python 的縮排規定&lt;/h2&gt;
 &lt;p&gt;重複迴圈用法, 使用者可以透過下列程式編輯區練習 for 迴圈與 print() 函式的用法.&lt;/p&gt;
 &lt;script type="text/python3"&gt;
 from browser import document as doc
@@ -722,7 +746,7 @@ doc['turtle_clear_container'].bind('click', Ace.clear_container)
 
 &lt;div id="container"&gt;&lt;/div&gt;
 
-&lt;h3&gt;函式用法與呼叫&lt;/h3&gt;
+&lt;h2&gt;函式用法與呼叫&lt;/h2&gt;
 &lt;p&gt;使用者可以利用下列程式, 練習 def 函式定義與呼叫的用法.&lt;/p&gt;
 &lt;script type="text/python3"&gt;
 from browser import document as doc
@@ -1011,7 +1035,7 @@ doc['clock_clear_container'].bind('click', Ace.clear_container)
 &lt;textarea id="clock_console" autocomplete="off"&gt;&lt;/textarea&gt;
 &lt;/div&gt;
 &lt;div id="clock_container"&gt;&lt;/div&gt;&lt;/p&gt;
-&lt;h3&gt;基本物件導向與案例&lt;/h3&gt;
+&lt;h2&gt;基本物件導向與案例&lt;/h2&gt;
 &lt;p&gt;Python 採用類別 (class) 將案例變數 (instance variables) 與案例方法 (instance methods) 包在一起, 並用來定義一種物件 (object).&lt;/p&gt;
 &lt;p&gt;物件導向具有封裝 (encapsulation) , 繼承 (inheritance) 與多形 ( polymorphism) 等三種特性.&lt;/p&gt;
 &lt;!-- oop 範例 --&gt;
@@ -1244,7 +1268,7 @@ doc['link_clear_console'].bind('click', Ace.clear_console)
 &lt;textarea id="link_console" autocomplete="off"&gt;&lt;/textarea&gt;
 &lt;/div&gt;
 &lt;canvas id="fourbar" width="250" height="250"&gt;&lt;/canvas&gt;&lt;/p&gt;
-&lt;h3&gt;平面機構運動模擬&lt;/h3&gt;
+&lt;h2&gt;平面機構運動模擬&lt;/h2&gt;
 &lt;p&gt;以下為 Jansen's 八連桿機構的基本 Kinematic 運算, 先採用 Sympy 以符號式推導出機構端點的運動軌跡方程式後, 利用 Python 執行數值分析運算, 列出機構端點的座標.&lt;/p&gt;
 &lt;script type="text/python3"&gt;
 from browser import document as doc
@@ -1349,7 +1373,7 @@ doc['jansen_clear_console'].bind('click', Ace.clear_console)
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;以下為與上述 Jansen's 八連桿機構對應的座標驗證圖, 機構端點座標 kx= -30.81 ky= -84.02:&lt;/p&gt;
 &lt;p&gt;&lt;img src="./../data/images/jansen_sympy.png" width="800" height="600"&gt;&lt;/img&gt;&lt;/p&gt;
-&lt;h3&gt;平面機構數目合成&lt;/h3&gt;
+&lt;h2&gt;平面機構數目合成&lt;/h2&gt;
 &lt;p&gt;itertools module implements a number of iterator building blocks.&lt;/p&gt;
 &lt;p&gt;itertools.product(*iterables, repeat=1) - Cartesian product of input iterables.&lt;/p&gt;
 &lt;p&gt;根據 &lt;a href="http://www.iftomm2015.tw/IFToMM2015CD/PDF/OS2-048.pdf"&gt;http://www.iftomm2015.tw/IFToMM2015CD/PDF/OS2-048.pdf&lt;/a&gt; (or &lt;a href="./../data/pdf/An_Algorithm_for_the_Automatic_Sketching_of_Generalized_Kinematic_Chains.pdf"&gt;local download&lt;/a&gt;)&lt;/p&gt;
@@ -1518,10 +1542,10 @@ class Editor():
 </summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/chiamingyen/cmsimfly"&gt;CMSimfly&lt;/a&gt; 是一套採用 Flask 應用程式框架編寫的網際內容管理系統 (Content Management System),  &lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 則是以 ANSI C 編寫的軟體組態管理 (Software Configuration Management) 系統, 兩套程式各有不同的特色, CMSimfly 適合用來管理無版次的大型檔案, 而 Fossil SCM 則可用來記錄詳細的軟體設計開發歷程.&lt;/p&gt;
 
 
-&lt;h3&gt;CMSimfly 與 Fossil SCM 安裝規劃&lt;/h3&gt;
+&lt;h2&gt;CMSimfly 與 Fossil SCM 安裝規劃&lt;/h2&gt;
 &lt;p&gt;CMSimfly 採用 Python3 與 Flask 編寫, 可以採用 &lt;a href="https://github.com/unbit/uwsgi"&gt;uwsgi&lt;/a&gt; 模組啟動, 預計網際前端透過 Nginx https 埠號 8443 承接來自瀏覽器的請求, 而 Fossil SCM 的 http port 80 前端則由 Nginx 承接後, 直接跳轉 Stunnel 所代理的 https 服務. 因此當使用者以瀏覽器 http 連線, 伺服器會馬上跳轉 https 的 Fossil SCM, 假如要連結 CMSimfly, 則必須以 https 8443 連線.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/unbit/uwsgi"&gt;uwsgi&lt;/a&gt; 有多種啟動方式, 在此希望透過 Emperor 的多應用程式的模式啟動, 基本架構是,  uwsgi 指令在 /etc/rc.local 中以 exec 執行, 可以在伺服器開機時執行, 而 uwsgi Emperor  中指定以一般用戶身分執行, 實際封包在內部網路的 8081 啟動, 之後透過 /etc/nginx/sites-available/default 中的 server 設定, 只接受 8443 埠號的 IPv4 與 IPv6 網際瀏覽器請求.&lt;/p&gt;
-&lt;h3&gt;CMSimfly 安裝設定&lt;/h3&gt;
+&lt;h2&gt;CMSimfly 安裝設定&lt;/h2&gt;
 &lt;p&gt;根據 uwsgi 與 Emperor 的啟動, 伺服器所需模組, 包括 pip3, Flask, python3 開發環境, uwsgi, nginx 與 uwsgi-plugin-python3 模組:&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
 sudo apt install python3-pip
@@ -1658,7 +1682,7 @@ wsgi-file = /home/user/cmsimfly2/wsgi.py
 &lt;p&gt;若要讓伺服器在開機時執行 uwsgi, 則需要在/etc/rc.local 加入:&lt;/p&gt;
 &lt;p&gt;exec uwsgi --emperor /home/user/uwsgi_ini&lt;/p&gt;
 &lt;p&gt;過程中若需要重新啟動 nginx, 以 /etc/init.d/nginx restart 執行.&lt;/p&gt;
-&lt;h3&gt;Fossil SCM 與 Stunnel 聯合啟動&lt;/h3&gt;
+&lt;h2&gt;Fossil SCM 與 Stunnel 聯合啟動&lt;/h2&gt;
 &lt;p&gt;因為在 Nginx /etc/nginx/sites-available/default 中已經將 port 80 的回應處理直接透過 http 301 狀態碼的宣告, 永久轉接到 https://my.server.host.name, 因此只要透過 Stunnel 代理在標準的 IPv4 與 IPv6 網路協定中, 以 https 啟動 Fossil SCM 即可.&lt;/p&gt;
 &lt;p&gt;首先要安裝 Stunnel 與 Fossil SCM:&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
@@ -1688,30 +1712,30 @@ execargs = /usr/bin/fossil http /home/user/ --https --nojail --notfound default
 </summary><content type="html">&lt;p&gt;在 2017 年 Spring, 電腦輔助設計室購入兩台 HP 伺服器, 分別是 &lt;a href="https://www.hpe.com/h20195/v2/GetPDF.aspx/c04922941.pdf"&gt;HPE ProLiant ML10 Gen9 Server&lt;/a&gt; 與 &lt;a href="https://www.hpe.com/h20195/v2/getpdf.aspx/c04375628.pdf"&gt;HPE ProLiant ML350 Gen9 Server&lt;/a&gt;, 操作系統為 Ubuntu 16.04, 根據 &lt;a href="https://www.ubuntu.com/info/release-end-of-life"&gt;Ubuntu LTS 通告&lt;/a&gt;, 使用週期可至 2021 年, 預計在 2019 年 Spring 由新伺服器接手提供服務.&lt;/p&gt;
 
 
-&lt;h3&gt;近端、區網與雲端其實是同一端&lt;/h3&gt;
+&lt;h2&gt;近端、區網與雲端其實是同一端&lt;/h2&gt;
 &lt;p&gt;自 2017 年 10 月起, 已經沒有免費的 OpenShift 雲端服務可以使用, 遠端較穩定的 html + javascript hosting 只剩下 Github Pages, 但是就課程與研究所需的近端、區網與雲端上的各項服務而言, 雲端的免費套餐終將越來越縮水的情況下, 強化近端與區網上的軟硬體服務, 將會更加重要.&lt;/p&gt;
 &lt;p&gt;這個學期工作站室的伺服器, 將全面使用 &lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 管理所有的課程與研究專案, 每一位上課的學員都將在近端與區網擁有一個 Fossil 倉儲, 用來存放與課程相關的所有內容.&lt;/p&gt;
 &lt;p&gt;Github 與 Bitbuckert 等雲端免費方案仍然扮演重要角色, 只是在無廣域網路連線與區域網路連線的情況下, 各學員的各項課程內容演練與操作資料提交, 將能在隨身的可攜系統上完成, 之後再配合區網與雲端網路的連線, 設法在分組協同的模式下, 將近端資料同步到區網與雲端主機. 因此 2017 Fall 起, 如何在近端、區網與雲端不同硬體環境下, 保持倉儲資料版本的同步, 就是另外一個重點.&lt;/p&gt;
-&lt;h3&gt;主機設定&lt;/h3&gt;
+&lt;h2&gt;主機設定&lt;/h2&gt;
 &lt;p&gt;接下來, 我們透過 &lt;a href="https://cadpb.kmol.info/40523201"&gt;https://cadpb.kmol.info/40523201&lt;/a&gt; 學員倉儲, 來說明提供 Fossil SCM 服務的主機如何設定.&lt;/p&gt;
 &lt;p&gt;首先當然是要先掌握 kmol.info 網域的主導權, 透過網域 DNS 的控管, 讓區域網路中的主機可以在 A 與 AAA 設定下的 IPv4 與 IPv6 網址呼應, 例如: cadpb.kmol.info 指的就是 cadp 電腦輔助設計實習課程中的 b 班所使用的伺服器名稱.&lt;/p&gt;
 &lt;p&gt;如前所述, 這些伺服器都是安裝 Ubuntu 16.04 Server 操作系統 + OpenSSH, 目的是希望在 Self-signed Certificate 的模式下運作.&lt;/p&gt;
 &lt;p&gt;接著必須根據 &lt;a href="create-a-multi-repository-fossil-scm-server.html"&gt;多 Fossil SCM 倉儲主機&lt;/a&gt; 的架構, 分別安裝 Fossil SCM 與 Stunnel.&lt;/p&gt;
 &lt;p&gt;其中, 特別將 Fossil SCM 伺服的目錄指向 /home/cadpa2017, 表示各操作系統帳號所有人, 可以自行利用 fossil 指令, 建立多個倉儲, 此一模式就是同一台主機可以透過網域來界定上課班級, 操作系統帳號可以界定大分組名稱, 而採用學號的倉儲名稱則可以用來界定參與協同的所有者.&lt;/p&gt;
 &lt;p&gt;因此, 一旦各倉儲所有者掌握管理該 .fossil 檔案的總管理權之後, 可以將其他學員納入自己所掌控的 .fossil users 中, 視實際需求賦於各帳號不同權限. 且可透過制式的 URL, 在得知各班各分組的成員學號情況下, 連結至各學員的倉儲中進行資料檢視.&lt;/p&gt;
-&lt;h3&gt;機械設計專案的資料格式&lt;/h3&gt;
+&lt;h2&gt;機械設計專案的資料格式&lt;/h2&gt;
 &lt;p&gt;由於設計是一種利用口語、文字、2D、3D、數學與實體等形式, 所完成的明確與具體表達, 過程中必須仔細思考、多方考量, 而且在不同時段與多人協同合作的結果, 將會產生許多不同的資料版本.&lt;/p&gt;
 &lt;p&gt;加上二十一世紀的機械可說是各種固體、流體與軟體元件精巧組合而成, 能達成特定功能之器物. 因此機械設計專案過程所產生的各種資料及版本, 更需要特別關注並竭力保存, 以便讓新舊學員在自學、執行與想像的創造力發揮階段, 擁有可持續改進的工具之外, 也能有保有多元開放的完整學習資料.&lt;/p&gt;
 &lt;p&gt;在這樣對於機械設計表達、內容物與創造流程的認知下, 我們會希望學員在口語表達階段除了錄音之外, 能夠利用 Reveal.js 投影片寫下文字資料, 能儘量採用開放的設計格式, 在 Fossil SCM 倉儲中保留可以持續追蹤的文字資料格式, 2D/3D 的末端二位元檔案, 並非版次管理系統所關注並保留的重點, 學員該紀錄的是, 各種末端檔案是在何種情況下, 根據哪些約束條件, 用甚麼方法產生, 隨後的使用者在檢視歷史資料的同時, 應該可以根據這些較能持續改進的文字資料, 配合不同的情況, 使用不同的工具, 建立其所需的二位元末端檔案.&lt;/p&gt;
 &lt;p&gt;換言之, 一個多元開放的機械設計專案, 在導入各種軟硬體組態管理的時間點, 必須全面檢視所用的工具, 所處的環境, 盡量採用能持續改進的專案資料格式, 而非只儲存不知前因與狀況下所產生的封閉格式檔案.&lt;/p&gt;
-&lt;h3&gt;文字、大綱與程式&lt;/h3&gt;
+&lt;h2&gt;文字、大綱與程式&lt;/h2&gt;
 &lt;p&gt;當上述 Fossil SCM 主機的設定, 可以讓各學員個別管理 .fossil 倉儲檔案之後, 
 利用瀏覽器介面可以控管 users, 可以利用  wiki 建立快寫網頁, 可以將各種影片檔案以 attach 方式附加在 wiki 頁面中, 也可以在專案進行過程利用 tickets 追蹤設計問題, 並在專案階段性任務完成時, 以 technote 紀錄成果.&lt;/p&gt;
 &lt;p&gt;除了利用瀏覽器介面維護的協同內容之外, 機械設計過程中採 Pelican Blog 紀錄的網誌, 採 Reveal.js 格式的簡報網頁, 以及各種計算機程式檔案, 則必須在文字、大綱與程式架構下來進行管理.&lt;/p&gt;
 &lt;p&gt;在此我們所採用的管理工具為 Leo Editor, SciTE 與 Eric6.&lt;/p&gt;
 &lt;p&gt;Leo Editor 是一套採用 Python3 + PyQt5 所編寫的大綱管理套件, 其任務是負責利用大綱架構管理鬆散的 Pelican Blog, 並且利用 button 執行操作系統指令, 還肩負透過 Python3 程式碼所組成的 button, 在近端啟動 IPv4 與 IPv6 WWW 伺服模擬環境, 能讓學員在近端檢視所有之後要推送到區網與雲端中的網誌與投影片內容.&lt;/p&gt;
 &lt;p&gt;SciTE 則提供文字編輯以及 Python3 與 ANSI C 程式執行環境, 而 Eric6 則用於 PyQt5 程式的開發.&lt;/p&gt;
-&lt;h3&gt;純 IPv6 主機設定&lt;/h3&gt;
+&lt;h2&gt;純 IPv6 主機設定&lt;/h2&gt;
 &lt;p&gt;目前在系主幹上的電腦已經可以選擇透過 IPv6 DHCP 或自行設定 IPv6 位址連線上網. &lt;/p&gt;
 &lt;p&gt;在安裝  Ubuntu 16.04 Server 時, 選擇安裝 OpenSSH 模組, 之後則必須透過 IPv4/IPv6 雙支援的 Squid Proxy Server 才可以利用 apt 維護系統所安裝的套件.&lt;/p&gt;
 &lt;p&gt;apt Proxy 的設定必須在 /etc/apt/atp.conf 中納入:&lt;/p&gt;
@@ -1732,7 +1756,7 @@ dns-nameservers 2001:b000:168::1
 &lt;p&gt;最後則安裝設定中文輸入法:&lt;/p&gt;
 &lt;p&gt;sudo apt install fcitx fcitx-chewing&lt;/p&gt;
 &lt;p&gt;然後修改系統的 language support 將輸入法改為 fcitx 設定後, 必須登出再登入, 讓設定生效, input method 則選擇 chewing.&lt;/p&gt;
-&lt;h3&gt;各階段設定檔案&lt;/h3&gt;
+&lt;h2&gt;各階段設定檔案&lt;/h2&gt;
 &lt;p&gt;Stunnel 的設定, 目的在與 Fossil SCM 結合, 提供 https 的連線代理.&lt;/p&gt;
 &lt;p&gt;/etc/stunnel/stunnel.conf&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
@@ -1776,7 +1800,7 @@ server {
 
 &lt;p&gt;為了因應這個變化, 許多過去所建立的網站資料將要轉到 Github 與 Fossil SCM.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://wordpress-2015course.rhcloud.com/"&gt;https://wordpress-2015course.rhcloud.com/&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;有用的連結&lt;/h3&gt;
+&lt;h2&gt;有用的連結&lt;/h2&gt;
 &lt;p&gt;Free Math Books&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.openculture.com/free-math-textbooks"&gt;http://www.openculture.com/free-math-textbooks&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Kinematic Synthesis of Linkage&lt;/p&gt;
@@ -1797,17 +1821,17 @@ server {
 &lt;p&gt;Flask 與 Javascript 建立簡單計算器: &lt;a href='https://github.com/helloflask/calculator"&gt;https://github.com/helloflask/calculator&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;目前在 KMOL 的計算機程式, 主要寫成三種格式, 1) 採用 PyQt5 寫單機視窗應用程式, 2) 以 Flask 及 Javascript 寫成瀏覽器程式, 3) 最後則是寫成 Android 平台上的 Apps.&lt;/p&gt;
 &lt;p&gt;PyQt5 單機應用程式與 Android Apps 的用途主要在即時與周遭的軟硬體互動, 執行虛實模擬或操作控制, 或者用來管理其他與近端軟硬體有關的主程式, 而 Flask Server Based 程式則以網際模式提供, 主要用於多人同步或非同步協同之用.&lt;/p&gt;
-&lt;h3&gt;計算器原始碼&lt;/h3&gt;
+&lt;h2&gt;計算器原始碼&lt;/h2&gt;
 &lt;p&gt;與 Qt5 加上 C++ 實現的簡單視窗計算器程式對應的 PyQt5 程式,  &lt;a href="https://github.com/baoboa/pyqt5/blob/master/examples/widgets/calculator.py"&gt;https://github.com/baoboa/pyqt5/blob/master/examples/widgets/calculator.py&lt;/a&gt;. 若使用本學期所使用的 Python 3.6 可攜程是環境 &lt;a href="http://service.mde.tw/public/python2017fall_36.7z"&gt;http://service.mde.tw/public/python2017fall_36.7z&lt;/a&gt;, 直接利用 SciTE 開啟 calculator.py 後按下 Tools - Go 就可以執行.&lt;/p&gt;
-&lt;h3&gt;waitingForOperand 變數&lt;/h3&gt;
+&lt;h2&gt;waitingForOperand 變數&lt;/h2&gt;
 &lt;p&gt;self.waitingForOperand 成員變數, 用來記錄計算器的輸入流程中, 是否處於等待使用者輸入處理數值. 一開始 self.waitingForOperand 為 True. 當首次按下數字鍵則系統清除顯示區, 然後 self.waitingForOperand 轉為 False. 表示已經進入處理數值的輸入程序中, 這時若使用者再按其他數字按鈕, 則 if self.waitingForOperand 區段將不會執行, 也就不會刷新顯示區, 而是執行其下方的顯示區數字附加的程式段.&lt;/p&gt;
 &lt;p&gt;self.display.setText(self.display.text() + str(digitValue))&lt;/p&gt;
 &lt;p&gt;至於 self.waitingForOperand 再次轉為 True 的時機, 分別在 unaryOperatorClicked、additiveOperatorClicked、multiplicativeOperatorClicked、pointclicked 或 equalClicked 等成員函式執行後, 輸入流程又轉回等待使用者輸入運算數值的階段.&lt;/p&gt;
 &lt;p&gt;其他 self.waitingForOperand 出現在 backspaceClicked、clear 與 clearAll 函式時, 也必須確定 self.waitingForOperand 會再次轉為 True.&lt;/p&gt;
-&lt;h3&gt;pendingAdditiveOperator 變數&lt;/h3&gt;
+&lt;h2&gt;pendingAdditiveOperator 變數&lt;/h2&gt;
 &lt;p&gt;若 pendingAdditiveOperator 為 True, 優先運算階段完成後顯示區換成 self.factorSoFar. 若 pendingAdditiveOperator 為 False, 則將目前顯示區中的數值對應成 self.factorSoFar.&lt;/p&gt;
 &lt;p&gt;The private calculate() function performs a binary operation. The right operand is given by rightOperand. For additive operators, the left operand is sumSoFar; for multiplicative operators, the left operand is factorSoFar. The function return false if a division by zero occurs.&lt;/p&gt;
-&lt;h3&gt;sumSofFar 與 factorSoFar 變數&lt;/h3&gt;
+&lt;h2&gt;sumSofFar 與 factorSoFar 變數&lt;/h2&gt;
 &lt;p&gt;執行 calculate  函式時, 若運算子為加或減, 則左運算數為 sumSoFar, 若運算子為乘或除, 則左運算數為 factorSoFar. 右運算數則取自 rightOperand 變數.&lt;/p&gt;
 &lt;p&gt;The example consists of two classes:&lt;/p&gt;
 &lt;p&gt;Calculator is the calculator widget, with all the calculator functionality.&lt;/p&gt;
@@ -1904,7 +1928,7 @@ Unary operators, such as Sqrt, require no special handling; they can be applied 
 </summary><content type="html">&lt;p&gt;In order to create a multi-repository Fossil SCM server on Ubuntu 16.04 environment, three steps are needed.&lt;/p&gt;
 
 
-&lt;h3&gt;Step 1: install Stunnel and Fossil SCM&lt;/h3&gt;
+&lt;h2&gt;Step 1: install Stunnel and Fossil SCM&lt;/h2&gt;
 &lt;p&gt;sudo apt update&lt;/p&gt;
 &lt;p&gt;sudo apt install stunnel4 -y&lt;/p&gt;
 &lt;p&gt;sudo apt install fossil&lt;/p&gt;
@@ -1912,7 +1936,7 @@ Unary operators, such as Sqrt, require no special handling; they can be applied 
 &lt;p&gt;HTTPS=on&lt;/p&gt;
 &lt;p&gt;Edit /etc/default/stunnel4 file and modified the ENABLED value from 0 to 1 to get stunnel service running when the computer startup:&lt;/p&gt;
 &lt;p&gt;ENABLED=1&lt;/p&gt;
-&lt;h3&gt;Step 2: Stunnel setup&lt;/h3&gt;
+&lt;h2&gt;Step 2: Stunnel setup&lt;/h2&gt;
 &lt;p&gt;Change directory to /etc/stunnel/ and use the following command to generate localhost.key and localhost.crt files.&lt;/p&gt;
 &lt;p&gt;sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout localhost.key -out localhost.crt&lt;/p&gt;
 &lt;p&gt;edit stunnel.conf configuration file under /etc/stunnel/ as follows:&lt;/p&gt;
@@ -1928,7 +1952,7 @@ execargs = /usr/bin/fossil http /home/user/repository/ --https --nojail --notfou
 
 &lt;p&gt;which means the IPv4 and IPv6 requests are both accepted under port 443. And /home/user/repository/ is used to store the Fossil SCM repo files. The default repo file is /home/user/repository/default.fossil&lt;/p&gt;
 &lt;p&gt;The setting of "--notfound default" means if the repository file is not specified, connection URL is default which is a relative directory associated with the server main URL.&lt;/p&gt;
-&lt;h3&gt;Step 3: create Fossil SCM repositories&lt;/h3&gt;
+&lt;h2&gt;Step 3: create Fossil SCM repositories&lt;/h2&gt;
 &lt;p&gt;Change directory to /home/user/repository and use "fossil init default.fossil" command to create the default repository. If more repository is needed, also use "fossil init other.fossil" to create other.fossil repository under /home/user/repository.&lt;/p&gt;
 &lt;p&gt;After the setup use "/etc/init.d/stunnel4 restart" command to restart the Stunnel service.&lt;/p&gt;
 &lt;p&gt;Use https://site-url:443/ to connect to default.fossil and use https://site-url:443/other to connect to other.fossil.&lt;/p&gt;</content><category term="Fossil SCM"></category><category term="Ubuntu"></category></entry><entry><title>2015 Fall CADP W16</title><link href="https://kmolab.github.io/blog/2015-cadp-w16.html" rel="alternate"></link><published>2017-07-10T12:00:00+08:00</published><updated>2017-07-10T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-10:/blog/2015-cadp-w16.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="./../data/nutcracker/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
@@ -2405,24 +2429,24 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 
 
 &lt;p&gt;所謂網際指的是 Web-Based, 也就是 World-Wide-Web Based 的簡稱, 中文也可以翻為"植基於全球資訊網" 或 "以全球資訊網為基礎", 其內涵是希望讓使用者在網際網路 (Internet) 的基礎上, 利用 Web Browser (瀏覽器) 操作各種與機械設計內容管理有關的任務.&lt;/p&gt;
-&lt;h3&gt;Ubuntu 操作系統&lt;/h3&gt;
+&lt;h2&gt;Ubuntu 操作系統&lt;/h2&gt;
 &lt;p&gt;根據 https://www.ubuntu.com/info/release-end-of-life 的生命週期年限, 選擇 LTS Server 版本安裝, 安裝過程需要安裝 OpenSSL 模組, 以及 ubuntu-desktop, Windows 客戶端則透過 &lt;a href="https://sourceforge.net/projects/xming/"&gt;xming&lt;/a&gt; 與 &lt;a href="http://www.putty.org/"&gt;http://www.putty.org/&lt;/a&gt; 進行安全的遠端登入.&lt;/p&gt;
-&lt;h3&gt;IPv4 與 IPv6 網路設定&lt;/h3&gt;
+&lt;h2&gt;IPv4 與 IPv6 網路設定&lt;/h2&gt;
 &lt;p&gt;一般來說, 只有必須擔負特定 WWW Server、DNS Server 與 Proxy Server 的主機需要同時支援 IPv4 與 IPv6 網路協定外, 其餘客戶端都可以只透過 IPv6 網路協定上網.&lt;/p&gt;
 &lt;p&gt;WWW Server 使用 Nginx, DNS Serve 使用 Bind, 而 Proxy Server 則使用 Squid.&lt;/p&gt;
-&lt;h3&gt;Nginx&lt;/h3&gt;
+&lt;h2&gt;Nginx&lt;/h2&gt;
 &lt;p&gt;Nginx WWW 伺服器通常用來伺服靜態文件或者作為其他近端伺服資料傳送的代理主機 (例如, uwsgi 網際服務).&lt;/p&gt;
-&lt;h3&gt;Ethercalc&lt;/h3&gt;
+&lt;h2&gt;Ethercalc&lt;/h2&gt;
 &lt;p&gt;Ethercalc 允許多人利用瀏覽器同時維護一份線上試算表, 可以用於協同資料永久存檔前的轉介站.&lt;/p&gt;
-&lt;h3&gt;Fossil SCM&lt;/h3&gt;
+&lt;h2&gt;Fossil SCM&lt;/h2&gt;
 &lt;p&gt;Fossil SCM 是一套小而美的分散式資料管理系統&lt;/p&gt;
-&lt;h3&gt;Squid Proxy Server&lt;/h3&gt;
+&lt;h2&gt;Squid Proxy Server&lt;/h2&gt;
 &lt;p&gt;在 IPv4 轉換到 IPv6 的過程中, 雙網路協定支援的代理主機扮演非常重要的角色, 例如, 從純 IPv4 瀏覽器連線到純 IPv6 WWW 伺服器, 就需要透過雙網路協定的代理主機轉介資料, 其次 putty ssh 遠端登入或 sftp 安全資料傳送, 也都需要雙網路支援的代理主機居中轉換不同協定資料.&lt;/p&gt;
-&lt;h3&gt;X-windows&lt;/h3&gt;
-&lt;h3&gt;Putty&lt;/h3&gt;
-&lt;h3&gt;Leo Editor&lt;/h3&gt;
-&lt;h3&gt;Filezilla 與 SFTP&lt;/h3&gt;
-&lt;h3&gt;Uwsgi 與 CMSimfly&lt;/h3&gt;</content><category term="網際內容管理"></category><category term="課程"></category></entry><entry><title>協同產品設計實習</title><link href="https://kmolab.github.io/blog/cd-course-1.html" rel="alternate"></link><published>2017-06-18T12:00:00+08:00</published><updated>2017-06-18T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/cd-course-1.html</id><summary type="html">&lt;p&gt;協同產品設計課程在教導學生, 以同步或非同步協同方式, 利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
+&lt;h2&gt;X-windows&lt;/h2&gt;
+&lt;h2&gt;Putty&lt;/h2&gt;
+&lt;h2&gt;Leo Editor&lt;/h2&gt;
+&lt;h2&gt;Filezilla 與 SFTP&lt;/h2&gt;
+&lt;h2&gt;Uwsgi 與 CMSimfly&lt;/h2&gt;</content><category term="網際內容管理"></category><category term="課程"></category></entry><entry><title>協同產品設計實習</title><link href="https://kmolab.github.io/blog/cd-course-1.html" rel="alternate"></link><published>2017-06-18T12:00:00+08:00</published><updated>2017-06-18T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/cd-course-1.html</id><summary type="html">&lt;p&gt;協同產品設計課程在教導學生, 以同步或非同步協同方式, 利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;協同產品設計課程在教導學生, 以同步或非同步協同方式, 利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
 </content><category term="協同產品設計實習"></category><category term="課程"></category></entry><entry><title>電腦輔助設計實習</title><link href="https://kmolab.github.io/blog/cadp-course-1.html" rel="alternate"></link><published>2017-06-18T11:00:00+08:00</published><updated>2017-06-18T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/cadp-course-1.html</id><summary type="html">&lt;p&gt;電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
@@ -2442,7 +2466,7 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 </summary><content type="html">&lt;p&gt;計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.&lt;/p&gt;
 
 
-&lt;h3&gt;為什麼非學不可?&lt;/h3&gt;
+&lt;h2&gt;為什麼非學不可?&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://cacm.acm.org/blogs/blog-cacm/166115-why-scientists-and-engineers-must-learn-programming/fulltext"&gt;https://cacm.acm.org/blogs/blog-cacm/166115-why-scientists-and-engineers-must-learn-programming/fulltext&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;首先, 看看機械設計流程會牽涉哪些任務, 所謂機械設計, 就是歷經詳細思慮考量, 完成互動元件間之精巧配置, 使其展現特定功能之具體規劃表達.&lt;/p&gt;
 &lt;p&gt;換言之, 機械設計是一種具體規劃的表達 (presentation), 其內容是經過一系列詳細的思慮與考量所得到的結果, 而此項結果通常有具體的功能, 並且包含許多互動 (interaction) 元件之間的彈性與精巧配置 (flexible and sophisticated configuration).&lt;/p&gt;
@@ -2461,9 +2485,9 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;p&gt;機械設計過程中, 為了在實體化之前能預先針對各種互動元件間的組成與配置進行最佳化, 因此需要使用各種逼真的模擬方法加以呈現.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;如何進行文字、2D&amp;amp;3D表達&lt;/h3&gt;
+&lt;h2&gt;如何進行文字、2D&amp;amp;3D表達&lt;/h2&gt;
 &lt;p&gt;有沒有一種方法可以讓多名使用者協同管理一份文件, 其中包含各種互動式圖文與影音資料, 各使用者在編修內容過程可以有效對資料進行保全, 可以有效分散備份, 可以紀錄各編修者所增刪的內容, 可以透過有效率的方法散佈此份文件的內容?&lt;/p&gt;
-&lt;h3&gt;使用工具的評量方法&lt;/h3&gt;
+&lt;h2&gt;使用工具的評量方法&lt;/h2&gt;
 &lt;p&gt;機械設計工程師為了有效完成具體規劃內容的表達, 過程中必須使用各種類型的工具, 其中包括:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;文字資料構建、管理與呈現的工具 (text)&lt;/li&gt;
@@ -2495,16 +2519,16 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;p&gt;工具掌握度與整合效能成本 (integration)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;一定要學 C&lt;/h3&gt;
+&lt;h2&gt;一定要學 C&lt;/h2&gt;
 &lt;p&gt;C 是為建立 Unix 操作系統而生的程式語言, 也是近代許多高階程式語言建構的基礎, 例如, 最早的 C 程式編譯器雖然採用組合語言編寫, 但是隨後的 C 程式編譯器則可以採用舊版的 C 來編譯, 而 Python 解譯器在 1980 年代晚期出現時, 就是以 C 程式編寫, 之後雖然有採用 Java 編寫的 Jython (2001), 以 C# 編寫的 IronPython (2006), 以 RPython 編寫的 PyPy (2007), 以 Javascript 編寫的 Brython (2012), 但是 CPython 仍然是最通用的版本.&lt;/p&gt;
 &lt;p&gt;儘管 C 程式語言對於工程師而言非常重要, 但是 C 或更進階的 C++ 程式語言的學習並不容易, 並不只是因為 C/C++ 擁有指標, 能夠控制電腦的底層記憶體, 而是因為 C/C++ 程式語言所涵蓋的應用非常廣.&lt;/p&gt;
 &lt;p&gt;但是無論如何, 工程師一定要學會基本的  C 程式語言, 倒是毋庸置疑.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.asme.org/career-education/articles/teachers-academics/c-as-part-of-a-mechanical-engineering-curriculum"&gt;https://www.asme.org/career-education/articles/teachers-academics/c-as-part-of-a-mechanical-engineering-curriculum&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;C 的指標與陣列導引&lt;/h3&gt;
+&lt;h2&gt;C 的指標與陣列導引&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://cad-lab.github.io/manual/post/c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin-zhong-wen-fan-yi.html"&gt;http://cad-lab.github.io/manual/post/c-cheng-shi-yu-yan-de-zhi-biao-yu-zhen-lie-dao-yin-zhong-wen-fan-yi.html&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;CP to CADP&lt;/h3&gt;
+&lt;h2&gt;CP to CADP&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://github.com/2015fallhw/cptocadp"&gt;https://github.com/2015fallhw/cptocadp&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;如何完成下列工作?&lt;/h3&gt;
+&lt;h2&gt;如何完成下列工作?&lt;/h2&gt;
 &lt;p&gt;1) 從一本英文書的文字檔中, 算出總字數, 並按照英文字母排列, 列出書中所使用的單字, 並查出各單字的中文解釋.&lt;/p&gt;
 &lt;p&gt;2) 從網站中擷取當天台幣與美金及英鎊的匯率, 並根據某一列有台幣、美金與英鎊的檔案進行各幣值的總結算.&lt;/p&gt;
 &lt;p&gt;3) 每組有六人, 某一任務需要完成六項工作, 每人負責一項, 但各工作間必須互相配合, 任務進行中需要完整呈現各組員每一階段所完成的內容細節, 請問該如何完成.&lt;/p&gt;
@@ -2536,7 +2560,7 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;p&gt;IGES Version 6: &lt;a href="https://filemonger.com/specs/igs/devdept.com/version6.pdf"&gt;https://filemonger.com/specs/igs/devdept.com/version6.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/IGES"&gt;https://en.wikipedia.org/wiki/IGES&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;DXF, IGES and STEP: &lt;a href="http://homepages.cae.wisc.edu/~me232/info/dxf_iges_step.pdf"&gt;http://homepages.cae.wisc.edu/~me232/info/dxf_iges_step.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Python3 學習&lt;/h3&gt;
+&lt;h2&gt;Python3 學習&lt;/h2&gt;
 &lt;p&gt;Official Tutorial: &lt;a href="https://docs.python.org/3/tutorial/"&gt;https://docs.python.org/3/tutorial/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.stavros.io/tutorials/python/"&gt; 10 min Python Tutorial&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;help(), dir(), print(), &lt;a href="https://docs.python.org/3/tutorial/controlflow.html#the-range-function"&gt;range()&lt;/a&gt;, &lt;a href="https://docs.python.org/3/library/stdtypes.html"&gt;built-in types&lt;/a&gt;,&lt;/p&gt;
@@ -2544,27 +2568,33 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;p&gt;&lt;a href="http://www.spronck.net/pythonbook"&gt;http://www.spronck.net/pythonbook&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/coodict/python3-in-one-pic/blob/master/notebooks/py3-in-one-pic.ipynb"&gt;https://github.com/coodict/python3-in-one-pic/blob/master/notebooks/py3-in-one-pic.ipynb&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;資料分析: &lt;a href="https://lectures.quantecon.org/py/"&gt;https://lectures.quantecon.org/py/&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Python 很慢?&lt;/h3&gt;
+&lt;h2&gt;Python 很慢?&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=8hHOxfXcWsg"&gt;https://www.youtube.com/watch?v=8hHOxfXcWsg&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=a8LsdodGoWQ"&gt;https://www.youtube.com/watch?v=a8LsdodGoWQ&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;PyQT&lt;/h3&gt;
+&lt;h2&gt;PyQT&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://kuanyui.github.io/2014/09/13/learn-python-via-pyqt/"&gt;https://kuanyui.github.io/2014/09/13/learn-python-via-pyqt/&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;網際程式繪圖&lt;/h3&gt;
+&lt;h2&gt;網際程式繪圖&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://2015fallhw.github.io/2015fallcpa/g99_w15.html"http://2015fallhw.github.io/2015fallcpa/g99_w15.html&lt;/a&gt;&lt;/p&gt;</content><category term="計算機程式"></category><category term="課程"></category></entry><entry><title>大學生為何不來上課?</title><link href="https://kmolab.github.io/blog/first-discussion-blog.html" rel="alternate"></link><published>2017-06-05T05:29:00+08:00</published><updated>2017-06-05T05:29:00+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-05:/blog/first-discussion-blog.html</id><summary type="html">&lt;p&gt;大學生不願進教室上課的原因很多, 學費太低? 學不到東西? 完全跟不上進度? 老師太混? 上與不上都差不多? 實在爬不起來? 沒有人叫我起床? &lt;/p&gt;
 </summary><content type="html">&lt;p&gt;大學生不願進教室上課的原因很多, 學費太低? 學不到東西? 完全跟不上進度? 老師太混? 上與不上都差不多? 實在爬不起來? 沒有人叫我起床? &lt;/p&gt;
 
 
-&lt;h3&gt;大學生為何不來上課?&lt;/h3&gt;
+&lt;h2&gt;大學生為何不來上課?&lt;/h2&gt;
 &lt;p&gt;首先就大學生上課, 有幾項基本組成: 時段、課程內容、教師與學生等. 因此, 大學生之所以不想來上課, 可能是因為時段太早, 學生爬不起來而翹課; 也可能是課程內容不能讓學生認同, 內容太過簡單, 內容太過困難等原因, 讓學生視上課為畏途, 一有機會就不願意到課; 另外也可能是老師的教學方式得不到學生認同, 因此不願意上課; 最後則是學生本身的心態, 完全不知道為何要上這門課, 或者如何克服課程中所碰到的困難等問題, 導致學生一逮到機會就斷然翹課.&lt;/p&gt;
-&lt;h3&gt;時段太早爬不起床&lt;/h3&gt;
+&lt;h2&gt;時段太早爬不起床&lt;/h2&gt;
 &lt;p&gt;因時段太早而翹課, 大家都知道這絕對是藉口, 也就是說, 這不是學生翹課的主要原因, 而是因為其他主要原因的影響下, 讓學生拿時段太早當作翹課的藉口.&lt;/p&gt;
-&lt;h3&gt;內容太淺, 內容太深&lt;/h3&gt;
+&lt;h2&gt;內容太淺, 內容太深&lt;/h2&gt;
 &lt;p&gt;接著來談談因為課程內容無法得到學生認同而翹課的因素, 一般而說, 過去循序漸進, 以靜態課本內容為主的教學, 較能得到學生的認同, 因為所有會涵蓋的教學內容, 都已經鉅細靡遺列在教科書中, 因此針對此類型的課程, 學生到課的主要動機在於能以較高效益理解教科書內容, 但是針對主題已定但內容會隨學習成效而加以取捨的課程, 若學生的學習動機不夠強, 就會覺得無法掌握課程教學的主軸而失焦, 導致認為課程內容太過無聊或太過複雜而中途放棄, 造成學生不願意到課.&lt;/p&gt;
-&lt;h3&gt;不知老師在教什麼?&lt;/h3&gt;
+&lt;h2&gt;打工賺錢太忙, 沒時間上課&lt;/h2&gt;
+&lt;p&gt;有部分學生因為經濟問題, 而必須邊上課邊工作賺錢, 大多數情況下, 由於大學尚未畢業, 無法根據專業找到報酬較高的工作, 因此大多在以時數累積賺錢的第一線服務業工作為主.&lt;/p&gt;
+&lt;p&gt;當學生日以繼夜打工賺取學費或生活費的同時, 經常以此為藉口而弄得沒時間上課時, 最後在大學註冊的最終目的, 就只剩下拿學位一件事, 一般情況下, 非但無法專心在自己所學的專業上日日進步, 反而在自己的學業成績單上留下許多不良紀錄, 嚴重影響畢業後的發展.&lt;/p&gt;
+&lt;p&gt;針對此類學生, 我們的建議是, 可以向學校的科系辦公室或職涯規劃單位求助, 尋求與本身專業有關的打工機會, 並且試著利用學校各專業科目所學內容, 在專業公司協助解決實務問題, 假若, 我們是說假若, 事實證明學校所傳授的知識, 完全無法在打工的過程中解決任何實務問題, 那麼表示念這書甚至拿這學位, 根本無助於往後的發展, 這時這些學生就可大步離開學校, 全力投入自己設想更有意義的工作上, 最後也就不會再有沒時間上課的問題了.&lt;/p&gt;
+&lt;h2&gt;不知老師在教什麼?&lt;/h2&gt;
 &lt;p&gt;老師的教學方式確實會影響學生的學習意願, 但是當學生從頭到尾都沒能到課的情形下, 還大聲疾呼說不知老師在教什麼? 就有些說不過去.&lt;/p&gt;
-&lt;h3&gt;學這些東西沒有用&lt;/h3&gt;
+&lt;h2&gt;學這些東西沒有用&lt;/h2&gt;
+&lt;p&gt;假如學生與家長真的認為在學校所學, 甚至拿學位無助往後發展, 建議應該及早離開學校, 從事更有意義的事, 尋求更好的發展機會.&lt;/p&gt;
+&lt;h2&gt;其他思考&lt;/h2&gt;
 &lt;p&gt;學生為何而讀, 為何而學, 為何而問?&lt;/p&gt;
-&lt;h3&gt;老師如何弄懂學生處境&lt;/h3&gt;
+&lt;p&gt;老師如何弄懂學生處境&lt;/p&gt;
 &lt;p&gt;設法與學生共同學習&lt;/p&gt;
 &lt;p&gt;鼓勵自學、執行與想像&lt;/p&gt;
 &lt;p&gt;設法與表現好的學生一起協助跟不上進度的同學&lt;/p&gt;
@@ -2574,7 +2604,7 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;p&gt;&lt;a href="https://www.thenewslens.com/article/664"&gt;https://www.thenewslens.com/article/664&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://shinphotos.com/2014-03-08-297/"&gt;https://shinphotos.com/2014-03-08-297/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.businessweekly.com.tw/article.aspx?id=1124&amp;amp;type=Blog"&gt;http://www.businessweekly.com.tw/article.aspx?id=1124&amp;amp;type=Blog&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;大學生應有的學習態度&lt;/h3&gt;
+&lt;h2&gt;大學生應有的學習態度&lt;/h2&gt;
 &lt;p&gt;面對全球協同的知識經濟環境, 身為一個大學生, 至少必須:&lt;/p&gt;
 &lt;p&gt;不要怕困難 (基本信念) – 因為幾乎處於網路時代的所有人, 在享受高度科技發展所帶來的便利性之後, 都必須隨時獨力或合力克服各種困難.
 不要失去熱忱 (強化動力) – 許多人在生活周遭都會碰到非常多不盡如人意的各種挑戰, 持續保持個人與團隊的處事熱忱, 是堅持克服困難的必備動力.
@@ -2586,9 +2616,9 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 </summary><content type="html">&lt;p&gt;紀錄與實作有關的內容, 實體製作&lt;/p&gt;
 
 
-&lt;h3&gt;操作流程拍攝&lt;/h3&gt;
+&lt;h2&gt;操作流程拍攝&lt;/h2&gt;
 &lt;p&gt;有關實作, 包含拍攝實際操作的照片與影片. 在 Windows 環境建議使用 &lt;a href="https://getsharex.com/"&gt;ShareX&lt;/a&gt; 拍攝, Ubuntu 則建議使用 &lt;a href="https:// .net/kazam"&gt;Kazam&lt;/a&gt;. 另外一個值得研究的 PyQt5 + FFMpeg 工具位於: &lt;a href="https://github.com/codeshard/videomorph"&gt;https://github.com/codeshard/videomorph&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;理想的課程網頁&lt;/h3&gt;
+&lt;h2&gt;理想的課程網頁&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://lectures.quantecon.org/"&gt;https://lectures.quantecon.org/&lt;/a&gt; 是一門教授數學與計量經濟學的課程, 分別使用 Python 與 Julia 程式語言, 採用 Python3 的課程教材 pdf 位於: &lt;a href="https://lectures.quantecon.org/_static/pdfs/QuantEconlectures-python3.pdf"&gt;https://lectures.quantecon.org/_static/pdfs/QuantEconlectures-python3.pdf&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;這門課程的網頁不僅有 &lt;a href="https://quantecon.org/news"&gt;News&lt;/a&gt;, 有&lt;a href="http://discourse.quantecon.org/"&gt;論壇&lt;/a&gt;, 並使用 Jupyter 建立網際 &lt;a href="https://quantecon.org/notebooks.html"&gt;Notebook&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;其中, 互動討論程式: &lt;a href="https://github.com/discourse/discourse"&gt;https://github.com/discourse/discourse&lt;/a&gt;, 為 discourse, 採用 Ruby 建立.&lt;/p&gt;
@@ -2599,7 +2629,7 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 </summary><content type="html">&lt;p&gt;紀錄與電腦模擬相關內容與紀錄， 使用工具 Python3, &lt;a href="http://www.robodk.com/download"&gt;RoboDK&lt;/a&gt; (&lt;a href="https://robodk.com/doc/en/RoboDK-API.html"&gt;RoboDK API&lt;/a&gt;)&lt;/p&gt;
 
 
-&lt;h3&gt;PyQt5&lt;/h3&gt;
+&lt;h2&gt;PyQt5&lt;/h2&gt;
 &lt;p&gt;pyqt5 程式 &lt;a href="http://projects.skylogic.ca/blog/how-to-install-pyqt5-and-build-your-first-gui-in-python-3-4/"&gt;http://projects.skylogic.ca/blog/how-to-install-pyqt5-and-build-your-first-gui-in-python-3-4/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;run.py, 自行編寫用從 core/main.py 中導入 MainWindow 類別建立案例後執行&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
@@ -2805,7 +2835,7 @@ if __name__ == "__main__":
 &lt;/ui&gt;
 &lt;/pre&gt;
 
-&lt;h3&gt;Binary Genetic Algorithm&lt;/h3&gt;
+&lt;h2&gt;Binary Genetic Algorithm&lt;/h2&gt;
 &lt;pre class="brush: python"&gt;
 #encoding=utf8
 # genetic.py
@@ -3134,12 +3164,12 @@ if __name__ == "__main__":
     env.run()
 &lt;/pre&gt;
 
-&lt;h3&gt;Deap 與 Scoop&lt;/h3&gt;
+&lt;h2&gt;Deap 與 Scoop&lt;/h2&gt;
 &lt;p&gt;Deap: &lt;a href="https://github.com/DEAP/deap"&gt;https://github.com/DEAP/deap&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Scoop: &lt;a href="https://en.wikipedia.org/wiki/Python_SCOOP_(software)"&gt;https://en.wikipedia.org/wiki/Python_SCOOP_(software)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://groups.google.com/forum/#!topic/deap-users/v3wbky0EUf0"&gt;https://groups.google.com/forum/#!topic/deap-users/v3wbky0EUf0&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://groups.google.com/forum/m/#!msg/deap-users/P4IkiE-Bvbg/xSoMDphbMR4J"&gt;https://groups.google.com/forum/m/#!msg/deap-users/P4IkiE-Bvbg/xSoMDphbMR4J&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;平行運算&lt;/h3&gt;
+&lt;h2&gt;平行運算&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://research.cs.wisc.edu/htcondor/"&gt;http://research.cs.wisc.edu/htcondor/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/J-Robinson/GridGA"&gt;https://github.com/J-Robinson/GridGA&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;利用 Blender 製作 &lt;/p&gt;
@@ -3148,12 +3178,12 @@ if __name__ == "__main__":
 </summary><content type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
 
 
-&lt;h3&gt;Github, Bitbucket 與 Fossil SCM&lt;/h3&gt;
+&lt;h2&gt;Github, Bitbucket 與 Fossil SCM&lt;/h2&gt;
 &lt;p&gt;Github 目前提供的免費帳號, 允許多人協同提交推送版本, 唯一的限制就是單一檔案不能大於 50 MB.&lt;/p&gt;
 &lt;p&gt;Bitbucket 則允許免費使用非公開的倉儲, 但是至多只允許五個帳號協同.&lt;/p&gt;
 &lt;p&gt;Fossil SCM 則適合在近端或區域網路中使用, 目前 KMOLab 希望在區網中導入作為與 Github Pages 配合的工具, 使用者可以將 Fossil SCM 的 working directory 限縮在 Github 近端倉儲的特定目錄下, 且在 .gitignore 中排除 &lt;em&gt;FOSSIL&lt;/em&gt; (under Windows) 的版次管理, 但是相關的 fossil update 與 fossil server 功能仍然必須依照特定的流程進行操作, 以避免兩套版次管理系統內容的不同步導致資料覆蓋流失.&lt;/p&gt;
 &lt;p&gt;github 倉儲與 bitbucket 倉儲, 則可以利用 git remote add 同步.&lt;/p&gt;
-&lt;h3&gt;Leo Editor, Pelican 與 Reveal.js&lt;/h3&gt;
+&lt;h2&gt;Leo Editor, Pelican 與 Reveal.js&lt;/h2&gt;
 &lt;p&gt;Leo Editor 是一套能夠以程式方法有效管理多元資料的文字資料編輯器, 以下就是用來管理 KMOLab Pelican 靜態網誌有關內容的畫面, 其中的 @button local-blog 是用來產生靜態網誌的指令按鈕, @button github-blog 則是用來產生嵌入 Disqus 留言系統的 Github Pages 網誌對應指令, 兩個指令的差別在於使用不同的設定檔案, 使用者可以先利用近端的按鈕, 建立網誌後在近端以另一個 https-server 按鈕建立 https 伺服, 用瀏覽器檢查所產生的網誌內容, 一旦要送到 Github 倉儲, 必須再利用遠端按鈕產生另外一組網誌與搜尋用 .json 檔案後, 再提交推送到倉儲.&lt;/p&gt;
 &lt;p&gt;在這個過程中, 使用者依照 Pelican 的特定 Markdown 檔案編寫網誌內容外, Leo Editor 專案檔中也可以放入其他有關的註記與設定檔案編輯用的節點. 若需要在 Pelican 的環境中修改設定, 都可以全部在一個 Leo Editor 專案檔中完成.&lt;/p&gt;
 &lt;p&gt;&lt;img src="./../data/images/leo_editor_kmolab.png" width="800" /&gt;&lt;/p&gt;
@@ -3360,5 +3390,61 @@ PAGE_SAVE_AS = 'pages/{slug}/index.html'
 SHOW_ARTICLE_AUTHOR = True
 &lt;/pre&gt;
 
-&lt;h3&gt;區網中的 IPv4 與 IPv6 WWW Server&lt;/h3&gt;
-&lt;p&gt;Pelican 在近端產生 weblog 後, 若要在近端以 https 檢視結果, 就必須同時建立 https Server.&lt;/p&gt;</content><category term="Github"></category><category term="Bitbucket"></category><category term="Fossil SCM"></category><category term="Leo Editor"></category><category term="Pelican"></category><category term="Reveal.js"></category></entry></feed>
+&lt;h2&gt;區網中的 IPv4 與 IPv6 WWW Server&lt;/h2&gt;
+&lt;p&gt;Pelican 在近端產生 weblog 後, 若要在近端以 https 檢視結果, 就必須同時建立 https Server.&lt;/p&gt;
+&lt;p&gt;近端 IPv4 WWW 伺服器程式:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+import os
+import subprocess
+import threading
+import http.server, ssl
+
+def domake():
+    # build directory
+    os.chdir("./../")
+    server_address = ('localhost', 5443)
+    httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
+    httpd.socket = ssl.wrap_socket(httpd.socket,
+                                   server_side=True,
+                                   certfile='localhost.crt',
+                                   keyfile='localhost.key',
+                                   ssl_version=ssl.PROTOCOL_TLSv1)
+    print(os.getcwd())
+    print("5443 https server started")
+    httpd.serve_forever()
+
+# 利用執行緒執行 https 伺服器
+make = threading.Thread(target=domake)
+make.start()
+&lt;/pre&gt;
+
+&lt;p&gt;近端 IPv6 ＷＷＷ 伺服器程式:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+import os
+import subprocess
+import threading
+import socket
+import http.server, ssl
+
+class HTTPServerV6(http.server.HTTPServer):
+    address_family = socket.AF_INET6
+
+def domake():
+    # build directory
+    os.chdir("./../")
+    ipv6_address = '::1'
+    server_address = (ipv6_address, 6443)
+    #httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
+    httpd = HTTPServerV6(server_address, http.server.SimpleHTTPRequestHandler)
+    httpd.socket = ssl.wrap_socket(httpd.socket,
+                                   server_side=True,
+                                   certfile='localhost.crt',
+                                   keyfile='localhost.key',
+                                   ssl_version=ssl.PROTOCOL_TLSv1)
+    print("6443 https server started")
+    httpd.serve_forever()
+
+# 利用執行緒執行 https 伺服器
+make = threading.Thread(target=domake)
+make.start()
+&lt;/pre&gt;</content><category term="Github"></category><category term="Bitbucket"></category><category term="Fossil SCM"></category><category term="Leo Editor"></category><category term="Pelican"></category><category term="Reveal.js"></category></entry></feed>

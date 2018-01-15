@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>KMOLab 機械設計工程 - Research</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/research.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2017-10-01T11:00:00+08:00</updated><entry><title>CMSimfly 與 Fossil SCM</title><link href="https://kmolab.github.io/blog/cmsimfly-and-fossil-on-same-machine.html" rel="alternate"></link><published>2017-10-01T11:00:00+08:00</published><updated>2017-10-01T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-10-01:/blog/cmsimfly-and-fossil-on-same-machine.html</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/chiamingyen/cmsimfly"&gt;CMSimfly&lt;/a&gt; 是一套採用 Flask 應用程式框架編寫的網際內容管理系統 (Content Management System),  &lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 則是以 ANSI C 編寫的軟體組態管理 (Software Configuration Management) 系統, 兩套程式各有不同的特色, CMSimfly 適合用來管理無版次的大型檔案, 而 Fossil SCM 則可用來記錄詳細的軟體設計開發歷程.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>機械設計工程系 KMOLab - Research</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/research.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2017-10-01T11:00:00+08:00</updated><entry><title>CMSimfly 與 Fossil SCM</title><link href="https://kmolab.github.io/blog/cmsimfly-and-fossil-on-same-machine.html" rel="alternate"></link><published>2017-10-01T11:00:00+08:00</published><updated>2017-10-01T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-10-01:/blog/cmsimfly-and-fossil-on-same-machine.html</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/chiamingyen/cmsimfly"&gt;CMSimfly&lt;/a&gt; 是一套採用 Flask 應用程式框架編寫的網際內容管理系統 (Content Management System),  &lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 則是以 ANSI C 編寫的軟體組態管理 (Software Configuration Management) 系統, 兩套程式各有不同的特色, CMSimfly 適合用來管理無版次的大型檔案, 而 Fossil SCM 則可用來記錄詳細的軟體設計開發歷程.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/chiamingyen/cmsimfly"&gt;CMSimfly&lt;/a&gt; 是一套採用 Flask 應用程式框架編寫的網際內容管理系統 (Content Management System),  &lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 則是以 ANSI C 編寫的軟體組態管理 (Software Configuration Management) 系統, 兩套程式各有不同的特色, CMSimfly 適合用來管理無版次的大型檔案, 而 Fossil SCM 則可用來記錄詳細的軟體設計開發歷程.&lt;/p&gt;
 
 
-&lt;h3&gt;CMSimfly 與 Fossil SCM 安裝規劃&lt;/h3&gt;
+&lt;h2&gt;CMSimfly 與 Fossil SCM 安裝規劃&lt;/h2&gt;
 &lt;p&gt;CMSimfly 採用 Python3 與 Flask 編寫, 可以採用 &lt;a href="https://github.com/unbit/uwsgi"&gt;uwsgi&lt;/a&gt; 模組啟動, 預計網際前端透過 Nginx https 埠號 8443 承接來自瀏覽器的請求, 而 Fossil SCM 的 http port 80 前端則由 Nginx 承接後, 直接跳轉 Stunnel 所代理的 https 服務. 因此當使用者以瀏覽器 http 連線, 伺服器會馬上跳轉 https 的 Fossil SCM, 假如要連結 CMSimfly, 則必須以 https 8443 連線.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/unbit/uwsgi"&gt;uwsgi&lt;/a&gt; 有多種啟動方式, 在此希望透過 Emperor 的多應用程式的模式啟動, 基本架構是,  uwsgi 指令在 /etc/rc.local 中以 exec 執行, 可以在伺服器開機時執行, 而 uwsgi Emperor  中指定以一般用戶身分執行, 實際封包在內部網路的 8081 啟動, 之後透過 /etc/nginx/sites-available/default 中的 server 設定, 只接受 8443 埠號的 IPv4 與 IPv6 網際瀏覽器請求.&lt;/p&gt;
-&lt;h3&gt;CMSimfly 安裝設定&lt;/h3&gt;
+&lt;h2&gt;CMSimfly 安裝設定&lt;/h2&gt;
 &lt;p&gt;根據 uwsgi 與 Emperor 的啟動, 伺服器所需模組, 包括 pip3, Flask, python3 開發環境, uwsgi, nginx 與 uwsgi-plugin-python3 模組:&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
 sudo apt install python3-pip
@@ -143,7 +143,7 @@ wsgi-file = /home/user/cmsimfly2/wsgi.py
 &lt;p&gt;若要讓伺服器在開機時執行 uwsgi, 則需要在/etc/rc.local 加入:&lt;/p&gt;
 &lt;p&gt;exec uwsgi --emperor /home/user/uwsgi_ini&lt;/p&gt;
 &lt;p&gt;過程中若需要重新啟動 nginx, 以 /etc/init.d/nginx restart 執行.&lt;/p&gt;
-&lt;h3&gt;Fossil SCM 與 Stunnel 聯合啟動&lt;/h3&gt;
+&lt;h2&gt;Fossil SCM 與 Stunnel 聯合啟動&lt;/h2&gt;
 &lt;p&gt;因為在 Nginx /etc/nginx/sites-available/default 中已經將 port 80 的回應處理直接透過 http 301 狀態碼的宣告, 永久轉接到 https://my.server.host.name, 因此只要透過 Stunnel 代理在標準的 IPv4 與 IPv6 網路協定中, 以 https 啟動 Fossil SCM 即可.&lt;/p&gt;
 &lt;p&gt;首先要安裝 Stunnel 與 Fossil SCM:&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
@@ -173,30 +173,30 @@ execargs = /usr/bin/fossil http /home/user/ --https --nojail --notfound default
 </summary><content type="html">&lt;p&gt;在 2017 年 Spring, 電腦輔助設計室購入兩台 HP 伺服器, 分別是 &lt;a href="https://www.hpe.com/h20195/v2/GetPDF.aspx/c04922941.pdf"&gt;HPE ProLiant ML10 Gen9 Server&lt;/a&gt; 與 &lt;a href="https://www.hpe.com/h20195/v2/getpdf.aspx/c04375628.pdf"&gt;HPE ProLiant ML350 Gen9 Server&lt;/a&gt;, 操作系統為 Ubuntu 16.04, 根據 &lt;a href="https://www.ubuntu.com/info/release-end-of-life"&gt;Ubuntu LTS 通告&lt;/a&gt;, 使用週期可至 2021 年, 預計在 2019 年 Spring 由新伺服器接手提供服務.&lt;/p&gt;
 
 
-&lt;h3&gt;近端、區網與雲端其實是同一端&lt;/h3&gt;
+&lt;h2&gt;近端、區網與雲端其實是同一端&lt;/h2&gt;
 &lt;p&gt;自 2017 年 10 月起, 已經沒有免費的 OpenShift 雲端服務可以使用, 遠端較穩定的 html + javascript hosting 只剩下 Github Pages, 但是就課程與研究所需的近端、區網與雲端上的各項服務而言, 雲端的免費套餐終將越來越縮水的情況下, 強化近端與區網上的軟硬體服務, 將會更加重要.&lt;/p&gt;
 &lt;p&gt;這個學期工作站室的伺服器, 將全面使用 &lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 管理所有的課程與研究專案, 每一位上課的學員都將在近端與區網擁有一個 Fossil 倉儲, 用來存放與課程相關的所有內容.&lt;/p&gt;
 &lt;p&gt;Github 與 Bitbuckert 等雲端免費方案仍然扮演重要角色, 只是在無廣域網路連線與區域網路連線的情況下, 各學員的各項課程內容演練與操作資料提交, 將能在隨身的可攜系統上完成, 之後再配合區網與雲端網路的連線, 設法在分組協同的模式下, 將近端資料同步到區網與雲端主機. 因此 2017 Fall 起, 如何在近端、區網與雲端不同硬體環境下, 保持倉儲資料版本的同步, 就是另外一個重點.&lt;/p&gt;
-&lt;h3&gt;主機設定&lt;/h3&gt;
+&lt;h2&gt;主機設定&lt;/h2&gt;
 &lt;p&gt;接下來, 我們透過 &lt;a href="https://cadpb.kmol.info/40523201"&gt;https://cadpb.kmol.info/40523201&lt;/a&gt; 學員倉儲, 來說明提供 Fossil SCM 服務的主機如何設定.&lt;/p&gt;
 &lt;p&gt;首先當然是要先掌握 kmol.info 網域的主導權, 透過網域 DNS 的控管, 讓區域網路中的主機可以在 A 與 AAA 設定下的 IPv4 與 IPv6 網址呼應, 例如: cadpb.kmol.info 指的就是 cadp 電腦輔助設計實習課程中的 b 班所使用的伺服器名稱.&lt;/p&gt;
 &lt;p&gt;如前所述, 這些伺服器都是安裝 Ubuntu 16.04 Server 操作系統 + OpenSSH, 目的是希望在 Self-signed Certificate 的模式下運作.&lt;/p&gt;
 &lt;p&gt;接著必須根據 &lt;a href="create-a-multi-repository-fossil-scm-server.html"&gt;多 Fossil SCM 倉儲主機&lt;/a&gt; 的架構, 分別安裝 Fossil SCM 與 Stunnel.&lt;/p&gt;
 &lt;p&gt;其中, 特別將 Fossil SCM 伺服的目錄指向 /home/cadpa2017, 表示各操作系統帳號所有人, 可以自行利用 fossil 指令, 建立多個倉儲, 此一模式就是同一台主機可以透過網域來界定上課班級, 操作系統帳號可以界定大分組名稱, 而採用學號的倉儲名稱則可以用來界定參與協同的所有者.&lt;/p&gt;
 &lt;p&gt;因此, 一旦各倉儲所有者掌握管理該 .fossil 檔案的總管理權之後, 可以將其他學員納入自己所掌控的 .fossil users 中, 視實際需求賦於各帳號不同權限. 且可透過制式的 URL, 在得知各班各分組的成員學號情況下, 連結至各學員的倉儲中進行資料檢視.&lt;/p&gt;
-&lt;h3&gt;機械設計專案的資料格式&lt;/h3&gt;
+&lt;h2&gt;機械設計專案的資料格式&lt;/h2&gt;
 &lt;p&gt;由於設計是一種利用口語、文字、2D、3D、數學與實體等形式, 所完成的明確與具體表達, 過程中必須仔細思考、多方考量, 而且在不同時段與多人協同合作的結果, 將會產生許多不同的資料版本.&lt;/p&gt;
 &lt;p&gt;加上二十一世紀的機械可說是各種固體、流體與軟體元件精巧組合而成, 能達成特定功能之器物. 因此機械設計專案過程所產生的各種資料及版本, 更需要特別關注並竭力保存, 以便讓新舊學員在自學、執行與想像的創造力發揮階段, 擁有可持續改進的工具之外, 也能有保有多元開放的完整學習資料.&lt;/p&gt;
 &lt;p&gt;在這樣對於機械設計表達、內容物與創造流程的認知下, 我們會希望學員在口語表達階段除了錄音之外, 能夠利用 Reveal.js 投影片寫下文字資料, 能儘量採用開放的設計格式, 在 Fossil SCM 倉儲中保留可以持續追蹤的文字資料格式, 2D/3D 的末端二位元檔案, 並非版次管理系統所關注並保留的重點, 學員該紀錄的是, 各種末端檔案是在何種情況下, 根據哪些約束條件, 用甚麼方法產生, 隨後的使用者在檢視歷史資料的同時, 應該可以根據這些較能持續改進的文字資料, 配合不同的情況, 使用不同的工具, 建立其所需的二位元末端檔案.&lt;/p&gt;
 &lt;p&gt;換言之, 一個多元開放的機械設計專案, 在導入各種軟硬體組態管理的時間點, 必須全面檢視所用的工具, 所處的環境, 盡量採用能持續改進的專案資料格式, 而非只儲存不知前因與狀況下所產生的封閉格式檔案.&lt;/p&gt;
-&lt;h3&gt;文字、大綱與程式&lt;/h3&gt;
+&lt;h2&gt;文字、大綱與程式&lt;/h2&gt;
 &lt;p&gt;當上述 Fossil SCM 主機的設定, 可以讓各學員個別管理 .fossil 倉儲檔案之後, 
 利用瀏覽器介面可以控管 users, 可以利用  wiki 建立快寫網頁, 可以將各種影片檔案以 attach 方式附加在 wiki 頁面中, 也可以在專案進行過程利用 tickets 追蹤設計問題, 並在專案階段性任務完成時, 以 technote 紀錄成果.&lt;/p&gt;
 &lt;p&gt;除了利用瀏覽器介面維護的協同內容之外, 機械設計過程中採 Pelican Blog 紀錄的網誌, 採 Reveal.js 格式的簡報網頁, 以及各種計算機程式檔案, 則必須在文字、大綱與程式架構下來進行管理.&lt;/p&gt;
 &lt;p&gt;在此我們所採用的管理工具為 Leo Editor, SciTE 與 Eric6.&lt;/p&gt;
 &lt;p&gt;Leo Editor 是一套採用 Python3 + PyQt5 所編寫的大綱管理套件, 其任務是負責利用大綱架構管理鬆散的 Pelican Blog, 並且利用 button 執行操作系統指令, 還肩負透過 Python3 程式碼所組成的 button, 在近端啟動 IPv4 與 IPv6 WWW 伺服模擬環境, 能讓學員在近端檢視所有之後要推送到區網與雲端中的網誌與投影片內容.&lt;/p&gt;
 &lt;p&gt;SciTE 則提供文字編輯以及 Python3 與 ANSI C 程式執行環境, 而 Eric6 則用於 PyQt5 程式的開發.&lt;/p&gt;
-&lt;h3&gt;純 IPv6 主機設定&lt;/h3&gt;
+&lt;h2&gt;純 IPv6 主機設定&lt;/h2&gt;
 &lt;p&gt;目前在系主幹上的電腦已經可以選擇透過 IPv6 DHCP 或自行設定 IPv6 位址連線上網. &lt;/p&gt;
 &lt;p&gt;在安裝  Ubuntu 16.04 Server 時, 選擇安裝 OpenSSH 模組, 之後則必須透過 IPv4/IPv6 雙支援的 Squid Proxy Server 才可以利用 apt 維護系統所安裝的套件.&lt;/p&gt;
 &lt;p&gt;apt Proxy 的設定必須在 /etc/apt/atp.conf 中納入:&lt;/p&gt;
@@ -217,7 +217,7 @@ dns-nameservers 2001:b000:168::1
 &lt;p&gt;最後則安裝設定中文輸入法:&lt;/p&gt;
 &lt;p&gt;sudo apt install fcitx fcitx-chewing&lt;/p&gt;
 &lt;p&gt;然後修改系統的 language support 將輸入法改為 fcitx 設定後, 必須登出再登入, 讓設定生效, input method 則選擇 chewing.&lt;/p&gt;
-&lt;h3&gt;各階段設定檔案&lt;/h3&gt;
+&lt;h2&gt;各階段設定檔案&lt;/h2&gt;
 &lt;p&gt;Stunnel 的設定, 目的在與 Fossil SCM 結合, 提供 https 的連線代理.&lt;/p&gt;
 &lt;p&gt;/etc/stunnel/stunnel.conf&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
@@ -245,7 +245,7 @@ server {
 </summary><content type="html">&lt;p&gt;紀錄與電腦模擬相關內容與紀錄， 使用工具 Python3, &lt;a href="http://www.robodk.com/download"&gt;RoboDK&lt;/a&gt; (&lt;a href="https://robodk.com/doc/en/RoboDK-API.html"&gt;RoboDK API&lt;/a&gt;)&lt;/p&gt;
 
 
-&lt;h3&gt;PyQt5&lt;/h3&gt;
+&lt;h2&gt;PyQt5&lt;/h2&gt;
 &lt;p&gt;pyqt5 程式 &lt;a href="http://projects.skylogic.ca/blog/how-to-install-pyqt5-and-build-your-first-gui-in-python-3-4/"&gt;http://projects.skylogic.ca/blog/how-to-install-pyqt5-and-build-your-first-gui-in-python-3-4/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;run.py, 自行編寫用從 core/main.py 中導入 MainWindow 類別建立案例後執行&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
@@ -451,7 +451,7 @@ if __name__ == "__main__":
 &lt;/ui&gt;
 &lt;/pre&gt;
 
-&lt;h3&gt;Binary Genetic Algorithm&lt;/h3&gt;
+&lt;h2&gt;Binary Genetic Algorithm&lt;/h2&gt;
 &lt;pre class="brush: python"&gt;
 #encoding=utf8
 # genetic.py
@@ -780,12 +780,12 @@ if __name__ == "__main__":
     env.run()
 &lt;/pre&gt;
 
-&lt;h3&gt;Deap 與 Scoop&lt;/h3&gt;
+&lt;h2&gt;Deap 與 Scoop&lt;/h2&gt;
 &lt;p&gt;Deap: &lt;a href="https://github.com/DEAP/deap"&gt;https://github.com/DEAP/deap&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Scoop: &lt;a href="https://en.wikipedia.org/wiki/Python_SCOOP_(software)"&gt;https://en.wikipedia.org/wiki/Python_SCOOP_(software)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://groups.google.com/forum/#!topic/deap-users/v3wbky0EUf0"&gt;https://groups.google.com/forum/#!topic/deap-users/v3wbky0EUf0&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://groups.google.com/forum/m/#!msg/deap-users/P4IkiE-Bvbg/xSoMDphbMR4J"&gt;https://groups.google.com/forum/m/#!msg/deap-users/P4IkiE-Bvbg/xSoMDphbMR4J&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;平行運算&lt;/h3&gt;
+&lt;h2&gt;平行運算&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://research.cs.wisc.edu/htcondor/"&gt;http://research.cs.wisc.edu/htcondor/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/J-Robinson/GridGA"&gt;https://github.com/J-Robinson/GridGA&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;利用 Blender 製作 &lt;/p&gt;
@@ -794,12 +794,12 @@ if __name__ == "__main__":
 </summary><content type="html">&lt;p&gt;紀錄電腦與網路的軟硬體相關設置&lt;/p&gt;
 
 
-&lt;h3&gt;Github, Bitbucket 與 Fossil SCM&lt;/h3&gt;
+&lt;h2&gt;Github, Bitbucket 與 Fossil SCM&lt;/h2&gt;
 &lt;p&gt;Github 目前提供的免費帳號, 允許多人協同提交推送版本, 唯一的限制就是單一檔案不能大於 50 MB.&lt;/p&gt;
 &lt;p&gt;Bitbucket 則允許免費使用非公開的倉儲, 但是至多只允許五個帳號協同.&lt;/p&gt;
 &lt;p&gt;Fossil SCM 則適合在近端或區域網路中使用, 目前 KMOLab 希望在區網中導入作為與 Github Pages 配合的工具, 使用者可以將 Fossil SCM 的 working directory 限縮在 Github 近端倉儲的特定目錄下, 且在 .gitignore 中排除 &lt;em&gt;FOSSIL&lt;/em&gt; (under Windows) 的版次管理, 但是相關的 fossil update 與 fossil server 功能仍然必須依照特定的流程進行操作, 以避免兩套版次管理系統內容的不同步導致資料覆蓋流失.&lt;/p&gt;
 &lt;p&gt;github 倉儲與 bitbucket 倉儲, 則可以利用 git remote add 同步.&lt;/p&gt;
-&lt;h3&gt;Leo Editor, Pelican 與 Reveal.js&lt;/h3&gt;
+&lt;h2&gt;Leo Editor, Pelican 與 Reveal.js&lt;/h2&gt;
 &lt;p&gt;Leo Editor 是一套能夠以程式方法有效管理多元資料的文字資料編輯器, 以下就是用來管理 KMOLab Pelican 靜態網誌有關內容的畫面, 其中的 @button local-blog 是用來產生靜態網誌的指令按鈕, @button github-blog 則是用來產生嵌入 Disqus 留言系統的 Github Pages 網誌對應指令, 兩個指令的差別在於使用不同的設定檔案, 使用者可以先利用近端的按鈕, 建立網誌後在近端以另一個 https-server 按鈕建立 https 伺服, 用瀏覽器檢查所產生的網誌內容, 一旦要送到 Github 倉儲, 必須再利用遠端按鈕產生另外一組網誌與搜尋用 .json 檔案後, 再提交推送到倉儲.&lt;/p&gt;
 &lt;p&gt;在這個過程中, 使用者依照 Pelican 的特定 Markdown 檔案編寫網誌內容外, Leo Editor 專案檔中也可以放入其他有關的註記與設定檔案編輯用的節點. 若需要在 Pelican 的環境中修改設定, 都可以全部在一個 Leo Editor 專案檔中完成.&lt;/p&gt;
 &lt;p&gt;&lt;img src="./../data/images/leo_editor_kmolab.png" width="800" /&gt;&lt;/p&gt;
@@ -1006,5 +1006,61 @@ PAGE_SAVE_AS = 'pages/{slug}/index.html'
 SHOW_ARTICLE_AUTHOR = True
 &lt;/pre&gt;
 
-&lt;h3&gt;區網中的 IPv4 與 IPv6 WWW Server&lt;/h3&gt;
-&lt;p&gt;Pelican 在近端產生 weblog 後, 若要在近端以 https 檢視結果, 就必須同時建立 https Server.&lt;/p&gt;</content><category term="Github"></category><category term="Bitbucket"></category><category term="Fossil SCM"></category><category term="Leo Editor"></category><category term="Pelican"></category><category term="Reveal.js"></category></entry></feed>
+&lt;h2&gt;區網中的 IPv4 與 IPv6 WWW Server&lt;/h2&gt;
+&lt;p&gt;Pelican 在近端產生 weblog 後, 若要在近端以 https 檢視結果, 就必須同時建立 https Server.&lt;/p&gt;
+&lt;p&gt;近端 IPv4 WWW 伺服器程式:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+import os
+import subprocess
+import threading
+import http.server, ssl
+
+def domake():
+    # build directory
+    os.chdir("./../")
+    server_address = ('localhost', 5443)
+    httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
+    httpd.socket = ssl.wrap_socket(httpd.socket,
+                                   server_side=True,
+                                   certfile='localhost.crt',
+                                   keyfile='localhost.key',
+                                   ssl_version=ssl.PROTOCOL_TLSv1)
+    print(os.getcwd())
+    print("5443 https server started")
+    httpd.serve_forever()
+
+# 利用執行緒執行 https 伺服器
+make = threading.Thread(target=domake)
+make.start()
+&lt;/pre&gt;
+
+&lt;p&gt;近端 IPv6 ＷＷＷ 伺服器程式:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+import os
+import subprocess
+import threading
+import socket
+import http.server, ssl
+
+class HTTPServerV6(http.server.HTTPServer):
+    address_family = socket.AF_INET6
+
+def domake():
+    # build directory
+    os.chdir("./../")
+    ipv6_address = '::1'
+    server_address = (ipv6_address, 6443)
+    #httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
+    httpd = HTTPServerV6(server_address, http.server.SimpleHTTPRequestHandler)
+    httpd.socket = ssl.wrap_socket(httpd.socket,
+                                   server_side=True,
+                                   certfile='localhost.crt',
+                                   keyfile='localhost.key',
+                                   ssl_version=ssl.PROTOCOL_TLSv1)
+    print("6443 https server started")
+    httpd.serve_forever()
+
+# 利用執行緒執行 https 伺服器
+make = threading.Thread(target=domake)
+make.start()
+&lt;/pre&gt;</content><category term="Github"></category><category term="Bitbucket"></category><category term="Fossil SCM"></category><category term="Leo Editor"></category><category term="Pelican"></category><category term="Reveal.js"></category></entry></feed>

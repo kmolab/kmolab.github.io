@@ -16,15 +16,11 @@ from pelicanconf import *
 SITEURL = 'https://kmolab.github.io/blog'
 # 此設定用於將資料送到 gh-pages, 因此使用絕對 URL 設定
 RELATIVE_URLS = False
-# 為了要讓 local 與 gh-pages 上都能夠使用 Tipue search, 可能要採用不同的 theme
-THEME = 'theme/pelican-bootstrap3'
-#BOOTSTRAP_THEME = 'readable'
-#BOOTSTRAP_THEME = 'readable-old'
+
+THEME = 'theme/attila'
 BOOTSTRAP_THEME = 'united'
-#PYGMENTS_STYLE = 'paraiso-drak'
-#PYGMENTS_STYLE = 'fruity'
-# 為了同時兼容 render_math, 必須放棄 fruity
-PYGMENTS_STYLE = 'monokai'
+COLOR_SCHEME_CSS = 'tomorrow_night.css'
+
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
