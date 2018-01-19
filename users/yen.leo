@@ -209,6 +209,7 @@
 </v>
 <v t="leo.20180115115910.1" a="E"><vh>2018</vh>
 <v t="leo.20180115115914.1"><vh>@edit 20180115.md</vh></v>
+<v t="leo.20180119215813.1"><vh>@edit 20180119.md</vh></v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -286,7 +287,9 @@
 </t>
 <t tx="leo.20170706005043.13">&lt;section&gt;
 @others
-&lt;/section&gt;</t>
+&lt;/section&gt;
+
+</t>
 <t tx="leo.20170706005043.14">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -540,7 +543,9 @@ web based 伺服功能
 </t>
 <t tx="leo.20170710021247.13">&lt;section&gt;
 @others
-&lt;/section&gt;</t>
+&lt;/section&gt;
+
+</t>
 <t tx="leo.20170710021247.14">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
