@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>機械設計工程系 KMOLab</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2018-01-19T11:00:00+08:00</updated><entry><title>2017 KMOLab 總結</title><link href="https://kmolab.github.io/blog/Year-2017-Conclusion.html" rel="alternate"></link><published>2018-01-19T11:00:00+08:00</published><updated>2018-01-19T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-01-19:/blog/Year-2017-Conclusion.html</id><summary type="html">&lt;p&gt;2017 年在兩個禮拜前結束, &lt;a href="https://kmolab.github.io"&gt;KMOLab&lt;/a&gt; 也在秋季學期完成了計算機程式與電腦輔助設計實習的課程.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>機械設計工程系 KMOLab</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2018-01-20T11:00:00+08:00</updated><entry><title>本站網址改為 lab.kmol.info</title><link href="https://kmolab.github.io/blog/use-blog-kmol-info-as-domain-name.html" rel="alternate"></link><published>2018-01-20T11:00:00+08:00</published><updated>2018-01-20T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-01-20:/blog/use-blog-kmol-info-as-domain-name.html</id><summary type="html">&lt;p&gt;目前的網址為 kmolab.github.io, 從今起希望改為 lab.kmol.info&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;目前的網址為 kmolab.github.io, 從今起希望改為 lab.kmol.info&lt;/p&gt;
+
+
+&lt;h2&gt;DNS 設定&lt;/h2&gt;
+&lt;p&gt;首先必須先在 DNS 伺服器中, 新增 CNAME 類型, 主機選擇 lab, 指向則設為 kmolab.github.io&lt;/p&gt;
+&lt;h2&gt;修改 publishconf.py&lt;/h2&gt;
+&lt;p&gt;接下來必須修改  publishconf.py, 將 SITEURL 設為 'https://kmolab.github.io/blog'&lt;/p&gt;
+&lt;h2&gt;Github 倉儲設定&lt;/h2&gt;
+&lt;p&gt;倉儲中新增一個 CNAME 檔案, 內容為 lab.kmol.info, 且進入倉儲 settings&lt;/p&gt;</content><category term="domain name"></category><category term="cname"></category></entry><entry><title>2017 KMOLab 總結</title><link href="https://kmolab.github.io/blog/Year-2017-Conclusion.html" rel="alternate"></link><published>2018-01-19T11:00:00+08:00</published><updated>2018-01-19T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-01-19:/blog/Year-2017-Conclusion.html</id><summary type="html">&lt;p&gt;2017 年在兩個禮拜前結束, &lt;a href="https://kmolab.github.io"&gt;KMOLab&lt;/a&gt; 也在秋季學期完成了計算機程式與電腦輔助設計實習的課程.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2017 年在兩個禮拜前結束, &lt;a href="https://kmolab.github.io"&gt;KMOLab&lt;/a&gt; 也在秋季學期完成了計算機程式與電腦輔助設計實習的課程.&lt;/p&gt;
 
 

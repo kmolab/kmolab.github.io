@@ -16,6 +16,7 @@
 <v t="yen.20170108171622.1"><vh>有關 kmolab.github.io</vh></v>
 <v t="leo.20180115141411.1"><vh>20180115 重整內容</vh></v>
 <v t="yen.20170108171733.1" a="E"><vh>@path ../</vh>
+<v t="leo.20180120152237.1"><vh>@edit CNAME</vh></v>
 <v t="leo.20180115150519.1"><vh>@edit index.html</vh></v>
 <v t="leo.20170706005043.1"><vh>@clean index_reveal.html</vh>
 <v t="leo.20170706005043.2" a="E"><vh>html</vh>
@@ -210,6 +211,7 @@
 <v t="leo.20180115115910.1" a="E"><vh>2018</vh>
 <v t="leo.20180115115914.1"><vh>@edit 20180115.md</vh></v>
 <v t="leo.20180119215813.1"><vh>@edit 20180119.md</vh></v>
+<v t="leo.20180120145336.1"><vh>@edit 20180120.md</vh></v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
