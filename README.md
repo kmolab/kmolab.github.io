@@ -1,3 +1,3 @@
-# kmolab.github.io
+# lab.kmol.info
 
-https://kmolab.github.io
+http://lab.kmol.info
