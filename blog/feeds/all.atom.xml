@@ -8,7 +8,7 @@
 &lt;h2&gt;修改 publishconf.py&lt;/h2&gt;
 &lt;p&gt;接下來必須修改  publishconf.py, 將 SITEURL 設為 'https://kmolab.github.io/blog'&lt;/p&gt;
 &lt;h2&gt;Github 倉儲設定&lt;/h2&gt;
-&lt;p&gt;倉儲中新增一個 CNAME 檔案, 內容為 lab.kmol.info, 且進入倉儲 settings&lt;/p&gt;</content><category term="domain name"></category><category term="cname"></category></entry><entry><title>2017 KMOLab 總結</title><link href="https://kmolab.github.io/blog/Year-2017-Conclusion.html" rel="alternate"></link><published>2018-01-19T11:00:00+08:00</published><updated>2018-01-19T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-01-19:/blog/Year-2017-Conclusion.html</id><summary type="html">&lt;p&gt;2017 年在兩個禮拜前結束, &lt;a href="https://kmolab.github.io"&gt;KMOLab&lt;/a&gt; 也在秋季學期完成了計算機程式與電腦輔助設計實習的課程.&lt;/p&gt;
+&lt;p&gt;倉儲中新增一個 CNAME 檔案, 內容為 lab.kmol.info, 且進入倉儲 settings 查驗是否 Custom domain 也是設為 lab.kmol.info, 透過以上設定就可以將 &lt;a href="http://kmolab.github.io"&gt;http://kmolab.github.io&lt;/a&gt; 轉為 &lt;a href="http://lab.kmol.info"&gt;http://lab.kmol.info&lt;/a&gt;&lt;/p&gt;</content><category term="domain name"></category><category term="cname"></category></entry><entry><title>2017 KMOLab 總結</title><link href="https://kmolab.github.io/blog/Year-2017-Conclusion.html" rel="alternate"></link><published>2018-01-19T11:00:00+08:00</published><updated>2018-01-19T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-01-19:/blog/Year-2017-Conclusion.html</id><summary type="html">&lt;p&gt;2017 年在兩個禮拜前結束, &lt;a href="https://kmolab.github.io"&gt;KMOLab&lt;/a&gt; 也在秋季學期完成了計算機程式與電腦輔助設計實習的課程.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2017 年在兩個禮拜前結束, &lt;a href="https://kmolab.github.io"&gt;KMOLab&lt;/a&gt; 也在秋季學期完成了計算機程式與電腦輔助設計實習的課程.&lt;/p&gt;
 
 
