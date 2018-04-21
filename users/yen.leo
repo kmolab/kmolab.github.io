@@ -209,9 +209,18 @@
 <v t="leo.20171025164953.1"><vh>@edit 20171025.md</vh></v>
 </v>
 <v t="leo.20180115115910.1" a="E"><vh>2018</vh>
+<v t="leo.20180404184008.1" a="E"><vh>網頁上的數學方程式</vh>
 <v t="leo.20180115115914.1"><vh>@edit 20180115.md</vh></v>
+</v>
+<v t="leo.20180404183953.1" a="E"><vh>2017 KMOLab 總結</vh>
 <v t="leo.20180119215813.1"><vh>@edit 20180119.md</vh></v>
+</v>
+<v t="leo.20180404183937.1"><vh>本站網址改為 lab.kmol.info</vh>
 <v t="leo.20180120145336.1"><vh>@edit 20180120.md</vh></v>
+</v>
+<v t="leo.20180404184123.1" a="E"><vh>2018 第二季-開始 Lua</vh>
+<v t="leo.20180404183907.1"><vh>@edit 20180404.md</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -1942,6 +1951,10 @@ mathjax 採用最新版本 2.7.2
 
 以 &lt;pre class="brush: python"&lt;/&gt; &lt;/pre&gt; 引用程式碼</t>
 <t tx="leo.20180115142025.1"></t>
+<t tx="leo.20180404183937.1"></t>
+<t tx="leo.20180404183953.1"></t>
+<t tx="leo.20180404184008.1"></t>
+<t tx="leo.20180404184123.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
