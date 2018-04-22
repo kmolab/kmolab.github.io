@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-  <title>機械設計工程系 KMOLab - Articles in the Misc category</title>
+  <title>更新 Let's Encrypt 數位簽章</title>
 
 
   <meta name="HandheldFriendly" content="True" />
@@ -40,27 +40,49 @@
   <![endif]-->
 
 
+    <link href="https://kmolab.github.io/blog/update_letsencrypt.html" rel="canonical" />
+
+        <meta name="description" content="制式的 Let's Encrypt 以安裝 python-certbot-nginx 程式從 certbot 網站取得正式的數位簽章, 然後自動修改原先只有 http 設定的 nginx 網站, 重新啟動後, 就可以讓該網站以 https 連結.">
+
+        <meta name="author" content="yen">
+
+        <meta name="tags" content="Lets encrypt">
+
+
 
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="機械設計工程系 KMOLab"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="機械設計工程系 KMOLab"/>
-<meta property="og:description" content="View the blog."/>
+<meta property="og:title" content="更新 Let's Encrypt 數位簽章"/>
+<meta property="og:description" content="制式的 Let's Encrypt 以安裝 python-certbot-nginx 程式從 certbot 網站取得正式的數位簽章, 然後自動修改原先只有 http 設定的 nginx 網站, 重新啟動後, 就可以讓該網站以 https 連結."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://kmolab.github.io/blog/"/>
-<meta property="og:image" content="https://kmolab.github.io/blog/theme/images/home-bg.jpg">
+<meta property="og:url" content="https://kmolab.github.io/blog/update_letsencrypt.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-04-22 11:00:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://kmolab.github.io/blog/author/yen.html">
+<meta property="article:section" content="Misc"/>
+<meta property="article:tag" content="Lets encrypt"/>
+<meta property="og:image" content="https://kmolab.github.io/blog/theme/images/post-bg.jpg">
 
 <!-- Twitter Card -->
 
 <script type="application/ld+json">
 {
-  "@context" : "http://schema.org",
-  "@type" : "Website",
-  "name": " 機械設計工程系 KMOLab ",
-  "url" : "https://kmolab.github.io/blog/",
-  "image": "https://kmolab.github.io/blog/theme/images/home-bg.jpg",
-  "description": "View the blog."
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "更新 Let's Encrypt 數位簽章",
+  "headline": "更新 Let's Encrypt 數位簽章",
+  "datePublished": "2018-04-22 11:00:00+08:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "yen",
+    "url": "https://kmolab.github.io/blog/author/yen.html"
+  },
+  "image": "https://kmolab.github.io/blog/theme/images/post-bg.jpg",
+  "url": "https://kmolab.github.io/blog/update_letsencrypt.html",
+  "description": "制式的 Let's Encrypt 以安裝 python-certbot-nginx 程式從 certbot 網站取得正式的數位簽章, 然後自動修改原先只有 http 設定的 nginx 網站, 重新啟動後, 就可以讓該網站以 https 連結."
 }
 </script>
 <script type="text/javascript" src="./../data/syntaxhighlighter/shCore.js"></script>
@@ -154,9 +176,14 @@ init_mathjax();
     </ul>
   </div>
 </nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header id="blog-header" class="has-cover">
+    <header id="post-header" class="has-cover">
       <div class="inner">
         <nav id="navigation">
             <span id="home-button" class="nav-button">
@@ -166,8 +193,13 @@ init_mathjax();
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="post-title">Category Misc</h1>
-        <span class="blog-description">Posts: 6</span>
+        <h1 class="post-title">更新 Let's Encrypt 數位簽章</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://kmolab.github.io/blog/author/yen.html">Yen</a>
+            | <time datetime="Sun 22 April 2018">Sun 22 April 2018</time>
+        </span>
+        <!-- TODO : Modified check -->
             <div class="post-cover cover" style="background-image: url('https://kmolab.github.io/blog/theme/images/post-bg.jpg')">
       </div>
     </header>
@@ -182,158 +214,90 @@ init_mathjax();
 </section>
 
 
-<div id="index" class="container">
-  <main class="content" role="main">
-    <div class="extra-pagination">
-<nav class="pagination" role="pagination">
-  <div class="inner">
-    <span class="pagination-info">Page 1 / 1</span>
-    <div class="clear"></div>
-  </div>
-</nav>
-    </div>
-
+    <!-- Post content -->
+    <main class="content" role="main">
         <article class="post">
         <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="https://kmolab.github.io/blog/update_letsencrypt.html" rel="bookmark" title="Permalink to 更新 Let's Encrypt 數位簽章">更新 Let's Encrypt 數位簽章</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="https://kmolab.github.io/blog/author/yen.html">Yen</a>
-                     | <time datetime="Sun 22 April 2018">Sun 22 April 2018</time>
-                </span>
-                <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        <p>制式的 Let's Encrypt 以安裝 python-certbot-nginx 程式從 certbot 網站取得正式的數位簽章, 然後自動修改原先只有 http 設定的 nginx 網站, 重新啟動後, 就可以讓該網站以 https 連結.</p>
+            <section class="post-content">
+                <p>制式的 Let's Encrypt 以安裝 python-certbot-nginx 程式從 certbot 網站取得正式的數位簽章, 然後自動修改原先只有 http 設定的 nginx 網站, 重新啟動後, 就可以讓該網站以 https 連結.</p>
 
-                    </p>
+
+<h2>90 天有效期</h2>
+<p>雖然每次從 certbot 取得的數位簽章只有 90 天效期, 但是 python-certbot-nginx 程式提供了 autorenew 的功能, 使用者可以持續透過自動更新使用由 certbot 提供的數位簽章.</p>
+<p>只不過目前在 KMOLab 所使用的網站, 幾乎都以安裝 Fossil SCM 為主, nginx 的功能在於從 http 跳轉到以 Stunnel 啟動的 https, 並且由 Stunnel 啟動程式在內部 IP 傳送 Fossil SCM 的網站資料.</p>
+<p>換言之, KMOLab 從 certbot 取得的正式數位簽章並非用於 nginx, 而是轉給 Stunnel 使用. 而目前的 python-certbot-nginx 只能透過 nginx 確認網站合法的 domain name 設定, 因此在修改程式轉為相容 Stunnel 之前, 使用 certbot 的數位簽章, 必須手動進行.</p>
+<h2>實際操作步驟</h2>
+<p>首先必須停止 Stunnel 執行:</p>
+<p>sudo /etc/init.d/stunnel4 stop</p>
+<p>接下來停止 nginx 執行:</p>
+<p>sudo /etc/init.d/nginx stop</p>
+<p>接著將目前從 nginx http 跳轉到 Stunnel 啟動的 https 網站設定 /etc/nginx/sites-available/default 改為由 nginx 掌控 https 的 default_certbot 設定.</p>
+<p>接著重新啟動 nginx:</p>
+<p>sudo /etc/init.d/nginx start</p>
+<p>然後取得新的數位簽章:</p>
+<p>sudo certbot renew</p>
+<p>所取得的公鑰與私鑰檔案:</p>
+<p>/etc/letsencrypt/live/mde1a1.kmol.info/cert.pem
+/etc/letsencrypt/live/mde1a1.kmol.info/privkey.pem</p>
+<p>最後將 cert.pem 複製為 /etc/stunnel/localhost.crt, privkey.pem 複製為 /etc/stunnel/localhsot.key 後, 將 /etc/nginx/sites-available/default 換為跳轉為 Stunnel 控管的 default_stunnel, 重新啟動 nginx 與 stunnel, 就可以使用該數位簽章於從 nginx http 跳轉至正式 https 的 Stunnel+Fossil SCM 網站.</p>
+<p>其中用來跳轉 https 的 nginx 設定:</p>
+<pre class="brush: jscript">
+server {
+listen 80;
+server_name mde1a1.kmol.info;
+rewrite ^/(.*)$ https://mde1a1.kmol.info/$1 permanent;
+}
+</pre>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=更新 Let's Encrypt 數位簽章&amp;url=https://kmolab.github.io/blog/update_letsencrypt.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://kmolab.github.io/blog/update_letsencrypt.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://kmolab.github.io/blog/update_letsencrypt.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://kmolab.github.io/blog/tag/lets-encrypt.html">Lets encrypt</a>                </aside>
+
+                <div class="clear"></div>
+
+
                 </section>
-<p>
-  <a data-disqus-identifier="/update_letsencrypt.html" href="https://kmolab.github.io/blog/update_letsencrypt.html#disqus_thread">comments</a>
-</p>
+
+                <script type="text/javascript">
+                    var disqus = 'kmolab-github';
+                    var disqus_shortname = 'kmolab-github';
+                    var disqus_identifier = '/update_letsencrypt.html';
+                    var disqus_url = 'https://kmolab.github.io/blog/update_letsencrypt.html';
+                </script>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+                <section class="post-comments">
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/update_letsencrypt.html" >Show Comments</a>
+                    <div id="disqus_thread"></div>
+                </section>
+
+                <aside class="post-nav">
+                    <a class="post-nav-prev" href="https://kmolab.github.io/blog/starting-lua-2018.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">2018 第二季-開始 Lua</h2>
+                            <p class="post-nav-excerpt">會興起將 Lua 導入計算機程式課程, 是因為 V-rep, 因為除了 C/C++ API 外, 標準 API 程式內嵌 (embedded) 與附加 (add-on)...</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
             </div>
         </article>
-        <article class="post">
-        <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="https://kmolab.github.io/blog/starting-lua-2018.html" rel="bookmark" title="Permalink to 2018 第二季-開始 Lua">2018 第二季-開始 Lua</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="https://kmolab.github.io/blog/author/yen.html">Yen</a>
-                     | <time datetime="Wed 04 April 2018">Wed 04 April 2018</time>
-                </span>
-                <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        <p>會興起將 <a href="https://www.lua.org/">Lua</a> 導入計算機程式課程, 是因為 <a href="http://www.coppeliarobotics.com/">V-rep</a>, 因為除了 C/C++ API 外, 標準 API 程式內嵌 (embedded) 與附加 (add-on) 語言, 就是 <a href="https://www.lua.org/">Lua</a>.</p>
-
-                    </p>
-                </section>
-<p>
-  <a data-disqus-identifier="/starting-lua-2018.html" href="https://kmolab.github.io/blog/starting-lua-2018.html#disqus_thread">comments</a>
-</p>
-            </div>
-        </article>
-        <article class="post">
-        <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="https://kmolab.github.io/blog/use-blog-kmol-info-as-domain-name.html" rel="bookmark" title="Permalink to 本站網址改為 lab.kmol.info">本站網址改為 lab.kmol.info</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="https://kmolab.github.io/blog/author/yen.html">Yen</a>
-                     | <time datetime="Sat 20 January 2018">Sat 20 January 2018</time>
-                </span>
-                <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        <p>目前的網址為 kmolab.github.io, 從今起希望改為 lab.kmol.info</p>
-
-                    </p>
-                </section>
-<p>
-  <a data-disqus-identifier="/use-blog-kmol-info-as-domain-name.html" href="https://kmolab.github.io/blog/use-blog-kmol-info-as-domain-name.html#disqus_thread">comments</a>
-</p>
-            </div>
-        </article>
-        <article class="post">
-        <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="https://kmolab.github.io/blog/first-discussion-blog.html" rel="bookmark" title="Permalink to 大學生為何不來上課?">大學生為何不來上課?</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="https://kmolab.github.io/blog/author/kmol.html">Kmol</a>
-                     | <time datetime="Mon 05 June 2017">Mon 05 June 2017</time>
-                </span>
-                <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        <p>大學生不願進教室上課的原因很多, 學費太低? 學不到東西? 完全跟不上進度? 老師太混? 上與不上都差不多? 實在爬不起來? 沒有人叫我起床? </p>
-
-                    </p>
-                </section>
-<p>
-  <a data-disqus-identifier="/first-discussion-blog.html" href="https://kmolab.github.io/blog/first-discussion-blog.html#disqus_thread">comments</a>
-</p>
-            </div>
-        </article>
-        <article class="post">
-        <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="https://kmolab.github.io/blog/first-misc-blog.html" rel="bookmark" title="Permalink to 其他">其他</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="https://kmolab.github.io/blog/author/kmol.html">Kmol</a>
-                     | <time datetime="Mon 05 June 2017">Mon 05 June 2017</time>
-                </span>
-                <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        <p>不在設置, 模擬, 實作與論述類別的內容, 則放入雜項其他類別</p>
-
-                    </p>
-                </section>
-<p>
-  <a data-disqus-identifier="/first-misc-blog.html" href="https://kmolab.github.io/blog/first-misc-blog.html#disqus_thread">comments</a>
-</p>
-            </div>
-        </article>
-        <article class="post">
-        <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="https://kmolab.github.io/blog/first-realization-blog.html" rel="bookmark" title="Permalink to 實作">實作</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="https://kmolab.github.io/blog/author/kmol.html">Kmol</a>
-                     | <time datetime="Mon 05 June 2017">Mon 05 June 2017</time>
-                </span>
-                <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        <p>紀錄與實作有關的內容, 實體製作</p>
-
-                    </p>
-                </section>
-<p>
-  <a data-disqus-identifier="/first-realization-blog.html" href="https://kmolab.github.io/blog/first-realization-blog.html#disqus_thread">comments</a>
-</p>
-            </div>
-        </article>
-
-<nav class="pagination" role="pagination">
-  <div class="inner">
-    <span class="pagination-info">Page 1 / 1</span>
-    <div class="clear"></div>
-  </div>
-</nav>
-  </main>
-</div>
+    </main>
       <!-- TODO : Body class -->
     <div id="body-class" style="display: none;" class=""></div>
 

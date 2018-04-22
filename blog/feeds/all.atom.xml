@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>機械設計工程系 KMOLab</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2018-04-04T11:00:00+08:00</updated><entry><title>2018 第二季-開始 Lua</title><link href="https://kmolab.github.io/blog/starting-lua-2018.html" rel="alternate"></link><published>2018-04-04T11:00:00+08:00</published><updated>2018-04-04T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-04-04:/blog/starting-lua-2018.html</id><summary type="html">&lt;p&gt;會興起將 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt; 導入計算機程式課程, 是因為 &lt;a href="http://www.coppeliarobotics.com/"&gt;V-rep&lt;/a&gt;, 因為除了 C/C++ API 外, 標準 API 程式內嵌 (embedded) 與附加 (add-on) 語言, 就是 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>機械設計工程系 KMOLab</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2018-04-22T11:00:00+08:00</updated><entry><title>更新 Let's Encrypt 數位簽章</title><link href="https://kmolab.github.io/blog/update_letsencrypt.html" rel="alternate"></link><published>2018-04-22T11:00:00+08:00</published><updated>2018-04-22T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-04-22:/blog/update_letsencrypt.html</id><summary type="html">&lt;p&gt;制式的 Let's Encrypt 以安裝 python-certbot-nginx 程式從 certbot 網站取得正式的數位簽章, 然後自動修改原先只有 http 設定的 nginx 網站, 重新啟動後, 就可以讓該網站以 https 連結.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;制式的 Let's Encrypt 以安裝 python-certbot-nginx 程式從 certbot 網站取得正式的數位簽章, 然後自動修改原先只有 http 設定的 nginx 網站, 重新啟動後, 就可以讓該網站以 https 連結.&lt;/p&gt;
+
+
+&lt;h2&gt;90 天有效期&lt;/h2&gt;
+&lt;p&gt;雖然每次從 certbot 取得的數位簽章只有 90 天效期, 但是 python-certbot-nginx 程式提供了 autorenew 的功能, 使用者可以持續透過自動更新使用由 certbot 提供的數位簽章.&lt;/p&gt;
+&lt;p&gt;只不過目前在 KMOLab 所使用的網站, 幾乎都以安裝 Fossil SCM 為主, nginx 的功能在於從 http 跳轉到以 Stunnel 啟動的 https, 並且由 Stunnel 啟動程式在內部 IP 傳送 Fossil SCM 的網站資料.&lt;/p&gt;
+&lt;p&gt;換言之, KMOLab 從 certbot 取得的正式數位簽章並非用於 nginx, 而是轉給 Stunnel 使用. 而目前的 python-certbot-nginx 只能透過 nginx 確認網站合法的 domain name 設定, 因此在修改程式轉為相容 Stunnel 之前, 使用 certbot 的數位簽章, 必須手動進行.&lt;/p&gt;
+&lt;h2&gt;實際操作步驟&lt;/h2&gt;
+&lt;p&gt;首先必須停止 Stunnel 執行:&lt;/p&gt;
+&lt;p&gt;sudo /etc/init.d/stunnel4 stop&lt;/p&gt;
+&lt;p&gt;接下來停止 nginx 執行:&lt;/p&gt;
+&lt;p&gt;sudo /etc/init.d/nginx stop&lt;/p&gt;
+&lt;p&gt;接著將目前從 nginx http 跳轉到 Stunnel 啟動的 https 網站設定 /etc/nginx/sites-available/default 改為由 nginx 掌控 https 的 default_certbot 設定.&lt;/p&gt;
+&lt;p&gt;接著重新啟動 nginx:&lt;/p&gt;
+&lt;p&gt;sudo /etc/init.d/nginx start&lt;/p&gt;
+&lt;p&gt;然後取得新的數位簽章:&lt;/p&gt;
+&lt;p&gt;sudo certbot renew&lt;/p&gt;
+&lt;p&gt;所取得的公鑰與私鑰檔案:&lt;/p&gt;
+&lt;p&gt;/etc/letsencrypt/live/mde1a1.kmol.info/cert.pem
+/etc/letsencrypt/live/mde1a1.kmol.info/privkey.pem&lt;/p&gt;
+&lt;p&gt;最後將 cert.pem 複製為 /etc/stunnel/localhost.crt, privkey.pem 複製為 /etc/stunnel/localhsot.key 後, 將 /etc/nginx/sites-available/default 換為跳轉為 Stunnel 控管的 default_stunnel, 重新啟動 nginx 與 stunnel, 就可以使用該數位簽章於從 nginx http 跳轉至正式 https 的 Stunnel+Fossil SCM 網站.&lt;/p&gt;
+&lt;p&gt;其中用來跳轉 https 的 nginx 設定:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+server {
+listen 80;
+server_name mde1a1.kmol.info;
+rewrite ^/(.*)$ https://mde1a1.kmol.info/$1 permanent;
+}
+&lt;/pre&gt;</content><category term="Lets encrypt"></category></entry><entry><title>2018 第二季-開始 Lua</title><link href="https://kmolab.github.io/blog/starting-lua-2018.html" rel="alternate"></link><published>2018-04-04T11:00:00+08:00</published><updated>2018-04-04T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-04-04:/blog/starting-lua-2018.html</id><summary type="html">&lt;p&gt;會興起將 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt; 導入計算機程式課程, 是因為 &lt;a href="http://www.coppeliarobotics.com/"&gt;V-rep&lt;/a&gt;, 因為除了 C/C++ API 外, 標準 API 程式內嵌 (embedded) 與附加 (add-on) 語言, 就是 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt;.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;會興起將 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt; 導入計算機程式課程, 是因為 &lt;a href="http://www.coppeliarobotics.com/"&gt;V-rep&lt;/a&gt;, 因為除了 C/C++ API 外, 標準 API 程式內嵌 (embedded) 與附加 (add-on) 語言, 就是 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt;.&lt;/p&gt;
 
 
