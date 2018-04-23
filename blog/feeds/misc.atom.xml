@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>機械設計工程系 KMOLab - Misc</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/misc.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2018-04-22T11:00:00+08:00</updated><entry><title>更新 Let's Encrypt 數位簽章</title><link href="https://kmolab.github.io/blog/update_letsencrypt.html" rel="alternate"></link><published>2018-04-22T11:00:00+08:00</published><updated>2018-04-22T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-04-22:/blog/update_letsencrypt.html</id><summary type="html">&lt;p&gt;制式的 Let's Encrypt 以安裝 python-certbot-nginx 程式從 certbot 網站取得正式的數位簽章, 然後自動修改原先只有 http 設定的 nginx 網站, 重新啟動後, 就可以讓該網站以 https 連結.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>機械設計工程系 KMOLab - Misc</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/misc.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2018-04-24T11:00:00+08:00</updated><entry><title>編譯 Fossil SCM</title><link href="https://kmolab.github.io/blog/msys2_compile_fossil_scm.html" rel="alternate"></link><published>2018-04-24T11:00:00+08:00</published><updated>2018-04-24T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-04-24:/blog/msys2_compile_fossil_scm.html</id><summary type="html">&lt;p&gt;在此利用 Msys2 編譯適用於 Windows 10 64 位元環境中的 Fossil SCM.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;在此利用 Msys2 編譯適用於 Windows 10 64 位元環境中的 Fossil SCM.&lt;/p&gt;
+
+
+&lt;h2&gt;編譯流程&lt;/h2&gt;
+&lt;p&gt;首先從 Gnuwin32 coreutils 取得視窗環境下執行的 cat 與 grep, 並且確定 sh.exe 位於指令搜尋路徑 (例如, 透過 git/bin 目錄中的 sh.exe), 先編譯 Fossil SCM 附帶的 zlib 後, 再設定 PREFIX = x86_64-w64-mingw32-, 就可順利完成 fossil.exe 的編譯. 在不修改 win/Makefile.mingw 的情況下, 必須與 zlib1.dll 配合才能執行. 若開啟 LIB = -static 設定, 則可以將程式庫納入 fossil.exe 中執行。&lt;/p&gt;
+&lt;h2&gt;取得 fossil clone 原始碼&lt;/h2&gt;
+&lt;p&gt;從 Fossil SCM 倉儲取得原始碼壓縮檔後, 在 wd/fossil 目錄中解開 trunk 最新版本的原始碼, 目前為 Fossil SCM 2.5 版.&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+fossil clone https://www.fossil-scm.org fossil.fossil
+cd wd
+mkdir fossil
+cd fossil
+fossil open ./../../fossil.fossil
+&lt;/pre&gt;
+
+&lt;h2&gt;編譯 zlib&lt;/h2&gt;
+&lt;p&gt;在 MSYS2 環境中編譯 Fossil SCM 時, 必須先編譯 compat/zlib&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+cd compat/zlib
+mingw32-make -f win32/Makefile.gcc
+&lt;/pre&gt;
+
+&lt;h2&gt;編譯 fossil.exe&lt;/h2&gt;
+&lt;p&gt;之後, 再退出 compat/zlib 目錄, 回到 wd/fossil 目錄中, 編輯 win/Makefile.mingw, 設定&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+PREFIX = x86_64-w64-mingw32-
+LIB = -static
+&lt;/pre&gt;
+
+&lt;p&gt;接著以 mingw32-make -f win/Makefile.mingw 編譯 fossil.exe&lt;/p&gt;
+&lt;p&gt;根據以上說明所建立的教學用倉儲位於: &lt;a href="https://github.com/kmolab/fossil-scm_25"&gt;https://github.com/kmolab/fossil-scm_25&lt;/a&gt;&lt;/p&gt;</content><category term="Fossil SCM"></category></entry><entry><title>更新 Let's Encrypt 數位簽章</title><link href="https://kmolab.github.io/blog/update_letsencrypt.html" rel="alternate"></link><published>2018-04-22T11:00:00+08:00</published><updated>2018-04-22T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-04-22:/blog/update_letsencrypt.html</id><summary type="html">&lt;p&gt;制式的 Let's Encrypt 以安裝 python-certbot-nginx 程式從 certbot 網站取得正式的數位簽章, 然後自動修改原先只有 http 設定的 nginx 網站, 重新啟動後, 就可以讓該網站以 https 連結.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;制式的 Let's Encrypt 以安裝 python-certbot-nginx 程式從 certbot 網站取得正式的數位簽章, 然後自動修改原先只有 http 設定的 nginx 網站, 重新啟動後, 就可以讓該網站以 https 連結.&lt;/p&gt;
 
 

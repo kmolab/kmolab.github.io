@@ -224,6 +224,9 @@
 <v t="leo.20180422212734.1" a="E"><vh>更新 Let's Encrypt 數位簽章</vh>
 <v t="leo.20180422221151.1"><vh>@edit 20180422.md</vh></v>
 </v>
+<v t="leo.20180423103639.1" a="E"><vh>編譯 Fossil SCM</vh>
+<v t="leo.20180423103656.1"><vh>@edit 20180423.md</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -1959,6 +1962,7 @@ mathjax 採用最新版本 2.7.2
 <t tx="leo.20180404184008.1"></t>
 <t tx="leo.20180404184123.1"></t>
 <t tx="leo.20180422212734.1"></t>
+<t tx="leo.20180423103639.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
