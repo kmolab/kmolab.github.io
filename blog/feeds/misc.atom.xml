@@ -59,6 +59,24 @@ listen 80;
 server_name mde1a1.kmol.info;
 rewrite ^/(.*)$ https://mde1a1.kmol.info/$1 permanent;
 }
+&lt;/pre&gt;
+
+&lt;p&gt;以 mde2a1.kmol.info 電腦的 certbot 數位簽章更新為例, 命令執行流程如下:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+sudo /etc/init.d/nginx stop
+sudo /etc/init.d/stunnel4 stop
+
+sudo cp /etc/nginx/sites-available/default_certbot /etc/nginx/sites-available/default
+sudo /etc/init.d/nginx start
+sudo certbot renew
+
+sudo cp /etc/nginx/sites-available/default_stunnel /etc/nginx/sites-available/default
+sudo /etc/init.d/nginx restart
+
+sudo cp /etc/letsencrypt/live/mde2a1.kmol.info/cert.pem /etc/stunnel/localhost.crt
+sudo cp /etc/letsencrypt/live/mde2a1.kmol.info/privkey.pem /etc/stunnel/localhost.key
+
+sudo /etc/init.d/stunnel4 start 
 &lt;/pre&gt;</content><category term="Lets encrypt"></category></entry><entry><title>2018 第二季-開始 Lua</title><link href="https://kmolab.github.io/blog/starting-lua-2018.html" rel="alternate"></link><published>2018-04-04T11:00:00+08:00</published><updated>2018-04-04T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-04-04:/blog/starting-lua-2018.html</id><summary type="html">&lt;p&gt;會興起將 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt; 導入計算機程式課程, 是因為 &lt;a href="http://www.coppeliarobotics.com/"&gt;V-rep&lt;/a&gt;, 因為除了 C/C++ API 外, 標準 API 程式內嵌 (embedded) 與附加 (add-on) 語言, 就是 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt;.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;會興起將 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt; 導入計算機程式課程, 是因為 &lt;a href="http://www.coppeliarobotics.com/"&gt;V-rep&lt;/a&gt;, 因為除了 C/C++ API 外, 標準 API 程式內嵌 (embedded) 與附加 (add-on) 語言, 就是 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt;.&lt;/p&gt;
 
