@@ -224,7 +224,7 @@
 <v t="leo.20180422212734.1" a="E"><vh>更新 Let's Encrypt 數位簽章</vh>
 <v t="leo.20180422221151.1"><vh>@edit 20180422.md</vh></v>
 </v>
-<v t="leo.20180423103639.1" a="E"><vh>編譯 Fossil SCM</vh>
+<v t="leo.20180423103639.1"><vh>編譯 Fossil SCM</vh>
 <v t="leo.20180423103656.1"><vh>@edit 20180423.md</vh></v>
 </v>
 </v>

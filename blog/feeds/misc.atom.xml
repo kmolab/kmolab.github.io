@@ -82,7 +82,7 @@ sudo /etc/init.d/stunnel4 start
 
 
 &lt;h2&gt;以 &lt;a href="https://www.msys2.org/"&gt;Msys2&lt;/a&gt; 編譯 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;下載 &lt;a href="https://drive.google.com/open?id=1cHBKoX20eO1oDOp0FQC4HRGW5xuroeHl"&gt;kmol_twigs.7z&lt;/a&gt; 後, 解開壓縮檔, 以 start.bat 啟動隨身程式系統.&lt;/p&gt;
+&lt;p&gt;下載 &lt;a href="https://drive.google.com/open?id=17S8Zmvxi67m0aW6lv6YodqRMIdmNtuQS"&gt;kmol_twigs.7z&lt;/a&gt; 後, 解開壓縮檔, 以 start.bat 啟動隨身程式系統.&lt;/p&gt;
 &lt;p&gt;從 &lt;a href="http://www.lua.org/download.html"&gt;http://www.lua.org/download.html&lt;/a&gt; 下載 lua 5.3.4 原始碼. 在隨身系統的命令列中執行 mingw32-make mingw 就可以完成編譯, 取得 lua.exe, luac.exe 與 liblua.a&lt;/p&gt;
 &lt;h2&gt;Fengari 專案&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://github.com/fengari-lua"&gt;fengari-lua&lt;/a&gt; 利用 Javascript 改寫 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt; 解譯器後, 在網頁中透過 &lt;a href="https://github.com/fengari-lua/fengari-web"&gt;fengari-web&lt;/a&gt; 就可以執行 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt; 程式外, 還能夠導入 js 模組, 使用 Javascript 程式庫中相關物件的方法與屬性. &lt;a href="https://github.com/davchoo/SchoolProject"&gt;SchoolProject&lt;/a&gt; 就是利用 &lt;a href="https://ace.c9.io/"&gt;Ace&lt;/a&gt; 編輯器與 &lt;a href="https://github.com/fengari-lua/fengari-web"&gt;fengari-web&lt;/a&gt;, 讓使用者可以直接在瀏覽器中編輯執行 &lt;a href="https://www.lua.org/"&gt;Lua&lt;/a&gt; 程式. &lt;a href="http://mde.tw/vecp2018/lua/SchoolProject"&gt;vecp2018_lua&lt;/a&gt; (&lt;a href="https://github.com/mdecourse/vecp2018/tree/gh-pages/lua/SchoolProject"&gt;原始碼&lt;/a&gt;) 則延續 &lt;a href="https://github.com/davchoo/SchoolProject"&gt;SchoolProject&lt;/a&gt;, 增加了一些功能, 可以用於大一的計算機程式課程中.&lt;/p&gt;
