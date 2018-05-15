@@ -224,8 +224,11 @@
 <v t="leo.20180422212734.1" a="E"><vh>更新 Let's Encrypt 數位簽章</vh>
 <v t="leo.20180422221151.1"><vh>@edit 20180422.md</vh></v>
 </v>
-<v t="leo.20180423103639.1"><vh>編譯 Fossil SCM</vh>
+<v t="leo.20180423103639.1" a="E"><vh>編譯 Fossil SCM</vh>
 <v t="leo.20180423103656.1"><vh>@edit 20180423.md</vh></v>
+</v>
+<v t="leo.20180515202057.1" a="E"><vh>協同設計室</vh>
+<v t="leo.20180515202112.1"><vh>@edit 20180515.md</vh></v>
 </v>
 </v>
 </v>
@@ -1963,6 +1966,7 @@ mathjax 採用最新版本 2.7.2
 <t tx="leo.20180404184123.1"></t>
 <t tx="leo.20180422212734.1"></t>
 <t tx="leo.20180423103639.1"></t>
+<t tx="leo.20180515202057.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
