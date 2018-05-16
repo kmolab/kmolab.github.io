@@ -230,6 +230,9 @@
 <v t="leo.20180515202057.1" a="E"><vh>協同設計室</vh>
 <v t="leo.20180515202112.1"><vh>@edit 20180515.md</vh></v>
 </v>
+<v t="leo.20180516211732.1" a="E"><vh>協同設計室二</vh>
+<v t="leo.20180516211802.1"><vh>@edit 20180516.md</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -1967,6 +1970,7 @@ mathjax 採用最新版本 2.7.2
 <t tx="leo.20180422212734.1"></t>
 <t tx="leo.20180423103639.1"></t>
 <t tx="leo.20180515202057.1"></t>
+<t tx="leo.20180516211732.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

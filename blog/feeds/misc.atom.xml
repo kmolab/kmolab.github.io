@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>機械設計工程系 KMOLab - Misc</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/misc.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2018-05-15T11:00:00+08:00</updated><entry><title>協同設計室</title><link href="https://kmolab.github.io/blog/Collaborative-Design-Laboratory.html" rel="alternate"></link><published>2018-05-15T11:00:00+08:00</published><updated>2018-05-15T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-05-15:/blog/Collaborative-Design-Laboratory.html</id><summary type="html">&lt;p&gt;2018 年春天, 在電腦輔助設計室旁的一間約十坪大小的空間, 成立了所謂的協同設計室, 希望透過多人協力一同, 解決與電腦及網路軟硬體相關問題.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>機械設計工程系 KMOLab - Misc</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/misc.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2018-05-16T11:00:00+08:00</updated><entry><title>協同設計室(二)</title><link href="https://kmolab.github.io/blog/Collaborative-Design-Laboratory-II.html" rel="alternate"></link><published>2018-05-16T11:00:00+08:00</published><updated>2018-05-16T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-05-16:/blog/Collaborative-Design-Laboratory-II.html</id><summary type="html">&lt;p&gt;昨天, 採用 &lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 與 &lt;a href="https://www.stunnel.org/"&gt;Stunnel&lt;/a&gt; 建置的 &lt;a href="https://[2001:288:6004:17:0811::cd06]"&gt;https://[2001:288:6004:17:0811::cd06]&lt;/a&gt; 虛擬主機網站已經初步完成. 大家從手機中的瀏覽器就可以直接連線 (因為已經都支援 IPv6 協定). 接下來必須將此 IPv6 網址與 cd06.kmol.info 對應之外, 還要取得此一網址的第三方簽署的數位簽章.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;昨天, 採用 &lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 與 &lt;a href="https://www.stunnel.org/"&gt;Stunnel&lt;/a&gt; 建置的 &lt;a href="https://[2001:288:6004:17:0811::cd06]"&gt;https://[2001:288:6004:17:0811::cd06]&lt;/a&gt; 虛擬主機網站已經初步完成. 大家從手機中的瀏覽器就可以直接連線 (因為已經都支援 IPv6 協定). 接下來必須將此 IPv6 網址與 cd06.kmol.info 對應之外, 還要取得此一網址的第三方簽署的數位簽章.&lt;/p&gt;
+
+
+&lt;p&gt;IPv6 網址與符號名稱的設定, 必須在 DNS 伺服器中指定一組 AAAA 設定, 將兩者綁定, 而網址的數位簽章, 則採用 &lt;a href="https://certbot.eff.org/"&gt;certbot&lt;/a&gt; 完成.&lt;/p&gt;
+&lt;h2&gt;Certbot 數位簽章&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://certbot.eff.org/"&gt;certbot&lt;/a&gt; 數位簽章的取得與設定, 是由 &lt;a href="https://www.nginx.com/"&gt;nginx&lt;/a&gt; 的一組 Python 延伸程式完成. 由於之前已經將 https 所使用的 443 埠號交給 &lt;a href="https://www.stunnel.org/"&gt;Stunnel&lt;/a&gt; 使用, 但當時所採用的是 self-signed 的數位簽章, 並沒有登錄在公開的 public server 上. &lt;a href="https://certbot.eff.org/"&gt;certbot&lt;/a&gt; 驗證網址的方式是透過 &lt;a href="https://www.nginx.com/"&gt;nginx&lt;/a&gt; 的連線完成, 因此接下來必須安裝 &lt;a href="https://www.nginx.com/"&gt;nginx&lt;/a&gt;, 使用的埠號為 http 協定的 port 80. 在 Ubuntu 18.04 中安裝 &lt;a href="https://www.nginx.com/"&gt;nginx&lt;/a&gt;, 執行:&lt;/p&gt;
+&lt;pre class="brush:jscript"&gt;
+$ sudo apt install nginx
+&lt;/pre&gt;
+
+&lt;p&gt;接著, 必須安裝 &lt;a href="https://certbot.eff.org/"&gt;certbot&lt;/a&gt; 延伸程式:&lt;/p&gt;
+&lt;pre class="brush:jscript"&gt;
+$ sudo apt-get update
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository ppa:certbot/certbot
+$ sudo apt-get update
+$ sudo apt-get install python-certbot-nginx 
+&lt;/pre&gt;
+
+&lt;p&gt;其中, 在 Ubuntu 18.04 執行 sudo add-apt-repository ppa:certbot/certbot 並沒有完成, 但似乎不影響隨後的 python-cerbot-nginx 安裝.&lt;/p&gt;
+&lt;p&gt;這時為了保留原始 &lt;a href="https://www.nginx.com/"&gt;nginx&lt;/a&gt; 執行設定 /etc/nginx/sites-available/default, 必須以 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default_orig 加以保留.&lt;/p&gt;
+&lt;p&gt;接著透過 $ sudo certbot --nginx 讓 &lt;a href="https://certbot.eff.org/"&gt;certbot&lt;/a&gt; 自動設定所需的 https 連線參數, 即可取得 /etc/letsencrypt/live/cd06.kmol.info/fullchain.pem 與 /etc/letsencrypt/live/cd06.kmol.info/privkey.pem 等兩數位公鑰與私鑰檔案.&lt;/p&gt;
+&lt;p&gt;完成 &lt;a href="https://certbot.eff.org/"&gt;certbot&lt;/a&gt; 指令後, /etc/nginx/sites-available/default 將會依使用者選擇要從 http 跳轉 https, 或不跳轉, 插入必要的設定修改, 取得數位簽章後, 以 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default_cert 儲存 &lt;a href="https://certbot.eff.org/"&gt;certbot&lt;/a&gt; 所修改的 &lt;a href="https://www.nginx.com/"&gt;nginx&lt;/a&gt; 設定.&lt;/p&gt;
+&lt;p&gt;接下來則將 /etc/nginx/sites-available/default 恢復為原先的 default_orig 版本, 因為這裡只讓 &lt;a href="https://www.nginx.com/"&gt;nginx&lt;/a&gt; 佔用 port 80, port 443 仍然必須交還給之前所設定的 &lt;a href="https://www.stunnel.org/"&gt;Stunnel&lt;/a&gt; 服務.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.nginx.com/"&gt;nginx&lt;/a&gt; 恢復原狀後, 可以利用 /etc/init.d/nginx restart 重新啟動.&lt;/p&gt;
+&lt;p&gt;而 /etc/stunnel/ 目錄中原有的 localhost.crt 與 localhost.key 改為 localhost_self.crt 與 localhost_self.key, 並從 /etc/letsencrypt/live/cd06.kmol.info/fullchain.pem 與 /etc/letsencrypt/live/cd06.kmol.info/privkey.pem 複製 public signed 的網址數位簽章, 分別複製為 /etc/stunnel/localhost.crt 與 localhost.key 後, 以 /etc/init.d/stunnel4 start 啟動.&lt;/p&gt;
+&lt;p&gt;假如一切正常, 使用者便可以連線到 &lt;a href="https://cd06.kmol.info"&gt;https://cd06.kmol.info&lt;/a&gt; 與 &lt;a href="http://cd06.kmol.info"&gt;http://cd06.kmol.info&lt;/a&gt;, 前者為 &lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 加上 &lt;a href="https://www.stunnel.org/"&gt;Stunnel&lt;/a&gt;, 而後者則由 &lt;a href="https://www.nginx.com/"&gt;nginx&lt;/a&gt; 伺服.&lt;/p&gt;</content><category term="Collaborative Design"></category></entry><entry><title>協同設計室</title><link href="https://kmolab.github.io/blog/Collaborative-Design-Laboratory.html" rel="alternate"></link><published>2018-05-15T11:00:00+08:00</published><updated>2018-05-15T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-05-15:/blog/Collaborative-Design-Laboratory.html</id><summary type="html">&lt;p&gt;2018 年春天, 在電腦輔助設計室旁的一間約十坪大小的空間, 成立了所謂的協同設計室, 希望透過多人協力一同, 解決與電腦及網路軟硬體相關問題.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2018 年春天, 在電腦輔助設計室旁的一間約十坪大小的空間, 成立了所謂的協同設計室, 希望透過多人協力一同, 解決與電腦及網路軟硬體相關問題.&lt;/p&gt;
 
 
