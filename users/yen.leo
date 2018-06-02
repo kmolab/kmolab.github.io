@@ -215,7 +215,7 @@
 <v t="leo.20180404183953.1" a="E"><vh>2017 KMOLab 總結</vh>
 <v t="leo.20180119215813.1"><vh>@edit 20180119.md</vh></v>
 </v>
-<v t="leo.20180404183937.1"><vh>本站網址改為 lab.kmol.info</vh>
+<v t="leo.20180404183937.1" a="E"><vh>本站網址改為 lab.kmol.info</vh>
 <v t="leo.20180120145336.1"><vh>@edit 20180120.md</vh></v>
 </v>
 <v t="leo.20180404184123.1" a="E"><vh>2018 第二季-開始 Lua</vh>
@@ -232,6 +232,9 @@
 </v>
 <v t="leo.20180516211732.1" a="E"><vh>協同設計室二</vh>
 <v t="leo.20180516211802.1"><vh>@edit 20180516.md</vh></v>
+</v>
+<v t="leo.20180531100725.1" a="E"><vh>協同設計室三</vh>
+<v t="leo.20180531100742.1"><vh>@edit 20180531.md</vh></v>
 </v>
 </v>
 </v>
@@ -1971,6 +1974,7 @@ mathjax 採用最新版本 2.7.2
 <t tx="leo.20180423103639.1"></t>
 <t tx="leo.20180515202057.1"></t>
 <t tx="leo.20180516211732.1"></t>
+<t tx="leo.20180531100725.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

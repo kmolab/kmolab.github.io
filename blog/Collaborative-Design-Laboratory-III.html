@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>協同設計室(三)</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://kmolab.github.io/blog/" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="https://kmolab.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="機械設計工程系 KMOLab Full Atom Feed" />
+          <link href="https://kmolab.github.io/blog/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="機械設計工程系 KMOLab Categories Atom Feed" />
+
+  <link href="https://kmolab.github.io/blog/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://kmolab.github.io/blog/theme/css/code_blocks/tomorrow_night.css" rel="stylesheet">
+
+  
+    <link href="https://kmolab.github.io/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="https://kmolab.github.io/blog/Collaborative-Design-Laboratory-III.html" rel="canonical" />
+
+        <meta name="description" content="兩週前, 當安裝設定 Ubuntu 18.04 Server 版時, 就已經從 https://blog.printk.io/2018/04/ubuntu-18-04-lts-bionic-beaver-server-installer-differences/ 中得知,...">
+
+        <meta name="author" content="yen">
+
+        <meta name="tags" content="Collaborative Design">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="機械設計工程系 KMOLab"/>
+<meta property="og:title" content="協同設計室(三)"/>
+<meta property="og:description" content="兩週前, 當安裝設定 Ubuntu 18.04 Server 版時, 就已經從 https://blog.printk.io/2018/04/ubuntu-18-04-lts-bionic-beaver-server-installer-differences/ 中得知,..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://kmolab.github.io/blog/Collaborative-Design-Laboratory-III.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-05-31 11:00:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://kmolab.github.io/blog/author/yen.html">
+<meta property="article:section" content="Misc"/>
+<meta property="article:tag" content="Collaborative Design"/>
+<meta property="og:image" content="https://kmolab.github.io/blog/theme/images/post-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "協同設計室(三)",
+  "headline": "協同設計室(三)",
+  "datePublished": "2018-05-31 11:00:00+08:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "yen",
+    "url": "https://kmolab.github.io/blog/author/yen.html"
+  },
+  "image": "https://kmolab.github.io/blog/theme/images/post-bg.jpg",
+  "url": "https://kmolab.github.io/blog/Collaborative-Design-Laboratory-III.html",
+  "description": "兩週前, 當安裝設定 Ubuntu 18.04 Server 版時, 就已經從 https://blog.printk.io/2018/04/ubuntu-18-04-lts-bionic-beaver-server-installer-differences/ 中得知,..."
+}
+</script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushLua.js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "./../data/syntaxhighlighter/shCore.css";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "./../data/syntaxhighlighter/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+<!-- for LaTeX equations -->
+<script src="./../data/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="https://kmolab.github.io/blog/pages/about/">About</a></li>
+
+            <li><a href="https://kmolab.github.io/blog/archives.html">Archives</span></a></li>
+            
+            <li><a href="https://kmolab.github.io/blog/categories.html">Categories</span></a></li>
+            
+            <li><a href="https://kmolab.github.io/blog/tags.html">Tags</span></a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://kmolab.github.io/blog/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">協同設計室(三)</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://kmolab.github.io/blog/author/yen.html">Yen</a>
+            | <time datetime="Thu 31 May 2018">Thu 31 May 2018</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('https://kmolab.github.io/blog/theme/images/post-bg.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+<section class="search">
+      <form class="navbar-search" action="https://kmolab.github.io/blog/search.html">
+      <input type="text"  placeholder="Search" name="q" id="tipue_search_input" required>
+    </form>
+</section>
+
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>兩週前, 當安裝設定 Ubuntu 18.04 Server 版時, 就已經從 <a href="https://blog.printk.io/2018/04/ubuntu-18-04-lts-bionic-beaver-server-installer-differences/">https://blog.printk.io/2018/04/ubuntu-18-04-lts-bionic-beaver-server-installer-differences/</a> 中得知, 整體的安裝過程與 16.04 有明顯差異.</p>
+
+
+<h2>SFTP 伺服器設定</h2>
+<p>假如使用 ubuntu-18.04-live-server-amd64.iso 執行安裝, 必須了解新的網路採用 <a href="https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes#Network_configuration">netplan</a> YAML 格式設定 (詳見: <a href="https://netplan.io/">netplan.io</a>). 而且安裝流程自動搭配<a href="https://blog.printk.io/wp-content/uploads/2018/04/ubuntu-18.04-live-server-packages.txt">一系列套件</a>. 其中包括 openssh-server/openssh-sftp-server/ssh-import-id.</p>
+<p>以 openssh-sftp-server 的設定而言, 在 Ubuntu 16.04 只要手動選擇安裝 openssh-server, 安裝流程就會自動配置, 安裝完成後, sftp client 就可以自動對任何一個使用帳號進行 sftp 傳檔, 但是在 Ubuntu 18.04, 即便自動安裝了 sftp server 所需的套件, 仍必須手動對每一位用戶設定 sftp 連線的許可內容.</p>
+<p>設定方法為 sudo vi /etc/ssh/sshd_config, 在設定檔案最後加入:</p>
+<pre class="brush: jscript">
+Match group sftp
+ChrootDirectory /home
+X11Forwarding no
+AllowTcpForwarding no
+ForceCommand internal-sftp
+</pre>
+
+<p>表示只有屬於 sftp 群組的使用者才能夠啟動 sftp 連線, 且以各自的 /home/myuser 當作連線目錄.</p>
+<p>sshd_config 存檔後, 以 sudo service ssh restart 重新啟動 ssh 服務, 接著要將允許使用 sftp 的帳號納入 sftp 群組, 先建立 sftp 群組:</p>
+<pre class="brush: jscript">
+sudo addgroup sftp
+</pre>
+
+<p>然後將 myuser 用戶加入 sftp 群組:</p>
+<pre class="brush: jscript">
+sudo usermod -a -G sftp myuser
+</pre>
+
+<p>之後, myuser 就可以使用 filezilla 客戶端以 sftp 協定連線到伺服器, 以 myuser 帳號密碼登入後, 連結到 /home/myuser 目錄.</p>
+<p>參考資料:</p>
+<p>有關建立 sftp 群組並修改 ssh 伺服設定:</p>
+<p><a href="https://linuxconfig.org/how-to-setup-sftp-server-on-ubuntu-18-04-bionic-beaver-with-vsftpd">https://linuxconfig.org/how-to-setup-sftp-server-on-ubuntu-18-04-bionic-beaver-with-vsftpd</a></p>
+<p>有關將用戶納入 sftp 群組設定:</p>
+<p><a href="https://askubuntu.com/questions/79565/how-to-add-existing-user-to-an-existing-group">https://askubuntu.com/questions/79565/how-to-add-existing-user-to-an-existing-group</a></p>
+<h2>BCD 檔案複製</h2>
+<p>由於協同設計室中的六台電腦採用的群準還原卡版本為 UEFI V8, 若使用還原卡的複製 Windows 10 磁區功能後, 必須使用 WinPE DVD 或 USB 隨身碟開機後, 複製開機磁區的 BCD (Boot Configuration Data) 修復, 因此需要自製一只開機用的 USB WinPE, 加上 <a href="https://sites.google.com/site/gbrtools/home/software/bootice-portable/bootice-downloads">BootICE</a> 與 <a href="http://www.diskgenius.cn/download.php">DiskGenius</a> 等工具套件.</p>
+<h2>製作 WinPE USB</h2>
+<p>首先必須要在一台能夠正常開機的 Windows 10 中, 安裝適合的 <a href="https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install">Windows ADK</a> (Windows Assessment and Deployment Kit), 意思是必須配合所複製磁區的 Windows 10 版本, 下載相應的 <a href="https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install">Windows ADK</a> 套件, 目前最新的版本為 <a href="https://go.microsoft.com/fwlink/?linkid=873065">Windows ADK for Windows 10, version 1803</a>.</p>
+<p>在用來製作 WinPE USB 開機隨身碟的 Windows 10 電腦上完成 <a href="https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install">Windows ADK</a> 的安裝後, 首先執行 Deployment and Imaging Tool environment, 將開機用的 USB WinPE 資料暫時放在 c:\winpe 目錄中.</p>
+<pre class="brush: jscript">
+copype amd64 c:\winpe
+</pre>
+
+<p>接下來將 boot.wim Mount 進 c:\winpe\mount 目錄中:</p>
+<pre class="brush: jscript">
+Dism /Mount-Image /ImageFile:"C:\WinPE\media\sources\boot.wim" /index:1 /MountDir:"C:\WinPE\mount"
+</pre>
+
+<p>接著加入 HTML Application (HTA) 套件:</p>
+<pre class="brush: jscript">
+Dism /Add-Package /Image:"C:\WinPE\mount" /PackagePath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-HTA.cab" 
+</pre>
+
+<p>因為之後所要使用的 <a href="http://www.diskgenius.cn/download.php">Diskgenius</a> 需要中文介面, 所以必須再加上中文的支援:</p>
+<pre class="brush: jscript">
+Dism /Add-Package /Image:"C:\WinPE\mount" /PackagePath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\zh-cn\WinPE-HTA_zh-tw.cab"
+
+Dism /Add-Package /Image:"C:\WinPE\mount" /PackagePath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-FontSupport-ZH-TW.cab"
+</pre>
+
+<p>然後就可以將 c:\winpe 目錄中的資料轉進 f: 槽, 讓代號為 f: 的 USB 隨身碟成為 WinPE 開機碟:</p>
+<pre class="brush: jscript">
+makewinpemedia /UFD c:\winpe f:
+</pre>
+
+<p>最後則是下載 <a href="https://sites.google.com/site/gbrtools/home/software/bootice-portable/bootice-downloads">BootICE</a> 與 <a href="http://www.diskgenius.cn/download.php">DiskGenius</a> 等兩項工具套件, 然後使用 7zip 工具, 開啟 f:\sources\boot.wim 檔案, 將 BootICEx64.exe 放入 f:\sources\boot.wim\Users 目錄中, 並且將 DiskGenius 目錄也納入 f:\sources\boot.wim\Users 目錄中, 就完成 WinPE USB 開機隨身碟的製作.</p>
+<h2>修復 Windows GPT 啟動區 BCD 檔案</h2>
+<p>假設使用了群準 UEFI V8 還原卡中的內建磁區複製功能, 將第一開機磁區中的資料複製到第二磁區, 進入開機表單後選擇第二磁區, 將無法進入 Windows 10 的正常開機程序, 原因是複製取得的第二磁區中的 EFI\MicroSoft\Boot\BCD 檔案並非正確的 Boot Configuration Data, 必須從前述製作的 WinPE USB 開機隨身碟中複製.</p>
+<p>基本的操作步驟為 (僅適用於 UEFI 磁碟複製, 若使用群準 Pro V8 MBR 分割的磁區複製, 可以直接開機, 不需額外處理 MBR):</p>
+<ol>
+<li>從群準 UEFI V8 開機選單中, 以滑鼠選擇第二磁區.</li>
+<li>接著按下 Ctrl + i, 表示要 install 操作系統.</li>
+<li>接下來 UEFI BIOS 會進入重新開機流程, 這時按下 F8 (在 Asus 主機板表示要選擇 boot 裝置).</li>
+<li>選擇以前述所製作的 WinPE USB 開機.</li>
+<li>WinPE 開機後會出現命令列視窗, 這時可以 cd 到 C:\Users\DiskGenius 目錄中, 執行 <a href="http://www.diskgenius.cn/download.php">DiskGenius</a>, 目的是指定第二磁區中的 ESP 分割區磁碟代號.</li>
+<li>在 <a href="http://www.diskgenius.cn/download.php">DiskGenius</a> 視窗操作介面左側, 以滑鼠右鍵點選 ESP 分割區, 選擇指派新的磁碟機代號, 例如: 使用內建的磁碟機代號 (假設為 D:).</li>
+<li>當第二磁區中的 ESP 分割區有了磁碟代號後 (假設為 D:), 就可以執行 C:\Users\BootICEx64.exe, 從目前的開機碟中將 BCD 資料複製給第二磁區.</li>
+<li>進入 BootICEx64.exe 視窗操作介面後, 選擇 BCD 編輯, 然後在 BCD 文件中, 指定前述所設定的 D: 槽中的 EFI\MicroSoft\Boot\BCD 檔案, 當作編輯對象.</li>
+<li>接ˋ著點選其下的智慧編輯模式, 選擇 Windows 10 的啟動分割 (即 C:), 點擊保存當前設置後, 當出現 BCD 參數修改成功視窗後即完成, 詳細的說明可以參考 <a href="https://github.com/mdecourse/wcms2018/files/1947497/Evosys_UEFI_GPT_partition_copy.pdf">https://github.com/mdecourse/wcms2018/files/1947497/Evosys_UEFI_GPT_partition_copy.pdf</a></li>
+</ol>
+<h2>將電腦輔助設計室實體磁區轉為虛擬硬碟</h2>
+<p>目前電腦輔助設計室第二磁區, 主要安裝套件包括:</p>
+<p>Ansys 18.1 - 25 GB</p>
+<p>Moldex3D R15 - 1.5 GB</p>
+<p>Comsol 5.3 - 4 GB</p>
+<p>AutoDesk AutoCad, Inventor 2016 等 - 7 GB</p>
+<p>PTC Creo 3.0 M090 - 5 GB</p>
+<p>Mathematica 9.0 - 4.5 GB</p>
+<p>Matlab R2017a - 7 GB</p>
+<p>Abaqus 2017 - 3 GB</p>
+<p>Recurdy V8R5 - 4 GB</p>
+<p>為了方便流通此一原版套件磁區, 特別製作成虛擬硬碟, 方法如下:</p>
+<ol>
+<li>首先以第二磁區開機後, 加掛一個 6TB 的 USB 外接硬碟, 準備儲存虛擬硬碟檔案.</li>
+<li>利用 <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/disk2vhd">https://docs.microsoft.com/en-us/sysinternals/downloads/disk2vhd</a>, 將第二磁區轉為 .vhd  格式, 存入外接硬碟中.</li>
+<li>此一檔案容量為 366 GB, 準備利用 Virtualbox 開機, 但是實際製作時, 出現找不到 driver 的錯誤, 無法正常開機.</li>
+<li>接下來利用 Windows 開機 iso DVD, 加掛在 Virtualbox 的第二磁區對應虛擬開機區, 並且指定由光碟開機.</li>
+<li>開機後選擇修復開機磁區, 完成後, 就可以正常利用 Virtualbox 開啟電腦輔助設計室中的第二磁區.</li>
+</ol>
+<h2>OnShape 與 AutoDesk Fusion 360 才是未來</h2>
+<p>經過將近兩個月處理電腦輔助設計室中的 366 GB 硬碟的過程中, 發現從 UEFI BIOS 中的各式設定, MBR 與 GPT 硬碟分割, 操作系統安裝設定與維護, 網路使用授權的管理, 再加上各式海量電腦輔助設計分析套件的安裝, 以及每套海量使用手冊的閱讀及各套封閉 API 延伸程式的學習及應用, 所涉及的工作, 對於一群機械設計工程師所造成的負擔, 已經不是三言兩語可以道盡其中辛酸.</p>
+<p>因為一般管理人員與助教無法單獨勝任此項工作, 而各套件代理廠商的工程師也只負責安裝各自的套件, 無法提供整體的系統規劃與管理協助, 而各任課教師則通常認為這種低階系統安裝工作, 與教學無關, 結果就難怪有許多教育版的用戶, 雖然購買原版套件, 但卻全面讓師生使用相應的盜版軟體, 因為大多數人都會認為管理並部署合法電腦輔助工程套件, 是一項耗錢費力且難有成就感的工作.</p>
+<p>因此當 2015 年初 <a href="https://en.wikipedia.org/wiki/Onshape">OnShape</a> 推出免費的教育版使用授權時, 電腦輔助設計實習課程就逐步將教學工具從 PTC Creo Parametric (這是電腦輔助設計室中, 唯一可以安裝為可攜模式的高端 CAD套件), 轉為 <a href="https://en.wikipedia.org/wiki/Onshape">OnShape</a> (<a href="https://www.onshape.com/">https://www.onshape.com/</a>, <a href="https://dev-portal.onshape.com">https://dev-portal.onshape.com</a>), 學員不僅無需任何安裝, 也能直接在手機或平板中的 App 中操作, 完全沒有安裝維護與使用的問題與負擔.</p>
+<p>更優的是, 配合電腦輔助設計所需的相關分析與製程規劃, 都可以在統一的雲端環境中完成:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eTQWLIo12as" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<p>當然, AutoDesk Fusion 360 也提供三年一期的<a href="https://www.autodesk.com/products/fusion-360/students-teachers-educators">免費教育帳號</a>, 雖然需要下載安裝近端套件 (容量約佔 2.7 GB), 但也具有雲端整合的優點, 預計 2018 年秋季電腦輔助設計實習課程將搭配 <a href="https://en.wikipedia.org/wiki/Onshape">OnShape</a> 使用. 導入 Fusion 360 的著眼在於除了 C++ 的 API 程式介面外, 也同時支援 Python3 程式環境 (<a href="https://help.autodesk.com/view/fusion360/ENU/?guid=GUID-D93DF10F-4209-4073-A2A0-4FA8788C8709">Getting Started with Fusion 360's API</a>, <a href="http://help.autodesk.com/view/fusion360/ENU/?guid=GUID-C1545D80-D804-4CF3-886D-9B5C54B2D7A2">Fusion 360 API user's manual</a>, <a href="http://help.autodesk.com/view/fusion360/ENU/?guid=GUID-DE98632B-3DC0-422B-A1C6-8A5A15C99E11">Fusion 360 API samples</a>).</p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=協同設計室(三)&amp;url=https://kmolab.github.io/blog/Collaborative-Design-Laboratory-III.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://kmolab.github.io/blog/Collaborative-Design-Laboratory-III.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://kmolab.github.io/blog/Collaborative-Design-Laboratory-III.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://kmolab.github.io/blog/tag/collaborative-design.html">Collaborative Design</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+                <script type="text/javascript">
+                    var disqus = 'kmolab-github';
+                    var disqus_shortname = 'kmolab-github';
+                    var disqus_identifier = '/Collaborative-Design-Laboratory-III.html';
+                    var disqus_url = 'https://kmolab.github.io/blog/Collaborative-Design-Laboratory-III.html';
+                </script>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+                <section class="post-comments">
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/Collaborative-Design-Laboratory-III.html" >Show Comments</a>
+                    <div id="disqus_thread"></div>
+                </section>
+
+                <aside class="post-nav">
+                    <a class="post-nav-prev" href="https://kmolab.github.io/blog/Collaborative-Design-Laboratory-II.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">協同設計室(二)</h2>
+                            <p class="post-nav-excerpt">昨天, 採用 Fossil SCM 與 Stunnel 建置的 https://[2001:288:6004:17:0811::cd06] 虛擬主機網站已經初步完成....</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+  
+  <script type="text/javascript" src="https://kmolab.github.io/blog/theme/js/script.js"></script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'kmolab-github';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+ 
+
+
+</body>
+</html>
