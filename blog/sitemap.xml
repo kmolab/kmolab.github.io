@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kmol.info/lab/doc/trunk/blog/</loc>
-<lastmod>2018-06-04T22:51:21-00:00</lastmod>
+<lastmod>2018-06-05T16:43:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmol.info/lab/doc/trunk/blog/archives.html</loc>
-<lastmod>2018-06-04T22:51:21-00:00</lastmod>
+<lastmod>2018-06-05T16:43:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmol.info/lab/doc/trunk/blog/tags.html</loc>
-<lastmod>2018-06-04T22:51:21-00:00</lastmod>
+<lastmod>2018-06-05T16:43:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmol.info/lab/doc/trunk/blog/categories.html</loc>
-<lastmod>2018-06-04T22:51:21-00:00</lastmod>
+<lastmod>2018-06-05T16:43:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
