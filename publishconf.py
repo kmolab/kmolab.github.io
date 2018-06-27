@@ -14,7 +14,7 @@ from pelicanconf import *
 
 # 將所有靜態 html 檔案移到 blog 子目錄
 # for github pages under kmolab at github
-SITEURL = 'https://kmol.info/lab/doc/trunk/blog'
+SITEURL = 'http://lab.kmol.info/blog'
 # for fossil scm under 53
 #SITEURL = 'https://kmol.info/lab/doc/trunk/blog'
 # 此設定用於將資料送到 gh-pages, 因此使用絕對 URL 設定
