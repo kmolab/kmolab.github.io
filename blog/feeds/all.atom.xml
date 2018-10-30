@@ -1,5 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>機械設計工程系 KMOLab</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2018-05-31T11:00:00+08:00</updated><entry><title>協同設計室(三)</title><link href="https://kmolab.github.io/blog/Collaborative-Design-Laboratory-III.html" rel="alternate"></link><published>2018-05-31T11:00:00+08:00</published><updated>2018-05-31T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-05-31:/blog/Collaborative-Design-Laboratory-III.html</id><summary type="html">&lt;p&gt;兩週前, 當安裝設定 Ubuntu 18.04 Server 版時, 就已經從 &lt;a href="https://blog.printk.io/2018/04/ubuntu-18-04-lts-bionic-beaver-server-installer-differences/"&gt;https://blog.printk.io/2018/04/ubuntu-18-04-lts-bionic-beaver-server-installer-differences/&lt;/a&gt; 中得知, 整體的安裝過程與 16.04 有明顯差異.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>機械設計工程系 KMOLab</title><link href="https://kmolab.github.io/blog/" rel="alternate"></link><link href="https://kmolab.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://kmolab.github.io/blog/</id><updated>2018-10-30T12:00:00+08:00</updated><entry><title>BIND 伺服器</title><link href="https://kmolab.github.io/blog/BIND-Server-for-MDE.html" rel="alternate"></link><published>2018-10-30T12:00:00+08:00</published><updated>2018-10-30T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-10-30:/blog/BIND-Server-for-MDE.html</id><summary type="html">&lt;p&gt;為了取得 your.domain.name.tw 符號名稱的管理權, 必須要向 domain.name.tw  DNS 伺服器管理者要求將 dns.your.domain.name.tw 與 dns2.your.domain.name.tw 設為 your.domain.name.tw 網域的管理者, 其中假設 dns.your.domain.name.tw 的 IPv4 位址為 192.168.17.3, 而 dns1.your.domain.name.tw IPv4 位址為 192.168.17.2, 且對應的 IPv6 位址則分別為 fe80:288:6004:17::3 與 fe80:288:6004:17::2.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;為了取得 your.domain.name.tw 符號名稱的管理權, 必須要向 domain.name.tw  DNS 伺服器管理者要求將 dns.your.domain.name.tw 與 dns2.your.domain.name.tw 設為 your.domain.name.tw 網域的管理者, 其中假設 dns.your.domain.name.tw 的 IPv4 位址為 192.168.17.3, 而 dns1.your.domain.name.tw IPv4 位址為 192.168.17.2, 且對應的 IPv6 位址則分別為 fe80:288:6004:17::3 與 fe80:288:6004:17::2.&lt;/p&gt;
+
+
+&lt;h2&gt;安裝 BIND&lt;/h2&gt;
+&lt;p&gt;sudo apt install bind9 bind9-doc dnsutils&lt;/p&gt;
+&lt;h2&gt;編輯設定檔&lt;/h2&gt;
+&lt;p&gt;Master DNS Server:&lt;/p&gt;
+&lt;p&gt;/etc/bind/named.conf for Master DNS Server:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+// This is the primary configuration file for the BIND DNS server named.
+//
+// Please read /usr/share/doc/bind9/README.Debian.gz for information on the 
+// structure of BIND configuration files in Debian, *BEFORE* you customize 
+// this configuration file.
+//
+// If you are just adding zones, please do that in /etc/bind/named.conf.local
+
+include "/etc/bind/named.conf.options";
+include "/etc/bind/named.conf.local";
+include "/etc/bind/named.conf.default-zones";
+&lt;/pre&gt;
+
+&lt;p&gt;/etc/bind/named.conf.options&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+options {
+    directory "/var/cache/bind";
+        dump-file "/var/cache/bind/data/cache_dump.db";
+        statistics-file "/var/cache/bind/data/named_stats.txt";
+        query-source address * port 53;
+        allow-recursion { any; };
+        allow-recursion-on { any; };
+        allow-query-cache { 192.168.17.0/24; 192.168.1.0/24; };
+        allow-query { 192.168.17.0/24; 192.168.1.0/24; };
+        // secondary server allow-transfer { none; };
+        allow-transfer { localhost; 192.168.17.2; };
+        version "version";
+
+    // If there is a firewall between you and nameservers you want
+    // to talk to, you may need to fix the firewall to allow multiple
+    // ports to talk.  See http://www.kb.cert.org/vuls/id/800113
+
+    // If your ISP provided one or more IP addresses for stable 
+    // nameservers, you probably want to use them as forwarders.  
+    // Uncomment the following block, and insert the addresses replacing 
+    // the all-0's placeholder.
+
+    forwarders {
+        192.168.1.2;
+            168.95.1.1;
+     };
+
+    //========================================================================
+    // If BIND logs error messages about the root key being expired,
+    // you will need to update your keys.  See https://www.isc.org/bind-keys
+    //========================================================================
+    dnssec-validation auto;
+
+    auth-nxdomain no;    # conform to RFC1035
+};
+&lt;/pre&gt;
+
+&lt;p&gt;/etc/bind/named.conf.local for Master DNS Server:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+
+zone "your.domain.name.tw" {
+    type master;
+    file "/etc/bind/db.mde";
+    also-notify { 192.168.17.2; };
+    allow-transfer { 192.168.17.2; };
+    allow-update { none; };
+};
+
+
+zone "17.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.17";
+    also-notify { 192.168.17.2; };
+    allow-transfer { 192.168.17.2; };
+    allow-update { none; };
+};
+&lt;/pre&gt;
+
+&lt;p&gt;/etc/bind/db.17 for Master DNS Server:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    3600    
+@   IN  SOA dns.your.domain.name.tw. root.your.domain.name.tw. (
+             2018102406     ; Serial
+             10800      ; Refresh
+             900        ; Retry
+             604800     ; Expire
+             86400 )    ; Negative Cache TTL
+;
+@        IN      NS        dns.your.domain.name.tw.
+@        IN      NS        dns2.your.domain.name.tw.
+3      IN       PTR  dns.your.domain.name.tw.
+2      IN       PTR  dns2.your.domain.name.tw.
+
+&lt;/pre&gt;
+
+&lt;p&gt;/etc/bind/db.mde for Master DNS Server:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+$TTL    3600        
+@   IN  SOA dns.your.domain.name.tw. root.your.domain.name.tw. (
+             2018102406     ; Serial
+             10800      ; Refresh
+             900        ; Retry
+             604800     ; Expire
+             86400 )    ; Negative Cache TTL
+; name servers -NS records
+@        IN      NS      dns.your.domain.name.tw.
+@        IN      NS      dns2.your.domain.name.tw.
+@        IN      A        192.168.17.3
+@        IN      AAAA    fe80:288:6004:17::3
+; name server s -AAAA records
+dns         IN         A          192.168.17.3
+dns2       IN         A          192.168.17.2
+dns         IN         AAAA    fe80:288:6004:17::3    
+dns2       IN         AAAA    fe80:288:6004:17::2    
+; MX records
+@        3600    IN    MX    1    ASPMX.L.GOOGLE.COM.
+                 IN    MX    5    ALT1.ASPMX.L.GOOGLE.COM.
+                 IN    MX    5    ALT2.ASPMX.L.GOOGLE.COM.
+                 IN    MX    10   ALT3.ASPMX.L.GOOGLE.COM.
+                 IN    MX    10   ALT4.ASPMX.L.GOOGLE.COM.
+&lt;/pre&gt;
+
+&lt;p&gt;Slave DNS Server:&lt;/p&gt;
+&lt;p&gt;/etc/bind/named.conf for Slave DNS Server:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+// This is the primary configuration file for the BIND DNS server named.
+//
+// Please read /usr/share/doc/bind9/README.Debian.gz for information on the 
+// structure of BIND configuration files in Debian, *BEFORE* you customize 
+// this configuration file.
+//
+// If you are just adding zones, please do that in /etc/bind/named.conf.local
+
+include "/etc/bind/named.conf.options";
+include "/etc/bind/named.conf.local";
+include "/etc/bind/named.conf.default-zones";
+&lt;/pre&gt;
+
+&lt;p&gt;/etc/bind/named.conf.options for Slave DNS Server:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+options {
+    directory "/var/cache/bind";
+        dump-file "/var/cache/bind/data/cache_dump.db";
+        statistics-file "/var/cache/bind/data/named_stats.txt";
+        query-source address * port 53;
+        allow-recursion { any; };
+        allow-recursion-on {any; };
+        allow-query-cache { 192.168.17.0/24; 192.168.1.0/24; };
+        allow-query { 192.168.17.0/24; 192.168.1.0/24; };
+        // slave need the following line
+        allow-transfer { none; };
+
+    // If there is a firewall between you and nameservers you want
+    // to talk to, you may need to fix the firewall to allow multiple
+    // ports to talk.  See http://www.kb.cert.org/vuls/id/800113
+
+    // If your ISP provided one or more IP addresses for stable 
+    // nameservers, you probably want to use them as forwarders.  
+    // Uncomment the following block, and insert the addresses replacing 
+    // the all-0's placeholder.
+
+    forwarders {
+        192.168.1.2;
+            168.95.1.1;
+     };
+
+    //========================================================================
+    // If BIND logs error messages about the root key being expired,
+    // you will need to update your keys.  See https://www.isc.org/bind-keys
+    //========================================================================
+    dnssec-validation auto;
+
+    auth-nxdomain no;    # conform to RFC1035
+};
+&lt;/pre&gt;
+
+&lt;p&gt;/etc/bind/named.conf.local for Slave DNS Server:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+
+zone "your.domain.name.tw" {
+    type slave;
+    file "/etc/bind/db.mde";
+    masters { 192.168.17.3; };
+};
+
+
+zone "17.168.192.in-addr.arpa" {
+    type slave;
+    file "/etc/bind/db.17";
+    masters { 192.168.17.3; };
+};
+&lt;/pre&gt;
+
+&lt;p&gt;/etc/bind/db.17 for Slave DNS Server:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    3600    
+@   IN  SOA dns.your.domain.name.tw. root.your.domain.name.tw. (
+             2018102406     ; Serial
+             10800      ; Refresh
+             900        ; Retry
+             604800     ; Expire
+             86400 )    ; Negative Cache TTL
+;
+@        IN      NS      dns.your.domain.name.tw.
+@        IN      NS      dns2.your.domain.name.tw.
+3    IN  PTR     dns.your.domain.name.tw.
+2    IN  PTR     dns2.your.domain.name.tw.
+&lt;/pre&gt;
+
+&lt;p&gt;/etc/bind/db.mde for Slave DNS Server:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+$TTL    3600        
+@   IN  SOA dns.your.domain.name.tw. root.your.domain.name.tw. (
+             2018102406    ; Serial
+             10800      ; Refresh
+             900        ; Retry
+             604800     ; Expire
+             86400 )    ; Negative Cache TTL
+; name servers -NS records
+@        IN      NS      dns.your.domain.name.tw.
+@        IN      NS      dns2.your.domain.name.tw.
+@        IN      A        192.168.17.3
+@        IN      AAAA    fe80:288:6004:17::3
+; name server s -AAAA records
+dns        IN        A          192.168.17.3
+dns2      IN        A          192.168.17.2
+dns        IN        AAAA    fe80:288:6004:17::3    
+dns2      IN        AAAA    fe80:288:6004:17::2    
+; MX records
+@      3600    IN    MX    1    ASPMX.L.GOOGLE.COM.
+                 IN    MX    5    ALT1.ASPMX.L.GOOGLE.COM.
+                 IN    MX    5    ALT2.ASPMX.L.GOOGLE.COM.
+                 IN    MX    10   ALT3.ASPMX.L.GOOGLE.COM.
+                 IN    MX    10   ALT4.ASPMX.L.GOOGLE.COM.
+&lt;/pre&gt;
+
+&lt;p&gt;修改設定檔案內容後, 要更新 Serial number, 然後以 sudo /etc/init.d/bind9 restart 重新啟動.&lt;/p&gt;</content><category term="BIND"></category></entry><entry><title>Google 行事曆</title><link href="https://kmolab.github.io/blog/Goodle-Calendar-for-MDE.html" rel="alternate"></link><published>2018-10-30T11:00:00+08:00</published><updated>2018-10-30T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-10-30:/blog/Goodle-Calendar-for-MDE.html</id><summary type="html">&lt;p&gt;&lt;a href="https://support.google.com/calendar/"&gt;Google 行事曆&lt;/a&gt;是在 2009 年推出的服務, 使用者可以在時間軸線上將特定場所安排的活動註記其上, 以便清楚了解過去、現在與未來特定團隊在特定時間於特定場地, 所從事的活動細節.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;&lt;a href="https://support.google.com/calendar/"&gt;Google 行事曆&lt;/a&gt;是在 2009 年推出的服務, 使用者可以在時間軸線上將特定場所安排的活動註記其上, 以便清楚了解過去、現在與未來特定團隊在特定時間於特定場地, 所從事的活動細節.&lt;/p&gt;
+
+
+&lt;h2&gt;電腦輔助設計室行事曆&lt;/h2&gt;
+&lt;p&gt;下列為機械設計工程系八樓電腦輔助設計室的行事曆, 其中還包括協同設計室所安排的備課時段, 大家可以清楚看到課程安排的時段, 以及與課程相關的網路資訊.&lt;/p&gt;
+&lt;iframe frameborder="0" height="600" scrolling="no" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei" style="border: 0;" width="800"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;本次重新啟用 Google 行事曆的目的, 在於讓系上同仁可以透過&lt;a href="https://mdecdlab.github.io/lab-booking-cdlab/doc/"&gt;場地使用申請&lt;/a&gt;, 將預計使用的時段, 註記在各電腦教室或研討室, 並且利用 Google &lt;a href="https://support.google.com/a/answer/1686462?hl=en"&gt;G Suite Resources&lt;/a&gt; 與行事曆整合管理的功能, 在各申請使用時段申請時, 能夠自動進行場所與時段衝突檢查, 一旦通過申請, 各場所的行事曆中便可在各種長期使用或臨時更動的資料登錄中, 清楚呈現各場所的使用情況.&lt;/p&gt;</content><category term="Google Calendar"></category></entry><entry><title>協同設計室(三)</title><link href="https://kmolab.github.io/blog/Collaborative-Design-Laboratory-III.html" rel="alternate"></link><published>2018-05-31T11:00:00+08:00</published><updated>2018-05-31T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-05-31:/blog/Collaborative-Design-Laboratory-III.html</id><summary type="html">&lt;p&gt;兩週前, 當安裝設定 Ubuntu 18.04 Server 版時, 就已經從 &lt;a href="https://blog.printk.io/2018/04/ubuntu-18-04-lts-bionic-beaver-server-installer-differences/"&gt;https://blog.printk.io/2018/04/ubuntu-18-04-lts-bionic-beaver-server-installer-differences/&lt;/a&gt; 中得知, 整體的安裝過程與 16.04 有明顯差異.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;兩週前, 當安裝設定 Ubuntu 18.04 Server 版時, 就已經從 &lt;a href="https://blog.printk.io/2018/04/ubuntu-18-04-lts-bionic-beaver-server-installer-differences/"&gt;https://blog.printk.io/2018/04/ubuntu-18-04-lts-bionic-beaver-server-installer-differences/&lt;/a&gt; 中得知, 整體的安裝過程與 16.04 有明顯差異.&lt;/p&gt;
 
 

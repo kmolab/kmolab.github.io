@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>BIND 伺服器</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://kmolab.github.io/blog/" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="https://kmolab.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="機械設計工程系 KMOLab Full Atom Feed" />
+          <link href="https://kmolab.github.io/blog/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="機械設計工程系 KMOLab Categories Atom Feed" />
+
+  <link href="https://kmolab.github.io/blog/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://kmolab.github.io/blog/theme/css/code_blocks/tomorrow_night.css" rel="stylesheet">
+
+  
+    <link href="https://kmolab.github.io/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="https://kmolab.github.io/blog/BIND-Server-for-MDE.html" rel="canonical" />
+
+        <meta name="description" content="為了取得 your.domain.name.tw 符號名稱的管理權, 必須要向 domain.name.tw DNS 伺服器管理者要求將 dns.your.domain.name.tw 與 dns2.your.domain.name.tw 設為...">
+
+        <meta name="author" content="yen">
+
+        <meta name="tags" content="BIND">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="機械設計工程系 KMOLab"/>
+<meta property="og:title" content="BIND 伺服器"/>
+<meta property="og:description" content="為了取得 your.domain.name.tw 符號名稱的管理權, 必須要向 domain.name.tw DNS 伺服器管理者要求將 dns.your.domain.name.tw 與 dns2.your.domain.name.tw 設為..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://kmolab.github.io/blog/BIND-Server-for-MDE.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-10-30 12:00:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://kmolab.github.io/blog/author/yen.html">
+<meta property="article:section" content="Misc"/>
+<meta property="article:tag" content="BIND"/>
+<meta property="og:image" content="https://kmolab.github.io/blog/theme/images/post-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "BIND 伺服器",
+  "headline": "BIND 伺服器",
+  "datePublished": "2018-10-30 12:00:00+08:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "yen",
+    "url": "https://kmolab.github.io/blog/author/yen.html"
+  },
+  "image": "https://kmolab.github.io/blog/theme/images/post-bg.jpg",
+  "url": "https://kmolab.github.io/blog/BIND-Server-for-MDE.html",
+  "description": "為了取得 your.domain.name.tw 符號名稱的管理權, 必須要向 domain.name.tw DNS 伺服器管理者要求將 dns.your.domain.name.tw 與 dns2.your.domain.name.tw 設為..."
+}
+</script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../data/syntaxhighlighter/shBrushLua.js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "./../data/syntaxhighlighter/shCore.css";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "./../data/syntaxhighlighter/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+<!-- for LaTeX equations -->
+<script src="./../data/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="https://kmolab.github.io/blog/pages/about/">About</a></li>
+
+            <li><a href="https://kmolab.github.io/blog/archives.html">Archives</span></a></li>
+            
+            <li><a href="https://kmolab.github.io/blog/categories.html">Categories</span></a></li>
+            
+            <li><a href="https://kmolab.github.io/blog/tags.html">Tags</span></a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://kmolab.github.io/blog/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">BIND 伺服器</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://kmolab.github.io/blog/author/yen.html">Yen</a>
+            | <time datetime="Tue 30 October 2018">Tue 30 October 2018</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('https://kmolab.github.io/blog/theme/images/post-bg.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+<section class="search">
+      <form class="navbar-search" action="https://kmolab.github.io/blog/search.html">
+      <input type="text"  placeholder="Search" name="q" id="tipue_search_input" required>
+    </form>
+</section>
+
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>為了取得 your.domain.name.tw 符號名稱的管理權, 必須要向 domain.name.tw  DNS 伺服器管理者要求將 dns.your.domain.name.tw 與 dns2.your.domain.name.tw 設為 your.domain.name.tw 網域的管理者, 其中假設 dns.your.domain.name.tw 的 IPv4 位址為 192.168.17.3, 而 dns1.your.domain.name.tw IPv4 位址為 192.168.17.2, 且對應的 IPv6 位址則分別為 fe80:288:6004:17::3 與 fe80:288:6004:17::2.</p>
+
+
+<h2>安裝 BIND</h2>
+<p>sudo apt install bind9 bind9-doc dnsutils</p>
+<h2>編輯設定檔</h2>
+<p>Master DNS Server:</p>
+<p>/etc/bind/named.conf for Master DNS Server:</p>
+<pre class="brush: jscript">
+// This is the primary configuration file for the BIND DNS server named.
+//
+// Please read /usr/share/doc/bind9/README.Debian.gz for information on the 
+// structure of BIND configuration files in Debian, *BEFORE* you customize 
+// this configuration file.
+//
+// If you are just adding zones, please do that in /etc/bind/named.conf.local
+
+include "/etc/bind/named.conf.options";
+include "/etc/bind/named.conf.local";
+include "/etc/bind/named.conf.default-zones";
+</pre>
+
+<p>/etc/bind/named.conf.options</p>
+<pre class="brush: jscript">
+options {
+    directory "/var/cache/bind";
+        dump-file "/var/cache/bind/data/cache_dump.db";
+        statistics-file "/var/cache/bind/data/named_stats.txt";
+        query-source address * port 53;
+        allow-recursion { any; };
+        allow-recursion-on { any; };
+        allow-query-cache { 192.168.17.0/24; 192.168.1.0/24; };
+        allow-query { 192.168.17.0/24; 192.168.1.0/24; };
+        // secondary server allow-transfer { none; };
+        allow-transfer { localhost; 192.168.17.2; };
+        version "version";
+
+    // If there is a firewall between you and nameservers you want
+    // to talk to, you may need to fix the firewall to allow multiple
+    // ports to talk.  See http://www.kb.cert.org/vuls/id/800113
+
+    // If your ISP provided one or more IP addresses for stable 
+    // nameservers, you probably want to use them as forwarders.  
+    // Uncomment the following block, and insert the addresses replacing 
+    // the all-0's placeholder.
+
+    forwarders {
+        192.168.1.2;
+            168.95.1.1;
+     };
+
+    //========================================================================
+    // If BIND logs error messages about the root key being expired,
+    // you will need to update your keys.  See https://www.isc.org/bind-keys
+    //========================================================================
+    dnssec-validation auto;
+
+    auth-nxdomain no;    # conform to RFC1035
+};
+</pre>
+
+<p>/etc/bind/named.conf.local for Master DNS Server:</p>
+<pre class="brush: jscript">
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+
+zone "your.domain.name.tw" {
+    type master;
+    file "/etc/bind/db.mde";
+    also-notify { 192.168.17.2; };
+    allow-transfer { 192.168.17.2; };
+    allow-update { none; };
+};
+
+
+zone "17.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.17";
+    also-notify { 192.168.17.2; };
+    allow-transfer { 192.168.17.2; };
+    allow-update { none; };
+};
+</pre>
+
+<p>/etc/bind/db.17 for Master DNS Server:</p>
+<pre class="brush: jscript">
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    3600    
+@   IN  SOA dns.your.domain.name.tw. root.your.domain.name.tw. (
+             2018102406     ; Serial
+             10800      ; Refresh
+             900        ; Retry
+             604800     ; Expire
+             86400 )    ; Negative Cache TTL
+;
+@        IN      NS        dns.your.domain.name.tw.
+@        IN      NS        dns2.your.domain.name.tw.
+3      IN       PTR  dns.your.domain.name.tw.
+2      IN       PTR  dns2.your.domain.name.tw.
+
+</pre>
+
+<p>/etc/bind/db.mde for Master DNS Server:</p>
+<pre class="brush: jscript">
+$TTL    3600        
+@   IN  SOA dns.your.domain.name.tw. root.your.domain.name.tw. (
+             2018102406     ; Serial
+             10800      ; Refresh
+             900        ; Retry
+             604800     ; Expire
+             86400 )    ; Negative Cache TTL
+; name servers -NS records
+@        IN      NS      dns.your.domain.name.tw.
+@        IN      NS      dns2.your.domain.name.tw.
+@        IN      A        192.168.17.3
+@        IN      AAAA    fe80:288:6004:17::3
+; name server s -AAAA records
+dns         IN         A          192.168.17.3
+dns2       IN         A          192.168.17.2
+dns         IN         AAAA    fe80:288:6004:17::3    
+dns2       IN         AAAA    fe80:288:6004:17::2    
+; MX records
+@        3600    IN    MX    1    ASPMX.L.GOOGLE.COM.
+                 IN    MX    5    ALT1.ASPMX.L.GOOGLE.COM.
+                 IN    MX    5    ALT2.ASPMX.L.GOOGLE.COM.
+                 IN    MX    10   ALT3.ASPMX.L.GOOGLE.COM.
+                 IN    MX    10   ALT4.ASPMX.L.GOOGLE.COM.
+</pre>
+
+<p>Slave DNS Server:</p>
+<p>/etc/bind/named.conf for Slave DNS Server:</p>
+<pre class="brush: jscript">
+// This is the primary configuration file for the BIND DNS server named.
+//
+// Please read /usr/share/doc/bind9/README.Debian.gz for information on the 
+// structure of BIND configuration files in Debian, *BEFORE* you customize 
+// this configuration file.
+//
+// If you are just adding zones, please do that in /etc/bind/named.conf.local
+
+include "/etc/bind/named.conf.options";
+include "/etc/bind/named.conf.local";
+include "/etc/bind/named.conf.default-zones";
+</pre>
+
+<p>/etc/bind/named.conf.options for Slave DNS Server:</p>
+<pre class="brush: jscript">
+options {
+    directory "/var/cache/bind";
+        dump-file "/var/cache/bind/data/cache_dump.db";
+        statistics-file "/var/cache/bind/data/named_stats.txt";
+        query-source address * port 53;
+        allow-recursion { any; };
+        allow-recursion-on {any; };
+        allow-query-cache { 192.168.17.0/24; 192.168.1.0/24; };
+        allow-query { 192.168.17.0/24; 192.168.1.0/24; };
+        // slave need the following line
+        allow-transfer { none; };
+
+    // If there is a firewall between you and nameservers you want
+    // to talk to, you may need to fix the firewall to allow multiple
+    // ports to talk.  See http://www.kb.cert.org/vuls/id/800113
+
+    // If your ISP provided one or more IP addresses for stable 
+    // nameservers, you probably want to use them as forwarders.  
+    // Uncomment the following block, and insert the addresses replacing 
+    // the all-0's placeholder.
+
+    forwarders {
+        192.168.1.2;
+            168.95.1.1;
+     };
+
+    //========================================================================
+    // If BIND logs error messages about the root key being expired,
+    // you will need to update your keys.  See https://www.isc.org/bind-keys
+    //========================================================================
+    dnssec-validation auto;
+
+    auth-nxdomain no;    # conform to RFC1035
+};
+</pre>
+
+<p>/etc/bind/named.conf.local for Slave DNS Server:</p>
+<pre class="brush: jscript">
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+
+zone "your.domain.name.tw" {
+    type slave;
+    file "/etc/bind/db.mde";
+    masters { 192.168.17.3; };
+};
+
+
+zone "17.168.192.in-addr.arpa" {
+    type slave;
+    file "/etc/bind/db.17";
+    masters { 192.168.17.3; };
+};
+</pre>
+
+<p>/etc/bind/db.17 for Slave DNS Server:</p>
+<pre class="brush: jscript">
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    3600    
+@   IN  SOA dns.your.domain.name.tw. root.your.domain.name.tw. (
+             2018102406     ; Serial
+             10800      ; Refresh
+             900        ; Retry
+             604800     ; Expire
+             86400 )    ; Negative Cache TTL
+;
+@        IN      NS      dns.your.domain.name.tw.
+@        IN      NS      dns2.your.domain.name.tw.
+3    IN  PTR     dns.your.domain.name.tw.
+2    IN  PTR     dns2.your.domain.name.tw.
+</pre>
+
+<p>/etc/bind/db.mde for Slave DNS Server:</p>
+<pre class="brush: jscript">
+$TTL    3600        
+@   IN  SOA dns.your.domain.name.tw. root.your.domain.name.tw. (
+             2018102406    ; Serial
+             10800      ; Refresh
+             900        ; Retry
+             604800     ; Expire
+             86400 )    ; Negative Cache TTL
+; name servers -NS records
+@        IN      NS      dns.your.domain.name.tw.
+@        IN      NS      dns2.your.domain.name.tw.
+@        IN      A        192.168.17.3
+@        IN      AAAA    fe80:288:6004:17::3
+; name server s -AAAA records
+dns        IN        A          192.168.17.3
+dns2      IN        A          192.168.17.2
+dns        IN        AAAA    fe80:288:6004:17::3    
+dns2      IN        AAAA    fe80:288:6004:17::2    
+; MX records
+@      3600    IN    MX    1    ASPMX.L.GOOGLE.COM.
+                 IN    MX    5    ALT1.ASPMX.L.GOOGLE.COM.
+                 IN    MX    5    ALT2.ASPMX.L.GOOGLE.COM.
+                 IN    MX    10   ALT3.ASPMX.L.GOOGLE.COM.
+                 IN    MX    10   ALT4.ASPMX.L.GOOGLE.COM.
+</pre>
+
+<p>修改設定檔案內容後, 要更新 Serial number, 然後以 sudo /etc/init.d/bind9 restart 重新啟動.</p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=BIND 伺服器&amp;url=https://kmolab.github.io/blog/BIND-Server-for-MDE.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://kmolab.github.io/blog/BIND-Server-for-MDE.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://kmolab.github.io/blog/BIND-Server-for-MDE.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://kmolab.github.io/blog/tag/bind.html">BIND</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+                <script type="text/javascript">
+                    var disqus = 'kmolab-github';
+                    var disqus_shortname = 'kmolab-github';
+                    var disqus_identifier = '/BIND-Server-for-MDE.html';
+                    var disqus_url = 'https://kmolab.github.io/blog/BIND-Server-for-MDE.html';
+                </script>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+                <section class="post-comments">
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/BIND-Server-for-MDE.html" >Show Comments</a>
+                    <div id="disqus_thread"></div>
+                </section>
+
+                <aside class="post-nav">
+                    <a class="post-nav-prev" href="https://kmolab.github.io/blog/Goodle-Calendar-for-MDE.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">Google 行事曆</h2>
+                            <p class="post-nav-excerpt">Google 行事曆是在 2009 年推出的服務, 使用者可以在時間軸線上將特定場所安排的活動註記其上, 以便清楚了解過去、現在與未來特定團隊在特定時間於特定場地, 所從事的活動細節.</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+  
+  <script type="text/javascript" src="https://kmolab.github.io/blog/theme/js/script.js"></script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'kmolab-github';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+ 
+
+
+</body>
+</html>

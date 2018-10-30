@@ -236,6 +236,12 @@
 <v t="leo.20180531100725.1" a="E"><vh>協同設計室三</vh>
 <v t="leo.20180531100742.1"><vh>@edit 20180531.md</vh></v>
 </v>
+<v t="leo.20181030102134.1" a="E"><vh>Google 行事曆</vh>
+<v t="leo.20181030102205.1"><vh>@edit 20181030.md</vh></v>
+</v>
+<v t="leo.20181030113900.1" a="E"><vh>BIND 伺服器</vh>
+<v t="leo.20181030113919.1"><vh>@asis 20181030-1.md</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -1975,6 +1981,299 @@ mathjax 採用最新版本 2.7.2
 <t tx="leo.20180515202057.1"></t>
 <t tx="leo.20180516211732.1"></t>
 <t tx="leo.20180531100725.1"></t>
+<t tx="leo.20181030102134.1"></t>
+<t tx="leo.20181030113900.1">因為 @asis 會全文存檔, 因此第一行不能有 @language md
+因為內文包含 @ 符號, 因此採 @asis 編輯檔案</t>
+<t tx="leo.20181030113919.1">---
+Title: BIND 伺服器
+Date: 2018-10-30 12:00
+Category: Misc
+Tags: BIND
+Slug: BIND-Server-for-MDE
+Author: yen
+---
+
+為了取得 your.domain.name.tw 符號名稱的管理權, 必須要向 domain.name.tw  DNS 伺服器管理者要求將 dns.your.domain.name.tw 與 dns2.your.domain.name.tw 設為 your.domain.name.tw 網域的管理者, 其中假設 dns.your.domain.name.tw 的 IPv4 位址為 192.168.17.3, 而 dns1.your.domain.name.tw IPv4 位址為 192.168.17.2, 且對應的 IPv6 位址則分別為 fe80:288:6004:17::3 與 fe80:288:6004:17::2.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+安裝 BIND
+----
+
+sudo apt install bind9 bind9-doc dnsutils
+
+編輯設定檔
+----
+
+Master DNS Server:
+
+/etc/bind/named.conf for Master DNS Server:
+
+&lt;pre class="brush: jscript"&gt;
+// This is the primary configuration file for the BIND DNS server named.
+//
+// Please read /usr/share/doc/bind9/README.Debian.gz for information on the 
+// structure of BIND configuration files in Debian, *BEFORE* you customize 
+// this configuration file.
+//
+// If you are just adding zones, please do that in /etc/bind/named.conf.local
+
+include "/etc/bind/named.conf.options";
+include "/etc/bind/named.conf.local";
+include "/etc/bind/named.conf.default-zones";
+&lt;/pre&gt;
+
+/etc/bind/named.conf.options
+
+&lt;pre class="brush: jscript"&gt;
+options {
+	directory "/var/cache/bind";
+        dump-file "/var/cache/bind/data/cache_dump.db";
+        statistics-file "/var/cache/bind/data/named_stats.txt";
+        query-source address * port 53;
+        allow-recursion { any; };
+        allow-recursion-on { any; };
+        allow-query-cache { 192.168.17.0/24; 192.168.1.0/24; };
+        allow-query { 192.168.17.0/24; 192.168.1.0/24; };
+        // secondary server allow-transfer { none; };
+        allow-transfer { localhost; 192.168.17.2; };
+        version "version";
+
+	// If there is a firewall between you and nameservers you want
+	// to talk to, you may need to fix the firewall to allow multiple
+	// ports to talk.  See http://www.kb.cert.org/vuls/id/800113
+
+	// If your ISP provided one or more IP addresses for stable 
+	// nameservers, you probably want to use them as forwarders.  
+	// Uncomment the following block, and insert the addresses replacing 
+	// the all-0's placeholder.
+
+	forwarders {
+	    192.168.1.2;
+            168.95.1.1;
+	 };
+
+	//========================================================================
+	// If BIND logs error messages about the root key being expired,
+	// you will need to update your keys.  See https://www.isc.org/bind-keys
+	//========================================================================
+	dnssec-validation auto;
+
+	auth-nxdomain no;    # conform to RFC1035
+};
+&lt;/pre&gt;
+
+/etc/bind/named.conf.local for Master DNS Server:
+
+&lt;pre class="brush: jscript"&gt;
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+
+zone "your.domain.name.tw" {
+    type master;
+    file "/etc/bind/db.mde";
+    also-notify { 192.168.17.2; };
+    allow-transfer { 192.168.17.2; };
+    allow-update { none; };
+};
+
+
+zone "17.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.17";
+    also-notify { 192.168.17.2; };
+    allow-transfer { 192.168.17.2; };
+    allow-update { none; };
+};
+&lt;/pre&gt;
+
+/etc/bind/db.17 for Master DNS Server:
+
+&lt;pre class="brush: jscript"&gt;
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    3600	
+@	IN	SOA	dns.your.domain.name.tw. root.your.domain.name.tw. (
+			 2018102406     ; Serial
+			 10800		; Refresh
+			 900  		; Retry
+			 604800		; Expire
+			 86400 )	; Negative Cache TTL
+;
+@        IN      NS        dns.your.domain.name.tw.
+@        IN      NS        dns2.your.domain.name.tw.
+3	   IN	    PTR	 dns.your.domain.name.tw.
+2	   IN	    PTR	 dns2.your.domain.name.tw.
+
+&lt;/pre&gt;
+
+/etc/bind/db.mde for Master DNS Server:
+
+&lt;pre class="brush: jscript"&gt;
+$TTL	3600		
+@	IN	SOA	dns.your.domain.name.tw. root.your.domain.name.tw. (
+			 2018102406     ; Serial
+			 10800		; Refresh
+			 900		; Retry
+			 604800 	; Expire
+			 86400 )	; Negative Cache TTL
+; name servers -NS records
+@        IN      NS      dns.your.domain.name.tw.
+@        IN      NS      dns2.your.domain.name.tw.
+@        IN      A        192.168.17.3
+@        IN      AAAA    fe80:288:6004:17::3
+; name server s -AAAA records
+dns         IN         A          192.168.17.3
+dns2       IN         A          192.168.17.2
+dns         IN         AAAA    fe80:288:6004:17::3    
+dns2       IN         AAAA    fe80:288:6004:17::2    
+; MX records
+@        3600    IN    MX    1    ASPMX.L.GOOGLE.COM.
+                 IN    MX    5    ALT1.ASPMX.L.GOOGLE.COM.
+                 IN    MX    5    ALT2.ASPMX.L.GOOGLE.COM.
+                 IN    MX    10   ALT3.ASPMX.L.GOOGLE.COM.
+                 IN    MX    10   ALT4.ASPMX.L.GOOGLE.COM.
+&lt;/pre&gt;
+
+Slave DNS Server:
+
+/etc/bind/named.conf for Slave DNS Server:
+
+&lt;pre class="brush: jscript"&gt;
+// This is the primary configuration file for the BIND DNS server named.
+//
+// Please read /usr/share/doc/bind9/README.Debian.gz for information on the 
+// structure of BIND configuration files in Debian, *BEFORE* you customize 
+// this configuration file.
+//
+// If you are just adding zones, please do that in /etc/bind/named.conf.local
+
+include "/etc/bind/named.conf.options";
+include "/etc/bind/named.conf.local";
+include "/etc/bind/named.conf.default-zones";
+&lt;/pre&gt;
+
+/etc/bind/named.conf.options for Slave DNS Server:
+
+&lt;pre class="brush: jscript"&gt;
+options {
+	directory "/var/cache/bind";
+        dump-file "/var/cache/bind/data/cache_dump.db";
+        statistics-file "/var/cache/bind/data/named_stats.txt";
+        query-source address * port 53;
+        allow-recursion { any; };
+        allow-recursion-on {any; };
+        allow-query-cache { 192.168.17.0/24; 192.168.1.0/24; };
+        allow-query { 192.168.17.0/24; 192.168.1.0/24; };
+        // slave need the following line
+        allow-transfer { none; };
+
+	// If there is a firewall between you and nameservers you want
+	// to talk to, you may need to fix the firewall to allow multiple
+	// ports to talk.  See http://www.kb.cert.org/vuls/id/800113
+
+	// If your ISP provided one or more IP addresses for stable 
+	// nameservers, you probably want to use them as forwarders.  
+	// Uncomment the following block, and insert the addresses replacing 
+	// the all-0's placeholder.
+
+	forwarders {
+	    192.168.1.2;
+            168.95.1.1;
+	 };
+
+	//========================================================================
+	// If BIND logs error messages about the root key being expired,
+	// you will need to update your keys.  See https://www.isc.org/bind-keys
+	//========================================================================
+	dnssec-validation auto;
+
+	auth-nxdomain no;    # conform to RFC1035
+};
+&lt;/pre&gt;
+
+/etc/bind/named.conf.local for Slave DNS Server:
+
+&lt;pre class="brush: jscript"&gt;
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+
+zone "your.domain.name.tw" {
+    type slave;
+    file "/etc/bind/db.mde";
+    masters { 192.168.17.3; };
+};
+
+
+zone "17.168.192.in-addr.arpa" {
+    type slave;
+    file "/etc/bind/db.17";
+    masters { 192.168.17.3; };
+};
+&lt;/pre&gt;
+
+/etc/bind/db.17 for Slave DNS Server:
+
+&lt;pre class="brush: jscript"&gt;
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    3600	
+@	IN	SOA	dns.your.domain.name.tw. root.your.domain.name.tw. (
+			 2018102406     ; Serial
+			 10800		; Refresh
+			 900		; Retry
+			 604800		; Expire
+			 86400 )	; Negative Cache TTL
+;
+@        IN      NS      dns.your.domain.name.tw.
+@        IN      NS      dns2.your.domain.name.tw.
+3	 IN	 PTR	 dns.your.domain.name.tw.
+2	 IN	 PTR	 dns2.your.domain.name.tw.
+&lt;/pre&gt;
+
+/etc/bind/db.mde for Slave DNS Server:
+
+&lt;pre class="brush: jscript"&gt;
+$TTL	3600		
+@	IN	SOA	dns.your.domain.name.tw. root.your.domain.name.tw. (
+			 2018102406    ; Serial
+			 10800		; Refresh
+			 900		; Retry
+			 604800		; Expire
+			 86400 )	; Negative Cache TTL
+; name servers -NS records
+@        IN      NS      dns.your.domain.name.tw.
+@        IN      NS      dns2.your.domain.name.tw.
+@        IN      A        192.168.17.3
+@        IN      AAAA    fe80:288:6004:17::3
+; name server s -AAAA records
+dns        IN        A          192.168.17.3
+dns2      IN        A          192.168.17.2
+dns        IN        AAAA    fe80:288:6004:17::3    
+dns2      IN        AAAA    fe80:288:6004:17::2    
+; MX records
+@      3600    IN    MX    1    ASPMX.L.GOOGLE.COM.
+                 IN    MX    5    ALT1.ASPMX.L.GOOGLE.COM.
+                 IN    MX    5    ALT2.ASPMX.L.GOOGLE.COM.
+                 IN    MX    10   ALT3.ASPMX.L.GOOGLE.COM.
+                 IN    MX    10   ALT4.ASPMX.L.GOOGLE.COM.
+&lt;/pre&gt;
+
+修改設定檔案內容後, 要更新 Serial number, 然後以 sudo /etc/init.d/bind9 restart 重新啟動.</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

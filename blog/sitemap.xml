@@ -5,35 +5,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kmolab.github.io/blog/</loc>
-<lastmod>2018-06-27T20:35:59-00:00</lastmod>
+<lastmod>2018-10-30T21:57:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/archives.html</loc>
-<lastmod>2018-06-27T20:35:59-00:00</lastmod>
+<lastmod>2018-10-30T21:57:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/tags.html</loc>
-<lastmod>2018-06-27T20:35:59-00:00</lastmod>
+<lastmod>2018-10-30T21:57:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/categories.html</loc>
-<lastmod>2018-06-27T20:35:59-00:00</lastmod>
+<lastmod>2018-10-30T21:57:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/pages/about/</loc>
-<lastmod>2018-05-31T10:01:24+08:00</lastmod>
+<lastmod>2018-10-27T19:34:24+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kmolab.github.io/blog/BIND-Server-for-MDE.html</loc>
+<lastmod>2018-10-30T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kmolab.github.io/blog/Goodle-Calendar-for-MDE.html</loc>
+<lastmod>2018-10-30T11:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -243,7 +257,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kmolab.github.io/blog/category/misc.html</loc>
-<lastmod>2018-05-31T11:00:00+08:06</lastmod>
+<lastmod>2018-10-30T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -251,6 +265,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kmolab.github.io/blog/category/research.html</loc>
 <lastmod>2017-10-01T11:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kmolab.github.io/blog/tag/bind.html</loc>
+<lastmod>2018-10-30T12:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kmolab.github.io/blog/tag/google-calendar.html</loc>
+<lastmod>2018-10-30T11:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -467,7 +495,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kmolab.github.io/blog/author/yen.html</loc>
-<lastmod>2018-05-31T11:00:00+08:06</lastmod>
+<lastmod>2018-10-30T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
