@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kmolab.github.io/blog/</loc>
-<lastmod>2018-10-30T21:57:23-00:00</lastmod>
+<lastmod>2019-05-05T16:39:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/archives.html</loc>
-<lastmod>2018-10-30T21:57:23-00:00</lastmod>
+<lastmod>2019-05-05T16:39:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/tags.html</loc>
-<lastmod>2018-10-30T21:57:23-00:00</lastmod>
+<lastmod>2019-05-05T16:39:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/categories.html</loc>
-<lastmod>2018-10-30T21:57:23-00:00</lastmod>
+<lastmod>2019-05-05T16:39:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kmolab.github.io/blog/pages/about/</loc>
-<lastmod>2018-10-27T19:34:24+08:00</lastmod>
+<lastmod>2019-05-05T12:31:21+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

@@ -18,7 +18,7 @@
 
   <!-- Feed -->
         <link href="https://kmolab.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="機械設計工程系 KMOLab Full Atom Feed" />
-          <link href="https://kmolab.github.io/blog/feeds/research.atom.xml" type="application/atom+xml" rel="alternate" title="機械設計工程系 KMOLab Categories Atom Feed" />
+          <link href="https://kmolab.github.io/blog/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="機械設計工程系 KMOLab Categories Atom Feed" />
 
   <link href="https://kmolab.github.io/blog/theme/css/style.css" type="text/css" rel="stylesheet" />
 
@@ -174,9 +174,13 @@ init_mathjax();
   <div class="nav-wrapper">
     <p class="nav-label">Menu</p>
     <ul>
+    <!--
 
               <li role="presentation"><a href="https://kmolab.github.io/blog/pages/about/">About</a></li>
+      -->
 
+            <li><a href="https://kmolab.github.io/blog/pages/about/index.html">About</span></a></li>
+            
             <li><a href="https://kmolab.github.io/blog/archives.html">Archives</span></a></li>
             
             <li><a href="https://kmolab.github.io/blog/categories.html">Categories</span></a></li>
@@ -197,7 +201,7 @@ init_mathjax();
       <div class="inner">
         <nav id="navigation">
             <span id="home-button" class="nav-button">
-                <a class="home-button" href="https://kmolab.github.io/blog/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+                <a class="home-button" href="https://kmolab.github.io/blog/index.html" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
             </span>
           <span id="menu-button" class="nav-button">
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>

@@ -1,7 +1,3 @@
-# Byte-compiled / optimized / DLL files
+# Byte-compiled
 __pycache__/
 
-*.py[cod]
-
-# fossil file
-_FOSSIL_
