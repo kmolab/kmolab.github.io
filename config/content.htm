@@ -8,10 +8,113 @@
 <p><a href="/downloads/Optimization+Methods+in+Engineering+Design.pdf">Optimization Methods for Engineering Design Applications and Theory.pdf</a></p>
 <p><a href="/downloads/A_Framework_for_Computational_Design_Synthesis_Mod.pdf">A_Framework_for_Computational_Design_Synthesis_Mod.pdf</a></p>
 <p><a href="/downloads/Design_synthesis.pdf">Design_synthesis.pdf</a></p>
+<p><a href="/downloads/engineering_design_synthesis.pdf">engineering_design_synthesis.pdf</a></p>
 <p><a href="/downloads/formal_design_synthesis.pdf">formal_design_synthesis.pdf</a></p>
 <p><a href="/downloads/Optimization+Methods+in+Engineering+Design.pdf">Optimization+Methods+in+Engineering+Design.pdf</a></p>
 <p><a href="/downloads/torch_introToSynthesis_Workshop_jk_01.pdf">torch_introToSynthesis_Workshop_jk_01.pdf</a></p>
-<p><a href="/downloads/yet_another_model_of_design_synthesis.pdf">yet_another_model_of_design_synthesis.pdf</a></p><h1>Front-End</h1>
+<p><a href="/downloads/yet_another_model_of_design_synthesis.pdf">yet_another_model_of_design_synthesis.pdf</a></p><h2>Math</h2>
+<p><a href="https://en.m.wikipedia.org/wiki/Babylonian_mathematics">Babylonian Algorithms</a></p>
+<p><a href="/downloads/1972_anchine_babylonian_algorithms_D_Knuth.pdf">1972_anchine_babylonian_algorithms_D_Knuth.pdf</a></p>
+<p>Babylonian Square Root:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def BabylonianAlgorithm(number):
+    if(number == 0):
+        return 0;
+
+    g = number/2.0;
+    g2 = g + 1;
+    while(g != g2):
+        n = number/ g;
+        g2 = g;
+        g = (g + n)/2;
+
+    return g;
+print('The Square root of 0.3 =', BabylonianAlgorithm(0.3));</pre>
+<p></p>
+<!-- 導入 Brython 標準程式庫 -->
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<p></p>
+<!-- 啟動 Brython -->
+<script>
+window.onload=function(){
+// 設定 data/py 為共用程式路徑
+brython({debug:1, pythonpath:['./../data/py']});
+}
+</script>
+<div id="result"></div>
+<p><input id="n" type="text" value="0.5"/><br/> <button id="button">Set Input Number</button></p>
+<script type="text/python3">
+from browser import html, document
+
+def BabylonianAlgorithm(number):
+    if(number == 0):
+        return 0
+
+    g = number/2.0
+    g2 = g + 1
+    while(g != g2):
+        n = number/ g
+        g2 = g
+        g = (g + n)/2
+
+    return g
+
+def printOutput(e):
+    output = document["result"]
+    output.clear()
+    cal = html.B(str(BabylonianAlgorithm(float(document["n"].value))))
+    output <= str(document["n"].value) + " 的平方根為: " + cal
+
+document["button"].bind("click", printOutput)
+</script>
+<p>上述巴比倫演算法解平方根程式碼:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!-- 導入 Brython 標準程式庫 --&gt;
+&lt;script src="/static/brython.js"&gt;&lt;/script&gt;
+&lt;script src="/static/brython_stdlib.js"&gt;&lt;/script&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;!-- 啟動 Brython --&gt;
+&lt;script&gt;
+window.onload=function(){
+// 設定 data/py 為共用程式路徑
+brython({debug:1, pythonpath:['./../data/py']});
+}
+&lt;/script&gt;
+&lt;!-- 利用 div 中 id 為 result 標註區, 承接 brython 運算結果列印 --&gt;
+&lt;div id="result"&gt;&lt;/div&gt;
+&lt;!-- 利用 input 標註及 id 為 n 換為 brython document 字串 --&gt;
+&lt;p&gt;&lt;input id="n" type="text" value="0.5"&gt;&lt;br&gt; 
+&lt;!-- 利用 button 標註與 id 為 button, 透過瀏覽器事件綁定 click 執行 Brython 函式 --&gt;
+&lt;button id="button"&gt;Set Input Number&lt;/button&gt;&lt;/p&gt;
+&lt;!-- 以下為 Brython 程式碼 --&gt;
+&lt;script type="text/python3"&gt;
+from browser import html, document
+
+def BabylonianAlgorithm(number):
+    if(number == 0):
+        return 0
+
+    g = number/2.0
+    g2 = g + 1
+    while(g != g2):
+        n = number/ g
+        g2 = g
+        g = (g + n)/2
+
+    return g
+
+def printOutput(e):
+    # 將 output 變數設為與 id 為 result 的標註區對應
+    output = document["result"]
+    # 先利用變數的 clear() 方法清除先前留下的內容
+    output.clear()
+    # 取 id 為 n 表單 input 中欄位的輸入 value 轉為 float 帶入函式運算後, 以 str 轉為字串然後插入 output 對應的 div 區域
+    cal = html.B(str(BabylonianAlgorithm(float(document["n"].value))))
+    output &lt;= str(document["n"].value) + " 的平方根為: " + cal
+
+# 將頁面中 id 為 button 的按鈕, 與滑鼠 click 事件綁定, 點擊後執行 printOutput,  注意函式以 event 作為輸入
+document["button"].bind("click", printOutput)
+&lt;/script&gt;</pre>
+<p></p><h1>Front-End</h1>
 <p>網際</p>
 <p>可程式化</p>
 <p>機械設計合成系統</p>
@@ -19,15 +122,12 @@
 <h2>Brython</h2>
 <h2>Bootstrap</h2>
 <h2>Fengari-Web</h2>
-<p><a href="https://github.com/fengari-lua/fengari-web">https://github.com/fengari-lua/fengari-web</a> </p><h1>CAD</h1>
-<h2>Onshape</h2>
+<p><a href="https://github.com/fengari-lua/fengari-web">https://github.com/fengari-lua/fengari-web</a> </p><h1>Design</h1><h2>Onshape</h2>
 <h2>Solvespace</h2>
 <h2>FreeCAD</h2>
-<h2>Blender</h2><h1>CAE</h1>
-<h2>V-rep</h2>
+<h2>Blender</h2><h1>Simulation</h1><h2>V-rep</h2>
 <h2>Webots</h2>
-<h2>Range</h2><h1>CAM</h1>
-<h2>KLL3PP</h2>
+<h2>Range</h2><h1>Realization</h1><h2>KLL3PP</h2>
 <h2>Foosball</h2><h1>Back-End</h1>
 <h2>Python</h2>
 <h2>Cython</h2>
