@@ -1954,7 +1954,41 @@ doc["ball"].bind('click', Ball.prog)
 <h2>Blender</h2><h1>Simulation</h1><h2>V-rep</h2>
 <h2>Webots</h2>
 <h2>Range</h2><h1>Realization</h1><h2>KLL3PP</h2>
-<h2>Foosball</h2><h1>Back-End</h1>
+<h2>Foosball</h2>
+<h2>Publish</h2>
+<p>出版是內容管理過程中重要的一環,  無論是一段文句, 一個零組件, 一張圖片或影片, 在 html 網際環境編輯之後, 要如何轉為各種類比與數位的出版品格式, 就是此地要探討的重點.</p>
+<p>段落文字在網際環境可以利用 Html5 加上 css 或 bootstrap 等前端框架加以處理, 最終與圖片及影片或數學方程式, 可以透過 Pandoc 將 html 轉為  Markdown 之後, 再加上手工編輯處理後, 轉為 pdf 或其他數位格式.</p>
+<p>以下為相關處理工具:</p>
+<p>圖片:</p>
+<p style="padding-left: 30px;">GIMP: <a href="https://www.gimp.org/">https://www.gimp.org/</a> </p>
+<p>轉檔工具:</p>
+<p style="padding-left: 30px;">Pandoc:</p>
+<p style="padding-left: 30px;"><a href="https://pandoc.org/">https://pandoc.org</a></p>
+<p>排版工具:</p>
+<p style="padding-left: 30px;">TinyTeX: <a href="https://yihui.name/tinytex/">https://yihui.name/tinytex/</a></p>
+<p>影片處理:</p>
+<p style="padding-left: 30px;">Blender: <a href="https://www.blender.org/">https://www.blender.org/</a></p>
+<p>3D 轉檔:</p>
+<p>FreeCAD: <a href="https://www.freecadweb.org/">https://www.freecadweb.org/</a></p>
+<p>相關操作指令:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">tlmgr search --global --file "/"
+
+tlmgr install 
+
+tlmgr option repository 
+http://ftp.yzu.edu.tw/CTAN/systems/texlive/tlnet
+
+pandoc MANUAL.txt --toc -V "CJKmainfont:SimSun" -V fontsize=12pt -V geometry:margin=1in --pdf-engine=xelatex -o example13.pdf
+
+pandoc content.htm  --toc -t latex -V "CJKmainfont:SimSun" -V fontsize=12pt -V geometry:margin=1in --pdf-engine=xelatex -o content.pdf
+
+pandoc content.md --toc -V "CJKmainfont:SimSun" -V fontsize=12pt -V geometry:margin=1in --pdf-engine=xelatex -o content.pdf
+
+pandoc content.md --toc -V "CJKmainfont:SimSun" -V fontsize=12pt -V geometry:margin=1in --pdf-engine=xelatex -o content.pdf
+
+pandoc content.htm -t markdown -o content.md</pre>
+<p><a href="https://drive.google.com/open?id=1QAvznDroNgmUJ-m1cUJTJLo2LnmWJrLF">TinyTex and Pandoc.7z</a></p>
+<p><a href="https://drive.google.com/file/d/1MwkNevyG3yGkwhFVT_R-0svzp3Yy76Jt/view?usp=sharing">FreeCAD0.18.1.7z</a></p><h1>Back-End</h1>
 <h2>Python</h2>
 <h2>Cython</h2>
 <h2>Metaheuristics</h2>
