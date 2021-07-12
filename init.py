@@ -1,14 +1,18 @@
 import os
-'''CMSimfly 程式起始設定'''
-# 確定程式檔案所在目錄, 在 Windows 有最後的反斜線
+
+"""CMSimfly Initialization setup
+"""
+
+# get current directory, on Windows, back slash at the end of the directory
 _curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
-# 設定在 uwsgi 與近端的資料儲存目錄
+# config directory
 config_dir = _curdir + "/config/"
-static_dir = _curdir + "/static"
 class Init(object):
     # uwsgi as static class variable, can be accessed by Init.uwsgi
     uwsgi = False
-    site_title = "Lab.kmol.info"
+    site_title = "lab.kmol.info"
+    ip = "127.0.0.1"
+    port = 9443
     def __init__(self):
         # hope to create downloads and images directories　
         if not os.path.isdir(_curdir + "/downloads"):

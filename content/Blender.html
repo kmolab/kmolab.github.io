@@ -1,7 +1,8 @@
 <!DOCTYPE html><html>
         <head>
-        <title>Lab.kmol.info</title>
+        <title>lab.kmol.info</title>
         <meta charset="utf-8">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -52,41 +53,22 @@
         </script>
         
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
 <link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
-
-<!-- for LaTeX equations 暫時不用
-<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
-<script type="text/javascript">
-init_mathjax = function() {
-    if (window.MathJax) {
-        // MathJax loaded
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-            },
-            displayAlign: 'left', // Change this to 'center' to center equations.
-            "HTML-CSS": {
-                styles: {'.MathJax_Display': {"margin": 0}}
-            }
-        });
-        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-    }
-}
-init_mathjax();
-</script>
--->
 <!-- 暫時不用
 <script src="./../cmsimde/static/fengari-web.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
@@ -97,6 +79,11 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython.js"></script>
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
 
 </head>
 <body>
@@ -116,14 +103,14 @@ init_mathjax();
             <header class="site-navbar py-4 bg-white" role="banner">
               <div class="container-fluid">
                 <div class="row align-items-center">
-                <h1>Lab.Kmol.Info 電子書</h1>
+                <h1>lab.kmol.info</h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">Lab.Kmol.Info 電子書</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">lab.kmol.info</a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -136,7 +123,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='CK Design.html'>CK Design</a><ul class='dropdown'><li><a href='Design Synthesis.html'>Design Synthesis</a><li><a href='Math.html'>Math</a><li><a href='Pfaffians.html'>Pfaffians</a></li></ul><li class='has-children'><a href='Front-End.html'>Front-End</a><ul class='dropdown'><li><a href='Javascript.html'>Javascript</a><li><a href='Brython.html'>Brython</a><li><a href='Bootstrap.html'>Bootstrap</a><li><a href='Fengari-Web.html'>Fengari-Web</a></li></ul><li class='has-children'><a href='Design.html'>Design</a><ul class='dropdown'><li><a href='Onshape.html'>Onshape</a><li><a href='Solvespace.html'>Solvespace</a><li><a href='FreeCAD.html'>FreeCAD</a><li><a href='Blender.html'>Blender</a></li></ul><li class='has-children'><a href='Simulation.html'>Simulation</a><ul class='dropdown'><li><a href='V-rep.html'>V-rep</a><li><a href='Webots.html'>Webots</a><li><a href='Range.html'>Range</a></li></ul><li class='has-children'><a href='Realization.html'>Realization</a><ul class='dropdown'><li><a href='KLL3PP.html'>KLL3PP</a><li><a href='Foosball.html'>Foosball</a><li><a href='Publish.html'>Publish</a></li></ul><li class='has-children'><a href='Back-End.html'>Back-End</a><ul class='dropdown'><li><a href='Python.html'>Python</a><li><a href='Cython.html'>Cython</a><li><a href='Metaheuristics.html'>Metaheuristics</a><li><a href='Pyslvs.html'>Pyslvs</a><li><a href='Virtualbox.html'>Virtualbox</a><li><a href='Ubuntu.html'>Ubuntu</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='CK Design.html'>CK Design</a><ul class='dropdown'><li><a href='Design Synthesis.html'>Design Synthesis</a><li><a href='Math.html'>Math</a><li><a href='Pfaffians.html'>Pfaffians</a></li></ul><li class='has-children'><a href='Front-End.html'>Front-End</a><ul class='dropdown'><li><a href='Javascript.html'>Javascript</a><li><a href='Brython.html'>Brython</a><li><a href='Bootstrap.html'>Bootstrap</a><li><a href='Fengari-Web.html'>Fengari-Web</a></li></ul><li class='has-children'><a href='Design.html'>Design</a><ul class='dropdown'><li><a href='Onshape.html'>Onshape</a><li><a href='Solvespace.html'>Solvespace</a><li><a href='FreeCAD.html'>FreeCAD</a><li><a href='Blender.html'>Blender</a></li></ul><li class='has-children'><a href='Simulation.html'>Simulation</a><ul class='dropdown'><li><a href='V-rep.html'>V-rep</a><li><a href='Webots.html'>Webots</a><li><a href='Range.html'>Range</a></li></ul><li class='has-children'><a href='Realization.html'>Realization</a><ul class='dropdown'><li><a href='KLL3PP.html'>KLL3PP</a><li><a href='Foosball.html'>Foosball</a><li><a href='Publish.html'>Publish</a></li></ul><li class='has-children'><a href='Back-End.html'>Back-End</a><ul class='dropdown'><li><a href='Python.html'>Python</a><li><a href='Cython.html'>Cython</a><li><a href='Metaheuristics.html'>Metaheuristics</a><li><a href='Pyslvs.html'>Pyslvs</a><li><a href='Virtualbox.html'>Virtualbox</a><li><a href='Ubuntu.html'>Ubuntu</a></li>
                       </ul>
                 </nav>
               </div>
@@ -188,5 +175,13 @@ init_mathjax();
                     </script>
             -->
             <script src="../cmsimde/static/chimper/js/main.js"></script>
-        </body></html>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
         
