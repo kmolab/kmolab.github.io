@@ -2329,7 +2329,11 @@
 </v>
 </v>
 </v>
-<v t="yen.20210712111327.1"><vh>@path markdown</vh></v>
+<v t="yen.20210712111327.1"><vh>@path markdown</vh>
+<v t="yen.20210712113810.1"><vh>@clean 20210712.md</vh>
+<v t="yen.20210712114108.1"><vh>早就忘記有這個網站</vh></v>
+</v>
+</v>
 </v>
 <v t="yen.20170108171930.1"><vh>@button https server</vh></v>
 <v t="yen.20170108171939.1"><vh>@button ipv6 https server</vh></v>
@@ -13751,5 +13755,36 @@ Many users will want to change the settings in the Fonts section, especially the
 <t tx="yen.20210712111521.997"></t>
 <t tx="yen.20210712111521.998"></t>
 <t tx="yen.20210712111521.999"></t>
+<t tx="yen.20210712113810.1">@language md
+---
+Title: 早就忘記有這個網站
+Date: 2021-07-12 11:00
+Category: 202107
+Tags: KMOLab
+Slug: kmolab-2021-almost-forgot-this-site
+Author: kmol
+---
+
+要不是意外在雲端倉儲上看到資料, 否則早就網際這個四年多前建立的網站.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="yen.20210712114108.1">舊電腦當作 server
+----
+
+2017 年是全面採用 [Fossil SCM] 教學的年份. 因為 2016 年電腦輔助設計室更換電腦, 留下許多舊電腦, 於是就將每兩台的 Ram 併為一台, 全部安裝 Ubuntu 16.04, 權充為伺服器. 這一批電腦撐了五年, 今年又到了要換電腦的時段, 眼看又有幾十台電腦硬體會移出, 也許又會選十台電腦併成五台 servers. 主要當作 IPv6 與 IPv4 網路協定間的 Proxy Servers.
+
+過去這四年, 經歷了總共幾波的教學轉折, 目前學生所面對的未來環境, 已經不是一般教師能夠徹底理解, 只能儘量鼓勵, 少責難多體諒.
+
+CK Design
+----
+
+2017 年正是 [C-K theory] 設計理論發起的年份, 但四年過去, 所謂的概念與知識之間的互動關聯, 或許已經證實難以直接用數學邏輯推理完成, 因此目前只剩下 [C-K theory 網站] 依然存在, 其他少有進展. 不過最近幾年透過深度強化學習的發展所完成的模型, 已經能夠讓電腦的短期學習效果進入實用階段, 希望從已知概念發展為專業知識的歷程, 機器學習的角色將會越來越吃重.
+
+
+[Fossil SCM]: https://www.fossil-scm.org
+[C-K theory]: https://en.wikipedia.org/wiki/C-K_theory
+[C-K theory 網站]: https://www.ck-theory.org/</t>
 </tnodes>
 </leo_file>

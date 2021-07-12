@@ -2,7 +2,10 @@
 <p>這裡是 lab.kmol.info 知識管理與最佳化應用實驗室, Taiwan.</p>
 <h1>CK Design</h1>
 <p>Concept-Knowledge Design Theory</p>
-<p>概念與知識設計理論</p><h2>Design Synthesis</h2>
+<p>概念與知識設計理論</p>
+<h4>還是留作紀念:</h4>
+<p style="padding-left: 30px;"><a href="https://en.wikipedia.org/wiki/C-K_theory">https://en.wikipedia.org/wiki/C-K_theory</a></p>
+<p style="padding-left: 30px;"><a href="https://www.ck-theory.org/">https://www.ck-theory.org/</a> </p><h2>Design Synthesis</h2>
 <p>設計合成乃依據所需產品的特徵或功能, 進行概念創建或內容設計的流程.</p>
 <p>Design synthesis is the process of concept creation or content design based on the features or functions of the desired product.</p>
 <p>網際可程式化機械設計合成系統 (Web-based Programmable Mechanical Design Synthesis System)</p>
@@ -146,12 +149,21 @@ document["button"].bind("click", printOutput)
 <p>機械設計合成系統</p>
 <p></p><h2>Javascript</h2>
 <h2>Brython</h2>
-<p>Python 3 官方教材: <a href="https://docs.python.org/3/index.html">https://docs.python.org/3/index.html</a> </p>
-<p>Python tutorial: <a href="https://docs.python.org/3/tutorial/index.html">https://docs.python.org/3/tutorial/index.html</a> (英文)</p>
-<p>Python 教學: <a href="https://python-doc-tw.github.io/tutorial/index.html">https://python-doc-tw.github.io/tutorial/index.html</a> </p>
-<p>網頁上的 Python - Brython: <a href="https://www.brython.info/static_doc/en/intro.html">https://www.brython.info/static_doc/en/intro.html</a>  (解譯式)</p>
-<p>網頁上的 Python GUI- Flexx: <a href="https://flexx.readthedocs.io/en/stable/">https://flexx.readthedocs.io/en/stable/</a> (轉譯式)</p>
-<p>
+<p>這個頁面已經將 ggame 從 brython 模組轉為 javascript 模組(<a href="http://mde.tw/cp2021/content/%E5%AD%B8%E7%BF%92%E7%A8%8B%E5%BC%8F.html">方法</a>), 名稱為 brython_modules.js 放在 downloads 目錄中.</p>
+<h4>請利用下列網際編輯器, 開始學習如何使用 Python 解決問題, 一般機械設計流程會面臨什麼問題?</h4>
+<p><a href="https://link.springer.com/book/10.1007/978-3-030-20290-3">A Beginners Guide to Python 3 Programming</a> (校園網路下載電子書)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-3-030-25943-3">Advanced Guide to Python 3 Programming</a> (校園網路下載電子書)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-3-319-19596-4">Elementary Mechanics Using Python</a> (校園網路下載電子書)</p>
+<p>1) 從 URL 導入程式<a href="https://docs.python.org/3/tutorial/modules.html">模組</a> (modules). (使用 /static/, ./../downloads/py/). 請列出<a href="https://docs.python.org/3/tutorial/modules.html">模組</a>中的 fib(1000). (瀏覽器上的程式, 可以導入其他網際路徑上 (或其他程式設計者伺服器上) 的另一個程式段, 並且使用該程式段的功能, 對於機械設計流程, 有何用處?)</p>
+<p>2) <a href="https://qry.nfu.edu.tw/">學校教務主機</a>可以根據當學期的課號, 查得該課程的修課學員名單, 請問可以直接利用下列網際 Python 程式編輯器, 取得本課程的修課人員學號資料嗎? 當取得修課人員名單後, 可以從中以亂數選出特定個數的學員嗎? 若每一週各選出特定學員, 當週已經被選過的學員, 可以從後續亂數選擇的名單中剔除嗎? (請參考 <a href="https://en.wikipedia.org/wiki/Ajax_(programming)">Ajax</a> 與 <a href="https://brython.info/static_doc/en/ajax.html">browser.ajax</a>, 利用瀏覽器中的程式, 可以跨網路即時從其他伺服器擷取資料, 對機械設計者有什麼意義?)</p>
+<p>3) 定時執行特定任務對某些機械裝置可能有些用處, 能夠讓 <a href="https://github.com/mdecourse/schedule">Schedule 模組</a> (<a href="https://bhupesh-v.github.io/A-Simple-Scheduler-in-Python/">ref</a>), 在 Brython 環境中執行嗎?</p>
+<p>4) 可以移動的機電模型經常需要客製化的齒輪減速裝置, 能夠直接在瀏覽器中根據減速需求, 設計繪製出能夠直接列印的齒輪組嗎? (<a href="/downloads/DesignBasicGearBoxes.pdf">ref1</a>, <a href="https://all3dp.com/2/3d-printed-gearbox-how-to-design-your-own-box/">ref2</a>, <a href="https://en.wikipedia.org/wiki/STL_(file_format)">ref3</a>, <a href="http://hessmer.org/gears/InvoluteSpurGearBuilder.html?circularPitch=8&amp;pressureAngle=20&amp;clearance=0.05&amp;backlash=0.05&amp;profileShift=0&amp;gear1ToothCount=30&amp;gear1CenterHoleDiamater=4&amp;gear2ToothCount=8&amp;gear2CenterHoleDiamater=4&amp;showOption=3">ref4</a>, <a href="http://www.hessmer.org/blog/2020/09/27/online-involute-spur-gear-builder-v2/">ref5</a>, <a href="https://geargenerator.com/#200,200,100,6,1,3,0,4,1,8,2,4,27,-90,0,0,0,0,0,0,16,4,4,27,-60,0,0,0,0,1,1,12,1,12,20,-60,0,0,0,0,2,0,60,5,12,20,0,1,0,0,0,0,0,3,-515">ref6</a>, <a href="https://www.igus.eu/info/3d-print-gears">ref7</a>)</p>
+<p>啟動 Brython 時, 可以同時設定多個模組擷取路徑:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;script&gt;/
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','/./../downloads/py/']});
+}
+&lt;/script&gt;</pre>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
 <!-- for ggame -->
@@ -160,6 +172,7 @@ document["button"].bind("click", printOutput)
 <script src="/static/pixi-3.0.5.min.js"></script>
 <script src="/static/buzz-1.2.1.js"></script>
 <script src="/static/bs.js"></script>
+<script src="/downloads/brython_modules.js"></script>
 <!-- Cango 程式庫 -->
 <script src="/static/Cango-13v08-min.js"></script>
 <script src="/static/CangoAxes-4v01-min.js"></script>
@@ -168,10 +181,9 @@ document["button"].bind("click", printOutput)
 <script src="/static/konva.min.js"></script>
 <script>
 window.onload=function(){
-brython({debug:1, pythonpath:['./../static/']});
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 }
 </script>
-</p>
 <p><!-- 導入 FileSaver 與 filereader --></p>
 <p>
 <script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
@@ -194,32 +206,25 @@ function doSave(storage_id, filename){
 }
 </script>
 </p>
-<h4>開始練習 print() 用法, 並著手建立函式</h4>
 <p><!-- 印出版次與關鍵字程式 --></p>
 <p>
 <script type="text/python3">
 from browser import document as doc
 from browser import html
 import ace
-
 # 清除畫布
 def clear_bd(ev):
     bd = doc["brython_div"]
     bd.clear()
-
 # Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
 Ace = ace.Editor(editor_id="kw_editor", console_id="kw_console", container_id="kw__container", storage_id="kw_py_src" )
-
 Ace.editor.setValue("""# 導入 sys 模組
 import sys
 # 導入 keyword 模組
 import keyword
-
 def helloWorld():
     print("Hello World!")
-
 helloWorld()
-
 # 利用 sys 模組中的 version_info 印出 Python 版次
 print("Python version: ", sys.version_info)
 # 利用 keyword 模組中的 kwlist 印出關鍵字
@@ -227,7 +232,6 @@ print("Python keywords: ", keyword.kwlist)
 """)
 Ace.editor.scrollToRow(0)
 Ace.editor.gotoLine(0)
-
 # 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
 doc['kw_run'].bind('click', Ace.run)
 doc['kw_show_console'].bind('click', Ace.show_console)
@@ -253,7 +257,6 @@ kw1 = beditor.editor("""# 導入 sys 模組
 import sys
 # 導入 keyword 模組
 import keyword
-
 # 利用 sys 模組中的 version_info 印出 Python 版次
 print("Python version: ", sys.version_info)
 # 利用 keyword 模組中的 kwlist 印出關鍵字
@@ -275,25 +278,20 @@ def my_print(n, input_str):
     print("以下將重覆列印 '", input_str + "' " + str(n) + "次")
     for i in range(n):
         print(i, input_str)
-
 my_print(5, "Hello World!")
 the_str = "開始學習 Python"
 num = input("請輸入要列印的次數!")
 my_print(int(num), the_str)
 a = a + 1
 print("(" + str(a) + ")", "_" * 25)
-
 def myfun():
     yield 1
     yield 2
     yield 3
-
 for i in myfun():
     print(i)
-
 x = iter(myfun())
 y = list(myfun())
-
 a = a + 1
 print("(" + str(a) + ")", "_" * 25)
 print(x.__next__())
@@ -316,7 +314,6 @@ import math
 def f():
     print("This is a user-defined function")
     return 42
-
 print("Some basic types in Python:")
 print(type(2))           # int
 print(type(2.2))         # float
@@ -326,9 +323,7 @@ print(type(math))        # module
 print(type(math.tan))    # builtin_function_or_method ("function" in Brython)
 print(type(f))           # function (user-defined function)
 print(type(type(42)))    # type
-
 print("#####################################################")
-
 print("And some other types we will see later in the course...")
 print(type(Exception())) # Exception
 print(type(range(5)))    # range
@@ -354,7 +349,6 @@ print("Some builtin constants:")
 print(True)
 print(False)
 print(None)
-
 print("And some more constants in the math module:")
 import math
 print(math.pi)
@@ -364,7 +358,6 @@ print("Type conversion functions:")
 print(bool(0))   # convert to boolean (True or False)
 print(float(42)) # convert to a floating point number
 print(int(2.8))  # convert to an integer (int)
-
 print("And some basic math functions:")
 print(abs(-5))   # absolute value
 print(max(2,3))  # return the max value
@@ -411,9 +404,7 @@ print("Precedence:")
 print(2+3*4)  # prints 14, not 20
 print(5+4%3)  # prints  6, not 0 (% has same precedence as *, /, and //)
 print(2**3*4) # prints 32, not 4096 (** has higher precedence than *, /, //, and %)
-
 print()
-
 print("Associativity:")
 print(5-4-3)   # prints -2, not 4 (- associates left-to-right)
 print(4**3**2) # prints 262144, not 4096 (** associates right-to-left)
@@ -427,7 +418,6 @@ print("The problem....")
 d1 = 0.1 + 0.1 + 0.1
 d2 = 0.3
 print(d1 == d2)                # False (never use == with floats!)
-
 print()
 print("The solution...")
 import math
@@ -436,26 +426,20 @@ print(math.isclose(d1, d2))  # True!
 # Short-Circuit Evaluation
 def yes():
     return True
-
 def no():
     return False
-
 def crash():
     return 1/0 # crashes!
-
 print(no() and crash()) # Works!
 print(crash() and no()) # Crashes!
 print (yes() and crash()) # Never runs (due to crash), but would also crash (without short-circuiting)
 # Or operator
 def yes():
     return True
-
 def no():
     return False
-
 def crash():
     return 1/0 # crashes!
-
 print(yes() or crash()) # Works!
 print(crash() or yes()) # Crashes!
 print(no() or crash())  # Never runs (due to crash), but would also crash (without short-circuiting)
@@ -464,12 +448,10 @@ def isPositive(n):
     result = (n > 0)
     print("isPositive(",n,") =", result)
     return result
-
 def isEven(n):
     result = (n % 2 == 0)
     print("isEven(",n,") =", result)
     return result
-
 print("Test 1: isEven(-4) and isPositive(-4))")
 print(isEven(-4) and isPositive(-4)) # Calls both functions
 print("----------")
@@ -478,28 +460,21 @@ print(isEven(-3) and isPositive(-3)) # Calls only one function!
 # type vs isinstance
 # Both type and isinstance can be used to type-check
 # In general, (isinstance(x, T)) will be more robust than (type(x) == T)
-
 print(type("abc") == str)
 print(isinstance("abc", str))
-
 # We'll see better reasons for this when we cover OOP + inheritance later
 # in the course.  For now, here is one reason:  say you wanted to check
 # if a value is any kind of number (int, float, complex, etc). 
 # You could do:
-
 def isNumber(x):
     return ((type(x) == int) or
             (type(x) == float)) # are we sure this is ALL kinds of numbers?
-
 print(isNumber(1), isNumber(1.1), isNumber(1+2j), isNumber("wow"))
-
 # But this is cleaner, and works for all kinds of numbers, including
 # complex numbers for example:
-
 import numbers
 def isNumber(x):
     return isinstance(x, numbers.Number) # works for any kind of number
-
 print(isNumber(1), isNumber(1.1), isNumber(1+2j), isNumber("wow"))
 """, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 # id 為 "ex3" 的按鈕點按時, 執行 Ex3 物件中的 prog 方法
@@ -520,108 +495,79 @@ def f(y, z):
     return result
 print(f(1, 2)) # 8
 print(f(3, 4)) # 12
-
 # Vocabulary:
 #   variables: global vs. local
 #   statements vs. expressions
 #   function definitions vs. function calls
 #   parameters vs. arguments
-
 # Return Statements
 # Basic example
-
 def isPositive(x):
     return (x > 0)
-
 print(isPositive(5))  # True
 print(isPositive(-5)) # False
 print(isPositive(0))  # False
-
 # Return ends the function immediately
 def isPositive(x):
     print("Hello!")   # runs
     return (x > 0)
     print("Goodbye!") # does not run ("dead code")
-
 print(isPositive(5))  # prints Hello, then True
-
 # No return statement --> return None
 def f(x):
     x + 42
-
 print(f(5)) # None
-
 def f2(x):
     result = x + 42
-
 print(f2(5)) # None
-
 # Print versus Return
 # This is a common early mistake (confusing print and return):
 def cubed(x):
     print(x**3) # Here is the error!
-
 cubed(2)          # seems to work!
 print(cubed(3))   # sort of works (but prints None, which is weird)
 print(2*cubed(4)) # Error!
-
 # Once again (correctly)
 def cubed2(x):
     return (x**3) # That's better!
-
 cubed2(2)          # seems to be ignored (why?)
 print(cubed2(3))   # works!
 print(2*cubed2(4)) # works!
-
 # Different Parameter and Return Types
 def hypotenuse(a, b):
     return ((a**2) + (b**2))**0.5
-
 print(hypotenuse(3, 4)) # 5.0 (not 5)
 print("---------------------")
-
 def xor(b1, b2):
     return ((b1 and (not b2)) or (b2 and (not b1)))  # same as (b1 != b2)
-
 print(xor(True,  True))  # False
 print(xor(True,  False)) # True
 print(xor(False, True))  # True
 print(xor(False, False)) # False
 print("---------------------")
-
 def isPositive(n):
     return (n > 0)
-
 print(isPositive(10))     # True
 print(isPositive(-1.234)) # False
-
 # Function Composition
 def f(w):
     return 10*w
-
 def g(x, y):
     return f(3*x) + y
-
 def h(z):
     return f(g(z, f(z+1)))
-
 print(h(1)) # hint: try the "visualize" feature
-
 # Helper Functions 
 def onesDigit(n):
     return n%10
-
 def largerOnesDigit(x, y):
     return max(onesDigit(x), onesDigit(y))
-
 print(largerOnesDigit(134, 672)) # 4
 print(largerOnesDigit(132, 674)) # Still 4
-
 # Test Functions
 # A broken test function
 def onesDigit(n):
     return n%10
-
 def testOnesDigit():
     print("Testing onesDigit()...", end="")
     assert(onesDigit(5) == 5)
@@ -629,13 +575,10 @@ def testOnesDigit():
     assert(onesDigit(100) == 0)
     assert(onesDigit(999) == 9)
     print("Passed!")
-
 testOnesDigit() # Passed!  Why is this bad?
-
 # A better version
 def onesDigit2(n):
     return n%10
-
 def testOnesDigit2():
     print("Testing onesDigit()...", end="")
     assert(onesDigit2(5) == 5)
@@ -644,74 +587,56 @@ def testOnesDigit2():
     assert(onesDigit2(999) == 9)
     assert(onesDigit2(-123) == 3) # Added this test
     print("Passed!")
-
 testOnesDigit2() # Crashed!  So the test function worked!
-
 # Local Variable Scope
 def f(x):
     print("In f, x =", x)
     x += 5
     return x
-
 def g(x):
     return f(x*2) + f(x*3)
-
 print(g(2))
-
 # Another example
 def f(x):
     print("In f, x =", x)
     x += 7
     return round(x / 3)
-
 def g(x):
     x *= 10
     return 2 * f(x)
-
 def h(x):
     x += 3
     return f(x+4) + g(x)
-
 print(h(f(1)))
-
 # Global Variable Scope
 # In general, you should avoid using global variables.
 # You will even lose style points if you use them!
 # Still, you need to understand how they work, since others
 # will use them, and there may also be some very few occasions
 # where you should use them, too!
-
 g = 100
-
 def f(x):
     return x + g
-
 print(f(5)) # 105
 print(f(6)) # 106
 print(g)    # 100
-
 # Another exampl
 g = 100
-
 def f(x):
     # If we modify a global variable, we must declare it as global.
     # Otherwise, Python will assume it is a local variable.
     global g
     g += 1
     return x + g
-
 print(f(5)) # 106
 print(f(6)) # 108
 print(g)    # 102
-
 # Default arguments
 # Sometimes, a function has a parameter that has a natural default
 # We can specify that default value in the function definition,
 # then choose whether or not to include it in the function call.
-
 def f(x, y=10):
     return x + y
-
 print(f(5))   # 15
 print(f(5,1)) # 6
 """, "kw_editor", "kw_console", "kw__container", "kw_py_src")
@@ -734,7 +659,6 @@ canvas = html.CANVAS(width = 300, height = 200)
 canvas.id = "line_drawing"
 brython_div = doc["brython_div"]
 brython_div <= canvas
-
 # 準備繪圖畫布
 canvas = doc["line_drawing"]
 ctx = canvas.getContext("2d")
@@ -747,7 +671,6 @@ ctx.fillStyle = "rgb(200,0,0)"
 ctx.strokeStyle = "rgb(0,0,200)"
 # 乘上 deg 可轉為徑度單位
 deg = math.pi / 180
-
 # 建立多邊形定點位置畫線函式
 def star(radius, xc, yc, n):
     #radius = 100
@@ -799,7 +722,6 @@ canvas.style = {"width": "100%"}
 canvas.id = "taiwan_flag"
 brython_div = doc["brython_div"]
 brython_div <= canvas
-
 # 準備繪圖畫布
 canvas = doc["taiwan_flag"]
 ctx = canvas.getContext("2d")
@@ -854,7 +776,7 @@ doc["flag"].bind('click', Flag.prog)
 </p>
 <!-- flag ex ends -->
 <p></p>
-<!-- bunny start -->
+<!-- bunny starts -->
 <p>
 <script type="text/python3">
 from browser import document as doc
@@ -865,7 +787,8 @@ from random import random, randint
 from browser import document as doc
 from browser import html
 import math
-
+# for site variable to use socket.gethostname() to differentiate execution on localhost or not
+import socket
 # 引入既有的id="graphics-column" 標註
 graphics_column = doc["graphics-column"]
 # 建立內定名稱為 "ggame-canvas" 的 canvas 標註
@@ -874,10 +797,16 @@ canvas.id = "ggame-canvas"
 # 將 canvas 插入 gc 標註中
 graphics_column <= canvas
 
+# when work with dynamic site
+if socket.gethostname() == "localhost":
+    site = ""
+else:
+    # when work with remote site
+    site="./.."
 
 class Bunny(Sprite):
     
-    asset = ImageAsset("/images/bunny.png")
+    asset = ImageAsset(site+"/images/bunny.png")
     
     def __init__(self, position):
         super().__init__(Bunny.asset, position)
@@ -888,7 +817,6 @@ class Bunny(Sprite):
         self.dragging = True
         self.deltax = 0
         self.deltay = 0
-
     
     def step(self):
         # Every now and then a bunny hops...
@@ -929,8 +857,6 @@ class DemoApp(App):
         # Override step to perform action on each frame update
         for bunny in self.spritelist:
             bunny.step()
-
-
 # Create the app
 app = DemoApp()  
 # Run the app
@@ -974,7 +900,6 @@ brython_div <= canvas
 from browser import document as doc
 from browser import window
 import math
-
 canvas = doc["cango_gear"]
 # 此程式採用 Cango Javascript 程式庫繪圖, 因此無需 ctx
 #ctx = canvas.getContext("2d")
@@ -984,11 +909,9 @@ shapedefs = window.shapeDefs
 shape = window.Shape.new
 path = window.Path.new
 creategeartooth = window.createGearTooth.new
-
 tweener = window.Tweener.new
 # 經由 Cango 轉換成 Brython 的 cango, 指定將圖畫在 id="cango_gear" 的 canvas 上
 cgo = cango("cango_gear")
-
 ######################################
 # 畫正齒輪輪廓
 #####################################
@@ -1015,7 +938,6 @@ def cangoGear(n, m, pa):
     gear = gearTooth.dup()
     # gear 為單一齒的輪廓資料
     #cgo.render(gearTooth)
-
     # 利用單齒輪廓旋轉, 產生整個正齒輪外形
     for i in range(1, n):
         # 將 gearTooth 中的資料複製到 newTooth
@@ -1032,7 +954,6 @@ def cangoGear(n, m, pa):
       "strokeColor": "#606060" })
     gear.appendPath(shaft) # retain the 'moveTo' command for shaft sub path
     return gear
-
 # 設定兩齒齒數
 n1 = 17
 n2 = 11
@@ -1047,19 +968,15 @@ pr1 = n1*m/2
 # n2 齒輪的節圓半徑
 pr2 = n2*m/2
 pr3 = n3*m/2
-
 cx = canvas.width/2
 cy = canvas.height/2
 # 建立 gears
 gear1 = cangoGear(n1, m, pa)
 gear2 = cangoGear(n2, m, pa)
 gear3 = cangoGear(n3, m, pa)
-
 from browser.timer import set_interval
-
 deg = math.pi/180
 rotate_speed = 12*deg
-
 def draw():
     cgo.clearCanvas()
     gear1.transform.translate(cx-(pr1+pr2)*reduced_ratio, cy)
@@ -1079,7 +996,6 @@ def draw():
     gear3.transform.rotate(180+(360/n3/2)+(180+(360/n2/2))*n2/n3)
     gear3.rotate((rotate_speed*n1/n2)*(n2/n3))
     cgo.render(gear3)
-
 set_interval(draw, 2)
 """, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 # id 為 "spur" 的按鈕點按時, 執行 Spur 物件中的 prog 方法
@@ -1097,16 +1013,12 @@ Temp = beditor.editor("""# Temperature Conversion
 # Temperature Conversion
 '''
 C to F: Celsius to Fahrenheit Conversion Formula. To convert temperatures in degrees Celsius to Fahrenheit, multiply by 1.8 (or 9/5) and add 32.
-
 To convert temperatures in degrees Fahrenheit to Celsius, subtract 32 and multiply by .5556 (or 5/9).
-
 Fahrenheit = Celsius*9/5 + 32
-
 Celsium = (Fahrenheit - 32)*5/9
 '''
 from browser import document, html
 brython_div = document["brython_div"]
-
 def c2f(c):
     f = round(c*9/5 + 32, 3)
     return "Celsiusc: "+ str(c) +         " degrees = Fahrenheit: " + str(f) + " degrees"
@@ -1162,7 +1074,6 @@ import beditor
 Guess = beditor.editor("""# 猜數字遊戲
 from browser import document, html, alert
 import random
-
 # 跳出文字說明視窗
 alert("開始玩猜數字遊戲")
 # 利用 random 模組中的 randint 取 1~100 間的亂數
@@ -1181,7 +1092,6 @@ while 標準答案 != 你猜的數字:
     你猜的數字 = int(input("請輸入您所猜 1~100 間的整數:"))
     # 猜測次數累加
     猜測次數 += 1
-
 # 跳出迴圈表示猜對, 給出最後文字說明視窗
 alert("猜對了！答案為" + str(標準答案) + ", 總共猜了" + str(猜測次數) + "次")
 """, "kw_editor", "kw_console", "kw__container", "kw_py_src")
@@ -1201,7 +1111,6 @@ from browser import document, html, alert
 import random
  
 id4 = document["brython_div"]
-
 執行次數 = 100
 總猜測次數 = 0
 for i in range(執行次數):
@@ -1230,11 +1139,9 @@ for i in range(執行次數):
         #pc猜的數字 = int(input("請輸入您所猜的整數:"))
         pc猜的數字 = random.randint(下限, 上限)
         猜測次數 += 1
-
     #print("猜對了！總共猜了", 猜測次數, "次")
     id4 <= "電腦猜對了, 答案為: " + str(標準答案) + ", 總共猜了 "+ str(猜測次數) + "次" + html.BR()
     總猜測次數 += 猜測次數
-
 平均猜測次數 = int(總猜測次數/執行次數)
 #print("平均次數", 平均猜測次數)
 id4 <= "平均次數: " + str(平均猜測次數)
@@ -1254,13 +1161,11 @@ Lottery = beditor.editor("""# 大樂透電腦選號
 # lottery
 from browser import document, html, alert
 import random
-
 try:
     total = int(input("請問要出幾張大樂透彩卷號碼?"))
 except:
     alert("請輸入要選擇大樂透電腦選號數量的'整數'")
     total = int(input("請問要出幾張大樂透彩卷號碼?"))
-
 # 準備將電腦選出的號碼, 輸出到內定 id="brython_div" 的標註區域
 output_div = document["brython_div"]
 output_div <= "以下將出 " + str(total) + " 張電腦選號彩卷:" + html.BR()
@@ -1286,13 +1191,11 @@ Weleadlottery = beditor.editor("""# 威力彩電腦選號
 # weleadlottery
 from browser import document, html, alert
 import random
-
 try:
     total = int(input("請問要出幾張威力彩卷號碼?"))
 except:
     alert("請輸入要選擇威力彩電腦選號數量的'整數'")
     total = int(input("請問要出幾張威力彩卷號碼?"))
-
 # 準備將電腦選出的號碼, 輸出到內定 id="brython_div" 的標註區域
 output_div = document["brython_div"]
 output_div <= "以下將出 " + str(total) + " 張威力彩電腦選號彩卷:" + html.BR()
@@ -1319,12 +1222,10 @@ import beditor
 Bezier = beditor.editor("""# Cango Bezier 繪圖
 from browser import window, html
 from browser import document as doc
-
 canvas = html.CANVAS(width = 600, height = 400)
 canvas.id = "canvas"
 brython_div = doc["brython_div"]
 brython_div <= canvas
-
 # Javascript 物件
 cango = window.Cango.new
 path = window.Path.new
@@ -1337,7 +1238,6 @@ g1.clearCanvas()
 g1.gridboxPadding(10, 10, 5, 7)
 g1.fillGridbox("lightgreen")
 g1.setWorldCoordsRHC(-100, -100, 400)
-
 x1 = 40
 y1 = 20
 cx1 = 90
@@ -1350,25 +1250,21 @@ cx3 = 150
 cy3 = 120
 x3 = 180
 y3 = 60
-
 def dragC1(mousePos):
     global cx1, cy1
     cx1 = mousePos.x
     cy1 = mousePos.y
     drawCurve()
-
 def dragC2(mousePos):
     global cx2, cy2
     cx2 = mousePos.x
     cy2 = mousePos.y
     drawCurve()
-
 def dragC3(mousePos):
     global cx3, cy3
     cx3 = mousePos.x
     cy3 = mousePos.y
     drawCurve()
-
 def drawCurve():
     qbez = path(['M', x1, y1, 'Q', cx1, cy1, x2, y2], {
       'strokeColor':'blue'})
@@ -1388,20 +1284,15 @@ def drawCurve():
     c3.transform.translate(cx3, cy3)
     grp = group(qbez, cbez, L1, L2, L3, c1, c2, c3)
     g1.render(grp, True)
-
 g1.clearCanvas("lightyellow")
 g1.deleteAllLayers()
 g1.setWorldCoordsRHC(0, 0, 200)
-
 c1 = shape(shapedefs.circle(6), {'fillColor':'red'})
 c1.enableDrag(None, dragC1, None)
-
 c2 = shape(shapedefs.circle(6), {'fillColor':'red'})
 c2.enableDrag(None, dragC2, None)
-
 c3 = shape(shapedefs.circle(6), {'fillColor':'red'})
 c3.enableDrag(None, dragC3, None);
-
 drawCurve()
 """, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 # id 為 "bezier" 的按鈕點按時, 執行 Bezier 物件中的 prog 方法
@@ -1423,14 +1314,11 @@ turtle.set_defaults(
     turtle_canvas_wrapper = doc['brython_div']
 )
 t = turtle.Turtle()
-
 t.width(5)
-
 for c in ['red', '#00ff00', '#fa0', 'rgb(0,0,200)']:
     t.color(c)
     t.forward(100)
     t.left(90)
-
 # dot() and write() do not require the pen to be down
 t.penup()
 t.goto(-30, -100)
@@ -1439,11 +1327,9 @@ t.goto(30, -100)
 t.dot(40, 'rgba(0, 255, 0, 0.5')
 t.goto(0, -70)
 t.dot(40, 'rgba(0, 0, 255, 0.5')
-
 t.goto(0, 125)
 t.color('purple')
 t.write("這就是 Brython, 網頁上的 Python", font=("Arial", 15, "normal"))
-
 turtle.done()
 """, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 # id 為 "turtle1" 的按鈕點按時, 執行 Turtle1 物件中的 prog 方法
@@ -1464,7 +1350,6 @@ turtle.set_defaults(
     turtle_canvas_wrapper = doc['brython_div']
 )
 star = turtle.Turtle()
-
 for i in range(5):
     star.forward(250)
     star.right(144)
@@ -1490,9 +1375,7 @@ turtle.set_defaults(
     turtle_canvas_wrapper = doc['brython_div']
 )
 painter = turtle.Turtle()
-
 painter.pencolor("blue")
-
 for i in range(50):
     painter.forward(50)
     painter.left(123) # Let's go counterclockwise this time 
@@ -1525,15 +1408,12 @@ turtle.set_defaults(
 )
 # 輸入 "turtle" 字串, 表示要使用內建的烏龜圖示
 t = turtle.Turtle("turtle")
-
 # 設定繪圖尺寸
 screen_x = 500-20
 screen_y = 300
-
 # 提筆, 將烏龜移動到畫布中心
 t.penup()
 t.home()
-
 # 內定方向為右, 前進 screen_x/2
 t.forward(screen_x / 2)
 # 將方向往右轉 90 度
@@ -1542,7 +1422,6 @@ t.right(90)
 t.forward(screen_y / 2)
 # 令烏龜方向轉絕對角度 180, 等同轉相對角度 90 度, 即 t.right(90)
 t.setheading(180)
-
 # 將畫筆顏色設為紅色
 t.pencolor('red')
 # 下筆準備繪圖
@@ -1557,7 +1436,6 @@ t.pensize(10)
 for distance in (screen_x, screen_y, screen_x, screen_y):
     t.forward(distance)
     t.right(90)
-
 # 提筆後, 將烏龜轉回內定方向回到畫布中心
 t.penup()
 t.home()
@@ -1586,54 +1464,38 @@ turtle.set_defaults(
 t = turtle.Turtle("turtle")
 t.speed(1)
 t.forward(50)
-
 print("Should be (50, 0):", t.position())
 print("Should be 50: ", t.xcor())
 print("Should be 0: ", t.ycor())
-
 t.left(90)
 t.color("blue")
 t.speed(2)
 t.fd(50)
-
 print("Should be (50, 50):", t.pos())
 print("Should be 225: ", t.towards(0, 0))
 print("Should be 90: ", t.heading())
 print("Should be approximately 71:", t.distance(0, 0))
-
 # Draw the same square in three different angle modes
 t.width(4)
-
 print("Drawing using degrees - the default")
 print("Heading should be 90: ", t.heading())
-
 for i in range(4):
     t.forward(100)
     t.left(90)
-
 print("Drawing using radians")
-
 t.radians()
-
 print("Heading should be pi/2: ", t.heading())
-
 for i in range(4):
     t.forward(100)
     t.left(math.pi/2)
-
 print("Drawing using gradients")
-
 t.degrees(400)
-
 print("Heading should be 100: ", t.heading())
-
 for i in range(4):
     t.forward(100)
     t.left(100)
-
 t.degrees()
 t.width(1)
-
 t.lt(90)
 t.color("orange")
 t.backward(50)
@@ -1645,7 +1507,6 @@ t.color("red")
 t.bk(50)
 t.stamp()
 t.speed(4)
-
 t.color("black", "white")
 t.goto(-100, 100)
 t.stamp()
@@ -1655,31 +1516,26 @@ t.stamp()
 t.color("green", "white")
 t.setpos(100, 100)
 t.stamp()
-
 t.speed(10)
 t.color("orange")
 t.sety(-100)
 t.setx(-100)
 t.stamp()
-
 t.color("cyan")
 t.home()
 t.stamp()
-
 t.color("green")
 t.width(4)
 t.setheading(180)
 t.forward(150)
 t.seth(90)
 t.fd(20)
-
 t.dot(30, "rgba(255, 0, 0, 0.2)")
 t.color("red")
 t.speed(0)
 t.forward(30)
 t.left(90)
 t.circle(30)
-
 turtle.done()
 """, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 # id 為 "turtle5" 的按鈕點按時, 執行 Turtle5 物件中的 prog 方法
@@ -1700,10 +1556,8 @@ import math
 turtle.set_defaults(
     turtle_canvas_wrapper = doc['brython_div']
 )
-
 t = turtle.Turtle("turtle")
 t.speed(10)
-
 colors = ['red', 'purple', 'blue', 'green', 'orange']
 for x in range(150):
     t.pencolor(colors[x % 5])
@@ -1730,12 +1584,9 @@ import math
 turtle.set_defaults(
     turtle_canvas_wrapper = doc['brython_div']
 )
-
 screen=turtle.Screen()    #making a canvas for drawing
 screen.bgcolor('black')    #making canvas black
-
 trtl=turtle.Turtle()  #making a turtle
-
 trtl.pencolor('red')    #making colour of the pen red
 trtl.pensize(5)    #choosing the size of pen nib 
 trtl.speed(10)    #choosing the speed of drawing
@@ -1773,7 +1624,6 @@ turtle.set_defaults(
 )
 wn = turtle.Screen() 
 wn.bgcolor("black") 
-
 skk = turtle.Turtle() 
 skk.speed(10)
 skk.shape("circle")
@@ -1808,10 +1658,8 @@ import beditor
 Konva1 = beditor.editor("""# Konva1 繪圖
 # 引用 https://konvajs.github.io/ 繪圖
 from browser import document, html, window
-
 width = 600
 height = 400
-
 konva = window.Konva
 # Konva 必須在 canvas 繪圖, 從上方設定,  canvas id 為 "container"
 stage = konva.Stage.new({
@@ -1819,11 +1667,9 @@ stage = konva.Stage.new({
         "width": width,
         "height": height
     })
-
 layer = konva.Layer.new()
 rectX = stage.getWidth() / 2 - 50
 rectY = stage.getHeight() / 2 - 25
-
 box = konva.Rect.new({
         "x": rectX,
         "y": rectY,
@@ -1834,17 +1680,14 @@ box = konva.Rect.new({
         "strokeWidth": 4,
         "draggable": True
     })
-
 def f1():
     document.body.style.cursor = 'pointer'
     
 def f2():
     document.body.style.cursor = 'default'
-
 # add cursor styling
 box.on('mouseover', f1())
 box.on('mouseout', f2())
-
 layer.add(box)
 stage.add(layer)
 """, "kw_editor", "kw_console", "kw__container", "kw_py_src")
@@ -1861,7 +1704,6 @@ from browser import document as doc
 import beditor
 Ycqsort = beditor.editor("""# Ycombinator quicksort example
 Y = lambda f: lambda *args: f(Y(f))(*args)
-
 quicksort = Y(lambda f:
     lambda x: (
         f([item for item in x if item < x[0]])
@@ -1896,7 +1738,8 @@ from ggame import (
 )
 from browser import document as doc
 from browser import html
-
+# for site variable to check socket.gethostname() for image file location
+import socket
 # 引入既有的id="graphics-column" 標註
 graphics_column = doc["graphics-column"]
 # 建立內定名稱為 "ggame-canvas" 的 canvas 標註
@@ -1904,11 +1747,9 @@ canvas = html.CANVAS(width = 600, height = 100)
 canvas.id = "ggame-canvas"
 # 將 canvas 插入 gc 標註中
 graphics_column <= canvas
-
 # reverse - change the ball direction
 def reverse(b):
     b.direction *= -1
-
 # Set up function for handling screen refresh
 def step():
     if ball.go:
@@ -1916,7 +1757,6 @@ def step():
         if ball.x + ball.width > myapp.width or ball.x < 0:
             ball.x -= ball.direction
             reverse(ball)
-
 myapp = App()
 # Three primary colors with no transparency (alpha = 1.0)
 red = Color(0xff0000, 1.0)
@@ -1930,7 +1770,13 @@ noline = LineStyle(0, black)
 # a rectangle asset and sprite to use as background
 bg_asset = RectangleAsset(canvas.width, canvas.height, noline, green)
 bg = Sprite(bg_asset, (0,0))
-ball_asset = ImageAsset("/images/orb-150545_640.png")
+# when work with dynamic site
+if socket.gethostname() == "localhost":
+    site = ""
+else:
+    # when work with remote site
+    site="./.."
+ball_asset = ImageAsset(site+"/images/orb-150545_640.png")
 ball = Sprite(ball_asset, (0, 0))
 # Original image is too big. Scale it to 1/10 its original size
 ball.scale = 0.1
@@ -1944,13 +1790,605 @@ doc["ball"].bind('click', Ball.prog)
 </script>
 </p>
 <!-- ball ends -->
-<p><button id="keyword">Keyword</button><button id="ex1">Ex1</button><button id="ex2">Ex2</button><button id="ex3">Ex3</button><button id="ex4">Ex4</button><button id="forloop">Ex5</button><button id="guess">Guess</button><button id="autoguess">Autoguess</button><button id="lottery">大樂透</button><button id="weleadlottery">威力彩</button><button id="temp">Temp</button><button id="draw">Draw</button><button id="flag">Flag</button><button id="bezier">Bezier</button><button id="turtle1">Turtle1</button><button id="turtle2">Turtle2</button><button id="turtle3">Turtle3</button><button id="turtle4">Turtle4</button><button id="turtle5">Turtle5</button><button id="turtle6">Turtle6</button><button id="turtle7">Turtle7</button><button id="turtle8">Turtle8</button><button id="konva1">Konva1</button><button id="bunny">Bunny</button><button id="ball">Ball</button><button id="spur">Spur</button><button id="ycqsort">Ycqsort</button><button id="clear">Clear</button></p>
+<p></p>
+<!-- nfulist starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Nfulist = beditor.editor("""# nfulist
+url = "https://nfulist.herokuapp.com/?semester=1092&courseno=2384&column=True"
+data = open(url).read()
+print(data)
+'''
+2021 spring:
+0741 1a
+0764 2a
+0776 2b
+2384 5j
+'''
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "nfulist" 的按鈕點按時, 執行 Nfulist 物件中的 prog 方法
+doc["nfulist"].bind('click', Nfulist.prog)
+</script>
+</p>
+<!-- nfulist ends -->
+<p></p>
+<!-- clock1 starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Clock1 = beditor.editor("""# clock1 in Brython
+'''Code for the clock'''
+# Line drawing
+# 導入 doc
+from browser import document as doc
+from browser import html
+import math
+import time
+import browser.timer
+canvas = html.CANVAS(width = 300, height = 200)
+canvas.id = "line_drawing"
+brython_div = doc["brython_div"]
+brython_div <= canvas
+# 準備繪圖畫布
+canvas = doc["line_drawing"]
+ctx = canvas.getContext("2d")
+
+sin, cos = math.sin, math.cos
+width, height = 200, 200 # canvas dimensions
+ray = 100 # clock ray
+
+background = "SteelBlue"
+digits = "#fff"
+border = "blue"
+
+def needle(angle, r1, r2):
+    '''Draw a needle at specified angle in specified color.
+    r1 and r2 are percentages of clock ray.
+    '''
+    x1 = width / 2 - ray * cos(angle) * r1
+    y1 = height / 2 - ray * sin(angle) * r1
+    x2 = width / 2 + ray * cos(angle) * r2
+    y2 = height / 2 + ray * sin(angle) * r2
+    ctx.beginPath()
+    ctx.strokeStyle = "#fff"
+    ctx.moveTo(x1, y1)
+    ctx.lineTo(x2, y2)
+    ctx.stroke()
+
+def set_clock():
+    # erase clock
+    ctx.beginPath()
+    ctx.fillStyle = background
+    ctx.arc(width / 2, height / 2, ray * 0.89, 0, 2 * math.pi)
+    ctx.fill()
+
+    # redraw hours
+    show_hours()
+
+    # print day
+    now_time = time.time()
+    now = time.localtime(now_time)
+    microsecs = now_time - int(now_time)
+    day = now.tm_mday
+    ctx.font = "bold 14px Arial"
+    ctx.textAlign = "center"
+    ctx.textBaseline = "middle"
+    ctx.fillStyle = "#000"
+    ctx.fillText(day, width * 0.7, height * 0.5)
+
+    # draw needles for hour, minute, seconds
+    ctx.lineWidth = 2
+    hour = now.tm_hour % 12 + now.tm_min / 60
+    angle = hour * 2 * math.pi / 12 - math.pi / 2
+    needle(angle, 0.05, 0.45)
+    minute = now.tm_min
+    angle = minute * 2 *math.pi / 60 - math.pi / 2
+    needle(angle, 0.05, 0.7)
+    ctx.lineWidth = 1
+    second = now.tm_sec + microsecs
+    angle = second * 2 * math.pi / 60 - math.pi / 2
+    needle(angle, 0.05, 0.8)
+
+def show_hours():
+    ctx.beginPath()
+    ctx.arc(width / 2, height / 2, ray * 0.05, 0, 2 * math.pi)
+    ctx.fillStyle = digits
+    ctx.fill()
+    for i in range(1, 13):
+        angle = i * math.pi / 6 - math.pi / 2
+        x3 = width / 2 + ray * cos(angle) * 0.82
+        y3 = height / 2 + ray * sin(angle) * 0.82
+        ctx.font = "18px Arial"
+        ctx.textAlign = "center"
+        ctx.textBaseline = "middle"
+        ctx.fillText(i, x3, y3)
+    # cell for day
+    ctx.fillStyle = "#fff"
+    ctx.fillRect(width * 0.65, height * 0.47, width * 0.1, height * 0.06)
+
+    ctx.beginPath()
+ctx.arc(width / 2, height / 2, ray, 0, 2 * math.pi)
+ctx.fillStyle = background
+ctx.fill()
+
+browser.timer.set_interval(set_clock, 100)
+show_hours()
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "clock1" 的按鈕點按時, 執行 Clock1 物件中的 prog 方法
+doc["clock1"].bind('click', Clock1.prog)
+</script>
+</p>
+<!-- clock1 ends -->
+<p></p>
+<!-- fourbar linkage starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Fourbar= beditor.editor("""# Fourbar Linkage Simulation
+from browser import document, html
+import math
+import time
+import browser.timer
+ 
+class Coord(object):
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+ 
+    def __sub__(self,other):
+        # This allows you to substract vectors
+        return Coord(self.x-other.x,self.y-other.y)
+ 
+    def __repr__(self):
+        # Used to get human readable coordinates when printing
+        return "Coord(%f,%f)"%(self.x,self.y)
+ 
+    def length(self):
+        # Returns the length of the vector
+        return math.sqrt(self.x**2 + self.y**2)
+ 
+    def angle(self):
+        # Returns the vector's angle
+        return math.atan2(self.y,self.x)
+ 
+def normalize(coord):
+    return Coord(
+        coord.x/coord.length(),
+        coord.y/coord.length()
+        )
+ 
+def perpendicular(coord):
+    # Shifts the angle by pi/2 and calculate the coordinates
+    # using the original vector length
+    return Coord(
+        coord.length()*math.cos(coord.angle()+math.pi/2),
+        coord.length()*math.sin(coord.angle()+math.pi/2)
+        )
+ 
+# 點類別
+class Point(object):
+    # 起始方法
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+ 
+    # 繪製方法
+    def drawMe(self, g, r):
+        self.g = g
+        self.r = r
+        self.g.save()
+        self.g.moveTo(self.x,self.y)
+        self.g.beginPath()
+        # 根據 r 半徑繪製一個圓代表點的所在位置
+        self.g.arc(self.x, self.y, self.r, 0, 2*math.pi, True)
+        self.g.moveTo(self.x,self.y)
+        self.g.lineTo(self.x+self.r, self.y)
+        self.g.moveTo(self.x, self.y)
+        self.g.lineTo(self.x-self.r, self.y)
+        self.g.moveTo(self.x, self.y)
+        self.g.lineTo(self.x, self.y+self.r)
+        self.g.moveTo(self.x, self.y)
+        self.g.lineTo(self.x, self.y-self.r)
+        self.g.restore()
+        self.g.stroke()
+ 
+    # 加入 Eq 方法
+    def Eq(self, pt):
+        self.x = pt.x
+        self.y = pt.y
+ 
+    # 加入 setPoint 方法
+    def setPoint(self, px, py):
+        self.x = px
+        self.y = py
+ 
+    # 加上 distance(pt) 方法, 計算點到 pt 的距離
+    def distance(self, pt):
+        self.pt = pt
+        x = self.x - self.pt.x
+        y = self.y - self.pt.y
+        return math.sqrt(x * x + y * y)
+ 
+    # 利用文字標示點的座標位置
+    def tag(self, g):
+        self.g = g
+        self.g.beginPath()
+        self.g.fillText("%d, %d"%(self.x, self.y),self.x, self.y)
+        self.g.stroke()
+ 
+ 
+# Line 類別物件
+class Line(object):
+ 
+    # 起始方法
+    def __init__(self, p1, p2):
+        self.p1 = p1
+        self.p2 = p2
+        # 直線的第一點, 設為線尾
+        self.Tail = self.p1
+        # 直線組成的第二點, 設為線頭
+        self.Head = self.p2
+        # 直線的長度屬性
+        self.length = math.sqrt(math.pow(self.p2.x-self.p1.x, 2)+math.pow(self.p2.y-self.p1.y,2))
+ 
+    # setPP 以指定頭尾座標點來定義直線
+    def setPP(self, p1, p2):
+        self.p1 = p1
+        self.p2 = p2
+        self.Tail = self.p1
+        self.Head = self.p2
+        self.length = math.sqrt(math.pow(self.p2.x-self.p1.x, 2)+math.pow(self.p2.y-self.p1.y,2))
+ 
+    # setRT 方法 for Line, 應該已經確定 Tail 點, 然後以 r, t 作為設定 Head 的參考
+    def setRT(self, r, t):
+        self.r = r
+        self.t = t
+        x = self.r * math.cos(self.t)
+        y = self.r * math.sin(self.t)
+        self.Tail.Eq(self.p1)
+        self.Head.setPoint(self.Tail.x + x,self.Tail.y + y)
+ 
+    # getR 方法 for Line
+    def getR(self):
+        # x 分量與 y 分量
+        x = self.p1.x - self.p2.x
+        y = self.p1.y - self.p2.y
+        return math.sqrt(x * x + y * y)
+ 
+    # 根據定義 atan2(y,x), 表示 (x,y) 與 正 x 軸之間的夾角, 介於 pi 與 -pi 間
+    def getT(self):
+        x = self.p2.x - self.p1.x
+        y = self.p2.y - self.p1.y
+        if (math.fabs(x) < math.pow(10,-100)):
+            if(y < 0.0):
+                return (-math.pi/2)
+            else:
+                return (math.pi/2)
+        else:
+            return math.atan2(y, x)
+ 
+    # setTail 方法 for Line
+    def setTail(self, pt):
+        self.pt = pt
+        self.Tail.Eq(pt)
+        self.Head.setPoint(self.pt.x + self.x, self.pt.y + self.y)
+ 
+    # getHead 方法 for Line
+    def getHead(self):
+        return self.Head
+ 
+    def getTail(self):
+        return self.Tail
+ 
+    def drawMe(self, g):
+        self.g = g
+        self.g.beginPath()
+        self.g.moveTo(self.p1.x,self.p1.y)
+        self.g.lineTo(self.p2.x,self.p2.y)
+        self.g.stroke()
+ 
+    def test(self):
+        return ("this is pure test to Inherit")
+ 
+ 
+class Link(Line):
+    def __init__(self, p1, p2):
+        self.p1 = p1
+        self.p2 = p2
+        self.length = math.sqrt(math.pow((self.p2.x - self.p1.x), 2) + math.pow((self.p2.y - self.p1.y), 2))
+ 
+    #g context
+    def drawMe(self, g):
+        self.g = g
+        hole = 5
+        radius = 10
+        length = self.getR()
+        # alert(length)
+        # 儲存先前的繪圖狀態
+        self.g.save()
+        self.g.translate(self.p1.x,self.p1.y)
+        #alert(str(self.p1.x)+","+str(self.p1.y))
+        #self.g.rotate(-((math.pi/2)-self.getT()))
+        self.g.rotate(-math.pi*0.5 + self.getT())
+        #alert(str(self.getT()))
+        #self.g.rotate(10*math.pi/180)
+        #this.g.rotate(-(Math.PI/2-this.getT()));
+        # 必須配合畫在 y 軸上的 Link, 進行座標轉換, 也可以改為畫在 x 軸上...
+        self.g.beginPath()
+        self.g.moveTo(0,0)
+        self.g.arc(0, 0, hole, 0, 2*math.pi, True)
+        self.g.stroke()
+        self.g.moveTo(0,length)
+        self.g.beginPath()
+        self.g.arc(0,length, hole, 0, 2*math.pi, True)
+        self.g.stroke()
+        self.g.moveTo(0,0)
+        self.g.beginPath()
+        self.g.arc(0,0, radius, 0, math.pi, True)
+        self.g.moveTo(0+radius,0)
+        self.g.lineTo(0+radius,0+length)
+        self.g.stroke()
+        self.g.moveTo(0,0+length)
+        self.g.beginPath()
+        self.g.arc(0, 0+length, radius, math.pi, 0, True)
+        self.g.moveTo(0-radius,0+length)
+        self.g.lineTo(0-radius,0)
+        self.g.stroke()
+        self.g.restore()
+        '''
+        self.g.beginPath()
+        self.g.fillStyle = "red"
+        self.g.font = "bold 18px sans-serif"
+        self.g.fillText("%d, %d"%(self.p2.x, self.p2.y),self.p2.x, self.p2.y)
+        self.g.stroke()
+        '''
+ 
+class Triangle(object):
+    def __init__(self, p1, p2, p3):
+        self.p1 = p1
+        self.p2 = p2
+        self.p3 = p3
+ 
+    def getLenp3(self):
+        p1 = self.p1
+        ret = p1.distance(self.p2)
+        return ret
+ 
+    def getLenp1(self):
+        p2 = self.p2
+        ret = p2.distance(self.p3)
+        return ret
+ 
+    def getLenp2(self):
+        p1 = self.p1
+        ret = p1.distance(self.p3)
+        return ret
+ 
+    # 角度
+    def getAp1(self):
+        ret = math.acos(((self.getLenp2() * self.getLenp2() + self.getLenp3() * self.getLenp3()) - self.getLenp1() * self.getLenp1()) / (2* self.getLenp2() * self.getLenp3()))
+        return ret
+ 
+    #
+    def getAp2(self):
+        ret =math.acos(((self.getLenp1() * self.getLenp1() + self.getLenp3() * self.getLenp3()) - self.getLenp2() * self.getLenp2()) / (2* self.getLenp1() * self.getLenp3()))
+        return ret
+ 
+    def getAp3(self):
+        ret = math.acos(((self.getLenp1() * self.getLenp1() + self.getLenp2() * self.getLenp2()) - self.getLenp3() * self.getLenp3()) / (2* self.getLenp1() * self.getLenp2()))
+        return ret
+ 
+    def drawMe(self, g):
+        self.g = g
+        r = 5
+        # 繪出三個頂點
+        self.p1.drawMe(self.g,r)
+        self.p2.drawMe(self.g,r)
+        self.p3.drawMe(self.g,r)
+        line1 = Line(self.p1,self.p2)
+        line2 = Line(self.p1,self.p3)
+        line3 = Line(self.p2,self.p3)
+        # 繪出三邊線
+        line1.drawMe(self.g)
+        line2.drawMe(self.g)
+        line3.drawMe(self.g)
+ 
+    # ends Triangle def
+    # 透過三個邊長定義三角形
+    def setSSS(self, lenp3, lenp1, lenp2):
+        self.lenp3 = lenmidpt = Point(0, 0)
+        self.lenp1 = lenp1
+        self.lenp2 = lenp2
+        self.ap1 = math.acos(((self.lenp2 * self.lenp2 + self.lenp3 * self.lenp3) - self.lenp1 * self.lenp1) / (2* self.lenp2 * self.lenp3))
+        self.ap2 = math.acos(((self.lenp1 * self.lenp1 + self.lenp3 * self.lenp3) - self.lenp2 * self.lenp2) / (2* self.lenp1 * self.lenp3))
+        self.ap3 = math.acos(((self.lenp1 * self.lenp1 + self.lenp2 * self.lenp2) - self.lenp3 * self.lenp3) / (2* self.lenp1 * self.lenp2))
+ 
+    # 透過兩個邊長與夾角定義三角形
+    def setSAS(self, lenp3, ap2, lenp1):
+        self.lenp3 = lenp3
+        self.ap2 = ap2
+        self.lenp1 = lenp1
+        self.lenp2 = math.sqrt((self.lenp3 * self.lenp3 + self.lenp1 * self.lenp1) - 2* self.lenp3 * self.lenp1 * math.cos(self.ap2))
+        #等於 SSS(AB, BC, CA)
+ 
+    def setSaSS(self, lenp2, lenp3, lenp1):
+        self.lenp2 = lenp2
+        self.lenp3 = lenp3
+        self.lenp1 = lenp1
+        if(self.lenp1 > (self.lenp2 + self.lenp3)):
+        #<CAB 夾角為 180 度, 三點共線且 A 介於 BC 之間
+            ret = math.pi
+        else :
+            # <CAB 夾角為 0, 三點共線且 A 不在 BC 之間
+            if((self.lenp1 < (self.lenp2 - self.lenp3)) or (self.lenp1 < (self.lenp3 - self.lenp2))):
+                ret = 0.0
+            else :
+            # 透過餘絃定理求出夾角 <CAB 
+                ret = math.acos(((self.lenp2 * self.lenp2 + self.lenp3 * self.lenp3) - self.lenp1 * self.lenp1) / (2 * self.lenp2 * self.lenp3))
+        return ret
+ 
+    # 取得三角形的三個邊長值
+    def getSSS(self):
+        temp = []
+        temp.append( self.getLenp1() )
+        temp.append( self.getLenp2() )
+        temp.append( self.getLenp3() )
+        return temp
+ 
+    # 取得三角形的三個角度值
+    def getAAA(self):
+        temp = []
+        temp.append( self.getAp1() )
+        temp.append( self.getAp2() )
+        temp.append( self.getAp3() )
+        return temp
+ 
+    # 取得三角形的三個角度與三個邊長
+    def getASASAS(self):
+        temp = []
+        temp.append(self.getAp1())
+        temp.append(self.getLenp1())
+        temp.append(self.getAp2())
+        temp.append(self.getLenp2())
+        temp.append(self.getAp3())
+        temp.append(self.getLenp3())
+        return temp
+    #2P 2L return mid P
+    def setPPSS(self, p1, p3, lenp1, lenp3):
+        temp = []
+        self.p1 = p1
+        self.p3 = p3
+        self.lenp1 = lenp1
+        self.lenp3 = lenp3
+ 
+        #bp3 is the angle beside p3 point, cp3 is the angle for line23, p2 is the output
+        line31 = Line(p3, p1)
+        self.lenp2 = line31.getR()
+        #這裡是求角3
+        ap3 = math.acos(((self.lenp1 * self.lenp1 + self.lenp2 * self.lenp2) - self.lenp3 * self.lenp3) / (2 * self.lenp1 * self.lenp2))
+        bp3 = line31.getT()
+        cp3 = bp3 - ap3
+        temp.append(p3.x + self.lenp1*math.cos(cp3))#p2.x
+        temp.append(p3.y + self.lenp1*math.sin(cp3))#p2.y
+        return temp
+ 
+def tag(g, p):
+    None
+ 
+midpt = Point(0, 0)
+tippt = Point(0, 0)
+contour = []
+# 執行繪圖流程, 注意 x, y 為 global variables
+def draw():
+    global theta, midpt, oldpt
+    context.clearRect(0, 0, canvas.width, canvas.height)
+    line1.drawMe(context)
+    line2.drawMe(context)
+    line3.drawMe(context)
+    #triangle1.drawMe(context)
+    #triangle2.drawMe(context)
+    theta += dx
+    p2.x = p1.x + line1.length*math.cos(theta*degree)
+    p2.y = p1.y - line1.length*math.sin(theta*degree)
+    p3.x, p3.y = triangle2.setPPSS(p2,p4,link2_len,link3_len)
+    # 計算垂直單位向量
+    a = Coord(p3.x, p3.y)
+    b = Coord(p2.x, p2.y)
+    normal = perpendicular(normalize(a-b))
+    midpt.x = (p2.x + p3.x)/2
+    midpt.y = (p2.y + p3.y)/2
+    tippt.x = midpt.x + 150*normal.x
+    tippt.y = midpt.y + 150*normal.y
+    if theta < 360:
+        contour.append((tippt.x, tippt.y))
+    context.beginPath()
+    context.moveTo(midpt.x, midpt.y)
+    context.lineTo(tippt.x, tippt.y)
+    # 利用 fillRect 繪製一個長寬各 1 單位的正方形
+    for i in range(len(contour)):
+        context.fillRect(contour[i][0], contour[i][1], 1, 1)
+    context.stroke()
+    #p1.tag(context)
+ 
+# 以上為相關函式物件的定義區
+# 全域變數
+# 幾何位置輸入變數
+x=10
+y=10
+r=10
+ 
+# 畫布與繪圖內容
+# 其他輸入變數
+theta = 0
+degree = math.pi/180.0
+dx = 2
+dy = 4
+ 
+#set p1.p2.p3.p4 position
+lift = 10
+p1 =  Point(150,100+lift)
+p2 =  Point(150,200+lift)
+p3 =  Point(300,300+lift)
+p4 =  Point(350,100+lift)
+ 
+#accord position create link
+line1 =  Link(p1,p2)
+line2 =  Link(p2,p3)
+line3 =  Link(p3,p4)
+line4 =  Link(p1,p4)
+line5 =  Link(p2,p4)
+ 
+link2_len = p2.distance(p3)
+link3_len = p3.distance(p4)
+ 
+#link2_len = line1.getR()
+#link3_len = line3.getR()
+#alert(str(link2_len)+','+str(link3_len))
+ 
+triangle1 =  Triangle(p1,p2,p4)
+triangle2 =  Triangle(p2,p3,p4)
+ 
+# 視窗載入時執行內容
+# 繪圖畫布設定
+
+canvas = html.CANVAS(width = 600, height = 450)
+canvas.id = "line_drawing"
+brython_div = document["brython_div"]
+brython_div <= canvas
+# 準備繪圖畫布
+canvas = document["line_drawing"]
+context = canvas.getContext("2d")
+ 
+# 座標轉換, 移動 canvas.height 並且 y 座標變號, 也就是將原點座標移到畫面左下角
+context.translate(0,canvas.height)
+context.scale(1,-1)
+ 
+#以間隔 20 micro seconds 重複呼叫 draw()
+browser.timer.set_interval(draw,20)
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "fourbar" 的按鈕點按時, 執行 Fourbar 物件中的 prog 方法
+doc["fourbar"].bind('click', Fourbar.prog)
+</script>
+</p>
+<!-- fourbar linkage ends -->
+<p><button id="keyword">Keyword</button><button id="ex1">Ex1</button><button id="ex2">Ex2</button><button id="ex3">Ex3</button><button id="ex4">Ex4</button><button id="forloop">Ex5</button><button id="guess">Guess</button><button id="autoguess">Autoguess</button><button id="lottery">大樂透</button><button id="weleadlottery">威力彩</button><button id="temp">Temp</button><button id="draw">Draw</button><button id="flag">Flag</button><button id="bezier">Bezier</button><button id="clock1">clock1</button><button id="fourbar">Fourbar</button><button id="turtle1">Turtle1</button><button id="turtle2">Turtle2</button><button id="turtle3">Turtle3</button><button id="turtle4">Turtle4</button><button id="turtle5">Turtle5</button><button id="turtle6">Turtle6</button><button id="turtle7">Turtle7</button><button id="turtle8">Turtle8</button><button id="konva1">Konva1</button><button id="bunny">Bunny</button><button id="ball">Ball</button><button id="spur">Spur</button><button id="ycqsort">Ycqsort</button><button id="nfulist">nfulist</button><button id="clear">Clear</button></p>
 <h4>參考資料:</h4>
 <p><a href="/downloads/turtle_intro.pdf">turtle_intro.pdf</a></p>
 <p><a href="/downloads/turtle_intro2.pdf">turtle_intro2.pdf</a></p>
-<p>其他擷取程式的方式: <a href="http://mde.tw/2017springvcp/blog/web-based-python.html">http://mde.tw/2017springvcp/blog/web-based-python.html</a> </p><h2>Bootstrap</h2>
-<h2>Fengari-Web</h2>
-<p><a href="https://github.com/fengari-lua/fengari-web">https://github.com/fengari-lua/fengari-web</a> </p><h1>Design</h1><h2>Onshape</h2>
+<p>其他擷取程式的方式: <a href="http://mde.tw/2017springvcp/blog/web-based-python.html">http://mde.tw/2017springvcp/blog/web-based-python.html</a></p><h2>Bootstrap</h2>
+<p><a href="https://getbootstrap.com/">https://getbootstrap.com/</a> </p><h2>Fengari-Web</h2>
+<p><a href="https://github.com/fengari-lua/fengari-web">https://github.com/fengari-lua/fengari-web</a> </p>
+<p>網際 Lua 解譯: <a href="http://mde.tw/lab/downloads/lua/index.html">http://mde.tw/lab/downloads/lua/index.html</a></p>
+<p>SciTE 編輯器中的 Lua.properties 設定:</p>
+<p>選擇利用 y:\lua-5.4.3\luac 與 lua 編譯或解譯 .lua 程式檔案.</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">command.compile.*.lua=y:\lua-5.4.3\luac -o "$(FileName).luc" "$(FileNameExt)"
+# Lua 5.1
+command.go.*.lua=y:\lua-5.4.3\lua "$(FileNameExt)"</pre>
+<p></p><h1>Design</h1><h2>Onshape</h2>
 <h2>Solvespace</h2>
 <h2>FreeCAD</h2>
 <h2>Blender</h2><h1>Simulation</h1><h2>V-rep</h2>
