@@ -4,7 +4,6 @@
         <meta charset="utf-8">
 <meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
@@ -35,9 +34,11 @@
         <script src="tipuesearch_content.js"></script>
         <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
         <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
-        <!-- for Wink3 -->
+        <!-- for Wink3 客製化關閉 -->
+        <!--
         <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
         <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
         <script>
             /* original tipuesearch
             $(document).ready(function() {
@@ -67,6 +68,8 @@
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushWbt.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
@@ -92,7 +95,7 @@ img.add_border {
 
 </head>
 <body>
-<div class='container-fluid'><nav>
+<div class='container'><nav>
         
     <div class="site-wrap">
 
@@ -106,7 +109,7 @@ img.add_border {
     </div>
     
             <header class="site-navbar py-4 bg-white" role="banner">
-              <div class="container-fluid">
+              <div class="container">
                 <div class="row align-items-center">
                 <h1>lab.cycu.org</h1>
                 <div class="pl-4">
@@ -123,12 +126,12 @@ img.add_border {
     <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
                         <li class="active has-children"><a href="index.html">Home</a>
                         <ul class="dropdown">
-                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="sitemap.html">SMap</a></li>
                             <li><a href="./../reveal/index.html">reveal</a></li>
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='CK Design.html'>CK Design</a><ul class='dropdown'><li><a href='Design Synthesis.html'>Design Synthesis</a><li><a href='Math.html'>Math</a><li><a href='Pfaffians.html'>Pfaffians</a></li></ul><li class='has-children'><a href='Front-End.html'>Front-End</a><ul class='dropdown'><li><a href='Javascript.html'>Javascript</a><li class='has-children'><a href='Brython.html'>Brython</a><ul class='dropdown'><li><a href='W12 demo.html'>W12 demo</a></li></ul><li><a href='Bootstrap.html'>Bootstrap</a><li><a href='Fengari-Web.html'>Fengari-Web</a></li></ul><li class='has-children'><a href='Design.html'>Design</a><ul class='dropdown'><li><a href='Onshape.html'>Onshape</a><li><a href='Solvespace.html'>Solvespace</a><li><a href='FreeCAD.html'>FreeCAD</a><li><a href='Blender.html'>Blender</a></li></ul><li class='has-children'><a href='Simulation.html'>Simulation</a><ul class='dropdown'><li><a href='V-rep.html'>V-rep</a><li><a href='Webots.html'>Webots</a><li><a href='Range.html'>Range</a></li></ul><li class='has-children'><a href='Realization.html'>Realization</a><ul class='dropdown'><li><a href='KLL3PP.html'>KLL3PP</a><li><a href='Foosball.html'>Foosball</a><li><a href='Publish.html'>Publish</a></li></ul><li class='has-children'><a href='Back-End.html'>Back-End</a><ul class='dropdown'><li><a href='Python.html'>Python</a><li><a href='Cython.html'>Cython</a><li><a href='Metaheuristics.html'>Metaheuristics</a><li><a href='Pyslvs.html'>Pyslvs</a><li><a href='Virtualbox.html'>Virtualbox</a><li><a href='Ubuntu.html'>Ubuntu</a></li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='MDE.html'>MDE</a></li></ul><li class='has-children'><a href='CK Design.html'>CK Design</a><ul class='dropdown'><li><a href='Design Synthesis.html'>Design Synthesis</a><li><a href='Math.html'>Math</a><li><a href='Pfaffians.html'>Pfaffians</a></li></ul><li class='has-children'><a href='Front-End.html'>Front-End</a><ul class='dropdown'><li><a href='Javascript.html'>Javascript</a><li><a href='Brython.html'>Brython</a><li><a href='Bootstrap.html'>Bootstrap</a><li><a href='Fengari-Web.html'>Fengari-Web</a></li></ul><li class='has-children'><a href='Design.html'>Design</a><ul class='dropdown'><li><a href='Simens_NX.html'>Simens_NX</a><li><a href='Onshape.html'>Onshape</a><li><a href='Solvespace.html'>Solvespace</a><li><a href='FreeCAD.html'>FreeCAD</a><li><a href='Blender.html'>Blender</a></li></ul><li class='has-children'><a href='Simulation.html'>Simulation</a><ul class='dropdown'><li><a href='Webots.html'>Webots</a><li><a href='CoppeliaSim.html'>CoppeliaSim</a></li></ul><li class='has-children'><a href='Realization.html'>Realization</a><ul class='dropdown'><li><a href='3D_Printer.html'>3D_Printer</a><li><a href='Publish.html'>Publish</a></li></ul><li class='has-children'><a href='Back-End.html'>Back-End</a><ul class='dropdown'><li><a href='Python.html'>Python</a><li><a href='Cython.html'>Cython</a><li><a href='Metaheuristics.html'>Metaheuristics</a><li><a href='Pyslvs.html'>Pyslvs</a><li><a href='Virtualbox.html'>Virtualbox</a><li><a href='Proxmox.html'>Proxmox</a><li><a href='Ubuntu.html'>Ubuntu</a></li>
                       </ul>
                 </nav>
               </div>
@@ -139,7 +142,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Foosball << <a href='Foosball.html'>Previous</a> <a href='Back-End.html'>Next</a> >> Back-End<br /><h1>Publish</h1>
+    <div id="tipue_search_content">3D_Printer << <a href='3D_Printer.html'>Previous</a> <a href='Back-End.html'>Next</a> >> Back-End<br /><h1>Publish</h1>
 <p>出版是內容管理過程中重要的一環,  無論是一段文句, 一個零組件, 一張圖片或影片, 在 html 網際環境編輯之後, 要如何轉為各種類比與數位的出版品格式, 就是此地要探討的重點.</p>
 <p>段落文字在網際環境可以利用 Html5 加上 css 或 bootstrap 等前端框架加以處理, 最終與圖片及影片或數學方程式, 可以透過 Pandoc 將 html 轉為  Markdown 之後, 再加上手工編輯處理後, 轉為 pdf 或其他數位格式.</p>
 <p>以下為相關處理工具:</p>
@@ -173,7 +176,7 @@ pandoc content.md --toc -V "CJKmainfont:SimSun" -V fontsize=12pt -V geometry:mar
 pandoc content.htm -t markdown -o content.md</pre>
 <p><a href="https://drive.google.com/open?id=1QAvznDroNgmUJ-m1cUJTJLo2LnmWJrLF">TinyTex and Pandoc.7z</a></p>
 <p><a href="https://drive.google.com/file/d/1MwkNevyG3yGkwhFVT_R-0svzp3Yy76Jt/view?usp=sharing">FreeCAD0.18.1.7z</a></p>
-<br />Foosball << <a href='Foosball.html'>Previous</a> <a href='Back-End.html'>Next</a> >> Back-End</div>
+<br />3D_Printer << <a href='3D_Printer.html'>Previous</a> <a href='Back-End.html'>Next</a> >> Back-End</div>
         
     <!-- footer -->
       <div class="container">

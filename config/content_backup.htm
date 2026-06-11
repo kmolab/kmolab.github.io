@@ -1,13 +1,26 @@
 <h1>About</h1>
-<p>這裡是 lab.cycu.org 知識管理與最佳化應用實驗室, Taiwan.</p>
+<p>這裡是 lab.cycu.org, Taiwan.</p>
 <p>倉儲: <a href="https://github.com/kmolab/kmolab.github.io">https://github.com/kmolab/kmolab.github.io</a></p>
-<p>聯繫: kmolab At mde Taiwan</p><h1>CK Design</h1>
+<p>聯繫: kmolab At mde Taiwan</p>
+<h2>MDE</h2>
+<p>Mission-Driven Education (使命驅動教育)</p>
+<p>使命驅動教育（Mission-Driven Education）是一種以特定願景、核心價值及社會目標為核心的教育理念。有別於傳統以考試或升學為主導的模式，教育方式強調培養學生對社會、環境及群體的責任感，讓學習成為實踐個人與團隊使命的過程。</p><h1>CK Design</h1>
 <p>Concept-Knowledge Design Theory</p>
 <p>概念與知識設計理論</p>
-<h4>還是留作紀念:</h4>
+<p>C-K Theory 的核心在於定義「概念 (Concept)」與「知識 (Knowledge)」的互動：</p>
+<p style="padding-left: 30px;">概念 (Concept)：存在於「未知的空間」，包含看似荒謬或不合邏輯的創新假設。</p>
+<p style="padding-left: 30px;">知識 (Knowledge)：存在於「已知的空間」，是可以被驗證、具備邏輯的既定事實。</p>
+<p>C-K Theory 在 AI 時代的三個關鍵優勢：</p>
+<p style="padding-left: 30px;">駕馭 AI 的擴散力：生成式 AI 擅長在「知識空間」中進行排列組合，但 C-K Theory 強調的「跨界概念映射 (Mapping)」能指導設計師向「未知空間」提問，避免陷入 AI 產生的平庸化設計。</p>
+<p style="padding-left: 30px;">確保系統的邏輯性：現代產品變得日益複雜，創新必須具備可追溯性與正當性。利用 C-K Theory，工程師能有邏輯地拆解並定義設計空間，引導 AI 進行「可解釋的」最佳化。</p>
+<p style="padding-left: 30px;">凸顯原創與意圖：AI 的執行速度極快，但在缺乏人類「意圖 (Intent)」的情況下，產出的多樣性往往缺乏靈魂。C-K Theory 能幫助創作者釐清真正的設計方向。</p>
+<h4>參考:</h4>
 <p style="padding-left: 30px;"><a href="https://en.wikipedia.org/wiki/C-K_theory">https://en.wikipedia.org/wiki/C-K_theory</a></p>
 <p style="padding-left: 30px;"><a href="https://www.ck-theory.org/">https://www.ck-theory.org/</a></p>
-<h2>Design Synthesis</h2>
+<p style="padding-left: 30px;">C-K 理論用於建構下一代 AI 的提示詞工程（Prompt Engineering）與 RAG（檢索增強生成）架構。</p>
+<p style="padding-left: 30px;">下列研究將 C-K 理論代入大語言模型的 Agents 架構中。證明 AI 可以自主執行 C-K 理論的邏輯封閉迴路(當概念在知識庫為假，則修改參數；當非真非假，則將其演變為全新概念空間)。這對自動化 AI 工業設計有指標性意義。</p>
+<p style="padding-left: 60px;"><a href="https://codesign.berkeley.edu/pdfs/papers/ma-ck-idetc.pdf">Simulating Design Theory Using LLM Agents: A Case Study Of C-K Theory</a></p>
+<p style="padding-left: 60px;">Ma, K., Brubaker, E. R., and Goucher-Lambert, K. (March 11, 2026). "Developing Design Theory Using Large Language Model Agents: A Case Study of C-K Theory." ASME. J. Mech. Des. July 2026; 148(7): 071402. <a href="https://doi.org/10.1115/1.4071235">https://doi.org/10.1115/1.4071235</a></p><h2>Design Synthesis</h2>
 <p>設計合成乃依據所需產品的特徵或功能, 進行概念創建或內容設計的流程.</p>
 <p>Design synthesis is the process of concept creation or content design based on the features or functions of the desired product.</p>
 <p>網際可程式化機械設計合成系統 (Web-based Programmable Mechanical Design Synthesis System)</p>
@@ -39,18 +52,23 @@
 print('The Square root of 0.3 =', BabylonianAlgorithm(0.3));</pre>
 <p></p>
 <!-- 導入 Brython 標準程式庫 -->
+<p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
+</p>
 <p></p>
 <!-- 啟動 Brython -->
+<p>
 <script>
 window.onload=function(){
 // 設定 data/py 為共用程式路徑
 brython({debug:1, pythonpath:['./../data/py']});
 }
 </script>
+</p>
 <div id="result"></div>
 <p><input id="n" type="text" value="0.5"/><br/> <button id="button">Set Input Number</button></p>
+<p>
 <script type="text/python3">
 from browser import html, document
 
@@ -75,6 +93,7 @@ def printOutput(e):
 
 document["button"].bind("click", printOutput)
 </script>
+</p>
 <p>上述巴比倫演算法解平方根程式碼:</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!-- 導入 Brython 標準程式庫 --&gt;
 &lt;script src="/static/brython.js"&gt;&lt;/script&gt;
@@ -170,26 +189,34 @@ window.onload=function(){
 brython({debug:1, pythonpath:['/static/','/./../downloads/py/']});
 }
 &lt;/script&gt;</pre>
+<p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
+</p>
 <!-- for ggame -->
+<p>
 <script src="/static/jquery-3.3.1.min.js"></script>
 <script src="/static/jquery-ui.1.12.1.min.js"></script>
 <script src="/static/pixi-3.0.5.min.js"></script>
 <script src="/static/buzz-1.2.1.js"></script>
 <script src="/static/bs.js"></script>
 <script src="/downloads/brython_modules.js"></script>
+</p>
 <!-- Cango 程式庫 -->
+<p>
 <script src="/static/Cango-13v08-min.js"></script>
 <script src="/static/CangoAxes-4v01-min.js"></script>
 <script src="/static/gearUtils-05.js"></script>
+</p>
 <!-- for Konva 程式庫 -->
+<p>
 <script src="/static/konva.min.js"></script>
 <script>
 window.onload=function(){
 brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 }
 </script>
+</p>
 <p><!-- 導入 FileSaver 與 filereader --></p>
 <p>
 <script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
@@ -2386,11 +2413,157 @@ doc["fourbar"].bind('click', Fourbar.prog)
 <p><a href="/downloads/turtle_intro.pdf">turtle_intro.pdf</a></p>
 <p><a href="/downloads/turtle_intro2.pdf">turtle_intro2.pdf</a></p>
 <p>其他擷取程式的方式: <a href="http://mde.tw/2017springvcp/blog/web-based-python.html">http://mde.tw/2017springvcp/blog/web-based-python.html</a></p>
+<h3>W12 demo</h3>
+<p><a href="/downloads/w12demo.txt">w12demo.txt</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details">ROC 國旗規格</a>.</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97#%E8%A7%84%E6%A0%BC">PROC 國旗規格</a> - 可以根據此規格定義, 新增 <button id="procflas">PROC flag</button> 按鈕.</p>
+<p><a href="https://en.wikipedia.org/wiki/Flag_of_the_United_States#Specifications">USA 國旗規格</a> - 可以根據此規格定義, 新增 <button id="usaflag">USA flag</button> 按鈕.</p>
+<!-- 導入 brython 程式庫 -->
+<p>
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+</p>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+</script>
+</p>
+<p><!-- 導入 FileSaver 與 filereader --></p>
+<p>
+<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
+<script src="/static/ace/filereader.js" type="text/javascript"></script>
+</p>
+<p><!-- 導入 ace --></p>
+<p>
+<script src="/static/ace/ace.js" type="text/javascript"></script>
+<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
+<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
+<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
+</p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/javascript">
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value
+    saveAs(blob, filename+".py");
+}
+</script>
+</p>
+<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+<script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/gearUtils-09.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
+</p>
+<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button></p>
+<p><!-- ######################  editor1 開始 ###################### --></p>
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor1" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<p><!-- 存擋表單開始 --></p>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
+<p><!-- 存擋表單結束 --></p>
+<p></p>
+<p><!-- 執行與清除按鈕開始 --></p>
+<p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><!-- 執行與清除按鈕結束 --></p>
+<p></p>
+<p><!-- 程式執行 ouput 區 --></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
+<!-- 這裡的畫布 id 為 brython_div -->
+<div id="brython_div"></div>
+<p><!-- ######################  editor1 結束 ###################### --></p>
+<!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    # 注意這裡清除的畫布 id 為 brython_div
+    bd = doc["brython_div"]
+    bd.clear()
+Ace1 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
+def run1():
+    # 利用 get 取下 src 變數值
+    try:
+        url = doc.query["src"]
+    except:
+        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+    prog = open(url).read()
+
+    # 將程式載入編輯區
+    Ace1.editor.setValue(prog)
+    Ace1.editor.scrollToRow(0)
+    Ace1.editor.gotoLine(0)
+    # 直接執行程式
+    #ns = {'__name__':'__main__'}
+    #exec(prog, ns)
+    # 按下 run 按鈕
+    Ace1.run()
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run1'].bind('click', Ace1.run)
+doc['kw_show_console1'].bind('click', Ace1.show_console)
+doc['kw_clear_console1'].bind('click', Ace1.clear_console)
+doc['clear_bd1'].bind('click', clear_bd1)
+# 呼叫函式執行
+run1()
+</script>
+</p>
+<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 -->
+<p><!-- add 1 to 100 開始 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+
+class button2:
+    def __init__(self, url):
+        self.url = url
+
+    # 記得加入 event 輸入變數
+    def do(self,ev):
+        Ace2.editor.setValue(open(self.url).read())
+        Ace2.editor.scrollToRow(0)
+        Ace2.editor.gotoLine(0)
+        Ace2.run()
+
+add1to100_url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c48e37714f055c3a0027cbfef59e442a6ef659b9/from_1_add_to_100_1.py"
+add1to100 = button2(add1to100_url)
+doc["add1to100"].bind('click', add1to100.do)
+################################# p261 start 
+p261_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/980606effcd29635307d6474718cd4a7ef016747/p261.py"
+p261 = button2(p261_url)
+doc["p261"].bind('click', p261.do)
+################################## p261 end
+################################## rocflag start
+rocflag_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/0e2ca81d5c2539c4b6c86071c8cf9de0b1251b9c/roc_flag.py"
+rocflag = button2(rocflag_url)
+doc["rocflag"].bind("click", rocflag.do)
+################################## rocflag end
+</script>
+</p>
 <h2>Bootstrap</h2>
 <p><a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
 <h2>Fengari-Web</h2>
 <p><a href="https://github.com/fengari-lua/fengari-web">https://github.com/fengari-lua/fengari-web</a> </p>
-<p>網際 Lua 解譯: <a href="http://mde.tw/lab/downloads/lua/index.html">http://mde.tw/lab/downloads/lua/index.html</a></p>
+<p>網際 Lua 解譯: <a href="https://lab.cycu.org/downloads/lua/">https://lab.cycu.org/downloads/lua/</a> </p>
 <p>SciTE 編輯器中的 Lua.properties 設定:</p>
 <p>選擇利用 y:\lua-5.4.3\luac 與 lua 編譯或解譯 .lua 程式檔案.</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">command.compile.*.lua=y:\lua-5.4.3\luac -o "$(FileName).luc" "$(FileNameExt)"
@@ -2398,17 +2571,21 @@ doc["fourbar"].bind('click', Fourbar.prog)
 command.go.*.lua=y:\lua-5.4.3\lua "$(FileNameExt)"</pre>
 <p></p>
 <h1>Design</h1>
-<h2>Onshape</h2>
-<h2>Solvespace</h2>
+<h2>Simens_NX</h2>
+<h2>Onshape</h2><h2>Solvespace</h2>
 <h2>FreeCAD</h2>
 <h2>Blender</h2>
 <h1>Simulation</h1>
-<h2>V-rep</h2>
 <h2>Webots</h2>
-<h2>Range</h2>
+<p><a href="https://cyberbotics.com/">https://cyberbotics.com/</a> </p>
+<p><a href="https://github.com/cyberbotics/webots">https://github.com/cyberbotics/webots</a> </p>
+<p>預估營收: $8.6 Million (<a href="https://www.zoominfo.com/c/cyberbotics-ltd/10289382">https://www.zoominfo.com/c/cyberbotics-ltd/10289382</a>)</p>
+<h2>CoppeliaSim</h2>
+<p><a href="https://www.coppeliarobotics.com">https://www.coppeliarobotics.com</a></p>
+<p><a href="https://github.com/CoppeliaRobotics">https://github.com/CoppeliaRobotics</a> </p>
+<p>預估營收: $342,220 (<a href="https://prospeo.io/c/coppelia-robotics">https://prospeo.io/c/coppelia-robotics</a>)</p>
 <h1>Realization</h1>
-<h2>KLL3PP</h2>
-<h2>Foosball</h2>
+<h2>3D_Printer</h2>
 <h2>Publish</h2>
 <p>出版是內容管理過程中重要的一環,  無論是一段文句, 一個零組件, 一張圖片或影片, 在 html 網際環境編輯之後, 要如何轉為各種類比與數位的出版品格式, 就是此地要探討的重點.</p>
 <p>段落文字在網際環境可以利用 Html5 加上 css 或 bootstrap 等前端框架加以處理, 最終與圖片及影片或數學方程式, 可以透過 Pandoc 將 html 轉為  Markdown 之後, 再加上手工編輯處理後, 轉為 pdf 或其他數位格式.</p>
@@ -2449,5 +2626,6 @@ pandoc content.htm -t markdown -o content.md</pre>
 <h2>Metaheuristics</h2>
 <h2>Pyslvs</h2>
 <h2>Virtualbox</h2>
-<h2>Ubuntu</h2>
+<h2>Proxmox</h2>
+<p><a href="https://www.proxmox.com">https://www.proxmox.com</a> </p><h2>Ubuntu</h2>
 <p></p>

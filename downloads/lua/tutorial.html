@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<title>How to program in Lua</title>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>
+    let url = location.pathname;
+    let urlFilename = url.substring(1, url.length-1);
+    let filename = urlFilename.substr(0, urlFilename.lastIndexOf("."));
+    var files = {
+        "index": "Home",
+        "tutorial": "Tutorial",
+        "quiz": "quiz",
+        "dailyjournal": "Daily Journal"
+    };
+    
+    $("title").append(" - " + files[filename]);
+</script>
+    </head>
+    <body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">How to program in Lua <img src="luaLogo.png" id="luaLogo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarHeader">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="tutorial.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tutorial
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="tutorial.html#1">1. Hello, World!</a>
+                        <a class="dropdown-item" href="tutorial.html#2">2. Basic Arithmetic</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quiz.html">Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dailyjournal.html">Daily Journal</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+        <div class="container">
+            <h1 class="center" id="1">1. Hello, World!</h1>
+            <p>
+                One of the first things a programmer learns to do is print "Hello, World!" to the console. In Lua, you would use print("text") to print the word "text" to the console. Try it out below by pressing the execute button!
+            </p>
+        </div>
+        <div class="repl-container">
+            <div class="row editor-container">
+                <div class="col-sm editor">print("text")</div>
+                <div class="col-sm output"></div>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-primary btn-execute">Execute</button>
+            </div>
+            <br>
+        </div>
+        <div class="container">
+            <p>
+                As you can see it worked exactly as we planned it to do. To get "Hello, World!" printed to the console we need to change the text inside the quotation marks. Do this then press execute.
+            </p>
+            <p>
+                The quotation marks around the text is required as it tells Lua that it is a "string" or text. Try removing the quotation marks and the text and replace it with a number.
+            </p>
+            <p>
+                Now try adding text next to the number. You would see that lua throws and error into the console. To fix this you can add quotation marks around the entire text.
+            </p>
+            <p>
+                Complete the first quiz before heading on.
+            </p>
+        </div>
+        
+        <div class="container">
+            <h1 class="center" id="2">2. Basic Arithmetic</h1>
+            <p>You can use Lua to do math by typing an equation. The basic operators are "+" for addition, "-" for subtraction, "*" for multiplication" and "/" for division. An example would be "1 + 1". You can then output this to the console by placing it in a print function which looks like, "print(1 + 1)". Type this into the editor and execute it!</p>
+        </div>
+        <div class="repl-container">
+            <div class="row editor-container">
+                <div class="col-sm editor">print("text")</div>
+                <div class="col-sm output"></div>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-primary btn-execute">Execute</button>
+            </div>
+            <br>
+        </div>
+        <div class="container">
+            <p>
+                Now try changing the numbers and the operation.
+            </p>
+            <p>
+                You can also chain operations such as "1 + 1 * 2" and it follows PEMDAS, so you would get 3 instead of 4. There are more operators such as "^" for exponents and "%" to get the remainder after dividing. 
+            </p>
+        </div>
+        
+<footer class="container footer">
+    <h4 class="center">
+        "Failing to succeed does not mean failing to progress." - Antichamber
+    </h4>
+</footer>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="ace/ace.js"></script>
+<script src="ace/mode-lua.js"></script>
+<script src="fengari-web.js"></script>
+<script src="editor.lua" type="application/lua" async></script>
+<script src="editor.js"></script>
+    </body>
+</html>

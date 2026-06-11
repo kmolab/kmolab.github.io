@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<title>How to program in Lua</title>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- 導入 FileSaver 與 filereader -->
+<script type="text/javascript" src="ace/FileSaver.min.js"></script>
+<script type="text/javascript" src="ace/filereader.js"></script>
+<script src="fengari-web.js"></script>
+<!-- 導入 sql.js -->
+<script src="sql/sql.js"></script>
+<!-- 導入 Cango library -->
+<script type="text/javascript" src="Cango-13v08-min.js"></script>
+<script type="text/javascript" src="CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="gearUtils-05.js"></script>
+<script type="text/javascript">
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value;
+    //source_code = window.localStorage.getItem("lua_src_id");
+    //document.getElementById("editor_field").value = source_code;
+    saveAs(blob, filename+".lua");
+}
+
+// 用來 parse window.location.href 中的變數
+function parse_query_string(query) {
+  var vars = query.split("&");
+  var query_string = {};
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split("=");
+    // If first entry with this name
+    if (typeof query_string[pair[0]] === "undefined") {
+      query_string[pair[0]] = decodeURIComponent(pair[1]);
+      // If second entry with this name
+    } else if (typeof query_string[pair[0]] === "string") {
+      var arr = [query_string[pair[0]], decodeURIComponent(pair[1])];
+      query_string[pair[0]] = arr;
+      // If third or later entry with this name
+    } else {
+      query_string[pair[0]].push(decodeURIComponent(pair[1]));
+    }
+  }
+  return query_string;
+}
+</script>
+</head>
+    <body>
+        <h1 class="center">Hello Lua!</h1>
+        
+        <div class="repl-container">
+            <div class="row editor-container">
+                <div id="editor_field" class="col-sm editor"></div>
+                <div class="col-sm output"></div>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-primary btn-execute">Execute</button>
+                &nbsp;&nbsp;
+                <button onclick="window.clearCanvas()">清除畫面</button>
+                <!-- lua 範例引用, 程式碼放在 ext/ 目錄下, 必須以 return 傳回, 詳細寫法請參考 fun1.lua -->
+                &nbsp;<a href="?filename=hello">hello</a>&nbsp;|
+                &nbsp;<a href="?filename=fun1">draw</a>&nbsp;|
+                &nbsp;<a href="?filename=guess1">guess1</a>&nbsp;|
+                &nbsp;<a href="?filename=guess2">guess2</a>&nbsp;|
+                &nbsp;<a href="?filename=ascii1">ascii1</a>&nbsp;|
+                &nbsp;<a href="?filename=ascii2">ascii2</a>&nbsp;|
+                &nbsp;<a href="?filename=scope1">scope</a>&nbsp;|
+                &nbsp;<a href="?filename=function1">function</a>&nbsp;|
+                &nbsp;<a href="?filename=star1">star</a>&nbsp;|
+                &nbsp;<a href="?filename=flag">flag</a>&nbsp;|
+                &nbsp;<a href="?filename=cango1">cango1</a>&nbsp;|
+                &nbsp;<a href="?filename=gear1">gear1</a>&nbsp;|
+                &nbsp;<a href="?filename=oop1">oop1</a>&nbsp;|
+                &nbsp;<a href="?filename=ga_onemax">ga</a>&nbsp;
+                <!--&nbsp;<a href="https://ethercalc.org/mxhtzxnpta9h">2a</a>&nbsp;-->
+                <!--&nbsp;<a href="https://ethercalc.org/xoa7d83hobvq">2b</a>&nbsp;-->
+                <!--&nbsp;<a href="https://ethercalc.org/u1k76qqtqc42">1a</a>&nbsp;-->
+                <!--&nbsp;<a href="https://ethercalc.org/l1gm1su8rzxu">vcp</a>&nbsp;-->
+            </div>
+    <form>
+    (請注意: 程式執行後才可以存檔!) <br />
+    <label>Filename: <input type="text" id="lua_filename" placeholder="input file name"/>.lua</label>
+    <input type="submit" id="save" value="Save" onclick="doSave('lua_src_id', 'lua_filename');"/>
+    </form>
+      </div>
+<script src="editor.lua" type="application/lua" async></script>
+<!-- 以下的 lua 從 localStorage 取出原始碼, 放入 editor_field -->
+<!-- 導入外部的 ext1.lua 程式內容 -->
+<script type="application/lua">
+--package.path = "ext1.lua"
+--require("ext1")
+js = require "js"
+storage = js.global.localStorage
+source_code = storage:getItem("lua_src_id")
+-- js.global.location.search 為 "?filename=fun1", 然後用 sub(2, -1) 取第 2 到最後一個字元, 表示去除 "?"
+-- 之後再由 js.global:parse_query_string() javascript 函式的呼叫解讀出 filename 變數的值
+-- 最後再根據 filename 的字串值, 作為呼叫 global namespace 中的函數名稱, 也就是 _G[example]()
+-- 就可以在 localStorage 為空時, 透過瀏覽器的 reload 載入 ext1.lua 中的各個範例程式
+parse_qs = js.global:parse_query_string(js.global.location.search:sub(2, -1))
+
+if parse_qs.filename == nil then
+    example = "fun1"
+else
+    --js.global:prompt("即將載入範例")
+    example = parse_qs.filename
+end
+
+package.path = "ext/"..example..".lua"
+require(example)
+
+-- 改為從 URL 中取 filename 名稱載入編輯器, 若無 filename 則載入 default 的 fun1()
+--if source_code ~= "" then
+    --js.global.document:getElementById("editor_field").textContent = source_code
+--else
+    js.global.document:getElementById("editor_field").textContent = _G[example]()
+--end
+
+-- js.global:prompt("testing")
+-- js.global:prompt(parse_qs.filename)
+function js.global.clearCanvas()
+    local canvas = js.global.document:getElementById("canvas")
+    local ctx = canvas:getContext("2d")
+    ctx:clearRect(0, 0, canvas.width, canvas.height)
+end
+</script>
+<script src="ace/ace.js"></script>
+<script src="ace/mode-lua.js"></script>
+<script src="editor.js"></script>
+<br /><br />
+<canvas id="canvas" width="600" height="600"></canvas>
+    </body>
+</html>

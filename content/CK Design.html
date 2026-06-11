@@ -4,7 +4,6 @@
         <meta charset="utf-8">
 <meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
@@ -35,9 +34,11 @@
         <script src="tipuesearch_content.js"></script>
         <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
         <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
-        <!-- for Wink3 -->
+        <!-- for Wink3 客製化關閉 -->
+        <!--
         <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
         <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
         <script>
             /* original tipuesearch
             $(document).ready(function() {
@@ -67,6 +68,8 @@
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushWbt.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
@@ -92,7 +95,7 @@ img.add_border {
 
 </head>
 <body>
-<div class='container-fluid'><nav>
+<div class='container'><nav>
         
     <div class="site-wrap">
 
@@ -106,7 +109,7 @@ img.add_border {
     </div>
     
             <header class="site-navbar py-4 bg-white" role="banner">
-              <div class="container-fluid">
+              <div class="container">
                 <div class="row align-items-center">
                 <h1>lab.cycu.org</h1>
                 <div class="pl-4">
@@ -123,12 +126,12 @@ img.add_border {
     <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
                         <li class="active has-children"><a href="index.html">Home</a>
                         <ul class="dropdown">
-                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="sitemap.html">SMap</a></li>
                             <li><a href="./../reveal/index.html">reveal</a></li>
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='CK Design.html'>CK Design</a><ul class='dropdown'><li><a href='Design Synthesis.html'>Design Synthesis</a><li><a href='Math.html'>Math</a><li><a href='Pfaffians.html'>Pfaffians</a></li></ul><li class='has-children'><a href='Front-End.html'>Front-End</a><ul class='dropdown'><li><a href='Javascript.html'>Javascript</a><li class='has-children'><a href='Brython.html'>Brython</a><ul class='dropdown'><li><a href='W12 demo.html'>W12 demo</a></li></ul><li><a href='Bootstrap.html'>Bootstrap</a><li><a href='Fengari-Web.html'>Fengari-Web</a></li></ul><li class='has-children'><a href='Design.html'>Design</a><ul class='dropdown'><li><a href='Onshape.html'>Onshape</a><li><a href='Solvespace.html'>Solvespace</a><li><a href='FreeCAD.html'>FreeCAD</a><li><a href='Blender.html'>Blender</a></li></ul><li class='has-children'><a href='Simulation.html'>Simulation</a><ul class='dropdown'><li><a href='V-rep.html'>V-rep</a><li><a href='Webots.html'>Webots</a><li><a href='Range.html'>Range</a></li></ul><li class='has-children'><a href='Realization.html'>Realization</a><ul class='dropdown'><li><a href='KLL3PP.html'>KLL3PP</a><li><a href='Foosball.html'>Foosball</a><li><a href='Publish.html'>Publish</a></li></ul><li class='has-children'><a href='Back-End.html'>Back-End</a><ul class='dropdown'><li><a href='Python.html'>Python</a><li><a href='Cython.html'>Cython</a><li><a href='Metaheuristics.html'>Metaheuristics</a><li><a href='Pyslvs.html'>Pyslvs</a><li><a href='Virtualbox.html'>Virtualbox</a><li><a href='Ubuntu.html'>Ubuntu</a></li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='MDE.html'>MDE</a></li></ul><li class='has-children'><a href='CK Design.html'>CK Design</a><ul class='dropdown'><li><a href='Design Synthesis.html'>Design Synthesis</a><li><a href='Math.html'>Math</a><li><a href='Pfaffians.html'>Pfaffians</a></li></ul><li class='has-children'><a href='Front-End.html'>Front-End</a><ul class='dropdown'><li><a href='Javascript.html'>Javascript</a><li><a href='Brython.html'>Brython</a><li><a href='Bootstrap.html'>Bootstrap</a><li><a href='Fengari-Web.html'>Fengari-Web</a></li></ul><li class='has-children'><a href='Design.html'>Design</a><ul class='dropdown'><li><a href='Simens_NX.html'>Simens_NX</a><li><a href='Onshape.html'>Onshape</a><li><a href='Solvespace.html'>Solvespace</a><li><a href='FreeCAD.html'>FreeCAD</a><li><a href='Blender.html'>Blender</a></li></ul><li class='has-children'><a href='Simulation.html'>Simulation</a><ul class='dropdown'><li><a href='Webots.html'>Webots</a><li><a href='CoppeliaSim.html'>CoppeliaSim</a></li></ul><li class='has-children'><a href='Realization.html'>Realization</a><ul class='dropdown'><li><a href='3D_Printer.html'>3D_Printer</a><li><a href='Publish.html'>Publish</a></li></ul><li class='has-children'><a href='Back-End.html'>Back-End</a><ul class='dropdown'><li><a href='Python.html'>Python</a><li><a href='Cython.html'>Cython</a><li><a href='Metaheuristics.html'>Metaheuristics</a><li><a href='Pyslvs.html'>Pyslvs</a><li><a href='Virtualbox.html'>Virtualbox</a><li><a href='Proxmox.html'>Proxmox</a><li><a href='Ubuntu.html'>Ubuntu</a></li>
                       </ul>
                 </nav>
               </div>
@@ -139,13 +142,24 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='Design Synthesis.html'>Next</a> >> Design Synthesis<br /><h1>CK Design</h1>
+    <div id="tipue_search_content">MDE << <a href='MDE.html'>Previous</a> <a href='Design Synthesis.html'>Next</a> >> Design Synthesis<br /><h1>CK Design</h1>
 <p>Concept-Knowledge Design Theory</p>
 <p>概念與知識設計理論</p>
-<h4>還是留作紀念:</h4>
+<p>C-K Theory 的核心在於定義「概念 (Concept)」與「知識 (Knowledge)」的互動：</p>
+<p style="padding-left: 30px;">概念 (Concept)：存在於「未知的空間」，包含看似荒謬或不合邏輯的創新假設。</p>
+<p style="padding-left: 30px;">知識 (Knowledge)：存在於「已知的空間」，是可以被驗證、具備邏輯的既定事實。</p>
+<p>C-K Theory 在 AI 時代的三個關鍵優勢：</p>
+<p style="padding-left: 30px;">駕馭 AI 的擴散力：生成式 AI 擅長在「知識空間」中進行排列組合，但 C-K Theory 強調的「跨界概念映射 (Mapping)」能指導設計師向「未知空間」提問，避免陷入 AI 產生的平庸化設計。</p>
+<p style="padding-left: 30px;">確保系統的邏輯性：現代產品變得日益複雜，創新必須具備可追溯性與正當性。利用 C-K Theory，工程師能有邏輯地拆解並定義設計空間，引導 AI 進行「可解釋的」最佳化。</p>
+<p style="padding-left: 30px;">凸顯原創與意圖：AI 的執行速度極快，但在缺乏人類「意圖 (Intent)」的情況下，產出的多樣性往往缺乏靈魂。C-K Theory 能幫助創作者釐清真正的設計方向。</p>
+<h4>參考:</h4>
 <p style="padding-left: 30px;"><a href="https://en.wikipedia.org/wiki/C-K_theory">https://en.wikipedia.org/wiki/C-K_theory</a></p>
 <p style="padding-left: 30px;"><a href="https://www.ck-theory.org/">https://www.ck-theory.org/</a></p>
-<br />About << <a href='About.html'>Previous</a> <a href='Design Synthesis.html'>Next</a> >> Design Synthesis</div>
+<p style="padding-left: 30px;">C-K 理論用於建構下一代 AI 的提示詞工程（Prompt Engineering）與 RAG（檢索增強生成）架構。</p>
+<p style="padding-left: 30px;">下列研究將 C-K 理論代入大語言模型的 Agents 架構中。證明 AI 可以自主執行 C-K 理論的邏輯封閉迴路(當概念在知識庫為假，則修改參數；當非真非假，則將其演變為全新概念空間)。這對自動化 AI 工業設計有指標性意義。</p>
+<p style="padding-left: 60px;"><a href="https://codesign.berkeley.edu/pdfs/papers/ma-ck-idetc.pdf">Simulating Design Theory Using LLM Agents: A Case Study Of C-K Theory</a></p>
+<p style="padding-left: 60px;">Ma, K., Brubaker, E. R., and Goucher-Lambert, K. (March 11, 2026). "Developing Design Theory Using Large Language Model Agents: A Case Study of C-K Theory." ASME. J. Mech. Des. July 2026; 148(7): 071402. <a href="https://doi.org/10.1115/1.4071235">https://doi.org/10.1115/1.4071235</a></p>
+<br />MDE << <a href='MDE.html'>Previous</a> <a href='Design Synthesis.html'>Next</a> >> Design Synthesis</div>
         
     <!-- footer -->
       <div class="container">
