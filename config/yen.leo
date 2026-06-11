@@ -1395,7 +1395,7 @@ QLineEdit#editorLabel {
 }</t>
 <t tx="leo.20260611152003.3">@string qt-layout-name = vertical-thirds
 @string qt-layout-name = horizontal-thirds</t>
-<t tx="leo.20260611152905.1" _mod_time="4741da8a99c08000002e">@language md
+<t tx="leo.20260611152905.1" _mod_time="4741da8a9a268000002e">@language md
 ---
 Title: MDE?
 Date: 2026-06-11 11:00
@@ -1415,7 +1415,7 @@ Author: kmol
 
 使命是一個組織或個人存在的根本理由。
 
-那麼使用驅動教育就是: 將個人或組織核心存在價值與社會責任置於首位，並以此引導所有教學實踐、資源配置與學生發展的教育模式。
+那麼使命驅動教育就是: 將個人或組織核心存在價值與社會責任置於首位，並以此引導所有教學實踐、資源配置與學生發展的教育模式。
 
 四個教育認知:
 
