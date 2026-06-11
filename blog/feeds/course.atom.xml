@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>機械設計工程系 KMOLab - Course</title><link href="./" rel="alternate"></link><link href="./feeds/course.atom.xml" rel="self"></link><id>./</id><updated>2018-01-19T11:00:00+08:00</updated><entry><title>2017 KMOLab 總結</title><link href="./Year-2017-Conclusion.html" rel="alternate"></link><published>2018-01-19T11:00:00+08:00</published><updated>2018-01-19T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2018-01-19:./Year-2017-Conclusion.html</id><summary type="html">&lt;p&gt;2017 年的課程在兩個禮拜前結束, &lt;a href="https://kmolab.github.io"&gt;KMOLab&lt;/a&gt; 也在秋季學期完成了計算機程式與電腦輔助設計實習的課程.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>lab.cycu.org - Course</title><link href="https://kmolab.github.io/blog/" rel="alternate"/><link href="https://kmolab.github.io/blog/feeds/course.atom.xml" rel="self"/><id>https://kmolab.github.io/blog/</id><updated>2026-06-11T11:07:34+08:00</updated><entry><title>2017 KMOLab 總結</title><link href="https://kmolab.github.io/blog/Year-2017-Conclusion.html" rel="alternate"/><published>2018-01-19T11:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-01-19:/blog/Year-2017-Conclusion.html</id><summary type="html">&lt;p&gt;2017 年的課程在兩個禮拜前結束, &lt;a href="https://kmolab.github.io"&gt;KMOLab&lt;/a&gt; 也在秋季學期完成了計算機程式與電腦輔助設計實習的課程.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2017 年的課程在兩個禮拜前結束, &lt;a href="https://kmolab.github.io"&gt;KMOLab&lt;/a&gt; 也在秋季學期完成了計算機程式與電腦輔助設計實習的課程.&lt;/p&gt;
 
 
@@ -114,7 +114,7 @@ server.quit()
 &lt;p&gt;最後, 在 2017 Fall 教學的最後階段, &lt;a href="https://kmolab.github.io"&gt;KMOLab&lt;/a&gt; 還導入了一項源自法國的 &lt;a href="http://www.cktheory.com/blog/index.html"&gt;C-K 設計理論&lt;/a&gt;, C 代表 Concept 指設計過程中的許多概念, 而 K 則是 Knowledge, 也就是設計者已經掌握, 可以用來解決問題的知識, 這個設計理論中最重要的概念是, 沒有所謂愚笨或可笑的設計概念, 而應當視為閱聽者在面對這些概念時, 還不具備實現這些概念所需的知識.&lt;/p&gt;
 &lt;p&gt;簡言之, &lt;a href="http://www.cktheory.com/blog/index.html"&gt;C-K 設計理論&lt;/a&gt; 闡述設計是可以被教導的, 而且可以引用數學原理, 從概念中衍生出更多概念, 將概念轉化為知識, 利用知識推演出更多知識, 同時, 許多知識隨著時空環境的變化, 也可能會轉為概念, 因為已經無法解決當時所面臨的實際問題.&lt;/p&gt;
 &lt;p&gt;在 &lt;a href="http://www.cktheory.com/blog/index.html"&gt;C-K 設計理論&lt;/a&gt; 的引領下, 任何一個從事機械設計流程的成員, 都不再會因為掌握一些片段知識而自滿, 因為若這些知識沒有持續改進, 未來將無法用來解題, 同時, 初學者也不會因為在協同設計過程中, 擔心提出所謂離譜可笑的概念, 因為理論上所有的概念都可能被實現, 就好像對於一個在數學理論上擁有無限大知識的成員, 就學理上, 根本沒有解決不了的問題, 呵呵, 這確實有些抽象.&lt;/p&gt;
-&lt;p&gt;歡迎各位來到 2018 年, 一個深度學習與智慧口號滿天的歷史元年, 我們有整整一年的時間來探討,  大家所擁有的所謂深度學習與智慧機械, 到底是概念還是真能用來解決問題的知識.&lt;/p&gt;</content><category term="Course"></category><category term="2017"></category><category term="C-K Theory"></category></entry><entry><title>網頁上的數學方程式</title><link href="./Math-Equation-On-Web-Page.html" rel="alternate"></link><published>2018-01-15T11:00:00+08:00</published><updated>2018-01-15T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2018-01-15:./Math-Equation-On-Web-Page.html</id><summary type="html">&lt;p&gt;利用 &lt;a href="https://www.mathjax.org"&gt;Mathjax&lt;/a&gt; 可以採 LaTeX 語法，在網頁上編寫數學方程式.&lt;/p&gt;
+&lt;p&gt;歡迎各位來到 2018 年, 一個深度學習與智慧口號滿天的歷史元年, 我們有整整一年的時間來探討,  大家所擁有的所謂深度學習與智慧機械, 到底是概念還是真能用來解決問題的知識.&lt;/p&gt;</content><category term="Course"/><category term="2017"/><category term="C-K Theory"/></entry><entry><title>網頁上的數學方程式</title><link href="https://kmolab.github.io/blog/Math-Equation-On-Web-Page.html" rel="alternate"/><published>2018-01-15T11:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2018-01-15:/blog/Math-Equation-On-Web-Page.html</id><summary type="html">&lt;p&gt;利用 &lt;a href="https://www.mathjax.org"&gt;Mathjax&lt;/a&gt; 可以採 LaTeX 語法，在網頁上編寫數學方程式.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;利用 &lt;a href="https://www.mathjax.org"&gt;Mathjax&lt;/a&gt; 可以採 LaTeX 語法，在網頁上編寫數學方程式.&lt;/p&gt;
 
 
@@ -138,26 +138,20 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 &lt;p&gt;當上述引用 &lt;a href="http://alexgorbatchev.com/SyntaxHighlighter/"&gt;Syntaxhighlighter&lt;/a&gt; 與 &lt;a href="https://www.mathjax.org"&gt;Mathjax&lt;/a&gt; 的過程中, 非常重要的一點就是這兩套 Javascript 程式碼, 在不斷更新的情況下, 不同版次的組成內容各不相同, 使用的方法也不一樣, 因此我們說事物組成內容與狀態的版次決定一切, 當許多問題的解決與討論, 在各自不知彼此立足點的組成內容與狀態版次的情況下, 許多無謂紛爭就會發生, 解決方法也比相對難以找到.&lt;/p&gt;
 &lt;p&gt;以我們目前在使用的 &lt;a href="http://leoeditor.com/"&gt;Leo Editor&lt;/a&gt; 來說, 可以在 &lt;a href="https://pythonclock.org/"&gt;Python2&lt;/a&gt; 或 Python3 的環境中使用, 並且需要安裝 &lt;a href="https://riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt; 第四版或第五版模組才能啟動. 但是隨著 &lt;a href="https://pythonclock.org/"&gt;Python2&lt;/a&gt; 的生命週期即將抵達終點, 而且 &lt;a href="http://leoeditor.com/"&gt;Leo Editor&lt;/a&gt; 及 &lt;a href="https://riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt; 幾乎隨時都在更動改版中, 因此假如使用者的操作系統、&lt;a href="http://leoeditor.com/"&gt;Leo Editor&lt;/a&gt;、&lt;a href="https://riverbankcomputing.com/software/pyqt/intro"&gt;PyQt&lt;/a&gt; 與其他使用者用來建置網頁或程式的所有套件都能"自動"感知組成內容, 自動調適狀態, 自動搭配改版, 使用者就能高枕無憂, 永續使用這一系列工具, 問題是整個過程中牽涉到如何收費, 這些工具套件如何正確判斷使用者的需求, 倘若因此造成損失, 該由誰負責"賠償"或者恢復原狀, 重點在於哪一個才是原狀?&lt;/p&gt;
 &lt;p&gt;以過去三十幾年的電腦與網路使用歷程來看, 第一階段的電腦輔助, 從旁協助的角色, 早已提升到自動附加的半自主角色, 例如: Windows 10 的自主更新, 已經無需使用者同意, 眼前能夠想像的是在十年內, 電腦與網路全面自主為人類創造價值的世代, 希望屆時使用者不僅只是整體社會運作的組成元件
-, 更是主導運作狀態的發號者.&lt;/p&gt;</content><category term="Course"></category><category term="Mathjax"></category></entry><entry><title>Cango Javascript 程式庫繪圖</title><link href="./cango-brython-svg-canvas.html" rel="alternate"></link><published>2017-10-25T12:00:00+08:00</published><updated>2017-10-25T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-10-25:./cango-brython-svg-canvas.html</id><summary type="html">&lt;p&gt;利用 Cango 與 Brython 進行網際繪圖&lt;/p&gt;
+, 更是主導運作狀態的發號者.&lt;/p&gt;</content><category term="Course"/><category term="Mathjax"/></entry><entry><title>Cango Javascript 程式庫繪圖</title><link href="https://kmolab.github.io/blog/cango-brython-svg-canvas.html" rel="alternate"/><published>2017-10-25T12:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-10-25:/blog/cango-brython-svg-canvas.html</id><summary type="html">&lt;p&gt;利用 Cango 與 Brython 進行網際繪圖&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;利用 Cango 與 Brython 進行網際繪圖&lt;/p&gt;
 
 
 &lt;!-- 導入 FileSaver 與 filereader --&gt;
-
 &lt;script type="text/javascript" src="./../ace/FileSaver.min.js"&gt;&lt;/script&gt;
-
 &lt;script type="text/javascript" src="./../ace/filereader.js"&gt;&lt;/script&gt;
 
 &lt;!-- 導入最新版的 Brython 標準程式庫 3.3.4 --&gt;
-
 &lt;script type="text/javascript" src="./../data/Brython-3.3.4/brython_dist.js"&gt;&lt;/script&gt;
-
 &lt;script type="text/javascript" src="./../data/cango/Cango-12v05-min.js"&gt;&lt;/script&gt;
-
 &lt;script type="text/javascript" src="./../data/cango/CangoAxes-4v00-min.js"&gt;&lt;/script&gt;
 
 &lt;!-- 啟動 Brython 時, 設定 pythonpath 為 data/py, 並將 script1.py 放入, 以便取代 3.2.9 之前版本的 script id 導入 --&gt;
-
 &lt;script&gt;
 window.onload=function(){
 brython({debug:1, pythonpath:['./../data/py']});
@@ -167,11 +161,8 @@ brython({debug:1, pythonpath:['./../data/py']});
 &lt;!-- 以下執行 Brython 程式 --&gt;
 
 &lt;script src="./../ace/ace.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-
 &lt;script src="./../ace/ext-language_tools.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-
 &lt;script src="./../ace/mode-python3.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-
 &lt;script src="./../ace/snippets/python.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
 
 &lt;!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--&gt;
@@ -435,14 +426,14 @@ doc['can1_clear_console'].bind('click', Ace.clear_console)
     &lt;label&gt;Filename: &lt;input type="text" id="can1_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
     &lt;input type="submit" value="Save" onclick="doSave('can1_py_src', 'can1_filename');"/&gt;
 &lt;/form&gt;
-
 &lt;p&gt;&lt;button id="can1_run"&gt;Run&lt;/button&gt;
 &lt;button id="can1_show_console"&gt;Output&lt;/button&gt;
-&lt;button id="can1_clear_console"&gt;清除&lt;/button&gt;
+&lt;button id="can1_clear_console"&gt;清除&lt;/button&gt;&lt;/p&gt;
 &lt;div style="width:100%;height:100%;"&gt;
 &lt;textarea id="can1_console" autocomplete="off"&gt;&lt;/textarea&gt;
 &lt;/div&gt;
-&lt;canvas id="can1_container" width="750" height="550"&gt;&lt;/canvas&gt;&lt;/p&gt;
+&lt;canvas id="can1_container" width="750" height="550"&gt;&lt;/canvas&gt;
+
 &lt;!-- Cango 繪圖程式2 --&gt;
 
 &lt;script type="text/python3"&gt;
@@ -498,14 +489,14 @@ doc['can2_clear_console'].bind('click', Ace.clear_console)
     &lt;label&gt;Filename: &lt;input type="text" id="can2_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
     &lt;input type="submit" value="Save" onclick="doSave('can2_py_src', 'can2_filename');"/&gt;
 &lt;/form&gt;
-
 &lt;p&gt;&lt;button id="can2_run"&gt;Run&lt;/button&gt;
 &lt;button id="can2_show_console"&gt;Output&lt;/button&gt;
-&lt;button id="can2_clear_console"&gt;清除&lt;/button&gt;
+&lt;button id="can2_clear_console"&gt;清除&lt;/button&gt;&lt;/p&gt;
 &lt;div style="width:100%;height:100%;"&gt;
 &lt;textarea id="can2_console" autocomplete="off"&gt;&lt;/textarea&gt;
 &lt;/div&gt;
-&lt;canvas id="can2_container" width="750" height="550"&gt;&lt;/canvas&gt;&lt;/p&gt;
+&lt;canvas id="can2_container" width="750" height="550"&gt;&lt;/canvas&gt;
+
 &lt;!-- Cango 繪圖程式3 --&gt;
 
 &lt;script type="text/python3"&gt;
@@ -616,38 +607,30 @@ doc['can3_clear_console'].bind('click', Ace.clear_console)
     &lt;label&gt;Filename: &lt;input type="text" id="can3_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
     &lt;input type="submit" value="Save" onclick="doSave('can3_py_src', 'can3_filename');"/&gt;
 &lt;/form&gt;
-
 &lt;p&gt;&lt;button id="can3_run"&gt;Run&lt;/button&gt;
 &lt;button id="can3_show_console"&gt;Output&lt;/button&gt;
-&lt;button id="can3_clear_console"&gt;清除&lt;/button&gt;
+&lt;button id="can3_clear_console"&gt;清除&lt;/button&gt;&lt;/p&gt;
 &lt;div style="width:100%;height:100%;"&gt;
 &lt;textarea id="can3_console" autocomplete="off"&gt;&lt;/textarea&gt;
 &lt;/div&gt;
-&lt;canvas id="can3_container" width="750" height="550"&gt;&lt;/canvas&gt;&lt;/p&gt;</content><category term="Course"></category><category term="Cango"></category><category term="Brython"></category><category term="SVG"></category><category term="Canvas"></category></entry><entry><title>Brython 3.3.4 程式環境</title><link href="./brython-programming-environment.html" rel="alternate"></link><published>2017-10-25T11:00:00+08:00</published><updated>2017-10-25T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-10-25:./brython-programming-environment.html</id><summary type="html">&lt;p&gt;利用 &lt;a href="http://brython.info/"&gt;Brython&lt;/a&gt; 與 &lt;a href="https://ace.c9.io/"&gt;Ace&lt;/a&gt; 編輯器, 建立瀏覽器上的簡單 Python3 程式練習環境.&lt;/p&gt;
+&lt;canvas id="can3_container" width="750" height="550"&gt;&lt;/canvas&gt;</content><category term="Course"/><category term="Cango"/><category term="Brython"/><category term="SVG"/><category term="Canvas"/></entry><entry><title>Brython 3.3.4 程式環境</title><link href="https://kmolab.github.io/blog/brython-programming-environment.html" rel="alternate"/><published>2017-10-25T11:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-10-25:/blog/brython-programming-environment.html</id><summary type="html">&lt;p&gt;利用 &lt;a href="http://brython.info/"&gt;Brython&lt;/a&gt; 與 &lt;a href="https://ace.c9.io/"&gt;Ace&lt;/a&gt; 編輯器, 建立瀏覽器上的簡單 Python3 程式練習環境.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;利用 &lt;a href="http://brython.info/"&gt;Brython&lt;/a&gt; 與 &lt;a href="https://ace.c9.io/"&gt;Ace&lt;/a&gt; 編輯器, 建立瀏覽器上的簡單 Python3 程式練習環境.&lt;/p&gt;
 
 
 &lt;!-- 導入 FileSaver 與 filereader --&gt;
-
 &lt;script type="text/javascript" src="./../ace/FileSaver.min.js"&gt;&lt;/script&gt;
-
 &lt;script type="text/javascript" src="./../ace/filereader.js"&gt;&lt;/script&gt;
 
 &lt;!-- 導入最新版的 Brython 標準程式庫 3.3.4 --&gt;
-
 &lt;script type="text/javascript" src="./../data/Brython-3.3.4/brython_dist.js"&gt;
 &lt;/script&gt;
 
 &lt;!-- 導入平面機構模擬所需程式庫 --&gt;
 
 &lt;!-- sylvester.js 為向量、矩陣與幾何程式庫 http://sylvester.jcoglan.com/ --&gt;
-
 &lt;script src="./../data/sylvester/sylvester.js"&gt;&lt;/script&gt;
-
 &lt;!-- PrairieDraw.js 為延伸 sylvester.js 的 html5 canvas 繪圖應用程式庫 https://github.com/martin70/PrairieDraw.js --&gt;
-
 &lt;script src="./../data/sylvester/PrairieDraw.js"&gt;&lt;/script&gt;
-
 &lt;style&gt;
 canvas {
     border: 1px solid black;
@@ -655,7 +638,6 @@ canvas {
 &lt;/style&gt;
 
 &lt;!-- 啟動 Brython 時, 設定 pythonpath 為 data/py, 並將 script1.py 放入, 以便取代 3.2.9 之前版本的 script id 導入 --&gt;
-
 &lt;script&gt;
 window.onload=function(){
 brython({debug:1, pythonpath:['./../data/py']});
@@ -665,11 +647,8 @@ brython({debug:1, pythonpath:['./../data/py']});
 &lt;!-- 以下執行 Brython 程式 --&gt;
 
 &lt;script src="./../ace/ace.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-
 &lt;script src="./../ace/ext-language_tools.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-
 &lt;script src="./../ace/mode-python3.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-
 &lt;script src="./../ace/snippets/python.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
 
 &lt;!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--&gt;
@@ -685,13 +664,12 @@ function doSave(storage_id, filename){
 &lt;p&gt;編寫 Python3 程式邏輯之前必須先了解基本的程式語法, 其中包括:&lt;/p&gt;
 &lt;h2&gt;Python3 變數命名規則與關鍵字&lt;/h2&gt;
 &lt;p&gt;Python 英文變數命名規格&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;變數必須以英文字母大寫或小寫或底線開頭
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;變數必須以英文字母大寫或小寫或底線開頭
 變數其餘字元可以是英文大小寫字母, 數字或底線
 變數區分英文大小寫
 變數不限字元長度
 不可使用關鍵字當作變數名稱
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;使用者可以利用以下程式列出所使用 Python 的版次與關鍵字:&lt;/p&gt;
 &lt;!-- 印出版次與關鍵字程式 --&gt;
@@ -732,21 +710,20 @@ doc['kw_clear_console'].bind('click', Ace.clear_console)
     &lt;label&gt;Filename: &lt;input type="text" id="kw_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
     &lt;input type="submit" value="Save" onclick="doSave('kw_py_src', 'kw_filename');"/&gt;
 &lt;/form&gt;
-
 &lt;p&gt;&lt;button id="kw_run"&gt;Run&lt;/button&gt;
 &lt;button id="kw_show_console"&gt;Output&lt;/button&gt;
-&lt;button id="kw_clear_console"&gt;清除&lt;/button&gt;
+&lt;button id="kw_clear_console"&gt;清除&lt;/button&gt;&lt;/p&gt;
 &lt;div style="width:100%;height:100%;"&gt;
 &lt;textarea id="kw_console" autocomplete="off"&gt;&lt;/textarea&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;p&gt;Python3 的程式關鍵字, 使用者命名變數時, 必須避開下列保留字.&lt;/p&gt;
 &lt;p&gt;Python keywords:  ['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']&lt;/p&gt;
 &lt;p&gt;選擇好的變數名稱:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;使用有意義且適當長度的變數名稱， 例如: 使用 length 代表長度, 不要單獨使用 l 或 L, 也不要使用 this_is_the_length
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;使用有意義且適當長度的變數名稱， 例如: 使用 length 代表長度, 不要單獨使用 l 或 L, 也不要使用 this_is_the_length
 程式前後變數命名方式盡量一致, 例如: 使用 rect_length 或 RectLength
 用底線開頭的變數通常具有特殊意義
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2&gt;print() 函式用法&lt;/h2&gt;
 &lt;p&gt;print() 為 Python 程式語言中用來列印數值或字串的函式, 其中有 sep 變數定義分隔符號, ｓep 內定為 ",", end 變數則用來定義列印結尾的符號, end 內定為跳行符號.&lt;/p&gt;
@@ -781,13 +758,13 @@ doc['clear_console'].bind('click', Ace.clear_console)
     &lt;label&gt;Filename: &lt;input type="text" id="filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
     &lt;input type="submit" value="Save" onclick="doSave('py_src', 'filename');"/&gt;
 &lt;/form&gt;
-
 &lt;p&gt;&lt;button id="run"&gt;Run&lt;/button&gt;
 &lt;button id="show_console"&gt;Output&lt;/button&gt;
-&lt;button id="clear_console"&gt;清除&lt;/button&gt;
+&lt;button id="clear_console"&gt;清除&lt;/button&gt;&lt;/p&gt;
 &lt;div style="width:100%;height:100%;"&gt;
 &lt;textarea id="console" autocomplete="off"&gt;&lt;/textarea&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;!-- 以下置入 brython turtle 繪圖程式段, 但是各畫布必須使用不同名稱 --&gt;
 
 &lt;p&gt;下列的 Brython turtle 網際繪圖程式僅提供參考, 可以用來練習 Python3 程式語法.&lt;/p&gt;
@@ -849,16 +826,15 @@ doc['turtle_clear_container'].bind('click', Ace.clear_container)
     &lt;label&gt;Filename: &lt;input type="text" id="turtle_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
     &lt;input type="submit" value="Save" onclick="doSave('tutle_py_src', 'turtle_filename');"/&gt;
 &lt;/form&gt;
-
 &lt;p&gt;&lt;button id="turtle_run"&gt;Run&lt;/button&gt;
 &lt;button id="turtle_show_console"&gt;Output&lt;/button&gt;
 &lt;button id="turtle_clear_console"&gt;清除&lt;/button&gt;
-&lt;button id="turtle_clear_container"&gt;清除畫布&lt;/button&gt;
+&lt;button id="turtle_clear_container"&gt;清除畫布&lt;/button&gt;&lt;/p&gt;
 &lt;div style="width:100%;height:100%;"&gt;
 &lt;textarea id="turtle_console" autocomplete="off"&gt;&lt;/textarea&gt;
-&lt;/div&gt;&lt;/p&gt;
-&lt;!-- container 主要提供網際繪圖用之畫布 --&gt;
+&lt;/div&gt;
 
+&lt;!-- container 主要提供網際繪圖用之畫布 --&gt;
 &lt;div id="container"&gt;&lt;/div&gt;
 
 &lt;h2&gt;函式用法與呼叫&lt;/h2&gt;
@@ -897,13 +873,13 @@ doc['fun_clear_console'].bind('click', Ace.clear_console)
     &lt;label&gt;Filename: &lt;input type="text" id="fun_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
     &lt;input type="submit" value="Save" onclick="doSave('fun_py_src', 'fun_filename');"/&gt;
 &lt;/form&gt;
-
 &lt;p&gt;&lt;button id="fun_run"&gt;Run&lt;/button&gt;
 &lt;button id="fun_show_console"&gt;Output&lt;/button&gt;
-&lt;button id="fun_clear_console"&gt;清除&lt;/button&gt;
+&lt;button id="fun_clear_console"&gt;清除&lt;/button&gt;&lt;/p&gt;
 &lt;div style="width:100%;height:100%;"&gt;
 &lt;textarea id="fun_console" autocomplete="off"&gt;&lt;/textarea&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;!-- Brython 的網際繪圖 --&gt;
 
 &lt;p&gt;以下網際繪圖程式, 僅提供參考.&lt;/p&gt;
@@ -987,15 +963,15 @@ doc['by_clear_container'].bind('click', Ace.clear_container)
     &lt;label&gt;Filename: &lt;input type="text" id="by_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
     &lt;input type="submit" value="Save" onclick="doSave('by_py_src', 'by_filename');"/&gt;
 &lt;/form&gt;
-
 &lt;p&gt;&lt;button id="by_run"&gt;Run&lt;/button&gt;
 &lt;button id="by_show_console"&gt;Output&lt;/button&gt;
 &lt;button id="by_clear_console"&gt;清除&lt;/button&gt;
-&lt;button id="by_clear_container"&gt;清除畫布&lt;/button&gt;
+&lt;button id="by_clear_container"&gt;清除畫布&lt;/button&gt;&lt;/p&gt;
 &lt;div style="width:100%;height:100%;"&gt;
 &lt;textarea id="by_console" autocomplete="off"&gt;&lt;/textarea&gt;
 &lt;/div&gt;
-&lt;div id="by_container"&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;div id="by_container"&gt;&lt;/div&gt;
+
 &lt;!-- Brython 動畫 --&gt;
 
 &lt;p&gt;以下網際動態繪圖程式, 僅提供參考.&lt;/p&gt;
@@ -1141,15 +1117,15 @@ doc['clock_clear_container'].bind('click', Ace.clear_container)
     &lt;label&gt;Filename: &lt;input type="text" id="clock_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
     &lt;input type="submit" value="Save" onclick="doSave('clock_py_src', 'clock_filename');"/&gt;
 &lt;/form&gt;
-
 &lt;p&gt;&lt;button id="clock_run"&gt;Run&lt;/button&gt;
 &lt;button id="clock_show_console"&gt;Output&lt;/button&gt;
 &lt;button id="clock_clear_console"&gt;清除&lt;/button&gt;
-&lt;button id="clock_clear_container"&gt;清除畫布&lt;/button&gt;
+&lt;button id="clock_clear_container"&gt;清除畫布&lt;/button&gt;&lt;/p&gt;
 &lt;div style="width:100%;height:100%;"&gt;
 &lt;textarea id="clock_console" autocomplete="off"&gt;&lt;/textarea&gt;
 &lt;/div&gt;
-&lt;div id="clock_container"&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;div id="clock_container"&gt;&lt;/div&gt;
+
 &lt;h2&gt;基本物件導向與案例&lt;/h2&gt;
 &lt;p&gt;Python 採用類別 (class) 將案例變數 (instance variables) 與案例方法 (instance methods) 包在一起, 並用來定義一種物件 (object).&lt;/p&gt;
 &lt;p&gt;物件導向具有封裝 (encapsulation) , 繼承 (inheritance) 與多形 ( polymorphism) 等三種特性.&lt;/p&gt;
@@ -1208,13 +1184,13 @@ doc['oop1_clear_console'].bind('click', Ace.clear_console)
     &lt;label&gt;Filename: &lt;input type="text" id="oop1_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
     &lt;input type="submit" value="Save" onclick="doSave('oop1_py_src', 'oop1_filename');"/&gt;
 &lt;/form&gt;
-
 &lt;p&gt;&lt;button id="oop1_run"&gt;Run&lt;/button&gt;
 &lt;button id="oop1_show_console"&gt;Output&lt;/button&gt;
-&lt;button id="oop1_clear_console"&gt;清除&lt;/button&gt;
+&lt;button id="oop1_clear_console"&gt;清除&lt;/button&gt;&lt;/p&gt;
 &lt;div style="width:100%;height:100%;"&gt;
 &lt;textarea id="oop1_console" autocomplete="off"&gt;&lt;/textarea&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;!-- 必須處理重複執行後機構模擬產生錯誤的問題 --&gt;
 
 &lt;p&gt;以下平面機構動態模擬程式, 僅提供參考.&lt;/p&gt;
@@ -1373,16 +1349,16 @@ doc['link_clear_console'].bind('click', Ace.clear_console)
     &lt;label&gt;Filename: &lt;input type="text" id="link_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
     &lt;input type="submit" value="Save" onclick="doSave('link_py_src', 'link_filename');"/&gt;
 &lt;/form&gt;
-
 &lt;p&gt;&lt;button id="link_run"&gt;Run&lt;/button&gt;
 &lt;button id="link_show_console"&gt;Output&lt;/button&gt;
 &lt;button id="link_clear_console"&gt;清除&lt;/button&gt;
 &lt;button id="power"&gt;啟動&lt;/button&gt;
-&lt;button id="reverse"&gt;反向&lt;/button&gt;
+&lt;button id="reverse"&gt;反向&lt;/button&gt;&lt;/p&gt;
 &lt;div style="width:100%;height:100%;"&gt;
 &lt;textarea id="link_console" autocomplete="off"&gt;&lt;/textarea&gt;
 &lt;/div&gt;
-&lt;canvas id="fourbar" width="250" height="250"&gt;&lt;/canvas&gt;&lt;/p&gt;
+&lt;canvas id="fourbar" width="250" height="250"&gt;&lt;/canvas&gt;
+
 &lt;h2&gt;平面機構運動模擬&lt;/h2&gt;
 &lt;p&gt;以下為 Jansen's 八連桿機構的基本 Kinematic 運算, 先採用 Sympy 以符號式推導出機構端點的運動軌跡方程式後, 利用 Python 執行數值分析運算, 列出機構端點的座標.&lt;/p&gt;
 &lt;script type="text/python3"&gt;
@@ -1479,13 +1455,13 @@ doc['jansen_clear_console'].bind('click', Ace.clear_console)
     &lt;label&gt;Filename: &lt;input type="text" id="jansen_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
     &lt;input type="submit" value="Save" onclick="doSave('jansen_py_src', 'jansen_filename');"/&gt;
 &lt;/form&gt;
-
 &lt;p&gt;&lt;button id="jansen_run"&gt;Run&lt;/button&gt;
 &lt;button id="jansen_show_console"&gt;Output&lt;/button&gt;
-&lt;button id="jansen_clear_console"&gt;清除&lt;/button&gt;
+&lt;button id="jansen_clear_console"&gt;清除&lt;/button&gt;&lt;/p&gt;
 &lt;div style="width:100%;height:100%;"&gt;
 &lt;textarea id="jansen_console" autocomplete="off"&gt;&lt;/textarea&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;p&gt;以下為與上述 Jansen's 八連桿機構對應的座標驗證圖, 機構端點座標 kx= -30.81 ky= -84.02:&lt;/p&gt;
 &lt;p&gt;&lt;img src="./../data/images/jansen_sympy.png" width="800" height="600"&gt;&lt;/img&gt;&lt;/p&gt;
 &lt;h2&gt;平面機構數目合成&lt;/h2&gt;
@@ -1551,13 +1527,13 @@ doc['numsyn_clear_console'].bind('click', Ace.clear_console)
     &lt;label&gt;Filename: &lt;input type="text" id="numsyn_filename" placeholder="input file name"/&gt;.py&lt;/label&gt;
     &lt;input type="submit" value="Save" onclick="doSave('numsyn_py_src', 'numsyn_filename');"/&gt;
 &lt;/form&gt;
-
 &lt;p&gt;&lt;button id="numsyn_run"&gt;Run&lt;/button&gt;
 &lt;button id="numsyn_show_console"&gt;Output&lt;/button&gt;
-&lt;button id="numsyn_clear_console"&gt;清除&lt;/button&gt;
+&lt;button id="numsyn_clear_console"&gt;清除&lt;/button&gt;&lt;/p&gt;
 &lt;div style="width:100%;height:100%;"&gt;
 &lt;textarea id="numsyn_console" autocomplete="off"&gt;&lt;/textarea&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;p&gt;目前所在頁面, 分別利用 &lt;a href="http://brython.info/"&gt;Brython&lt;/a&gt; 與 &lt;a href="https://ace.c9.io/"&gt;Ace&lt;/a&gt; 編輯器, 可直接在網誌中執行 Python3 程式, 基本架構為將 &lt;a href="http://brython.info/"&gt;Brython&lt;/a&gt; 的標準輸出轉到特定 div 標註, 而 &lt;a href="https://ace.c9.io/"&gt;Ace&lt;/a&gt; 編輯器則設為與其內的程式碼相同長度, 但至多只會在頁面中顯示 20 行, 且編輯器內的程式碼使用 12 號字元.&lt;/p&gt;
 &lt;p&gt;ace.py 原始碼, 位於 data/py 目錄中, 將原先只能單一呼叫的函式改為物件, 可以在同一頁面中產生案例時, 透過各標註的 id 字串區分各段程式碼, 是本課程 Python3 物件導向程式的實際應用範例, 謹提供參考.&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
@@ -1653,7 +1629,7 @@ class Editor():
     def load_script(self, evt):
         _name = evt.target.value + '?foo=%s' % time.time()
         self.editor.setValue(open(_name).read())
-&lt;/pre&gt;</content><category term="Course"></category><category term="Brython"></category></entry><entry><title>2017 Fall 即將開學</title><link href="./2017fall-semester-starts.html" rel="alternate"></link><published>2017-09-01T12:00:00+08:00</published><updated>2017-09-01T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-09-01:./2017fall-semester-starts.html</id><summary type="html">&lt;p&gt;再過幾天, 2017 Fall 學期即將開始, 去年 copy.com 免費雲端磁碟停止提供服務, 這個月底 OpenShift 的 online 2 免費帳號也將走入歷史, 可以預期, 之後 Github 與 Bitbucket 的免費方案也將會越來越限縮, 或許就連 Onshape 與 V-rep 目前所提供的免費教育授權, 也會步上相同後塵.&lt;/p&gt;
+&lt;/pre&gt;</content><category term="Course"/><category term="Brython"/></entry><entry><title>2017 Fall 即將開學</title><link href="https://kmolab.github.io/blog/2017fall-semester-starts.html" rel="alternate"/><published>2017-09-01T12:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-09-01:/blog/2017fall-semester-starts.html</id><summary type="html">&lt;p&gt;再過幾天, 2017 Fall 學期即將開始, 去年 copy.com 免費雲端磁碟停止提供服務, 這個月底 OpenShift 的 online 2 免費帳號也將走入歷史, 可以預期, 之後 Github 與 Bitbucket 的免費方案也將會越來越限縮, 或許就連 Onshape 與 V-rep 目前所提供的免費教育授權, 也會步上相同後塵.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;再過幾天, 2017 Fall 學期即將開始, 去年 copy.com 免費雲端磁碟停止提供服務, 這個月底 OpenShift 的 online 2 免費帳號也將走入歷史, 可以預期, 之後 Github 與 Bitbucket 的免費方案也將會越來越限縮, 或許就連 Onshape 與 V-rep 目前所提供的免費教育授權, 也會步上相同後塵.&lt;/p&gt;
 
 
@@ -1667,7 +1643,7 @@ class Editor():
 &lt;h2&gt;2017 Fall 區網主機&lt;/h2&gt;
 &lt;p&gt;主要伺服器可以從 &lt;a href="http://mde.tw"&gt;http://mde.tw&lt;/a&gt; 進入.&lt;/p&gt;
 &lt;p&gt;2017 Fall 區網課程網頁: &lt;a href="https://mde1a1.kmol.info/2017fall"&gt;https://mde1a1.kmol.info/2017fall&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Github 與 Fossil SCM 同步倉儲: &lt;a href="https://mde1a1.kmol.info/pymcadp"&gt;https://mde1a1.kmol.info/pymcadp&lt;/a&gt;&lt;/p&gt;</content><category term="Course"></category><category term="2017fall"></category></entry><entry><title>Sunset of OpenShift Online 2 Platform</title><link href="./sunset-of-openshift-online2.html" rel="alternate"></link><published>2017-08-26T12:00:00+08:00</published><updated>2017-08-26T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-08-26:./sunset-of-openshift-online2.html</id><summary type="html">&lt;p&gt;OpenShift 在 2017.08.25 於 &lt;a href="https://blog.openshift.com/migrate-to-v3-v2-eol/"&gt;https://blog.openshift.com/migrate-to-v3-v2-eol/&lt;/a&gt; 宣布, 先前所推出的 Online 2 Platform, 將要在 2017.09.30 走入歷史.&lt;/p&gt;
+&lt;p&gt;Github 與 Fossil SCM 同步倉儲: &lt;a href="https://mde1a1.kmol.info/pymcadp"&gt;https://mde1a1.kmol.info/pymcadp&lt;/a&gt;&lt;/p&gt;</content><category term="Course"/><category term="2017fall"/></entry><entry><title>Sunset of OpenShift Online 2 Platform</title><link href="https://kmolab.github.io/blog/sunset-of-openshift-online2.html" rel="alternate"/><published>2017-08-26T12:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-08-26:/blog/sunset-of-openshift-online2.html</id><summary type="html">&lt;p&gt;OpenShift 在 2017.08.25 於 &lt;a href="https://blog.openshift.com/migrate-to-v3-v2-eol/"&gt;https://blog.openshift.com/migrate-to-v3-v2-eol/&lt;/a&gt; 宣布, 先前所推出的 Online 2 Platform, 將要在 2017.09.30 走入歷史.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;OpenShift 在 2017.08.25 於 &lt;a href="https://blog.openshift.com/migrate-to-v3-v2-eol/"&gt;https://blog.openshift.com/migrate-to-v3-v2-eol/&lt;/a&gt; 宣布, 先前所推出的 Online 2 Platform, 將要在 2017.09.30 走入歷史.&lt;/p&gt;
 
 
@@ -1687,7 +1663,7 @@ class Editor():
 &lt;p&gt;備份: https://wordpress-2015course.rhcloud.com/?p=4579&lt;/p&gt;
 &lt;p&gt;Product Design Modeling using CAD/CAE &lt;/p&gt;
 &lt;p&gt;How to be a star engineer&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://ieeexplore.ieee.org/document/795608/"&gt;http://ieeexplore.ieee.org/document/795608/&lt;/a&gt;&lt;/p&gt;</content><category term="Course"></category><category term="OpenShift"></category></entry><entry><title>Calculator in PyQt5 and Eric6</title><link href="./calculator-pyqt5-eric6.html" rel="alternate"></link><published>2017-07-31T12:00:00+08:00</published><updated>2017-07-31T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-07-31:./calculator-pyqt5-eric6.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html"&gt;http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html&lt;/a&gt; 的說明, 利用 Eric6 與 PyQt5 開發簡單的計算器視窗程式.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ieeexplore.ieee.org/document/795608/"&gt;http://ieeexplore.ieee.org/document/795608/&lt;/a&gt;&lt;/p&gt;</content><category term="Course"/><category term="OpenShift"/></entry><entry><title>Calculator in PyQt5 and Eric6</title><link href="https://kmolab.github.io/blog/calculator-pyqt5-eric6.html" rel="alternate"/><published>2017-07-31T12:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-31:/blog/calculator-pyqt5-eric6.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html"&gt;http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html&lt;/a&gt; 的說明, 利用 Eric6 與 PyQt5 開發簡單的計算器視窗程式.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;根據 &lt;a href="http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html"&gt;http://doc.qt.io/qt-5/qtwidgets-widgets-calculator-example.html&lt;/a&gt; 的說明, 利用 Eric6 與 PyQt5 開發簡單的計算器視窗程式.&lt;/p&gt;
 
 
@@ -1725,7 +1701,6 @@ class Editor():
 &lt;p&gt;Add. Op. - 加或減運算元,若隨後無乘與除等優先運算元, 且按下等於或接著按加或減運算元, 則前段隨即完成運算後列在 Sum so Far 欄位.&lt;/p&gt;
 &lt;p&gt;Mul. Op. - 乘或除運算元, 屬於優先運算元, 因此若輸入已經滿足運算數接優先運算元, 再接其他運算元則 將局部優先運算所需的前方運算數, 放入 Factor so Far, 而前面未處理的加或減運算數, 則放入 Sum so Far.&lt;/p&gt;
 &lt;!-- 這裡在測試 template 中 base.html head 標註中所加入的 style 標註用法 --&gt;
-
 &lt;table&gt;
 &lt;tr&gt;
 &lt;th&gt;User Input&lt;/th&gt; &lt;th&gt;Display&lt;/th&gt;    &lt;th&gt;Sum so Far&lt;/th&gt; &lt;th&gt;Add. Op.&lt;/ht&gt;   &lt;th&gt;Factor so Far&lt;/th&gt;  &lt;th&gt;Mult. Op.&lt;/th&gt;  &lt;th&gt;Waiting for Operand?&lt;/th&gt;
@@ -1766,7 +1741,6 @@ class Editor():
 &lt;td&gt;1 + 2 ÷ 3 - 4 =&lt;/td&gt;    &lt;td&gt;-2.33333&lt;/td&gt;   &lt;td&gt;0&lt;/td&gt;      &lt;td&gt;&lt;/td&gt;   &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;true&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;
-
 &lt;p&gt;&lt;br /&gt;
 Unary operators, such as Sqrt, require no special handling; they can be applied immediately since the operand is already known when the operator button is clicked.&lt;/p&gt;
 &lt;p&gt;Finally, we declare the variables associated with the display and the buttons used to display numerals.&lt;/p&gt;
@@ -1797,7 +1771,7 @@ Unary operators, such as Sqrt, require no special handling; they can be applied 
 &lt;p&gt;The clearMemory() slot erases the sum kept in memory, readMemory() displays the sum as an operand, setMemory() replace the sum in memory with the current sum, and addToMemory() adds the current value to the value in memory. For setMemory() and addToMemory(), we start by calling equalClicked() to update sumSoFar and the value in the display.&lt;/p&gt;
 &lt;p&gt;The private createButton() function is called from the constructor to create calculator buttons.&lt;/p&gt;
 &lt;p&gt;The private abortOperation() function is called whenever a calculation fails. It resets the calculator state and displays "####".&lt;/p&gt;
-&lt;p&gt;The private calculate() function performs a binary operation. The right operand is given by rightOperand. For additive operators, the left operand is sumSoFar; for multiplicative operators, the left operand is factorSoFar. The function return false if a division by zero occurs.&lt;/p&gt;</content><category term="Course"></category><category term="計算機程式"></category><category term="PyQt5"></category></entry><entry><title>Create a Multi-repository Fossil SCM Server</title><link href="./create-a-multi-repository-fossil-scm-server.html" rel="alternate"></link><published>2017-07-14T12:00:00+08:00</published><updated>2017-07-14T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-07-14:./create-a-multi-repository-fossil-scm-server.html</id><summary type="html">&lt;p&gt;In order to create a multi-repository Fossil SCM server on Ubuntu 16.04 environment, three steps are needed.&lt;/p&gt;
+&lt;p&gt;The private calculate() function performs a binary operation. The right operand is given by rightOperand. For additive operators, the left operand is sumSoFar; for multiplicative operators, the left operand is factorSoFar. The function return false if a division by zero occurs.&lt;/p&gt;</content><category term="Course"/><category term="計算機程式"/><category term="PyQt5"/></entry><entry><title>Create a Multi-repository Fossil SCM Server</title><link href="https://kmolab.github.io/blog/create-a-multi-repository-fossil-scm-server.html" rel="alternate"/><published>2017-07-14T12:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-14:/blog/create-a-multi-repository-fossil-scm-server.html</id><summary type="html">&lt;p&gt;In order to create a multi-repository Fossil SCM server on Ubuntu 16.04 environment, three steps are needed.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;In order to create a multi-repository Fossil SCM server on Ubuntu 16.04 environment, three steps are needed.&lt;/p&gt;
 
 
@@ -1828,7 +1802,7 @@ execargs = /usr/bin/fossil http /home/user/repository/ --https --nojail --notfou
 &lt;h2&gt;Step 3: create Fossil SCM repositories&lt;/h2&gt;
 &lt;p&gt;Change directory to /home/user/repository and use "fossil init default.fossil" command to create the default repository. If more repository is needed, also use "fossil init other.fossil" to create other.fossil repository under /home/user/repository.&lt;/p&gt;
 &lt;p&gt;After the setup use "/etc/init.d/stunnel4 restart" command to restart the Stunnel service.&lt;/p&gt;
-&lt;p&gt;Use https://site-url:443/ to connect to default.fossil and use https://site-url:443/other to connect to other.fossil.&lt;/p&gt;</content><category term="Course"></category><category term="Fossil SCM"></category><category term="Ubuntu"></category></entry><entry><title>2015 Fall CADP W16</title><link href="./2015-cadp-w16.html" rel="alternate"></link><published>2017-07-10T12:00:00+08:00</published><updated>2017-07-10T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-07-10:./2015-cadp-w16.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="./../data/nutcracker/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
+&lt;p&gt;Use https://site-url:443/ to connect to default.fossil and use https://site-url:443/other to connect to other.fossil.&lt;/p&gt;</content><category term="Course"/><category term="Fossil SCM"/><category term="Ubuntu"/></entry><entry><title>2015 Fall CADP W16</title><link href="https://kmolab.github.io/blog/2015-cadp-w16.html" rel="alternate"/><published>2017-07-10T12:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-10:/blog/2015-cadp-w16.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="./../data/nutcracker/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;根據 &lt;a href="./../data/nutcracker/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
 
 
@@ -1953,7 +1927,6 @@ def main():
 if __name__ == "__main__":
     main()
 &lt;/pre&gt;
-
 &lt;p&gt;&lt;br /&gt;
 上述課程資料與 &lt;a href="http://wordpress-2015course.rhcloud.com/?p=4584#more-4584"&gt;Wordpress 網頁&lt;/a&gt;上的資料內容相同, Ｗordpress 網站屬於動態的網誌, 而 &lt;a href="http://chiamingyen.github.io/kmolab/"&gt;http://chiamingyen.github.io/kmolab/&lt;/a&gt; 則是靜態網誌系統, 採用靜態網誌的優點如下:&lt;/p&gt;
 &lt;ul&gt;
@@ -2241,14 +2214,13 @@ if __name__ == "__main__":
     #env = Environment(Volume, size=500, maxgenerations=100)
     env = Environment(Intersect, size=500, maxgenerations=100)
     env.run()
-&lt;/pre&gt;</content><category term="Course"></category><category term="電腦輔助設計實習"></category><category term="2015 Fall cadp"></category></entry><entry><title>計算機程式與電腦輔助設計實習</title><link href="./2017fall-cp-cadp.html" rel="alternate"></link><published>2017-07-06T12:00:00+08:00</published><updated>2017-07-06T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:None,2017-07-06:./2017fall-cp-cadp.html</id><summary type="html">&lt;p&gt;以下為 Brython 網際程式環境.&lt;/p&gt;
+&lt;/pre&gt;</content><category term="Course"/><category term="電腦輔助設計實習"/><category term="2015 Fall cadp"/></entry><entry><title>計算機程式與電腦輔助設計實習</title><link href="https://kmolab.github.io/blog/2017fall-cp-cadp.html" rel="alternate"/><published>2017-07-06T12:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>yen</name></author><id>tag:kmolab.github.io,2017-07-06:/blog/2017fall-cp-cadp.html</id><summary type="html">&lt;p&gt;以下為 Brython 網際程式環境.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;以下為 Brython 網際程式環境.&lt;/p&gt;
 
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
 
 &lt;script src="./../data/Brython-3.3.1/brython.js"&gt;&lt;/script&gt;
-
 &lt;script src="./../data/Brython-3.3.1/brython_stdlib.js"&gt;&lt;/script&gt;
 
 &lt;!-- 啟動 Brython --&gt;
@@ -2261,7 +2233,6 @@ brython({debug:1, pythonpath:['./../data/py']});
 &lt;/script&gt;
 
 &lt;p&gt;投影片:&lt;/p&gt;
-
 &lt;div id="container1"&gt;&lt;/div&gt;
 
 &lt;script type="text/python3"&gt;
@@ -2297,7 +2268,7 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;/pre&gt;
 
 &lt;p&gt;經過轉換成為:&lt;/p&gt;
-&lt;p&gt;$$[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigma^2}(X_i-\mu)^2\right]]$$&lt;/p&gt;</content><category term="Course"></category><category term="Final"></category></entry><entry><title>網際內容管理</title><link href="./wcm-course-1.html" rel="alternate"></link><published>2017-06-18T13:00:00+08:00</published><updated>2017-06-18T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-18:./wcm-course-1.html</id><summary type="html">&lt;p&gt;網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.&lt;/p&gt;
+&lt;p&gt;$$[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigma^2}(X_i-\mu)^2\right]]$$&lt;/p&gt;</content><category term="Course"/><category term="Final"/></entry><entry><title>網際內容管理</title><link href="https://kmolab.github.io/blog/wcm-course-1.html" rel="alternate"/><published>2017-06-18T13:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/wcm-course-1.html</id><summary type="html">&lt;p&gt;網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;網際內容管理課程在教導學生, 利用電腦與網路軟硬體配置, 完成各項與機械設計內容管理有關的任務.&lt;/p&gt;
 
 
@@ -2319,8 +2290,8 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;h2&gt;Putty&lt;/h2&gt;
 &lt;h2&gt;Leo Editor&lt;/h2&gt;
 &lt;h2&gt;Filezilla 與 SFTP&lt;/h2&gt;
-&lt;h2&gt;Uwsgi 與 CMSimfly&lt;/h2&gt;</content><category term="Course"></category><category term="網際內容管理"></category><category term="課程"></category></entry><entry><title>協同產品設計實習</title><link href="./cd-course-1.html" rel="alternate"></link><published>2017-06-18T12:00:00+08:00</published><updated>2017-06-18T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-18:./cd-course-1.html</id><content type="html">&lt;p&gt;協同產品設計課程在教導學生, 以同步或非同步協同方式, 利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
-</content><category term="Course"></category><category term="協同產品設計實習"></category><category term="課程"></category></entry><entry><title>電腦輔助設計實習</title><link href="./cadp-course-1.html" rel="alternate"></link><published>2017-06-18T11:00:00+08:00</published><updated>2017-06-18T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-18:./cadp-course-1.html</id><summary type="html">&lt;p&gt;電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
+&lt;h2&gt;Uwsgi 與 CMSimfly&lt;/h2&gt;</content><category term="Course"/><category term="網際內容管理"/><category term="課程"/></entry><entry><title>協同產品設計實習</title><link href="https://kmolab.github.io/blog/cd-course-1.html" rel="alternate"/><published>2017-06-18T12:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/cd-course-1.html</id><content type="html">&lt;p&gt;協同產品設計課程在教導學生, 以同步或非同步協同方式, 利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
+</content><category term="Course"/><category term="協同產品設計實習"/><category term="課程"/></entry><entry><title>電腦輔助設計實習</title><link href="https://kmolab.github.io/blog/cadp-course-1.html" rel="alternate"/><published>2017-06-18T11:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-18:/blog/cadp-course-1.html</id><summary type="html">&lt;p&gt;電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;電腦輔助設計課程在教導學生利用電腦軟體完成各項與機械設計運算與模擬流程有關的任務.&lt;/p&gt;
 
 
@@ -2334,7 +2305,7 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;p&gt;CADO: &lt;a href="https://github.com/BGCECSE2015/CADO"&gt;https://github.com/BGCECSE2015/CADO&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Electronics made easy: &lt;a href="http://fritzing.org/home/"&gt;http://fritzing.org/home/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;SFEPy: &lt;a href="https://github.com/sfepy/sfepy"&gt;https://github.com/sfepy/sfepy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://nbviewer.jupyter.org/github/sukhbinder/sfepy-simple_tutorial/blob/master/Getting_Started_With_SFEPY_using_a_simpleplate_example.ipynb"&gt;http://nbviewer.jupyter.org/github/sukhbinder/sfepy-simple_tutorial/blob/master/Getting_Started_With_SFEPY_using_a_simpleplate_example.ipynb&lt;/a&gt;&lt;/p&gt;</content><category term="Course"></category><category term="電腦輔助設計實習"></category><category term="課程"></category></entry><entry><title>計算機程式</title><link href="./cp-course-1.html" rel="alternate"></link><published>2017-06-12T11:00:00+08:00</published><updated>2017-06-12T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:None,2017-06-12:./cp-course-1.html</id><summary type="html">&lt;p&gt;計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://nbviewer.jupyter.org/github/sukhbinder/sfepy-simple_tutorial/blob/master/Getting_Started_With_SFEPY_using_a_simpleplate_example.ipynb"&gt;http://nbviewer.jupyter.org/github/sukhbinder/sfepy-simple_tutorial/blob/master/Getting_Started_With_SFEPY_using_a_simpleplate_example.ipynb&lt;/a&gt;&lt;/p&gt;</content><category term="Course"/><category term="電腦輔助設計實習"/><category term="課程"/></entry><entry><title>計算機程式</title><link href="https://kmolab.github.io/blog/cp-course-1.html" rel="alternate"/><published>2017-06-12T11:00:00+08:00</published><updated>2026-06-11T11:07:34+08:00</updated><author><name>kmol</name></author><id>tag:kmolab.github.io,2017-06-12:/blog/cp-course-1.html</id><summary type="html">&lt;p&gt;計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;計算機程式課程在教導學生利用電腦完成各項與機械設計流程有關的任務.&lt;/p&gt;
 
 
@@ -2446,4 +2417,4 @@ $$\[L(\mu,\sigma;X)=\sum_i\left[-\frac 1 2 \ln(2\pi)-\ln(\sigma)-\frac{1}{2\sigm
 &lt;h2&gt;PyQT&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://kuanyui.github.io/2014/09/13/learn-python-via-pyqt/"&gt;https://kuanyui.github.io/2014/09/13/learn-python-via-pyqt/&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;網際程式繪圖&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://2015fallhw.github.io/2015fallcpa/g99_w15.html"http://2015fallhw.github.io/2015fallcpa/g99_w15.html&lt;/a&gt;&lt;/p&gt;</content><category term="Course"></category><category term="計算機程式"></category><category term="課程"></category></entry></feed>
+&lt;p&gt;&amp;lt;a href="http://2015fallhw.github.io/2015fallcpa/g99_w15.html"http://2015fallhw.github.io/2015fallcpa/g99_w15.html&lt;/a&gt;&lt;/p&gt;</content><category term="Course"/><category term="計算機程式"/><category term="課程"/></entry></feed>
